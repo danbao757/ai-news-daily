@@ -1,0 +1,45 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = '全网 AI 资讯每日精选：模型发布、产品更新、行业动态，每天一期。' } = Astro.props;
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="inner">
+        <a class="brand" href="/">AI<em>日报</em></a>
+        <nav class="site-nav">
+          <a href="/">本期</a>
+          <a href="/archive">往期</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="inner">
+        <span>内容由 LLM 自动采集加工，版权归原作者所有 · 本站仅做摘要与链接</span>
+        <span><a href="/archive">往期归档</a></span>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  /* Layout 级别的少量补充（保持 global.css 为主体） */
+</style>

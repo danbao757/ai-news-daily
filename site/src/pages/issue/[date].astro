@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import IssueView from '../../components/IssueView.astro';
+import { getIssues } from '../../lib/issues';
+
+export function getStaticPaths() {
+  return getIssues().map((issue) => ({
+    params: { date: issue.date },
+    props: { issue },
+  }));
+}
+
+const { issue } = Astro.props;
+---
+
+<Layout title={`AI 日报 · 第 ${issue.issue} 期 · ${issue.date}`}>
+  <IssueView issue={issue} />
+</Layout>

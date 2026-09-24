@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+
+# Node / Astro
+site/node_modules/
+site/dist/
+site/.astro/
+
+# 本地环境
+.env

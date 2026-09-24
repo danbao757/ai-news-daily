@@ -1,0 +1,15 @@
+---
+const CAT_CLASS: Record<string, string> = {
+  '模型': 'cat-model',
+  '产品': 'cat-product',
+  '行业': 'cat-industry',
+  '论文': 'cat-paper',
+  '开源': 'cat-oss',
+  '政策': 'cat-policy',
+  '观点': 'cat-opinion',
+};
+interface Props { category: string }
+const { category } = Astro.props;
+---
+
+<span class={`chip ${CAT_CLASS[category] ?? ''}`}>{category}</span>

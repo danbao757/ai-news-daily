@@ -1,0 +1,54 @@
+---
+import type { Issue } from '../lib/issues';
+import { fmtDate } from '../lib/issues';
+import CategoryChip from './CategoryChip.astro';
+
+interface Props { issue: Issue }
+const { issue } = Astro.props;
+---
+
+<section class="masthead">
+  <div class="kicker">Daily Briefing</div>
+  <h1>AI 日报</h1>
+  <div class="meta">
+    第 {issue.issue} 期 · {fmtDate(issue.date)} · 收录 {issue.stats.selected} 条
+    （采集 {issue.stats.collected}，去重 {issue.stats.duplicates}）
+  </div>
+</section>
+
+{issue.headlines.length > 0 && (
+  <div class="section-title">头条 <span class="en">Top Stories</span></div>
+)}
+<div class="headlines">
+  {issue.headlines.map((item) => (
+    <article class="headline-card">
+      <div class="row-top">
+        <CategoryChip category={item.category} />
+        {item.tags.map((t) => <span class="tag">{t}</span>)}
+      </div>
+      <h2><a href={item.url} target="_blank" rel="noopener">{item.title_zh}</a></h2>
+      {item.summary_zh && <p>{item.summary_zh}</p>}
+      <div class="row-bottom">
+        <span>AI 评分 {item.score}</span>
+        <span>·</span>
+        <a class="src" href={item.url} target="_blank" rel="noopener">{item.source} <span class="arrow">↗</span></a>
+      </div>
+    </article>
+  ))}
+</div>
+
+{issue.briefing.length > 0 && (
+  <div class="section-title">速览 <span class="en">Briefing</span></div>
+)}
+<ul class="brief-list">
+  {issue.briefing.map((item) => (
+    <li>
+      <span class="score">{item.score}</span>
+      <div class="body">
+        <span class="t"><a href={item.url} target="_blank" rel="noopener">{item.title_zh}</a></span>
+        <CategoryChip category={item.category} />
+        <span class="sub"><a href={item.url} target="_blank" rel="noopener">{item.source} ↗</a></span>
+      </div>
+    </li>
+  ))}
+</ul>

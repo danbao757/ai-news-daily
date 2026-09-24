@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import IssueView from '../components/IssueView.astro';
+import { getIssues } from '../lib/issues';
+
+const issues = getIssues();
+const latest = issues[0];
+---
+
+<Layout title={latest ? `AI 日报 · 第 ${latest.issue} 期` : 'AI 日报'}>
+  {latest ? <IssueView issue={latest} /> : (
+    <div class="empty-tip">
+      还没有生成任何日报。<br />
+      在项目根目录运行 <code>python -m collector.generate</code> 生成第一期。
+    </div>
+  )}
+</Layout>

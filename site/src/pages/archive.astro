@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getIssues, fmtDate } from '../lib/issues';
+
+const issues = getIssues();
+---
+
+<Layout title="往期归档 · AI 日报">
+  <section class="masthead">
+    <div class="kicker">Archive</div>
+    <h1>往期归档</h1>
+    <div class="meta">共 {issues.length} 期</div>
+  </section>
+
+  {issues.length === 0 ? (
+    <div class="empty-tip">暂无内容</div>
+  ) : (
+    <ul class="archive-list">
+      {issues.map((it) => (
+        <li>
+          <span class="no">No.{it.issue}</span>
+          <span class="d"><a href={`/issue/${it.date}/`}>{fmtDate(it.date)}</a></span>
+          <span class="cnt">{it.stats.selected} 条 · {it.stats.sources.length} 个来源</span>
+        </li>
+      ))}
+    </ul>
+  )}
+</Layout>
