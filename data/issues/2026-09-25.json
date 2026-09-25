@@ -1,0 +1,161 @@
+{
+  "issue": 2,
+  "date": "2026-09-25",
+  "generated_at": "2026-09-25T04:47:06",
+  "stats": {
+    "collected": 51,
+    "duplicates": 0,
+    "selected": 13,
+    "sources": [
+      "TechCrunch AI",
+      "The Decoder"
+    ]
+  },
+  "headlines": [
+    {
+      "title_zh": "Top AI experts badly underestimated how fast the field is mo",
+      "title_orig": "Top AI experts badly underestimated how fast the field is moving, study finds",
+      "summary_zh": "Leading AI experts have consistently underestimated how fast AI is advancing, according to the Forecasting Research Inst",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/top-ai-experts-badly-underestimated-how-fast-the-field-is-moving-study-finds/",
+      "published_at": "2026-09-24T19:18"
+    },
+    {
+      "title_zh": "Sakana AI hires Jürgen Schmidhuber, inventor of deep learnin",
+      "title_orig": "Sakana AI hires Jürgen Schmidhuber, inventor of deep learning, world models, and your next ChatGPT update",
+      "summary_zh": "Tokyo-based Sakana AI has hired Jürgen Schmidhuber as Chief Scientific Advisor. Sakana calls him the \"father of modern A",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/sakana-ai-hires-jurgen-schmidhuber-inventor-of-deep-learning-world-models-and-your-next-chatgpt-update/",
+      "published_at": "2026-09-24T18:06"
+    },
+    {
+      "title_zh": "Google's Suncatcher project aims to put AI data centers in o",
+      "title_orig": "Google's Suncatcher project aims to put AI data centers in orbit powered by solar energy",
+      "summary_zh": "Google's \"Suncatcher\" project aims to run AI infrastructure in orbit on solar power. A fridge-sized experimental satelli",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/googles-suncatcher-project-aims-to-put-ai-data-centers-in-orbit-powered-by-solar-energy/",
+      "published_at": "2026-09-24T17:45"
+    }
+  ],
+  "briefing": [
+    {
+      "title_zh": "Black Forest Labs launches FLUX 3 Action, an open robotics A",
+      "title_orig": "Black Forest Labs launches FLUX 3 Action, an open robotics AI model",
+      "summary_zh": "Black Forest Labs is entering robotics with FLUX 3 Action. The open-world-action model uses camera feeds to predict what",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/black-forest-labs-launches-flux-3-action-an-open-robotics-ai-model/",
+      "published_at": "2026-09-24T17:01"
+    },
+    {
+      "title_zh": "Anthropic says Claude discovered a new enzyme system, but CR",
+      "title_orig": "Anthropic says Claude discovered a new enzyme system, but CRISPR researchers call it routine genome mining",
+      "summary_zh": "Anthropic's AI model Claude found a previously unknown enzyme system in DNA databases, doing most of the analysis on its",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/anthropic-says-claude-discovered-a-new-enzyme-system-but-crispr-researchers-call-it-routine-genome-mining/",
+      "published_at": "2026-09-24T16:04"
+    },
+    {
+      "title_zh": "AI performance costs are falling faster than those of any pr",
+      "title_orig": "AI performance costs are falling faster than those of any previous technology",
+      "summary_zh": "AI is hitting a fixed benchmark performance level at a rapidly falling cost. Epoch AI measures a price decline of about ",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/ai-performance-costs-are-falling-faster-than-those-of-any-previous-technology/",
+      "published_at": "2026-09-24T16:00"
+    },
+    {
+      "title_zh": "U.S. bill proposes permanent ban on artificial superintellig",
+      "title_orig": "U.S. bill proposes permanent ban on artificial superintelligence and creation of new federal AI agency",
+      "summary_zh": "Senator Bernie Sanders and Representative Greg Casar introduced a bill on September 23 that would permanently ban the de",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/u-s-bill-proposes-permanent-ban-on-artificial-superintelligence-and-creation-of-new-federal-ai-agency/",
+      "published_at": "2026-09-24T14:42"
+    },
+    {
+      "title_zh": "OpenAI's agents went after government and university sites m",
+      "title_orig": "OpenAI's agents went after government and university sites months before Hugging Face",
+      "summary_zh": "According to Transluce researchers and the Australian government, OpenAI's AI agents repeatedly broke into government an",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openais-agents-went-after-government-and-university-sites-months-before-hugging-face/",
+      "published_at": "2026-09-24T14:01"
+    },
+    {
+      "title_zh": "Bring your co-founder, partner, or colleague and get 50% off",
+      "title_orig": "Bring your co-founder, partner, or colleague and get 50% off a second TechCrunch Disrupt 2026 pass",
+      "summary_zh": "Buy one pass to TechCrunch Disrupt 2026 and get 50% off a second of the same ticket type. Register before event starts o",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/09/24/bring-your-co-founder-partner-or-colleague-and-get-50-off-a-second-techcrunch-disrupt-2026-pass/",
+      "published_at": "2026-09-24T19:15"
+    },
+    {
+      "title_zh": "PrismML brings its tiny LLMs to Qualcomm-powered smart glass",
+      "title_orig": "PrismML brings its tiny LLMs to Qualcomm-powered smart glasses",
+      "summary_zh": "Prism's larger goal is open-weight AI that runs on devices and makes better use of the computing power they already have",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/09/24/prismml-brings-its-tiny-llms-to-qualcomm-powered-smart-glasses/",
+      "published_at": "2026-09-24T19:00"
+    },
+    {
+      "title_zh": "Oracle sends force majeure notice on its New Mexico Stargate",
+      "title_orig": "Oracle sends force majeure notice on its New Mexico Stargate data center",
+      "summary_zh": "The notice would allow Oracle to delay payments should the facility miss its 2028 target to come online.",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/",
+      "published_at": "2026-09-24T18:11"
+    },
+    {
+      "title_zh": "Meta’s Muse Charm looks like a Tamagotchi, but it’s tapping ",
+      "title_orig": "Meta’s Muse Charm looks like a Tamagotchi, but it’s tapping into a much newer trend",
+      "summary_zh": "Meta’s new AI gadget may look like a Tamagotchi, but its dangling form factor taps into a much broader Gen Z trend aroun",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/09/24/metas-muse-charm-looks-like-a-tamagotchi-but-its-tapping-into-a-much-newer-trend/",
+      "published_at": "2026-09-24T17:39"
+    },
+    {
+      "title_zh": "Google Photos ‘Clueless’-inspired virtual closet is now avai",
+      "title_orig": "Google Photos ‘Clueless’-inspired virtual closet is now available on Android and iOS",
+      "summary_zh": "The AI-powered feature builds a virtual wardrobe from your photos, and is now broadly available after first rolling out ",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/09/24/google-photos-clueless-inspired-virtual-closet-is-now-available-on-android-and-ios/",
+      "published_at": "2026-09-24T17:00"
+    }
+  ]
+}
