@@ -1,0 +1,162 @@
+{
+  "issue": 4,
+  "date": "2026-09-27",
+  "generated_at": "2026-09-27T05:10:14",
+  "stats": {
+    "collected": 32,
+    "duplicates": 0,
+    "selected": 13,
+    "sources": [
+      "TechCrunch AI",
+      "The Decoder",
+      "量子位"
+    ]
+  },
+  "headlines": [
+    {
+      "title_zh": "Former Ukrainian Defense Minister Fedorov pitches a private-",
+      "title_orig": "Former Ukrainian Defense Minister Fedorov pitches a private-sector robot army",
+      "summary_zh": "Former Ukrainian Defense Minister Mykhailo Fedorov has announced \"Army of Robots,\" a private combat robotics initiative.",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/former-ukrainian-defense-minister-fedorov-pitches-a-private-sector-robot-army/",
+      "published_at": "2026-09-26T19:10"
+    },
+    {
+      "title_zh": "Two-thirds of IT leaders report AI results, but few would in",
+      "title_orig": "Two-thirds of IT leaders report AI results, but few would interrupt the CEO's vacation over them",
+      "summary_zh": "Speaking to 160 IT vice presidents in Las Vegas, tech entrepreneur Azeem Azhar asked who had measurable AI results. Two-",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/two-thirds-of-it-leaders-report-ai-results-but-few-would-interrupt-the-ceos-vacation-over-them/",
+      "published_at": "2026-09-26T17:27"
+    },
+    {
+      "title_zh": "AI access makes people almost entirely unwilling to say \"I d",
+      "title_orig": "AI access makes people almost entirely unwilling to say \"I don't know,\" study finds",
+      "summary_zh": "A study with more than 3,000 participants shows that just having access to AI answers nearly eliminated people's willing",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/ai-access-makes-people-almost-entirely-unwilling-to-say-i-dont-know-study-finds/",
+      "published_at": "2026-09-26T16:56"
+    }
+  ],
+  "briefing": [
+    {
+      "title_zh": "Nvidia's SoL-Pi system cuts coding agent token usage nearly ",
+      "title_orig": "Nvidia's SoL-Pi system cuts coding agent token usage nearly in half by optimizing the harness",
+      "summary_zh": "SoL-Pi cuts coding agents' token usage by up to 49 percent with little change in performance by optimizing the control l",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/nvidias-sol-pi-system-cuts-coding-agent-token-usage-nearly-in-half-by-optimizing-the-harness/",
+      "published_at": "2026-09-26T10:30"
+    },
+    {
+      "title_zh": "OpenAI's GPT-6 Astra can now tell you exactly where you scre",
+      "title_orig": "OpenAI's GPT-6 Astra can now tell you exactly where you screwed up your IKEA shelf",
+      "summary_zh": "OpenAI's GPT-6 Astra can look at a photo and tell whether an IKEA furniture piece was assembled incorrectly, hitting an ",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openais-gpt-6-astra-can-now-tell-you-exactly-where-you-screwed-up-your-ikea-shelf/",
+      "published_at": "2026-09-26T09:44"
+    },
+    {
+      "title_zh": "OpenAI pauses its \"most capable models\" after agents exploit",
+      "title_orig": "OpenAI pauses its \"most capable models\" after agents exploit loopholes and leak data",
+      "summary_zh": "OpenAI has shared new details from its ongoing AI safety investigation. One research model exploited a DNS loophole to r",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openai-pauses-its-most-capable-models-after-agents-exploit-loopholes-and-leak-data/",
+      "published_at": "2026-09-26T09:06"
+    },
+    {
+      "title_zh": "Google tests buying from Walmart-owned Flipkart through Gemi",
+      "title_orig": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
+      "summary_zh": "The limited test covers select products and users, with a broader rollout planned for later in October.",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/",
+      "published_at": "2026-09-27T01:30"
+    },
+    {
+      "title_zh": "Insurers claim AI is already increasing healthcare costs",
+      "title_orig": "Insurers claim AI is already increasing healthcare costs",
+      "summary_zh": "Blue Cross Blue Shield says hospital use of AI tools led to an additional $942M in healthcare spending over a two-year p",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/",
+      "published_at": "2026-09-26T21:02"
+    },
+    {
+      "title_zh": "I created an interactive digital avatar of myself — and you ",
+      "title_orig": "I created an interactive digital avatar of myself — and you can talk to it",
+      "summary_zh": "After obtaining an interactive avatar and training it to discuss venture fraud, I have mixed feelings about making AI cl",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/09/26/i-created-an-interactive-digital-avatar-of-myself-and-you-can-talk-to-it/",
+      "published_at": "2026-09-26T14:00"
+    },
+    {
+      "title_zh": "索辰科技加码世界模型，与战略投资企业美梦空间联合发布具身模型与物理测评标准",
+      "title_orig": "索辰科技加码世界模型，与战略投资企业美梦空间联合发布具身模型与物理测评标准",
+      "summary_zh": "“世界模型”开始成为具身智能跨越商业化“奇点”的新叙事。",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/498478.html",
+      "published_at": "2026-09-26T11:49"
+    },
+    {
+      "title_zh": "AI开始研究Physical AI：FSD级团队亮出首版模型Simate-beta，空降RoboDojo",
+      "title_orig": "AI开始研究Physical AI：FSD级团队亮出首版模型Simate-beta，空降RoboDojo",
+      "summary_zh": "Simate将训练、推理与评测全流程接入自研Infra，通过极致的任务编排与资源调度，同时并行推进数十条相互独立的研究路线。",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/498271.html",
+      "published_at": "2026-09-26T09:07"
+    },
+    {
+      "title_zh": "笔记本跑7000亿参数GLM！无GPU也行? SSD当显存用火爆GitHub",
+      "title_orig": "笔记本跑7000亿参数GLM！无GPU也行? SSD当显存用火爆GitHub",
+      "summary_zh": "GitHub现在最火热的大模型开源小蜂鸟Colibrì是个啥？",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/497624.html",
+      "published_at": "2026-09-26T09:01"
+    },
+    {
+      "title_zh": "在云栖大会，我终于看懂了米哈游千亿AI野心",
+      "title_orig": "在云栖大会，我终于看懂了米哈游千亿AI野心",
+      "summary_zh": "大伟哥：如果做不到，一年两年之后过来打我脸",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/497613.html",
+      "published_at": "2026-09-26T07:18"
+    }
+  ]
+}
