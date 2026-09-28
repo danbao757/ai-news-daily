@@ -1,0 +1,162 @@
+{
+  "issue": 5,
+  "date": "2026-09-28",
+  "generated_at": "2026-09-28T03:53:53",
+  "stats": {
+    "collected": 31,
+    "duplicates": 0,
+    "selected": 13,
+    "sources": [
+      "TechCrunch AI",
+      "The Decoder",
+      "量子位"
+    ]
+  },
+  "headlines": [
+    {
+      "title_zh": "AI agents do more of the work in model development, but huma",
+      "title_orig": "AI agents do more of the work in model development, but humans still make the decisions",
+      "summary_zh": "A research team analyzed 769 task logs from building its own AI model. AI agents supplied up to 55 percent of method pro",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/ai-agents-do-more-of-the-work-in-model-development-but-humans-still-make-the-decisions/",
+      "published_at": "2026-09-27T15:18"
+    },
+    {
+      "title_zh": "Some Anthropic veterans are reportedly buying remote land in",
+      "title_orig": "Some Anthropic veterans are reportedly buying remote land in case \"AI goes awry\"",
+      "summary_zh": "According to the Wall Street Journal, some of Anthropic's longest-serving employees are considering buying land in remot",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/some-anthropic-veterans-are-reportedly-buying-remote-land-in-case-ai-goes-awry/",
+      "published_at": "2026-09-27T13:03"
+    },
+    {
+      "title_zh": "Nvidia drops a free 100M-parameter model that identifies up ",
+      "title_orig": "Nvidia drops a free 100M-parameter model that identifies up to eight speakers in real time",
+      "summary_zh": "Nvidia released Nemotron 3 Diarization, an AI model that identifies which speaker is talking at any given moment in a co",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/nvidia-drops-a-free-100m-parameter-model-that-identifies-up-to-eight-speakers-in-real-time/",
+      "published_at": "2026-09-27T11:01"
+    }
+  ],
+  "briefing": [
+    {
+      "title_zh": "Researchers plug GPT-6 Astra directly into a robot and let i",
+      "title_orig": "Researchers plug GPT-6 Astra directly into a robot and let it clean up an unfamiliar kitchen",
+      "summary_zh": "Researchers from Stanford and Caltech had a humanoid robot powered by GPT-6 Astra independently tidy up an unfamiliar ki",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/researchers-plug-gpt-6-astra-directly-into-a-robot-and-let-it-clean-up-an-unfamiliar-kitchen/",
+      "published_at": "2026-09-27T10:59"
+    },
+    {
+      "title_zh": "OpenAI says 80 to 90 percent of its research already targets",
+      "title_orig": "OpenAI says 80 to 90 percent of its research already targets GPT 7 and beyond",
+      "summary_zh": "Boris Power, OpenAI's Head of Applied Research, says 80 to 90 percent of the company's research goes toward GPT 7, GPT 8",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/openai-says-80-to-90-percent-of-its-research-already-targets-gpt-7-and-beyond/",
+      "published_at": "2026-09-27T10:36"
+    },
+    {
+      "title_zh": "Tens of thousands of security probes show OpenAI's Hugging F",
+      "title_orig": "Tens of thousands of security probes show OpenAI's Hugging Face incident was just the beginning",
+      "summary_zh": "OpenAI and Anthropic are investigating tens of thousands of incidents in which their AI agents independently hacked webs",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/tens-of-thousands-of-security-probes-show-openais-hugging-face-incident-was-just-the-beginning/",
+      "published_at": "2026-09-27T09:23"
+    },
+    {
+      "title_zh": "Goldman Sachs expects Big Tech to spend $1.2 trillion on AI ",
+      "title_orig": "Goldman Sachs expects Big Tech to spend $1.2 trillion on AI infrastructure by 2027, dwarfing Wall Street estimates",
+      "summary_zh": "Goldman Sachs projects that Amazon, Alphabet, Microsoft, Oracle, and Meta will pour a combined $1.2 trillion into AI inf",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "The Decoder",
+      "url": "https://the-decoder.com/goldman-sachs-expects-big-tech-to-spend-1-2-trillion-on-ai-infrastructure-by-2027-dwarfing-wall-street-estimates/",
+      "published_at": "2026-09-27T08:17"
+    },
+    {
+      "title_zh": "Anthropic’s CEO is about to have dinner with President Trump",
+      "title_orig": "Anthropic’s CEO is about to have dinner with President Trump",
+      "summary_zh": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
+      "published_at": "2026-09-27T20:34"
+    },
+    {
+      "title_zh": "Can Muse overcome Meta’s trust issues?",
+      "title_orig": "Can Muse overcome Meta’s trust issues?",
+      "summary_zh": "On Equity, we discussed how Meta's AI announcement managed to steal the spotlight from OpenAI and Anthropic.",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/09/27/can-muse-overcome-metas-trust-issues/",
+      "published_at": "2026-09-27T19:57"
+    },
+    {
+      "title_zh": "Anthropic’s Dario Amodei gets the SNL treatment",
+      "title_orig": "Anthropic’s Dario Amodei gets the SNL treatment",
+      "summary_zh": "\"AI is the devil and I its maker.\"",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/",
+      "published_at": "2026-09-27T16:30"
+    },
+    {
+      "title_zh": "量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层",
+      "title_orig": "量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层",
+      "summary_zh": "",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/498633.html",
+      "published_at": "2026-09-27T14:20"
+    },
+    {
+      "title_zh": "量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门",
+      "title_orig": "量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门",
+      "summary_zh": "想让开发者“说句话就能跑量子计算”",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/498605.html",
+      "published_at": "2026-09-27T13:57"
+    },
+    {
+      "title_zh": "又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录",
+      "title_orig": "又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录",
+      "summary_zh": "中秋假期文具OpenRouter调用日榜榜首",
+      "category": "未分类",
+      "tags": [],
+      "score": 50,
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/498584.html",
+      "published_at": "2026-09-27T13:40"
+    }
+  ]
+}
