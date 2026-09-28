@@ -21,7 +21,7 @@ USER_PROMPT_TMPL = """请处理以下新闻条目，输出 JSON 对象数组（�
 - "category": 从 ["模型","产品","行业","论文","开源","政策","观点"] 中选最贴切的一个
 - "tags": 最多 3 个短标签，如 "OpenAI"、"开源"、"智能体"、"视频生成"
 - "score": 0-100 整数，重要性评分。锚点：90+ 行业级重大突破；75-89 头部厂商重要发布或重磅模型；60-74 有影响的更新、大额融资；40-59 常规功能更新或边际新闻；40 以下 个人观点、重复消息
-- "keep": 布尔值。与 AI/AIGC 强相关且值得收录进日报为 true；招聘信息、股市行情、促销广告、付费课程/软文一律 false
+- "keep": 布尔值。与 AI/AIGC 强相关且值得收录进日报为 true。以下一律 false：招聘信息、股市行情、促销广告、付费课程/软文，以及消费电子/汽车/家电/门锁等仅沾"智能"字样但 AI 并非其核心的普通产品新闻
 
 条目列表：
 {items}
@@ -120,6 +120,8 @@ def _chat(prompt: str) -> str:
 
 def process(items: list[dict]) -> list[dict]:
     """批量调用 LLM 加工，把结果字段合并回条目。"""
+    for idx, it in enumerate(items):
+        it["id"] = idx + 1  # prompt 要求模型按 id 原样返回，先编号
     results = []
     for i in range(0, len(items), config.LLM_BATCH_SIZE):
         batch = items[i : i + config.LLM_BATCH_SIZE]
