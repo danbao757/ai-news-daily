@@ -5,6 +5,7 @@ interface Props {
 }
 const { title, description = '全网 AI 资讯每日精选：模型发布、产品更新、行业动态，每天一期。' } = Astro.props;
 import '../styles/global.css';
+import { withBase } from '../lib/url';
 ---
 
 <!doctype html>
@@ -14,15 +15,17 @@ import '../styles/global.css';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title="AI 日报" href={withBase('/rss.xml')} />
   </head>
   <body>
     <header class="site-header">
       <div class="inner">
-        <a class="brand" href="/">AI<em>日报</em></a>
+        <a class="brand" href={withBase('/')}>AI<em>日报</em></a>
         <nav class="site-nav">
-          <a href="/">本期</a>
-          <a href="/archive">往期</a>
+          <a href={withBase('/')}>本期</a>
+          <a href={withBase('/archive')}>往期</a>
+          <a href={withBase('/search')}>搜索</a>
         </nav>
       </div>
     </header>
@@ -34,7 +37,10 @@ import '../styles/global.css';
     <footer class="site-footer">
       <div class="inner">
         <span>内容由 LLM 自动采集加工，版权归原作者所有 · 本站仅做摘要与链接</span>
-        <span><a href="/archive">往期归档</a></span>
+        <span>
+          <a href={withBase('/archive')}>往期归档</a>
+          · <a href={withBase('/rss.xml')}>RSS 订阅</a>
+        </span>
       </div>
     </footer>
   </body>

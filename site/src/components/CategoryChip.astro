@@ -12,4 +12,4 @@ interface Props { category: string }
 const { category } = Astro.props;
 ---
 
-<span class={`chip ${CAT_CLASS[category] ?? ''}`}>{category}</span>
+<span class={`chip ${CAT_CLASS[category] ?? ''}`} data-pagefind-ignore>{category}</span>

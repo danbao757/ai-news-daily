@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getIssues } from '../lib/issues';
+import { withBase } from '../lib/url';
+
+const total = getIssues().length;
+const bundlePath = withBase('/pagefind/');
+---
+
+<Layout title={`搜索 · AI 日报`}>
+  <section class="masthead">
+    <div class="kicker">Search</div>
+    <h1>站内搜索</h1>
+    <div class="meta">检索全部 {total} 期日报的标题与摘要</div>
+  </section>
+
+  <link rel="stylesheet" href={withBase('/pagefind/pagefind-ui.css')} />
+  <div id="search"></div>
+  <div id="search-fallback" class="empty-tip" hidden>
+    搜索索引尚未生成（开发模式没有索引）。<br />
+    运行 <code>npm run build</code> 后查看构建产物，或直接使用线上站点的搜索页。
+  </div>
+
+  <script is:inline define:vars={{ bundlePath }}>
+    (function () {
+      var s = document.createElement('script');
+      s.src = bundlePath + 'pagefind-ui.js';
+      s.onload = function () {
+        new PagefindUI({
+          element: '#search',
+          bundlePath: bundlePath,
+          showImages: false,
+          pageSize: 10,
+        });
+      };
+      s.onerror = function () {
+        document.getElementById('search-fallback').hidden = false;
+      };
+      document.head.appendChild(s);
+    })();
+  </script>
+</Layout>

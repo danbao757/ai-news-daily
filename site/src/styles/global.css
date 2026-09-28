@@ -245,3 +245,56 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
   padding: 4rem 0;
 }
+
+/* ── Pagefind 搜索 UI：融入站点暖纸白风格 ──────────────────────── */
+.pagefind-ui {
+  --pagefind-ui-scale: 1;
+  --pagefind-ui-primary: var(--accent);
+  --pagefind-ui-text: var(--ink);
+  --pagefind-ui-background: var(--surface);
+  --pagefind-ui-border: var(--line);
+  --pagefind-ui-tag: var(--bg);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 8px;
+  --pagefind-ui-image-border-radius: 4px;
+  --pagefind-ui-font: inherit;
+}
+
+.pagefind-ui .pagefind-ui__search-input {
+  font-size: 1rem;
+}
+
+.pagefind-ui .pagefind-ui__result-title a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--faint);
+}
+
+.pagefind-ui .pagefind-ui__result-title a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.pagefind-ui .pagefind-ui__message {
+  color: var(--muted);
+}
+
+/* 搜索命中高亮：暖色调，不刺眼 */
+.pagefind-ui mark {
+  background: #fde8e7;
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+/* 搜索输入框：弱化默认边框 */
+.pagefind-ui .pagefind-ui__search-input {
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+
+.pagefind-ui .pagefind-ui__search-input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 38, 34, 0.08);
+}

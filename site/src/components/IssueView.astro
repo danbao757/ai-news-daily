@@ -10,7 +10,7 @@ const { issue } = Astro.props;
 <section class="masthead">
   <div class="kicker">Daily Briefing</div>
   <h1>AI 日报</h1>
-  <div class="meta">
+  <div class="meta" data-pagefind-ignore>
     第 {issue.issue} 期 · {fmtDate(issue.date)} · 收录 {issue.stats.selected} 条
     （采集 {issue.stats.collected}，去重 {issue.stats.duplicates}）
   </div>
@@ -22,13 +22,13 @@ const { issue } = Astro.props;
 <div class="headlines">
   {issue.headlines.map((item) => (
     <article class="headline-card">
-      <div class="row-top">
+      <div class="row-top" data-pagefind-ignore>
         <CategoryChip category={item.category} />
         {item.tags.map((t) => <span class="tag">{t}</span>)}
       </div>
       <h2><a href={item.url} target="_blank" rel="noopener">{item.title_zh}</a></h2>
       {item.summary_zh && <p>{item.summary_zh}</p>}
-      <div class="row-bottom">
+      <div class="row-bottom" data-pagefind-ignore>
         <span>AI 评分 {item.score}</span>
         <span>·</span>
         <a class="src" href={item.url} target="_blank" rel="noopener">{item.source} <span class="arrow">↗</span></a>
@@ -43,11 +43,11 @@ const { issue } = Astro.props;
 <ul class="brief-list">
   {issue.briefing.map((item) => (
     <li>
-      <span class="score">{item.score}</span>
+      <span class="score" data-pagefind-ignore>{item.score}</span>
       <div class="body">
         <span class="t"><a href={item.url} target="_blank" rel="noopener">{item.title_zh}</a></span>
         <CategoryChip category={item.category} />
-        <span class="sub"><a href={item.url} target="_blank" rel="noopener">{item.source} ↗</a></span>
+        <span class="sub" data-pagefind-ignore><a href={item.url} target="_blank" rel="noopener">{item.source} ↗</a></span>
       </div>
     </li>
   ))}

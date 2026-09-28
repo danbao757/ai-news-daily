@@ -16,7 +16,7 @@ USER_PROMPT_TMPL = """请处理以下新闻条目，输出 JSON 对象数组（�
 - "category": 从 ["模型","产品","行业","论文","开源","政策","观点"] 中选最贴切的一个
 - "tags": 最多 3 个短标签，如 "OpenAI"、"开源"、"智能体"、"视频生成"
 - "score": 0-100 整数，重要性评分。锚点：90+ 行业级重大突破；75-89 头部厂商重要发布或重磅模型；60-74 有影响的更新、大额融资；40-59 常规功能更新或边际新闻；40 以下 个人观点、重复消息
-- "keep": 布尔值。与 AI/AIGC 强相关且值得收录进日报为 true，否则 false
+- "keep": 布尔值。与 AI/AIGC 强相关且值得收录进日报为 true；招聘信息、股市行情、促销广告、付费课程/软文一律 false
 
 条目列表：
 {items}
@@ -24,6 +24,20 @@ USER_PROMPT_TMPL = """请处理以下新闻条目，输出 JSON 对象数组（�
 只输出 JSON 数组。"""
 
 FALLBACK_CATEGORY = "未分类"
+
+# 标题命中即判软文/无关内容（LLM 路径与降级路径共用），keep 置 False。
+# 刻意保守：只放确定性高的词，避免误杀正常新闻。
+_JUNK_TITLE_RE = re.compile(
+    r"(招聘|诚聘|急聘|内推|hiring|"
+    r"行情|股价|收盘|盘前|市值蒸发|"
+    r"优惠券|促销|赞助内容|sponsored|advertorial|"
+    r"付费课程|训练营)",
+    re.IGNORECASE,
+)
+
+
+def _looks_like_junk(title: str) -> bool:
+    return bool(_JUNK_TITLE_RE.search(title or ""))
 
 
 def _build_prompt(items: list[dict]) -> str:
@@ -84,7 +98,7 @@ def process(items: list[dict]) -> list[dict]:
                            {"模型", "产品", "行业", "论文", "开源", "政策", "观点"} else FALLBACK_CATEGORY,
                 "tags": [str(t)[:12] for t in (p.get("tags") or [])][:3],
                 "score": max(0, min(100, int(p.get("score") or 50))),
-                "keep": bool(p.get("keep", True)),
+                "keep": bool(p.get("keep", True)) and not _looks_like_junk(it["title"]),
             })
     return results
 
@@ -99,7 +113,7 @@ def _fallback(items: list[dict]) -> list[dict]:
             "category": FALLBACK_CATEGORY,
             "tags": [],
             "score": 50,
-            "keep": True,
+            "keep": not _looks_like_junk(it["title"]),
         }
         for it in items
     ]

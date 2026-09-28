@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getIssues, fmtDate } from '../lib/issues';
+import { withBase } from '../lib/url';
 
 const issues = getIssues();
 ---
@@ -19,7 +20,7 @@ const issues = getIssues();
       {issues.map((it) => (
         <li>
           <span class="no">No.{it.issue}</span>
-          <span class="d"><a href={`/issue/${it.date}/`}>{fmtDate(it.date)}</a></span>
+          <span class="d"><a href={withBase(`/issue/${it.date}/`)}>{fmtDate(it.date)}</a></span>
           <span class="cnt">{it.stats.selected} 条 · {it.stats.sources.length} 个来源</span>
         </li>
       ))}
