@@ -14,10 +14,18 @@ HEADERS = {
 }
 
 
-def _http_get(url: str, timeout: int = 20) -> bytes:
-    resp = requests.get(url, headers=HEADERS, timeout=timeout)
-    resp.raise_for_status()
-    return resp.content
+def _http_get(url: str, timeout: int = 20, retries: int = 2) -> bytes:
+    """带一次重试的抓取：YouTube/VentureFeed 等源偶发 404/429 抖动。"""
+    last_exc: Exception | None = None
+    for _ in range(retries):
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=timeout)
+            resp.raise_for_status()
+            return resp.content
+        except Exception as exc:
+            last_exc = exc
+            time.sleep(2)
+    raise last_exc
 
 
 def _entry_timestamp(entry) -> float | None:

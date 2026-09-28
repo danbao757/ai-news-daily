@@ -1,7 +1,12 @@
-"""LLM 加工：中文标题、摘要、分类、标签、重要性评分。OpenAI 兼容接口。"""
+"""LLM 加工：中文标题、摘要、分类、标签、重要性评分。OpenAI 兼容接口。
+
+无 key / 调用失败时降级：Google gtx 免费机翻标题与摘要（中文源自动跳过，
+再失败回退原文），分类与评分保持降级值。
+"""
 
 import json
 import re
+import time
 
 import requests
 
@@ -38,6 +43,44 @@ _JUNK_TITLE_RE = re.compile(
 
 def _looks_like_junk(title: str) -> bool:
     return bool(_JUNK_TITLE_RE.search(title or ""))
+
+
+def _truncate(text: str, limit: int) -> str:
+    """词边界截断：英文不拦腰截断单词，中文按字符，超长补省略号。"""
+    text = (text or "").strip()
+    if len(text) <= limit:
+        return text
+    cut = text[:limit]
+    for i in range(len(cut) - 1, max(len(cut) - 24, 0), -1):
+        if cut[i].isspace():
+            return cut[:i].rstrip(" ,;:-–—") + "…"
+    return cut + "…"
+
+
+def _cjk_ratio(text: str) -> float:
+    """CJK 字符占比，用于判断文本是否已是中文（无需机翻）。"""
+    if not text:
+        return 0.0
+    cjk = sum(1 for ch in text if "\u4e00" <= ch <= "\u9fff")
+    return cjk / max(len(text.replace(" ", "")), 1)
+
+
+def _mt_zh(text: str, sess: requests.Session) -> str:
+    """单条机翻（Google gtx 免费接口，无需 key）。失败返回原文。"""
+    if not text or _cjk_ratio(text) >= 0.3:
+        return text
+    try:
+        resp = sess.get(
+            "https://translate.googleapis.com/translate_a/single",
+            params={"client": "dict-chrome-ex", "sl": "auto", "tl": "zh-CN", "dt": "t", "q": text[:1500]},
+            timeout=15,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+        out = "".join(seg[0] for seg in data[0] if seg and seg[0])
+        return out or text
+    except Exception:
+        return text
 
 
 def _build_prompt(items: list[dict]) -> str:
@@ -92,8 +135,8 @@ def process(items: list[dict]) -> list[dict]:
             p = by_id.get(it["id"], {})
             results.append({
                 **it,
-                "title_zh": str(p.get("title_zh") or it["title"])[:60],
-                "summary_zh": str(p.get("summary_zh") or "")[:160],
+                "title_zh": _truncate(str(p.get("title_zh") or it["title"]), 60),
+                "summary_zh": _truncate(str(p.get("summary_zh") or ""), 160),
                 "category": p.get("category") if p.get("category") in
                            {"模型", "产品", "行业", "论文", "开源", "政策", "观点"} else FALLBACK_CATEGORY,
                 "tags": [str(t)[:12] for t in (p.get("tags") or [])][:3],
@@ -104,16 +147,25 @@ def process(items: list[dict]) -> list[dict]:
 
 
 def _fallback(items: list[dict]) -> list[dict]:
-    """无 API key 或调用失败时的降级输出：原文标题 + 截断摘要。"""
-    return [
-        {
+    """无 API key 或调用失败时的降级输出：机翻标题/摘要 + 截断原文摘要。"""
+    sess = requests.Session()
+    sess.headers.update({"User-Agent": "Mozilla/5.0 ai-news-daily/0.1"})
+    out = []
+    for it in items:
+        title_zh = it["title"]
+        summary_zh = (it.get("summary_raw") or "").strip()
+        if config.MT_FALLBACK_ENABLED:
+            title_zh = _mt_zh(title_zh, sess)
+            if summary_zh:
+                summary_zh = _mt_zh(_truncate(summary_zh, 160), sess)
+            time.sleep(0.15)
+        out.append({
             **it,
-            "title_zh": it["title"][:60],
-            "summary_zh": (it.get("summary_raw") or "")[:120],
+            "title_zh": _truncate(title_zh, 60),
+            "summary_zh": _truncate(summary_zh, 120),
             "category": FALLBACK_CATEGORY,
             "tags": [],
             "score": 50,
             "keep": not _looks_like_junk(it["title"]),
-        }
-        for it in items
-    ]
+        })
+    return out

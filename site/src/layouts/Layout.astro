@@ -6,6 +6,11 @@ interface Props {
 const { title, description = '全网 AI 资讯每日精选：模型发布、产品更新、行业动态，每天一期。' } = Astro.props;
 import '../styles/global.css';
 import { withBase } from '../lib/url';
+
+// 导航当前页判定（兼容 base 路径与结尾斜杠差异）
+const baseTrim = withBase('/').replace(/\/$/, '');
+const path = Astro.url.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '');
+const cur = (p: string) => (path === (p === '/' ? baseTrim : baseTrim + p) ? 'page' : undefined);
 ---
 
 <!doctype html>
@@ -23,9 +28,9 @@ import { withBase } from '../lib/url';
       <div class="inner">
         <a class="brand" href={withBase('/')}>AI<em>日报</em></a>
         <nav class="site-nav">
-          <a href={withBase('/')}>本期</a>
-          <a href={withBase('/archive')}>往期</a>
-          <a href={withBase('/search')}>搜索</a>
+          <a href={withBase('/')} aria-current={cur('/')}>本期</a>
+          <a href={withBase('/archive')} aria-current={cur('/archive')}>往期</a>
+          <a href={withBase('/search')} aria-current={cur('/search')}>搜索</a>
         </nav>
       </div>
     </header>

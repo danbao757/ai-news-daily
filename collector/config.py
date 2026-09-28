@@ -32,13 +32,20 @@ MAX_BRIEFING = 10   # 速览条数
 
 # ── RSS 源（想加源就往这里加一行）──────────────────────────────────
 # lang 影响后续 LLM 处理；priority 同分时用于排序参考
+# X/推特无原生 RSS：需自建 RSSHub（https://docs.rsshub.app/）后加一行，如
+#   {"name": "X OpenAI", "url": "http://localhost:1200/twitter/user/OpenAI", "lang": "en", "priority": 7}
 RSS_SOURCES = [
     {"name": "The Decoder",   "url": "https://the-decoder.com/feed/",                                    "lang": "en", "priority": 9},
     {"name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/",     "lang": "en", "priority": 8},
+    {"name": "OpenAI News",   "url": "https://openai.com/news/rss.xml",                                   "lang": "en", "priority": 8},
+    {"name": "DeepMind Blog", "url": "https://deepmind.google/blog/rss.xml",                              "lang": "en", "priority": 8},
     {"name": "Ars Technica",  "url": "https://arstechnica.com/ai/feed/",                                  "lang": "en", "priority": 7},
     {"name": "MIT Tech Review", "url": "https://www.technologyreview.com/feed/",                          "lang": "en", "priority": 7},
     {"name": "VentureBeat",   "url": "https://venturebeat.com/category/ai/feed/",                         "lang": "en", "priority": 6},
     {"name": "MarkTechPost",  "url": "https://www.marktechpost.com/feed/",                                "lang": "en", "priority": 6},
+    {"name": "YT DeepMind",   "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCP7jMXSY2xbc3KCAE0MHQ-A", "lang": "en", "priority": 6},
+    {"name": "YT Matt Wolfe", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCcefcZRL2oaA_uBNeo5UOWg", "lang": "en", "priority": 5},
+    {"name": "Google News AI", "url": "https://news.google.com/rss/search?q=AI+when:1d&hl=en-US&gl=US&ceid=US:en",   "lang": "en", "priority": 5},
     {"name": "机器之心",       "url": "https://www.jiqizhixin.com/rss",                                    "lang": "zh", "priority": 7},
     {"name": "量子位",         "url": "https://www.qbitai.com/feed",                                       "lang": "zh", "priority": 7},
     {"name": "雷锋网",         "url": "https://www.leiphone.com/feed",                                     "lang": "zh", "priority": 5},
@@ -62,3 +69,8 @@ LLM_BATCH_SIZE = 12  # 每次 LLM 调用处理的条目数
 
 # ── 去重状态 ────────────────────────────────────────────────────────
 SEEN_RETAIN_DAYS = 14  # 去重记忆保留天数
+
+# ── 降级机翻 ────────────────────────────────────────────────────────
+# 无 LLM_API_KEY 时用 Google gtx 免费接口翻译标题/摘要（中文源自动跳过）。
+# 设 MT_FALLBACK=0 可关闭（例如接口不可达时省掉等待）。
+MT_FALLBACK_ENABLED = os.environ.get("MT_FALLBACK", "1") == "1"

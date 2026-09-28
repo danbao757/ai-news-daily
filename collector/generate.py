@@ -96,7 +96,7 @@ def main() -> int:
         print(f"  模型: {config.LLM_MODEL} @ {config.LLM_BASE_URL}")
         processed = llm.process(fresh)
     else:
-        print("  未配置 LLM_API_KEY，降级为原始条目（无翻译/摘要/评分）")
+        print("  未配置 LLM_API_KEY，降级为机翻条目（Google MT 翻译标题/摘要，无分类/评分）")
         processed = llm._fallback(fresh)
 
     headlines, briefing = select(processed)
