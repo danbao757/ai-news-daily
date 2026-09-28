@@ -1,6 +1,7 @@
 # AI 日报（ai-news-daily）· 项目交接文档
 
 > 本文档由 2026-09-24 的开发会话整理于 2026-09-28，供在其他环境接续开发使用。
+> 2026-09-28 第二次开发会话已更新：新增站内搜索、RSS 订阅、2 个信源、软文过滤，并修复站内链接 404 bug。
 > 项目已**完整上线并自动化运行**，接手即可迭代，无需从头搭建。
 
 | 关键信息 | 值 |
@@ -8,7 +9,8 @@
 | 线上地址 | https://danbao757.github.io/ai-news-daily/ |
 | 代码仓库 | https://github.com/danbao757/ai-news-daily （**public**） |
 | 自动化 | GitHub Actions，每天北京时间 **08:05**（cron `5 0 * * *` UTC） |
-| 当前状态 | 已出至**第 4 期**（2026-09-24 ~ 09-27），工作流连续成功 |
+| 当前状态 | 已出至**第 5 期**（2026-09-24 ~ 09-28），工作流连续成功 |
+| 站点功能 | 首页 / 往期归档 / **站内搜索** `/search` / **RSS 订阅** `/rss.xml` |
 | 本地路径 | `D:\ai-news-daily` |
 
 ---
@@ -27,17 +29,17 @@
 ## 2. 架构与数据流
 
 ```
-RSS（9 源）──┐
+RSS（11 源）─┐
              ├→ 采集(sources.py) → 每源截8条 → 去重(dedup.py, 14天记忆)
 Hacker News ─┘        │  URL精确 + 标题3-gram Jaccard≥0.55
                       ↓
                LLM 批量加工(llm.py, 12条/次, OpenAI兼容接口)
-                      ↓  中文标题/摘要/分类(7类)/评分(0-100)/keep
+                      ↓  中文标题/摘要/分类(7类)/评分(0-100)/keep + 软文过滤
                选稿(generate.py): (score, priority) 降序
                       ↓  头条3 + 速览10
                data/issues/YYYY-MM-DD.json（随 git 保存，即历史档案）
                       ↓
-               Astro 构建(site/) → GitHub Pages
+               Astro 构建(site/) + Pagefind 索引 → GitHub Pages
 ```
 
 每日定时由 `.github/workflows/daily.yml` 驱动：生成 → git 提交数据 → build → deploy。
@@ -59,19 +61,24 @@ ai-news-daily/
 │   ├── astro.config.mjs     # site + base 已按 GitHub Pages 配好
 │   └── src/
 │       ├── lib/issues.ts    # getIssues() 读项目根 data/issues
-│       ├── pages/           # index / archive / issue/[date]
+│       ├── lib/url.ts       # withBase()：站内链接拼 base 前缀（防 404）
+│       ├── pages/           # index / archive / issue/[date] / search / rss.xml.js
 │       ├── components/      # IssueView.astro, CategoryChip.astro
-│       ├── layouts/         # Layout.astro
-│       └── styles/global.css# 全部设计变量与组件样式
+│       ├── layouts/         # Layout.astro（导航含"搜索"，head 含 RSS 自动发现）
+│       └── styles/global.css# 全部设计变量与组件样式（含 Pagefind UI 融合）
 └── .github/workflows/daily.yml
 ```
+
+构建命令 `npm run build` = `astro build && pagefind --site dist`（pagefind 为 devDependency，
+构建后生成 `dist/pagefind/` 搜索索引；搜索页运行时从 `pagefind-ui.js` 加载 UI）。
 
 ### 关键实现细节（接手必读）
 
 - **config.py**：`WINDOW_HOURS=24`（首期为 48）；`MAX_PER_SOURCE=8`；`MAX_HEADLINES=3` / `MAX_BRIEFING=10`；`HN_MIN_POINTS=40`；LLM 三件套读环境变量 `LLM_API_KEY` / `LLM_BASE_URL`（默认 `https://api.deepseek.com/v1`）/ `LLM_MODEL`（默认 `deepseek-chat`）。**自动加载项目根 `.env`**（`os.environ.setdefault`，真实环境变量优先；`.env` 已被 gitignore）。
-- **RSS_SOURCES**（9 个，priority 用于同分排序）：The Decoder(9)、TechCrunch AI(8)、Ars Technica(7)、VentureBeat(6)、机器之心(7)、量子位(7)、雷锋网(5)、36氪(4)、IT之家(5)。**加源 = 在此数组加一行**。
+- **RSS_SOURCES**（11 个，priority 用于同分排序）：The Decoder(9)、TechCrunch AI(8)、Ars Technica(7)、MIT Tech Review(7)、VentureBeat(6)、MarkTechPost(6)、机器之心(7)、量子位(7)、雷锋网(5)、36氪(4)、IT之家(5)。**加源 = 在此数组加一行**（注意 MIT TR 是综合科技源，非 AI 条目靠 LLM keep=false 过滤，降级模式下会混入非 AI 新闻）。
 - **dedup.py**：标题字符 3-gram 集合的 Jaccard 相似度 ≥0.55 判重（中英文通用，无外部依赖）；`is_dup(item, ignore_after)` 的 `ignore_after` 参数专为 FORCE 重跑当日设计（忽略今天记入的记忆，但保留更早的）。
-- **llm.py**：要求模型返回 JSON 数组，字段 `id/title_zh/summary_zh/category/tags/score/keep`；分类白名单 `["模型","产品","行业","论文","开源","政策","观点"]`，未匹配落 `未分类`；评分锚点：90+ 行业突破 / 75-89 重要发布 / 60-74 有影响的更新 / 40-59 例行 / <40 边缘。失败或无 key 走 `_fallback()`（原标题、score 50、keep True）。
+- **llm.py**：要求模型返回 JSON 数组，字段 `id/title_zh/summary_zh/category/tags/score/keep`；分类白名单 `["模型","产品","行业","论文","开源","政策","观点"]`，未匹配落 `未分类`；评分锚点：90+ 行业突破 / 75-89 重要发布 / 60-74 有影响的更新 / 40-59 例行 / <40 边缘。失败或无 key 走 `_fallback()`（原标题、score 50、keep True）。**软文过滤**：`_JUNK_TITLE_RE` 命中招聘/行情/促销/付费课程类标题强制 keep=False，LLM 与降级路径共用，加词改正则即可。
+- **rss.xml.js**：Astro 静态端点，每期一条 digest item（HTML 摘要已实体转义）。**端点必须导出大写 `GET` 并返回 `new Response()`**——小写 `get` 或返回 `{body}` 会被静默跳过（见 §7）。
 - **generate.py**：当日 JSON 已存在则跳过；`FORCE=1 python -m collector.generate` 覆盖重跑（**沿用原期号**，不递增）。
 - **Issue JSON 结构**：`{issue, date, generated_at, stats{collected,duplicates,selected,sources}, headlines[], briefing[]}`，条目字段 `title_zh/title_orig/summary_zh/category/tags/score/source/url/published_at`。
 - **site/src/lib/issues.ts**：数据目录解析为 `../../../data/issues`（lib→src→site→项目根，**共三级**）。曾因写成四级导致 `issue/[date]` 路由生成 0 页面——动目录结构时务必核对。
@@ -130,19 +137,23 @@ npm run build      # 产出到 site/dist
 | FORCE 重跑被自家去重吃掉 | 31 条只剩 3 条"新" | `is_dup` 加 `ignore_after`（今日 0 点） |
 | GBK 控制台传中文 | curl -d 内联 JSON 报 "Problems parsing JSON" | 中文载荷写临时文件 `--data-binary @file`，Python 加 `-X utf8` |
 | GitHub 直连失败 | push 时 Connection was reset | 走 Clash 代理 7897 |
-| GitHub cron 延迟 | 比预定时间晚几分钟到几十分钟 | 正常现象，非故障 |
+| GitHub cron 延迟 | 比预定时间晚几分钟到几十分钟 | 正常现象，非故障；超 2-3 小时未跑可手动 workflow_dispatch 补 |
+| 站内链接缺 base 前缀 | 线上点"往期"跳 `github.io/archive` 404 | Astro 不自动改写裸 `href="/x"`；一律 `withBase('/x')`（lib/url.ts） |
+| Astro 5 端点小写 get / 返回 {body} | build 无报错但 rss.xml 静默不生成，日志有 "No API Route handler ... Found handlers: get" | 端点导出大写 `GET` 且 `return new Response(xml)` |
+| pagefind.js 是 ESM | 经典 `<script>` 加载报 "Cannot use 'import.meta outside a module" | Default UI 加载 `pagefind/pagefind-ui.js`（经典脚本、挂 window.PagefindUI）；`pagefind.js` 是模块入口别直接用 |
+| 搜索摘录混入徽章/评分/来源噪音 | 结果摘录夹杂"未分类 ↗ 50" | 徽章/评分/来源/统计行加 `data-pagefind-ignore`，正文与标题保留索引 |
 
 ## 8. 建议下一步（路线图）
 
 **短期**
 - [ ] 配置 `LLM_API_KEY`（见 §6，唯一阻塞完整体验的事）
-- [ ] 加信源：英文（MIT Tech Review、The Verge AI 等）直接加 RSS_SOURCES；X/微信公众号需自建 [RSSHub](https://docs.rsshub.app/) 转 RSS
-- [ ] 站内搜索：Astro 静态搜索用 [Pagefind](https://pagefind.app/)，零后端
+- [x] 加信源：MIT Tech Review、MarkTechPost（2026-09-28）；X/微信公众号需自建 [RSSHub](https://docs.rsshub.app/) 转 RSS
+- [x] 站内搜索：Pagefind 已接入（2026-09-28），`/search`
 - [ ] 自定义域名：Pages 加 CNAME + 改 `astro.config.mjs` 的 `site`（去掉 `base`）
-- [ ] 输出每日 RSS feed / 邮件订阅，让日报本身可订阅
+- [x] 输出每日 RSS feed（2026-09-28），`/rss.xml`；邮件订阅可接 [Follow.it / Feedburner 类服务](https://follow.it)
 
 **中期**
-- [ ] 标题党过滤：`_fallback` 与 LLM prompt 里都可加规则（keep=false 丢弃软文/招聘/行情类）
+- [x] 标题党过滤：`_JUNK_TITLE_RE` + prompt 规则（2026-09-28）
 - [ ] 多源聚类：同一事件多个源报道时合并展示"另有 N 家信源报道"（aihot.news 的玩法）
 - [ ] 数据丰富后做趋势页：每周/每月标签热度、来源分布图
 

@@ -8,6 +8,8 @@ RSS + Hacker News 采集 ──→ 去重 ──→ LLM 加工（中文标题/�
                                               Astro 静态站 ←── data/issues/*.json
 ```
 
+站点功能：首页（最新一期）· 往期归档 · **站内搜索**（`/search`，Pagefind 静态索引，构建时生成）· **RSS 订阅**（`/rss.xml`，每天一期 digest）。
+
 ## 项目结构
 
 ```
@@ -83,7 +85,9 @@ LLM_MODEL=deepseek-chat
 
 ## 想扩展？
 
-- **加 RSS 源**：`collector/config.py` 的 `RSS_SOURCES` 加一行即可
+- **加 RSS 源**：`collector/config.py` 的 `RSS_SOURCES` 加一行即可（当前 11 源）
+- **过滤软文/招聘/行情**：`collector/llm.py` 的 `_JUNK_TITLE_RE` 正则加词即可，LLM 与降级路径共用
+- **搜索索引**：`npm run build` 自动执行 `pagefind --site dist`；只索引单期页（`data-pagefind-body` 在 `issue/[date].astro`），徽章/评分/来源已用 `data-pagefind-ignore` 排除出摘录
 - **抓 X/推特、微信公众号**：自建 [RSSHub](https://docs.rsshub.app/) 把目标转成 RSS 再加进来
 - **升级成实时聚合站（aihot.news 形态）**：管线已就绪，把 `generate.py` 的日批改成 cron 每 15 分钟增量跑，数据写 PostgreSQL，前端换 Next.js 动态渲染即可
 
