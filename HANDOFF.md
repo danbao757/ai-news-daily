@@ -1,7 +1,8 @@
 # AI 日报（ai-news-daily）· 项目交接文档
 
 > 本文档由 2026-09-24 的开发会话整理于 2026-09-28，供在其他环境接续开发使用。
-> 2026-09-28 第二次开发会话已更新：新增站内搜索、RSS 订阅、2 个信源、软文过滤，并修复站内链接 404 bug。
+> 2026-09-28 第二次开发会话：新增站内搜索、RSS 订阅、软文过滤，修复站内链接 404。
+> 2026-09-28 第三次开发会话：前端报刊风改版、新增 5 个海外信源（OpenAI/DeepMind/Google News/YouTube）、无 key 机翻降级。
 > 项目已**完整上线并自动化运行**，接手即可迭代，无需从头搭建。
 
 | 关键信息 | 值 |
@@ -9,7 +10,7 @@
 | 线上地址 | https://danbao757.github.io/ai-news-daily/ |
 | 代码仓库 | https://github.com/danbao757/ai-news-daily （**public**） |
 | 自动化 | GitHub Actions，每天北京时间 **08:05**（cron `5 0 * * *` UTC） |
-| 当前状态 | 已出至**第 5 期**（2026-09-24 ~ 09-28），工作流连续成功 |
+| 当前状态 | 已出至**第 5 期**（2026-09-24 ~ 09-28），降级模式含机翻中文标题 |
 | 站点功能 | 首页 / 往期归档 / **站内搜索** `/search` / **RSS 订阅** `/rss.xml` |
 | 本地路径 | `D:\ai-news-daily` |
 
@@ -75,9 +76,12 @@ ai-news-daily/
 ### 关键实现细节（接手必读）
 
 - **config.py**：`WINDOW_HOURS=24`（首期为 48）；`MAX_PER_SOURCE=8`；`MAX_HEADLINES=3` / `MAX_BRIEFING=10`；`HN_MIN_POINTS=40`；LLM 三件套读环境变量 `LLM_API_KEY` / `LLM_BASE_URL`（默认 `https://api.deepseek.com/v1`）/ `LLM_MODEL`（默认 `deepseek-chat`）。**自动加载项目根 `.env`**（`os.environ.setdefault`，真实环境变量优先；`.env` 已被 gitignore）。
-- **RSS_SOURCES**（11 个，priority 用于同分排序）：The Decoder(9)、TechCrunch AI(8)、Ars Technica(7)、MIT Tech Review(7)、VentureBeat(6)、MarkTechPost(6)、机器之心(7)、量子位(7)、雷锋网(5)、36氪(4)、IT之家(5)。**加源 = 在此数组加一行**（注意 MIT TR 是综合科技源，非 AI 条目靠 LLM keep=false 过滤，降级模式下会混入非 AI 新闻）。
+- **RSS_SOURCES**（16 个，priority 用于同分排序）：The Decoder(9)、TechCrunch AI(8)、OpenAI News(8)、DeepMind Blog(8)、Ars Technica(7)、MIT Tech Review(7)、VentureBeat(6)、MarkTechPost(6)、YT DeepMind(6)、YT Matt Wolfe(5)、Google News AI(5)、机器之心(7)、量子位(7)、雷锋网(5)、36氪(4)、IT之家(5)。**加源 = 在此数组加一行**（注意 MIT TR / Google News 是综合源，非 AI 条目靠 LLM keep=false 过滤，降级模式下会混入非 AI 新闻）。
+- **X/推特无原生 RSS**：config.py 内有注释说明，需自建 [RSSHub](https://docs.rsshub.app/)（如 Docker 一键部署）后按注释格式加一行。Anthropic 官网无 RSS、Two Minute Papers feed 持续 404，均试过不可用。
 - **dedup.py**：标题字符 3-gram 集合的 Jaccard 相似度 ≥0.55 判重（中英文通用，无外部依赖）；`is_dup(item, ignore_after)` 的 `ignore_after` 参数专为 FORCE 重跑当日设计（忽略今天记入的记忆，但保留更早的）。
-- **llm.py**：要求模型返回 JSON 数组，字段 `id/title_zh/summary_zh/category/tags/score/keep`；分类白名单 `["模型","产品","行业","论文","开源","政策","观点"]`，未匹配落 `未分类`；评分锚点：90+ 行业突破 / 75-89 重要发布 / 60-74 有影响的更新 / 40-59 例行 / <40 边缘。失败或无 key 走 `_fallback()`（原标题、score 50、keep True）。**软文过滤**：`_JUNK_TITLE_RE` 命中招聘/行情/促销/付费课程类标题强制 keep=False，LLM 与降级路径共用，加词改正则即可。
+- **llm.py**：要求模型返回 JSON 数组，字段 `id/title_zh/summary_zh/category/tags/score/keep`；分类白名单 `["模型","产品","行业","论文","开源","政策","观点"]`，未匹配落 `未分类`；评分锚点：90+ 行业突破 / 75-89 重要发布 / 60-74 有影响的更新 / 40-59 例行 / <40 边缘。失败或无 key 走 `_fallback()`。**软文过滤**：`_JUNK_TITLE_RE` 命中招聘/行情/促销/付费课程类标题强制 keep=False，LLM 与降级路径共用，加词改正则即可。
+- **机翻降级（`_fallback`）**：无 LLM key 时用 Google `translate_a/single?client=dict-chrome-ex` 免费接口翻译标题与摘要（**必须用 dict-chrome-ex，gtx 客户端会被反爬拦截返回 Sorry 页**）；中文源按 CJK 占比 ≥30% 自动跳过；失败回退原文；`MT_FALLBACK=0` 可关闭。截断统一走 `_truncate()`（词边界+省略号，不拦腰截断英文单词）。
+- **sources.py**：`_http_get` 自带一次重试（间隔 2s），抗 YouTube feed 间歇 404 / VentureBeat 429。
 - **rss.xml.js**：Astro 静态端点，每期一条 digest item（HTML 摘要已实体转义）。**端点必须导出大写 `GET` 并返回 `new Response()`**——小写 `get` 或返回 `{body}` 会被静默跳过（见 §7）。
 - **generate.py**：当日 JSON 已存在则跳过；`FORCE=1 python -m collector.generate` 覆盖重跑（**沿用原期号**，不递增）。
 - **Issue JSON 结构**：`{issue, date, generated_at, stats{collected,duplicates,selected,sources}, headlines[], briefing[]}`，条目字段 `title_zh/title_orig/summary_zh/category/tags/score/source/url/published_at`。
@@ -120,7 +124,7 @@ npm run build      # 产出到 site/dist
 
 ## 6. ⚠️ 唯一未完成项：LLM key
 
-线上目前是**降级模式**（无 `LLM_API_KEY`）：英文原标题、无摘要、分类全"未分类"、评分统一 50。管线本身已就绪，配置后第二天自动变完整版，无需改代码：
+线上目前是**降级模式**（无 `LLM_API_KEY`）：标题/摘要已由 Google 机翻成中文（见 §3 机翻降级），但**无分类、无标签、评分统一 50、无软文语义过滤**。管线本身已就绪，配置后第二天自动变完整版，无需改代码：
 
 1. 取一个 key：智谱 `glm-4-flash` **免费**（`https://open.bigmodel.cn`）或 DeepSeek（约 ¥1-3/月）
 2. 仓库 Settings → Secrets and variables → Actions → New repository secret：名 `LLM_API_KEY`
@@ -142,19 +146,23 @@ npm run build      # 产出到 site/dist
 | Astro 5 端点小写 get / 返回 {body} | build 无报错但 rss.xml 静默不生成，日志有 "No API Route handler ... Found handlers: get" | 端点导出大写 `GET` 且 `return new Response(xml)` |
 | pagefind.js 是 ESM | 经典 `<script>` 加载报 "Cannot use 'import.meta outside a module" | Default UI 加载 `pagefind/pagefind-ui.js`（经典脚本、挂 window.PagefindUI）；`pagefind.js` 是模块入口别直接用 |
 | 搜索摘录混入徽章/评分/来源噪音 | 结果摘录夹杂"未分类 ↗ 50" | 徽章/评分/来源/统计行加 `data-pagefind-ignore`，正文与标题保留索引 |
+| Google gtx 翻译接口被拦 | translate_a/single?client=gtx 返回 Sorry 反爬页 | 用 `client=dict-chrome-ex`（实测可用）；失败要能静默回退原文 |
+| YouTube feed 间歇 404 | curl 200 但 requests 偶发 404，下一分钟又正常 | `_http_get` 抓取失败重试一次（间隔 2s），仍失败告警跳过 |
+| 竖排文字内用 `<br>` | vertical-rl 中 `<br>` 变成换列而非换行，期号章溢出错乱 | 竖排容器内保持单一文本流，用 letter-spacing 控制间距 |
 
 ## 8. 建议下一步（路线图）
 
 **短期**
-- [ ] 配置 `LLM_API_KEY`（见 §6，唯一阻塞完整体验的事）
-- [x] 加信源：MIT Tech Review、MarkTechPost（2026-09-28）；X/微信公众号需自建 [RSSHub](https://docs.rsshub.app/) 转 RSS
-- [x] 站内搜索：Pagefind 已接入（2026-09-28），`/search`
+- [ ] 配置 `LLM_API_KEY`（见 §6，唯一阻塞完整体验的事；降级机翻已让标题/摘要中文化，但分类/评分/标签仍需 key）
+- [x] 加信源：MIT Tech Review、MarkTechPost（09-28 上午）；OpenAI News、DeepMind Blog、Google News AI、YT DeepMind、YT Matt Wolfe（09-28 下午，共 16 源）；X 需自建 RSSHub
+- [x] 站内搜索：Pagefind 已接入（09-28），`/search`
 - [ ] 自定义域名：Pages 加 CNAME + 改 `astro.config.mjs` 的 `site`（去掉 `base`）
-- [x] 输出每日 RSS feed（2026-09-28），`/rss.xml`；邮件订阅可接 [Follow.it / Feedburner 类服务](https://follow.it)
+- [x] 输出每日 RSS feed（09-28），`/rss.xml`；邮件订阅可接 [Follow.it / Feedburner 类服务](https://follow.it)
 
 **中期**
-- [x] 标题党过滤：`_JUNK_TITLE_RE` + prompt 规则（2026-09-28）
-- [ ] 多源聚类：同一事件多个源报道时合并展示"另有 N 家信源报道"（aihot.news 的玩法）
+- [x] 标题党过滤：`_JUNK_TITLE_RE` + prompt 规则（09-28）
+- [x] 无 key 翻译降级：Google dict-chrome-ex 机翻（09-28）
+- [ ] 多源聚类：同一事件多个源报道时合并展示"另有 N 家信源报道"（aihot.news 的玩法；Google News 加入后跨源重复变多，优先级提升）
 - [ ] 数据丰富后做趋势页：每周/每月标签热度、来源分布图
 
 **长期（升级路线 B：实时聚合站）**
@@ -162,11 +170,13 @@ npm run build      # 产出到 site/dist
 
 ## 9. 设计规范速查（site/src/styles/global.css）
 
-- 底色 `--bg: #faf9f7`（暖纸白）、正文 `--ink: #1c1917`、强调 `--accent: #dc2622`（红）
-- 正文栏最大宽度 **720px**，刊头「AI 日报」+「本期 / 往期」导航
-- 分类徽章配色：模型 `#2563eb` · 产品 `#7c3aed` · 行业 `#d97706` · 论文 `#0d9488` · 开源 `#16a34a` · 政策 `#dc2626` · 观点 `#64748b`
-- 头条 = 大卡片（徽章 + 标签 + 链接标题 + 摘要 + 评分 + 来源↗）；速览 = 行列表（评分列 + 标题 + 徽章 + 来源）
-- 页面结构：首页（最新一期）/ archive（往期列表）/ issue/[date]（单期，getStaticPaths 从 JSON 生成）
+- 底色 `--bg: #faf9f7`（暖纸白）、正文 `--ink: #1c1917`、强调 `--accent: #dc2622` / 深红 `--accent-deep: #b91c1c`
+- **报刊排版**：标题/报头/栏目标题/归档日期用衬线 `--font-serif`（Georgia + Songti SC/SimSun，系统字体不引 webfont）；正文用黑体 `--font-body`
+- **刊头**：双线（4px 块 + 1px hairline）+ 竖排期号红章（`writing-mode: vertical-rl`）+ 日期信息带（上下 hairline）
+- **签名元素**：AI 评分 5 格刻度条（`.score-meter`，每格 20 分，颜色按档位 t90/t75/t60/t40）；速览行有迷你版 `.mini-meter`
+- 分类徽章（tinted 底色+同系深字）：模型 `#e8f0fe/#1d4ed8` · 产品 `#f1e9fd/#6d28d9` · 行业 `#fdf0e0/#b45309` · 论文 `#e2f3f1/#0f766e` · 开源 `#e5f5e9/#15803d` · 政策 `#fde8e7/#b91c1c` · 观点 `#eef1f5/#475569`
+- 交互：卡片 hover 轻浮起+阴影、标题 hover 红色下划线展开、页头 sticky+毛玻璃、导航 `aria-current` 激活红线；`prefers-reduced-motion` 全部关闭动效；`:focus-visible` 红色焦点环
+- 页面结构：首页（最新一期）/ archive / issue/[date] / search（Pagefind）/ rss.xml
 
 ## 10. 历史决策记录（为什么这么做）
 

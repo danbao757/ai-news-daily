@@ -8,7 +8,7 @@ RSS + Hacker News 采集 ──→ 去重 ──→ LLM 加工（中文标题/�
                                               Astro 静态站 ←── data/issues/*.json
 ```
 
-站点功能：首页（最新一期）· 往期归档 · **站内搜索**（`/search`，Pagefind 静态索引，构建时生成）· **RSS 订阅**（`/rss.xml`，每天一期 digest）。
+站点功能：首页（最新一期）· 往期归档 · **站内搜索**（`/search`，Pagefind 静态索引，构建时生成）· **RSS 订阅**（`/rss.xml`，每天一期 digest）。未配置 LLM key 时自动降级为 Google 机翻（标题/摘要仍为中文）。
 
 ## 项目结构
 
