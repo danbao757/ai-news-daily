@@ -1,23 +1,40 @@
 {
   "issue": 5,
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T14:25:54",
+  "generated_at": "2026-09-28T14:47:39",
   "stats": {
-    "collected": 35,
+    "collected": 39,
     "duplicates": 0,
-    "selected": 12,
+    "selected": 13,
     "sources": [
       "Google News AI",
+      "Hacker News",
       "MarkTechPost",
+      "Simon Willison",
       "TechCrunch AI",
       "The Decoder"
     ]
   },
   "headlines": [
     {
-      "title_zh": "AI在模型开发中作用增强，人类决策仍为主",
+      "title_zh": "Google Research推出AI视频联合导演：4个代理框架用于生成连贯的视频",
+      "title_orig": "Google Research Introduces an AI Video Co-Director: 4 Agentic Frameworks for Coherent, Minutes-Long Video Generation",
+      "summary_zh": "Google Research推出AI视频联合导演，用于生成连贯的、几分钟长的视频。",
+      "category": "产品",
+      "tags": [
+        "Google Resea",
+        "视频生成",
+        "AI联合导演"
+      ],
+      "score": 75,
+      "source": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/09/27/google-research-introduces-an-ai-video-co-director-4-agentic-frameworks-for-coherent-minutes-long-video-generation/",
+      "published_at": "2026-09-28T02:44"
+    },
+    {
+      "title_zh": "AI在模型开发中作用增强，决策仍由人类主导",
       "title_orig": "AI agents do more of the work in model development, but humans still make the decisions",
-      "summary_zh": "研究团队分析769个任务日志，AI代理提供高达55%的方法建议，但人类决策超过85%。",
+      "summary_zh": "研究团队分析769个任务日志，AI代理提供高达55%的方法建议，但人类做出超过85%的最终决策。",
       "category": "论文",
       "tags": [
         "AI代理",
@@ -30,9 +47,26 @@
       "published_at": "2026-09-27T15:18"
     },
     {
-      "title_zh": "TypeSafe AI的Jev 20个应用案例",
+      "title_zh": "2026年LLM回顾",
+      "title_orig": "2026 in LLMs (so far)",
+      "summary_zh": "Simon Willison在WeAreDevelopers World Congress North America上发表主题演讲，回顾了2026年的关键趋势。",
+      "category": "行业",
+      "tags": [
+        "LLM",
+        "Simon Willis",
+        "趋势"
+      ],
+      "score": 60,
+      "source": "Simon Willison",
+      "url": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
+      "published_at": "2026-09-27T23:54"
+    }
+  ],
+  "briefing": [
+    {
+      "title_zh": "TypeSafe AI的Jev的20个代理用例",
       "title_orig": "20 Agentic Use Cases of TypeSafe AI’s Jev",
-      "summary_zh": "TypeSafe AI的Jev跳过文本生成，直接返回带概率的决策。验证了20个代理用例。",
+      "summary_zh": "TypeSafe AI的Jev提供基于概率的决策，验证了20个代理用例。",
       "category": "产品",
       "tags": [
         "TypeSafe AI",
@@ -45,56 +79,37 @@
       "published_at": "2026-09-28T03:07"
     },
     {
-      "title_zh": "Google Research推出AI视频联合导演",
-      "title_orig": "Google Research Introduces an AI Video Co-Director: 4 Agentic Frameworks for Coherent, Minutes-Long Video Generation",
-      "summary_zh": "Google Research推出AI视频联合导演，将短剪辑转换为连贯的几分钟故事。",
-      "category": "产品",
+      "title_zh": "Anthropic CEO 讨论AI对人类威胁",
+      "title_orig": "SNL Weekend Update: Anthropic CEO Dario Amodei on A.I.'S Threat to Humanity [video]",
+      "summary_zh": "Anthropic CEO Dario Amodei 讨论AI对人类的潜在威胁。",
+      "category": "观点",
       "tags": [
-        "Google Resea",
-        "AI视频",
-        "联合导演"
+        "Anthropic",
+        "AI威胁"
       ],
       "score": 60,
-      "source": "MarkTechPost",
-      "url": "https://www.marktechpost.com/2026/09/27/google-research-introduces-an-ai-video-co-director-4-agentic-frameworks-for-coherent-minutes-long-video-generation/",
-      "published_at": "2026-09-28T02:44"
-    }
-  ],
-  "briefing": [
-    {
-      "title_zh": "特朗普宣布计划创建“AI部队”",
-      "title_orig": "Trump announces plans to create an \"AI Force\" - Mashable",
-      "summary_zh": "特朗普宣布计划创建“AI部队”。",
-      "category": "政策",
-      "tags": [
-        "特朗普",
-        "AI部队",
-        "政策"
-      ],
-      "score": 60,
-      "source": "Google News AI",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQkZ1UkRSdF94QW1JazZ3enl6SmN3WGtzYldaNF82d1ZCcHlHanhTZGNtQzIyUjJJWFRHWVprT3hZTXN2eXIyeGZQTDFjQWgwWG5pcHE1d2tyLU5YUWptS0J2V3FvYWhweS1TbEoyMHQ1dkhmQzNXckJleFVtUE9JVw?oc=5",
-      "published_at": "2026-09-28T05:17"
+      "source": "Hacker News",
+      "url": "https://www.youtube.com/watch?v=-Nvne3LzBls",
+      "published_at": "2026-09-28T01:32"
     },
     {
-      "title_zh": "Raspberry AI改变生活方式品牌从概念到货架的方式",
-      "title_orig": "Raspberry AI Is Changing How Lifestyle Brands Go From Concept To Shelf - Forbes",
-      "summary_zh": "Raspberry AI改变生活方式品牌从概念到货架的方式。",
-      "category": "产品",
+      "title_zh": "OpenAI 停止训练最新模型",
+      "title_orig": "OpenAI halts training of latest models as reports mount of AI agents going rogue",
+      "summary_zh": "OpenAI 停止训练最新模型，因报告称AI代理行为异常。",
+      "category": "行业",
       "tags": [
-        "Raspberry AI",
-        "生活方式品牌",
-        "概念到货架"
+        "OpenAI",
+        "AI代理"
       ],
       "score": 60,
-      "source": "Google News AI",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOQktDaURTdWdLaXM1SG5TTTNwRWhaejNoZk9oSWxKV21QY0JQdjFPZTZMa19NdjVrSzFwenVXRDNETldwdnQzNjk3WXloTHhJanFnT2JzTEUtTVVBcFNPQXVpeGxxaFVWaTdMRGVuemdyR2RHd2RMVVQ1aVVsYWpVSm45N1FVc1l0WW1MLW5JZ1Y2VkhKcFNxT19uN0loWndtajYxbllzLUt6NEpQZmJBSlRxQ2ZPQk1iVmdHeWxXOVV5M1Nn?oc=5",
-      "published_at": "2026-09-28T05:11"
+      "source": "Hacker News",
+      "url": "https://www.theguardian.com/technology/2026/sep/27/openai-halts-training-of-latest-models-as-reports-mount-of-ai-agents-going-rogue",
+      "published_at": "2026-09-28T00:29"
     },
     {
       "title_zh": "Anthropic CEO将与特朗普总统共进晚餐",
       "title_orig": "Anthropic’s CEO is about to have dinner with President Trump",
-      "summary_zh": "Dario Amodei与特朗普总统将进行一对一会议。",
+      "summary_zh": "Dario Amodei将与唐纳德·特朗普进行一对一会议。",
       "category": "行业",
       "tags": [
         "Anthropic",
@@ -109,7 +124,7 @@
     {
       "title_zh": "Muse能否克服Meta的信任问题？",
       "title_orig": "Can Muse overcome Meta’s trust issues?",
-      "summary_zh": "讨论Meta的AI公告如何从OpenAI和Anthropic手中夺走聚光灯。",
+      "summary_zh": "讨论了Meta的AI公告如何从OpenAI和Anthropic手中夺走聚光灯。",
       "category": "行业",
       "tags": [
         "Muse",
@@ -122,14 +137,14 @@
       "published_at": "2026-09-27T19:57"
     },
     {
-      "title_zh": "Anthropic的Dario Amodei在SNL中接受调侃",
+      "title_zh": "Anthropic的Dario Amodei接受SNL节目采访",
       "title_orig": "Anthropic’s Dario Amodei gets the SNL treatment",
-      "summary_zh": "Amodei在SNL中提到“AI是恶魔，我是它的创造者。”",
+      "summary_zh": "Amodei在采访中提到‘AI是恶魔，我是它的创造者。’",
       "category": "行业",
       "tags": [
         "Anthropic",
-        "SNL",
-        "Dario Amodei"
+        "Dario Amodei",
+        "SNL"
       ],
       "score": 50,
       "source": "TechCrunch AI",
@@ -137,14 +152,14 @@
       "published_at": "2026-09-27T16:30"
     },
     {
-      "title_zh": "教授们对课堂中的人工智能使用看法不一",
+      "title_zh": "教授们在课堂中使用人工智能的看法不一 - 耶鲁日报",
       "title_orig": "Professors varied on artificial intelligence use in the classroom - Yale Daily News",
-      "summary_zh": "关于在课堂中使用人工智能，教授们的看法不一。",
+      "summary_zh": "耶鲁日报报道了教授们在课堂中使用人工智能的看法。",
       "category": "行业",
       "tags": [
-        "教授",
         "人工智能",
-        "课堂"
+        "课堂",
+        "耶鲁日报"
       ],
       "score": 50,
       "source": "Google News AI",
@@ -152,14 +167,14 @@
       "published_at": "2026-09-28T06:03"
     },
     {
-      "title_zh": "AI和能源不仅仅是需求故事",
+      "title_zh": "AI和能源不仅仅是需求故事 - GIS报告",
       "title_orig": "AI and energy are more than a demand story - GIS Reports",
-      "summary_zh": "AI和能源不仅仅是需求故事。",
+      "summary_zh": "GIS报告探讨了AI和能源之间的关系。",
       "category": "行业",
       "tags": [
         "AI",
         "能源",
-        "需求故事"
+        "GIS报告"
       ],
       "score": 50,
       "source": "Google News AI",
@@ -167,34 +182,34 @@
       "published_at": "2026-09-28T06:00"
     },
     {
-      "title_zh": "保险公司如何从AI投资中获得最大价值：埃森哲",
-      "title_orig": "How Insurers Can Find the Most Value From Their AI Investments: Accenture - Insurance Journal",
-      "summary_zh": "保险公司如何从AI投资中获得最大价值。",
-      "category": "行业",
+      "title_zh": "Muse AI代理回应MX Keys Mini订单问题",
+      "title_orig": "Quoting Muse AI Agent",
+      "summary_zh": "MX Keys Mini订单处理不当，导致客户不满。",
+      "category": "产品",
       "tags": [
-        "保险公司",
-        "AI投资",
-        "埃森哲"
+        "Muse",
+        "AI代理",
+        "订单问题"
       ],
-      "score": 50,
-      "source": "Google News AI",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE0tamJqT09pT1NaTUh6OG1aR01Nc0hNS0RLOEI4ZnA3VjY5M1N6b0JLSUhTQkFPR0MyMmZGV0RtRUhNVzRHWlBDSmg1MGdQcDBWWHIzRVRmWVBjcVk3V1NNTGZkdVhDLVZ0VmdYTkRxRnpiMy01MFhUUzNKeGxGdw?oc=5",
-      "published_at": "2026-09-28T05:06"
+      "score": 40,
+      "source": "Simon Willison",
+      "url": "https://simonwillison.net/2026/Sep/28/muse-ai-agent/",
+      "published_at": "2026-09-28T04:01"
     },
     {
-      "title_zh": "观点：你能做什么是AI做不到的？",
-      "title_orig": "OPINION: What can you do that AI can’t? - dailynebraskan.com",
-      "summary_zh": "探讨人类与AI的区别。",
-      "category": "观点",
+      "title_zh": "S3的未来与过去",
+      "title_orig": "S3 Is the Future, S3 Is the Past",
+      "summary_zh": "对S3价格变化的评论。",
+      "category": "行业",
       "tags": [
-        "人类",
-        "AI",
-        "观点"
+        "S3",
+        "价格变化",
+        "Hacker News"
       ],
-      "score": 50,
-      "source": "Google News AI",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNS0N3WnpmRGNILUt3VlhDeDFlSi05dUI5RlhHUkd3Rk1UQjkxeVlCQVZNY3lRc2tSWEM0cVhoZHQ5aXNxMGlhRTJnN2xibzVZQ2RmdjhxejRKVC0wazR4Y21mcE4tUm90SzYybjU0aDVDWGNjczc4dXNLVkc5YS16MHcyV2VlWGVaY21nQ1lsUkRHbFBBM1VCOEpjdXIxY1E3WlhNcG1TTnJBQlBhZnBYVGkxSVhGT0tHaUdQeE9Hdm84aEhi?oc=5",
-      "published_at": "2026-09-28T05:00"
+      "score": 40,
+      "source": "Simon Willison",
+      "url": "https://simonwillison.net/2026/Sep/27/hn-49871741/",
+      "published_at": "2026-09-27T23:09"
     }
   ]
 }
