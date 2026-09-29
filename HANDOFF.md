@@ -9,7 +9,7 @@
 |---|---|
 | 线上地址 | https://danbao757.github.io/ai-news-daily/ |
 | 代码仓库 | https://github.com/danbao757/ai-news-daily （**public**） |
-| 自动化 | GitHub Actions，每天北京时间 **08:05**（cron `5 0 * * *` UTC） |
+| 自动化 | GitHub Actions，每天北京时间 **08:13**（cron `13 0 * * *` UTC，刻意避开拥挤槽位；原 08:05 槽连续两天被静默丢弃后调整） |
 | 当前状态 | 已出至**第 5 期**（2026-09-24 ~ 09-28），降级模式含机翻中文标题 |
 | 站点功能 | 首页 / 往期归档 / **站内搜索** `/search` / **RSS 订阅** `/rss.xml` |
 | 本地路径 | `D:\ai-news-daily` |
@@ -143,6 +143,7 @@ npm run build      # 产出到 site/dist
 | GBK 控制台传中文 | curl -d 内联 JSON 报 "Problems parsing JSON" | 中文载荷写临时文件 `--data-binary @file`，Python 加 `-X utf8` |
 | GitHub 直连失败 | push 时 Connection was reset | 走 Clash 代理 7897 |
 | GitHub cron 延迟 | 比预定时间晚几分钟到几十分钟 | 正常现象，非故障；超 2-3 小时未跑可手动 workflow_dispatch 补 |
+| GitHub cron 整点槽静默丢弃 | `5 0 * * *` 这类热门时段连续多天完全不触发（2026-09-28/29 连续两天） | 换冷门分钟数（现为 `13 0`）；当日手动 dispatch 补刊即可，数据窗口 24h 不受影响 |
 | 站内链接缺 base 前缀 | 线上点"往期"跳 `github.io/archive` 404 | Astro 不自动改写裸 `href="/x"`；一律 `withBase('/x')`（lib/url.ts） |
 | Astro 5 端点小写 get / 返回 {body} | build 无报错但 rss.xml 静默不生成，日志有 "No API Route handler ... Found handlers: get" | 端点导出大写 `GET` 且 `return new Response(xml)` |
 | pagefind.js 是 ESM | 经典 `<script>` 加载报 "Cannot use 'import.meta outside a module" | Default UI 加载 `pagefind/pagefind-ui.js`（经典脚本、挂 window.PagefindUI）；`pagefind.js` 是模块入口别直接用 |
