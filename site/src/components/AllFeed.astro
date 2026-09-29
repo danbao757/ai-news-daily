@@ -1,5 +1,6 @@
 ---
-// /all 全部动态：按日时间线 + 分类/标签筛选 + 仅精选开关（纯客户端过滤，静态站可用）
+// /all 全部动态：左侧筛选栏（sticky）+ 右侧按日时间线（纯客户端过滤，静态站可用）
+// 支持 ?cat=<key> 预激活分类筛选（首页侧栏分类卡跳转用）
 import type { NewsItem } from '../lib/issues';
 import { CATEGORY_LABELS, fmtDate, fmtTime } from '../lib/issues';
 import { withBase } from '../lib/url';
@@ -23,6 +24,11 @@ const days = [...byDay.keys()].sort((a, b) => b.localeCompare(a));
 for (const d of days) {
   byDay.get(d)!.sort((a, b) => (b.published_at ?? '').localeCompare(a.published_at ?? ''));
 }
+const dayCounts = new Map(days.map((d) => [d, byDay.get(d)!.length]));
+
+// 分类计数（筛选按钮右侧显示）
+const catCounts = new Map<string, number>();
+for (const it of items) catCounts.set(it.category ?? '', (catCounts.get(it.category ?? '') ?? 0) + 1);
 
 // 高频标签（出现 ≥2 次的前 14 个）
 const tagCount = new Map<string, number>();
@@ -38,74 +44,87 @@ const tier = (score: number | null) =>
   score == null ? '' : score >= 90 ? 't90' : score >= 75 ? 't75' : score >= 60 ? 't60' : 't40';
 ---
 
-<div class="filter-bar" data-pagefind-ignore>
-  <div class="filter-row">
-    <span class="filter-label">分类</span>
-    <button class="filter-tab on" data-cat="">全部</button>
-    {Object.entries(CATEGORY_LABELS).map(([key, label]) => (
-      <button class="filter-tab" data-cat={key}>{label}</button>
-    ))}
-  </div>
-  {topTags.length > 0 && (
-    <div class="filter-row">
-      <span class="filter-label">标签</span>
-      {topTags.map((t) => (
-        <button class="filter-tab tag-chip" data-tag={t}>{t}</button>
-      ))}
+<div class="all-layout">
+  <aside class="filter-side" data-pagefind-ignore>
+    <div class="side-card">
+      <h3 class="side-title">分类 <span class="en">Filter</span></h3>
+      <div class="filter-row">
+        <button class="filter-tab on" data-cat="">全部 <span>{items.length}</span></button>
+        {Object.entries(CATEGORY_LABELS)
+          .filter(([key]) => catCounts.get(key))
+          .map(([key, label]) => (
+            <button class="filter-tab" data-cat={key}>{label} <span>{catCounts.get(key)}</span></button>
+          ))}
+      </div>
     </div>
-  )}
-  <div class="filter-row">
-    <button class="filter-tab" data-sel="1">★ 只看精选</button>
-    <span class="filter-count" id="feed-count">{items.length} 条</span>
+    {topTags.length > 0 && (
+      <div class="side-card">
+        <h3 class="side-title">标签 <span class="en">Tags</span></h3>
+        <div class="filter-row">
+          {topTags.map((t) => (
+            <button class="filter-tab tag-chip" data-tag={t}>{t}</button>
+          ))}
+        </div>
+      </div>
+    )}
+    <div class="side-card">
+      <div class="filter-row" style="flex-direction:row">
+        <button class="filter-tab" data-sel="1">★ 只看精选</button>
+        <span class="filter-count" id="feed-count">{items.length} 条</span>
+      </div>
+    </div>
+  </aside>
+
+  <div class="all-main">
+    <div data-pagefind-body>
+      {days.map((d) => (
+        <section class="day-group" data-day={d}>
+          <h2 data-pagefind-ignore>
+            {fmtDate(d)}
+            <span class="cnt">{dayCounts.get(d)} 条</span>
+          </h2>
+          <ul class="feed-list">
+            {byDay.get(d)!.map((it) => (
+              <li data-cat={it.category ?? ''} data-tags={(it.tags ?? []).join('|')} data-sel={it.selected ? '1' : ''}>
+                <span class="when" data-pagefind-ignore>{fmtTime(it.published_at) || '—'}</span>
+                <div class="body">
+                  <div class="t">
+                    {it.selected && <span class="sel-mark" title="精选">★</span>}
+                    <a href={it.url} target="_blank" rel="noopener">{it.title_zh || it.title_orig}</a>
+                  </div>
+                  <div class="row2" data-pagefind-ignore>
+                    <CategoryChip category={it.category} />
+                    {(it.tags ?? []).slice(0, 3).map((t) => <span class="tag">{t}</span>)}
+                    <span class="src">{it.source}</span>
+                    {typeof it.score === 'number' && <span class={`sc ${tier(it.score)}`}>{it.score}</span>}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+      {days.length === 0 && <div class="empty-tip">本月暂无数据</div>}
+    </div>
+
+    <div class="month-nav" data-pagefind-ignore>
+      {prevMonth
+        ? <a href={withBase(`/all/${prevMonth}/`)}>← {prevMonth}</a>
+        : <span></span>}
+      <span class="cur">{month} · {months.length} 个月</span>
+      {nextMonth
+        ? <a href={withBase(`/all/${nextMonth}/`)}>{nextMonth} →</a>
+        : <span></span>}
+    </div>
   </div>
-</div>
-
-<div data-pagefind-body>
-  {days.map((d) => (
-    <section class="day-group" data-day={d}>
-      <h2 data-pagefind-ignore>
-        {fmtDate(d)}
-        <span class="cnt">{byDay.get(d)!.length} 条</span>
-      </h2>
-      <ul class="feed-list">
-        {byDay.get(d)!.map((it) => (
-          <li data-cat={it.category ?? ''} data-tags={(it.tags ?? []).join('|')} data-sel={it.selected ? '1' : ''}>
-            <span class="when" data-pagefind-ignore>{fmtTime(it.published_at) || '—'}</span>
-            <div class="body">
-              <div class="t">
-                {it.selected && <span class="sel-mark" title="精选">★</span>}
-                <a href={it.url} target="_blank" rel="noopener">{it.title_zh || it.title_orig}</a>
-              </div>
-              <div class="row2" data-pagefind-ignore>
-                <CategoryChip category={it.category} />
-                {(it.tags ?? []).slice(0, 3).map((t) => <span class="tag">{t}</span>)}
-                <span class="src">{it.source}</span>
-                {typeof it.score === 'number' && <span class={`sc ${tier(it.score)}`}>{it.score}</span>}
-              </div>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </section>
-  ))}
-  {days.length === 0 && <div class="empty-tip">本月暂无数据</div>}
-</div>
-
-<div class="month-nav" data-pagefind-ignore>
-  {prevMonth
-    ? <a href={withBase(`/all/${prevMonth}/`)}>← {prevMonth}</a>
-    : <span></span>}
-  <span class="cur">{month} · {months.length} 个月</span>
-  {nextMonth
-    ? <a href={withBase(`/all/${nextMonth}/`)}>{nextMonth} →</a>
-    : <span></span>}
 </div>
 
 <script>
-  // 客户端筛选：分类（单选）× 标签（多选 OR）× 仅精选，行级显隐 + 空日组隐藏
-  const bar = document.querySelector('.filter-bar');
+  // 客户端筛选：分类（单选）× 标签（多选 OR）× 仅精选，行级显隐 + 空日组隐藏；
+  // 支持 ?cat=<key> / ?tag=<t> 预激活（首页侧栏分类卡跳转）
+  const side = document.querySelector('.filter-side');
   const count = document.getElementById('feed-count');
-  if (bar && count) {
+  if (side && count) {
     const state = { cat: '', tags: new Set<string>(), sel: false };
     const rows = Array.from(document.querySelectorAll<HTMLElement>('.feed-list li'));
 
@@ -127,12 +146,14 @@ const tier = (score: number | null) =>
       count.textContent = `${shown} 条`;
     };
 
-    bar.addEventListener('click', (e) => {
+    const activate = (btn: Element) => btn.dispatchEvent(new Event('click', { bubbles: true }));
+
+    side.addEventListener('click', (e) => {
       const btn = (e.target as HTMLElement).closest('button');
       if (!btn) return;
       if (btn.dataset.cat !== undefined) {
         state.cat = btn.dataset.cat;
-        bar.querySelectorAll('[data-cat]').forEach((b) => b.classList.toggle('on', b === btn));
+        side.querySelectorAll('[data-cat]').forEach((b) => b.classList.toggle('on', b === btn));
       } else if (btn.dataset.tag !== undefined) {
         const t = btn.dataset.tag;
         if (state.tags.has(t)) state.tags.delete(t); else state.tags.add(t);
@@ -143,5 +164,22 @@ const tier = (score: number | null) =>
       }
       apply();
     });
+
+    // URL 预激活（?cat= / ?tag= / ?sel=1）
+    const params = new URLSearchParams(location.search);
+    const pc = params.get('cat');
+    if (pc) {
+      const btn = side.querySelector(`[data-cat="${CSS.escape(pc)}"]`);
+      if (btn) activate(btn);
+    }
+    const pt = params.get('tag');
+    if (pt) {
+      const btn = side.querySelector(`[data-tag="${CSS.escape(pt)}"]`);
+      if (btn) activate(btn);
+    }
+    if (params.get('sel')) {
+      const btn = side.querySelector('[data-sel]');
+      if (btn) activate(btn);
+    }
   }
 </script>

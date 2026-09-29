@@ -1,6 +1,6 @@
 ---
 import type { Issue } from '../lib/issues';
-import { fmtDate, getEventById } from '../lib/issues';
+import { getEventById } from '../lib/issues';
 import { withBase } from '../lib/url';
 import CategoryChip from './CategoryChip.astro';
 
@@ -26,26 +26,6 @@ const highlightItems = (issue.lead?.highlights ?? [])
   .map((id) => byId.get(id))
   .filter(Boolean);
 ---
-
-<section class="masthead">
-  <div class="mast-rule" data-pagefind-ignore></div>
-  <div class="mast-body">
-    <div class="mast-main">
-      <div class="kicker">Daily Briefing</div>
-      <h1>AI 日报</h1>
-    </div>
-    <div class="issue-no" data-pagefind-ignore>第 {issue.issue} 期</div>
-  </div>
-  <div class="mast-meta" data-pagefind-ignore>
-    <span class="date">{fmtDate(issue.date)}</span>
-    <span class="sep" aria-hidden="true"></span>
-    <span>
-      精选 {issue.stats.selected ?? issue.headlines.length + issue.briefing.length} 条
-      · 分析 {issue.stats.analyzed ?? '—'} 条
-      · 采集 {issue.stats.collected ?? '—'}
-    </span>
-  </div>
-</section>
 
 {issue.lead && (issue.lead.title || issue.lead.paragraph || highlightItems.length > 0) && (
   <div class="lead-block" data-pagefind-ignore>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import SideHot from '../../components/SideHot.astro';
 import { getHotEvents, getItemIndex, fmtDate, fmtTime } from '../../lib/issues';
 import type { NewsItem } from '../../lib/issues';
 import { withBase } from '../../lib/url';
@@ -35,56 +36,72 @@ const days = ev.continued_from
 ---
 
 <Layout title={`${ev.title_zh} · 事件 · AI 日报`} description={ev.digest_zh || undefined}>
-  <section class="story-head">
-    <div class="kicker">Story</div>
-    <h1>{ev.title_zh}</h1>
-    <div class="story-meta">
-      <span class="src-count" style="color:var(--accent-deep);background:var(--accent-soft);border-radius:999px;padding:0.1em 0.6em;font-size:0.78rem;font-weight:700">◉ {ev.source_count} 家独立来源</span>
-      <span class="sep" aria-hidden="true"></span>
-      <span>{ev.sources.join(' / ')}</span>
-      <span class="sep" aria-hidden="true"></span>
-      <span>最高 {ev.score_max} 分</span>
-      {ev.continued_from && (
-        <>
+  <div class="layout-cols">
+    <div class="main-col">
+      <section class="story-head">
+        <div class="kicker">Story</div>
+        <h1>{ev.title_zh}</h1>
+        <div class="story-meta">
+          <span class="src-count" style="color:var(--accent-deep);background:var(--accent-soft);border-radius:999px;padding:0.1em 0.6em;font-size:0.78rem;font-weight:700">◉ {ev.source_count} 家独立来源</span>
           <span class="sep" aria-hidden="true"></span>
-          <span>追踪 {days} 天（始于 {ev.continued_from}）</span>
-        </>
-      )}
+          <span>{ev.sources.join(' / ')}</span>
+          <span class="sep" aria-hidden="true"></span>
+          <span>最高 {ev.score_max} 分</span>
+          {ev.continued_from && (
+            <>
+              <span class="sep" aria-hidden="true"></span>
+              <span>追踪 {days} 天（始于 {ev.continued_from}）</span>
+            </>
+          )}
+        </div>
+      </section>
+
+      {ev.digest_zh && <p class="story-digest">{ev.digest_zh}</p>}
+
+      <div class="section-title" data-pagefind-ignore>各方报道 <span class="en">Coverage</span></div>
+      <ul class="member-list" data-pagefind-body>
+        {rep && (
+          <li class="rep">
+            <div class="t"><a href={rep.url} target="_blank" rel="noopener">{rep.title_zh || rep.title_orig}</a></div>
+            {rep.summary_zh && <p class="sum">{rep.summary_zh}</p>}
+            <div class="meta">
+              <span class="badge-rep">代表报道</span>
+              <span>{rep.source}</span>
+              <span>· {fmtDate(rep.date ?? '')} {fmtTime(rep.published_at)}</span>
+              {typeof rep.score === 'number' && <span>· {rep.score} 分</span>}
+              <span>· <a href={rep.url} target="_blank" rel="noopener">原文 ↗</a></span>
+            </div>
+          </li>
+        )}
+        {rest.map((m) => (
+          <li>
+            <div class="t"><a href={m.url} target="_blank" rel="noopener">{m.title_zh || m.title_orig}</a></div>
+            <div class="meta">
+              <span>{m.source}</span>
+              <span>· {fmtDate(m.date ?? '')} {fmtTime(m.published_at)}</span>
+              {typeof m.score === 'number' && <span>· {m.score} 分</span>}
+              <span>· <a href={m.url} target="_blank" rel="noopener">原文 ↗</a></span>
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <div class="month-nav" data-pagefind-ignore>
+        <a href={withBase('/hot')}>← 返回热榜</a>
+        <a href={withBase(`/issue/${ev.date ?? ''}/`)}>查看当日日报 →</a>
+      </div>
     </div>
-  </section>
 
-  {ev.digest_zh && <p class="story-digest">{ev.digest_zh}</p>}
-
-  <div class="section-title" data-pagefind-ignore>各方报道 <span class="en">Coverage</span></div>
-  <ul class="member-list" data-pagefind-body>
-    {rep && (
-      <li class="rep">
-        <div class="t"><a href={rep.url} target="_blank" rel="noopener">{rep.title_zh || rep.title_orig}</a></div>
-        {rep.summary_zh && <p class="sum">{rep.summary_zh}</p>}
-        <div class="meta">
-          <span class="badge-rep">代表报道</span>
-          <span>{rep.source}</span>
-          <span>· {fmtDate(rep.date ?? '')} {fmtTime(rep.published_at)}</span>
-          {typeof rep.score === 'number' && <span>· {rep.score} 分</span>}
-          <span>· <a href={rep.url} target="_blank" rel="noopener">原文 ↗</a></span>
+    <aside class="side-col">
+      <SideHot date={ev.date ?? ''} exclude={ev.id} />
+      <div class="side-card" data-pagefind-ignore>
+        <h3 class="side-title">报道来源 <span class="en">Sources</span></h3>
+        <div class="stat-rows">
+          {ev.sources.map((s) => (
+            <div class="row"><span>{s}</span></div>
+          ))}
         </div>
-      </li>
-    )}
-    {rest.map((m) => (
-      <li>
-        <div class="t"><a href={m.url} target="_blank" rel="noopener">{m.title_zh || m.title_orig}</a></div>
-        <div class="meta">
-          <span>{m.source}</span>
-          <span>· {fmtDate(m.date ?? '')} {fmtTime(m.published_at)}</span>
-          {typeof m.score === 'number' && <span>· {m.score} 分</span>}
-          <span>· <a href={m.url} target="_blank" rel="noopener">原文 ↗</a></span>
-        </div>
-      </li>
-    ))}
-  </ul>
-
-  <div class="month-nav" data-pagefind-ignore>
-    <a href={withBase('/hot')}>← 返回热榜</a>
-    <a href={withBase(`/issue/${ev.date ?? ''}/`)}>查看当日日报 →</a>
+      </div>
+    </aside>
   </div>
 </Layout>

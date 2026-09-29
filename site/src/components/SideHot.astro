@@ -1,0 +1,38 @@
+---
+import { getHotEvents, getItemIndex } from '../lib/issues';
+import { withBase } from '../lib/url';
+
+// 侧栏「热点事件」卡：某日的多源事件 Top5（可排除当前事件页自身）
+interface Props { date: string; exclude?: string; limit?: number }
+const { date, exclude, limit = 5 } = Astro.props;
+const events = getHotEvents()
+  .filter((e) => e.date === date && e.id !== exclude)
+  .slice(0, limit);
+const idx = getItemIndex();
+---
+
+{events.length > 0 && (
+  <div class="side-card" data-pagefind-ignore>
+    <h3 class="side-title">
+      热点事件 <span class="en">Hot</span>
+      <a class="more" href={withBase('/hot')}>全部 →</a>
+    </h3>
+    <ul class="side-hot">
+      {events.map((ev) => {
+        const rep = idx.get(ev.representative_id);
+        return (
+          <li>
+            <span class="rank" aria-hidden="true"></span>
+            <div class="body">
+              <span class="t"><a href={withBase(`/story/${ev.id}/`)}>{ev.title_zh}</a></span>
+              <span class="meta">
+                <span class="src-count">{ev.source_count} 源</span>
+                {rep && <span>{rep.source}</span>}
+              </span>
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+)}

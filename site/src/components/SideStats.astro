@@ -1,0 +1,32 @@
+---
+import type { Issue } from '../lib/issues';
+
+// 侧栏「今日数据」卡
+interface Props { issue: Issue }
+const { issue } = Astro.props;
+const s = issue.stats;
+const rows: Array<[string, number | string | undefined, boolean?]> = [
+  ['采集', s.collected],
+  ['去重剔除', s.duplicates],
+  ['LLM 分析', s.analyzed],
+  ['预筛拦截', s.blocked],
+  ['精选', s.selected, true],
+  ['多源事件', s.events, true],
+];
+---
+
+<div class="side-card" data-pagefind-ignore>
+  <h3 class="side-title">今日数据 <span class="en">By the Numbers</span></h3>
+  <div class="stat-rows">
+    {rows.map(([label, val, acc]) => (
+      <div class="row">
+        <span>{label}</span>
+        <b class={acc ? 'acc' : ''}>{val ?? '—'}</b>
+      </div>
+    ))}
+    <div class="row">
+      <span>信源</span>
+      <b>{(issue.stats.sources ?? []).length || '—'}</b>
+    </div>
+  </div>
+</div>

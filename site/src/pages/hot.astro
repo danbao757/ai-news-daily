@@ -35,25 +35,23 @@ const fallback =
   </section>
 
   {hot.length > 0 ? (
-    <ol class="hot-list">
+    <ol class="hot-grid">
       {hot.map((ev) => {
         const rep = idx.get(ev.representative_id);
         return (
-          <li>
+          <li class="hot-card">
             <span class="rank" aria-hidden="true"></span>
-            <div class="body">
-              <div class="t"><a href={withBase(`/story/${ev.id}/`)}>{ev.title_zh}</a></div>
-              <div class="meta">
-                <span class="src-count">◉ {ev.source_count} 家来源</span>
-                <span>{ev.sources.slice(0, 4).join(' / ')}{ev.sources.length > 4 ? ' 等' : ''}</span>
-                <span>· 最高 {ev.score_max} 分</span>
-                {ev.continued_from && <span>· 追踪中（始于 {ev.continued_from}）</span>}
-              </div>
-              {ev.digest_zh && <p class="digest">{ev.digest_zh}</p>}
+            <h2 class="t"><a href={withBase(`/story/${ev.id}/`)}>{ev.title_zh}</a></h2>
+            {ev.digest_zh && <p class="digest">{ev.digest_zh}</p>}
+            <div class="meta">
+              <span class="src-count">◉ {ev.source_count} 家来源</span>
+              <span>{ev.sources.slice(0, 3).join(' / ')}{ev.sources.length > 3 ? ' 等' : ''}</span>
+              <span>· 最高 {ev.score_max} 分</span>
+              {ev.continued_from && <span>· 追踪中</span>}
               {rep && (
-                <div class="meta" style="margin-top:0.35rem">
-                  <a href={rep.url} target="_blank" rel="noopener">代表报道：{rep.source} ↗</a>
-                </div>
+                <a href={rep.url} target="_blank" rel="noopener" style="margin-left:auto">
+                  代表报道 {rep.source} ↗
+                </a>
               )}
             </div>
           </li>
