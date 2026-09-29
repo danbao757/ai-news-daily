@@ -9,7 +9,7 @@
 |---|---|
 | 线上地址 | https://danbao757.github.io/ai-news-daily/ |
 | 代码仓库 | https://github.com/danbao757/ai-news-daily （**public**） |
-| 自动化 | GitHub Actions，每天北京时间 **08:13**（cron `13 0 * * *` UTC，刻意避开拥挤槽位；原 08:05 槽连续两天被静默丢弃后调整） |
+| 自动化 | GitHub Actions，双时段幂等触发：**08:13** 主时段（cron `13 0 * * *` UTC）+ **09:47** 备份（`47 1`，当天已出刊自动跳过）。原 08:05 拥挤槽曾连续两天被 GitHub 静默丢弃 |
 | 当前状态 | 已出至**第 5 期**（2026-09-24 ~ 09-28），降级模式含机翻中文标题 |
 | 站点功能 | 首页 / 往期归档 / **站内搜索** `/search` / **RSS 订阅** `/rss.xml` |
 | 本地路径 | `D:\ai-news-daily` |
