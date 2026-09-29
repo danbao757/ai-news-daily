@@ -1,0 +1,25 @@
+---
+// /monthly = 最新一期月报（构建期由当月日报聚合）
+import Layout from '../../layouts/Layout.astro';
+import ReportPaper from '../../components/report/ReportPaper.astro';
+import { getMonthlyIndex, getMonthlyPaper } from '../../lib/reports';
+
+const latest = getMonthlyIndex()[0];
+const paper = latest ? getMonthlyPaper(latest.key) : null;
+---
+
+<Layout
+  title={paper ? `AI 月报 · ${paper.key}` : 'AI 月报'}
+  description={paper?.leadParagraph ?? undefined}
+  report="monthly"
+  reportKey={paper?.key ?? ''}
+>
+  {paper ? (
+    <div data-pagefind-body>
+      <ReportPaper paper={paper} dated />
+      <span hidden data-pagefind-meta="title">{`AI 月报 · ${paper.key}`}</span>
+    </div>
+  ) : (
+    <div class="empty-tip">还没有可聚合的月报，当月日报出刊后会出现在这里。</div>
+  )}
+</Layout>

@@ -1,0 +1,25 @@
+---
+// /weekly = 最新一期周报（构建期由当周日报聚合）
+import Layout from '../../layouts/Layout.astro';
+import ReportPaper from '../../components/report/ReportPaper.astro';
+import { getWeeklyIndex, getWeeklyPaper } from '../../lib/reports';
+
+const latest = getWeeklyIndex()[0];
+const paper = latest ? getWeeklyPaper(latest.key) : null;
+---
+
+<Layout
+  title={paper ? `AI 周报 · ${paper.key}` : 'AI 周报'}
+  description={paper?.leadParagraph ?? undefined}
+  report="weekly"
+  reportKey={paper?.key ?? ''}
+>
+  {paper ? (
+    <div data-pagefind-body>
+      <ReportPaper paper={paper} dated />
+      <span hidden data-pagefind-meta="title">{`AI 周报 · ${paper.key}`}</span>
+    </div>
+  ) : (
+    <div class="empty-tip">还没有可聚合的周报，第一个完整周出刊后会出现在这里。</div>
+  )}
+</Layout>

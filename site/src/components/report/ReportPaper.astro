@@ -1,0 +1,233 @@
+---
+// 报纸版式正文（AIHOT ReportPaper）：刊头（报眼 + 数据带）→ 头版（大标题总起 + 看点/版面目录）
+// → 逐版面的条目展示（每条标注来源网站，两列排布）→ 快讯 → 前后期 → 尾注。
+import type { Paper } from '../../lib/reports';
+import { KIND_LABEL, KIND_MOTTO, KIND_EDITION, reportPath } from '../../lib/reports';
+import { getDailyIndex, getWeeklyIndex, getMonthlyIndex } from '../../lib/reports';
+import { getEventById, fmtTime } from '../../lib/issues';
+import type { NewsItem } from '../../lib/issues';
+import { withBase } from '../../lib/url';
+
+interface Props {
+  paper: Paper;
+  dated?: boolean; // 条目显示日期（周期报）而非时刻（日报）
+}
+const { paper, dated = false } = Astro.props;
+
+const pad = (n: number) => String(n).padStart(2, '0');
+const periodWord = paper.kind === 'daily' ? '今日' : paper.kind === 'weekly' ? '本周' : '本月';
+
+const when = (it: NewsItem) =>
+  dated ? (it.date ?? '').slice(5).replace('-', '.') : fmtTime(it.published_at);
+
+// 多源事件才有事件页
+const evHref = (eid: string | null) => {
+  if (!eid) return null;
+  const ev = getEventById(eid);
+  return ev && ev.source_count >= 2 ? withBase(`/story/${eid}/`) : null;
+};
+
+const tier = (s: number) => (s >= 90 ? 't90' : s >= 75 ? 't75' : s >= 60 ? 't60' : 't40');
+
+const toc = [
+  ...paper.sections.map((s) => ({ id: s.id, label: s.label, n: `${s.items.length} 件` })),
+  ...(paper.flashes.length > 0 ? [{ id: 's-flash', label: '快讯', n: `${paper.flashes.length} 条` }] : []),
+];
+
+// 条目成对分行（AIHOT Rows）：一行的两条共高，整行底部一条 hairline
+const pairRows = (items: NewsItem[]): NewsItem[][] => {
+  const rows: NewsItem[][] = [];
+  for (let i = 0; i < items.length; i += 2) rows.push(items.slice(i, i + 2));
+  return rows;
+};
+
+// 周期报页尾的往期列表（也是手机端「更早」的落点）
+const historyIndex =
+  paper.kind === 'daily' ? [] : paper.kind === 'weekly' ? getWeeklyIndex() : getMonthlyIndex();
+const others = historyIndex.filter((e) => e.key !== paper.key).slice(0, 12);
+---
+
+<article class="rp">
+  <!-- 刊头 -->
+  <header class="rp-mast">
+    <div class="rp-dateline">
+      <span>{paper.dateline}</span>
+      <span class="motto">{KIND_MOTTO[paper.kind]}</span>
+      <span>{KIND_EDITION[paper.kind]}</span>
+    </div>
+    <div class="rp-plate">
+      <div class="rp-name">
+        <h1>AI<em>{KIND_LABEL[paper.kind]}</em></h1>
+        <p>AI NEWS DAILY</p>
+      </div>
+      <div class="rp-eye">
+        {paper.issueNo != null && <span class="no">第 {paper.issueNo} 期</span>}
+        <b class="figure">{paper.mark.figure}</b>
+        <span class="t1">{paper.mark.top}</span>
+        <span class="t2">{paper.mark.bottom}</span>
+      </div>
+    </div>
+    <div class="rp-metrics">
+      {paper.metrics.map((m) => (
+        <span class="m"><b>{m.value}</b> {m.unit}</span>
+      ))}
+      <span class="mins">约 {paper.minutes} 分钟读完</span>
+    </div>
+  </header>
+
+  <!-- 头版：大标题总起全文 -->
+  <section class="rp-front" aria-label="头版">
+    <div class="rp-lead">
+      <div class="rp-kicker">{paper.kind === 'daily' ? '头条' : '本期导读'}</div>
+      <h2 class="rp-big">{paper.headlineTitle}</h2>
+      {paper.leadParagraph && <p class="rp-dek">{paper.leadParagraph}</p>}
+      {paper.leadStory && (
+        <div class="rp-lead-src">
+          <span>
+            {paper.leadStory.source}
+            {paper.leadStory.first_party && <em class="rp-badge">一手</em>}
+          </span>
+          <a href={paper.leadStory.url} target="_blank" rel="noopener">原文 ↗</a>
+        </div>
+      )}
+    </div>
+
+    <aside class="rp-side">
+      {paper.highlights.length > 0 && (
+        <div class="rp-block">
+          <div class="rp-kicker">{periodWord}看点</div>
+          <ol class="rp-hl">
+            {paper.highlights.map((h, i) => (
+              <li>
+                <a href={`#r-${h.id}`} title={h.title_zh || h.title_orig}>
+                  <b>{i + 1}</b>
+                  <span>
+                    <em>{h.title_zh || h.title_orig}</em>
+                    <i>{h.source}</i>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
+      {toc.length > 0 && (
+        <div class="rp-block">
+          <div class="rp-kicker">本期版面</div>
+          <nav class="rp-toc">
+            {toc.map((r, i) => (
+              <a href={`#${r.id}`}>
+                <b>{pad(i + 1)}</b>
+                <span>{r.label}</span>
+                <i>{r.n}</i>
+              </a>
+            ))}
+          </nav>
+        </div>
+      )}
+    </aside>
+  </section>
+
+  <!-- 版面：每个网站的详细资讯 -->
+  {paper.sections.map((s, i) => (
+    <section class="rp-sec" id={s.id} aria-labelledby={`${s.id}-t`}>
+      <header class="rp-sec-head">
+        <b class="no">{pad(i + 1)}</b>
+        <h2 id={`${s.id}-t`}>{s.label}</h2>
+      </header>
+      <div class="rp-rows">
+        {pairRows(s.items).map((row) => (
+          <div class="rp-row">
+            {row.map((it) => {
+              const ev = evHref(it.event_id);
+              return (
+                <article class="rp-story" id={`r-${it.id}`}>
+                  <div class="rp-src">
+                    <span class="src">
+                      {it.source}
+                      {it.first_party && <em class="rp-badge">一手</em>}
+                    </span>
+                    <span class="side">
+                      {typeof it.score === 'number' && <b class:list={['rp-score', tier(it.score)]}>{it.score}</b>}
+                      <i class="when">{when(it)}</i>
+                    </span>
+                  </div>
+                  <h3><a href={it.url} target="_blank" rel="noopener">{it.title_zh || it.title_orig}</a></h3>
+                  {it.summary_zh && <p class="rp-sum">{it.summary_zh}</p>}
+                  {it.reason_zh && <p class="rp-reason">编按 · {it.reason_zh}</p>}
+                  <div class="rp-links">
+                    <a href={it.url} target="_blank" rel="noopener">原文 ↗</a>
+                    {ev && <a href={ev}>事件脉络 →</a>}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <!-- 快讯 -->
+  {paper.flashes.length > 0 && (
+    <section class="rp-sec" id="s-flash" aria-labelledby="s-flash-t">
+      <header class="rp-sec-head">
+        <b class="no">{pad(paper.sections.length + 1)}</b>
+        <h2 id="s-flash-t">快讯</h2>
+      </header>
+      <ul class="rp-flashes">
+        {paper.flashes.map((f) => (
+          <li>
+            <a href={f.url} target="_blank" rel="noopener">{f.title_zh || f.title_orig}</a>
+            <span>{f.source}{dated && (f.date ?? '') && ` · ${(f.date ?? '').slice(5).replace('-', '.')}`}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <!-- 前后期 -->
+  {(paper.prev || paper.next) && (
+    <nav class="rp-nb" aria-label={paper.kind === 'daily' ? '前后日报' : '前后各期'}>
+      {paper.prev ? (
+        <a href={paper.prev.href}>
+          <span>← {paper.prev.label}</span>
+          <b>{paper.prev.title}</b>
+        </a>
+      ) : <span class="empty"></span>}
+      {paper.next ? (
+        <a class="n" href={paper.next.href}>
+          <span>{paper.next.label} →</span>
+          <b>{paper.next.title}</b>
+        </a>
+      ) : <span class="empty"></span>}
+    </nav>
+  )}
+
+  <!-- 往期（周期报；手机端「更早」落点） -->
+  {others.length > 0 && (
+    <section class="rp-history" id="report-history">
+      <div class="rp-kicker">往期 AI {KIND_LABEL[paper.kind]}</div>
+      <ul>
+        {others.map((e) => (
+          <li>
+            <a href={reportPath(paper.kind, e.key)}>
+              <span class="k">{e.key}</span>
+              <span class="t">{e.title}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <footer class="rp-end">
+    <div class="fin">（本期完）</div>
+    <p>
+      AI {KIND_LABEL[paper.kind]}由编辑系统根据公开来源自动{paper.kind === 'daily' ? '编辑' : '综合'}，每条均附原文
+      {paper.kind === 'daily'
+        ? <> · <a href={withBase('/daily/archive/')}>日报合订本</a></>
+        : <> · <a href="#report-history">往期{KIND_LABEL[paper.kind]}</a></>}
+    </p>
+  </footer>
+</article>

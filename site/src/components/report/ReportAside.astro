@@ -1,0 +1,62 @@
+---
+// 报告页左侧第二竖栏（AIHOT ReportArchive）：日报/周报/月报切换 + 按月分组的往期列表。
+// 仅桌面（≥1024px）显示；当前期高亮，其余月份折叠。
+import { KINDS, KIND_LABEL, KIND_PATH, archiveGroups, reportPath } from '../../lib/reports';
+import type { ReportKind } from '../../lib/reports';
+import { getDailyIndex, getWeeklyIndex, getMonthlyIndex } from '../../lib/reports';
+import Icon from '../Icon.astro';
+import { withBase } from '../../lib/url';
+
+interface Props {
+  kind: ReportKind;
+  current: string; // 当前期的 key（日期/周键/月键）
+}
+const { kind, current } = Astro.props;
+
+const index =
+  kind === 'daily' ? getDailyIndex() : kind === 'weekly' ? getWeeklyIndex() : getMonthlyIndex();
+const groups = archiveGroups(kind, index);
+const openGroup = groups.find((g) => g.entries.some((e) => e.key === current))?.id ?? groups[0]?.id;
+---
+
+<aside class="rp-aside" data-pagefind-ignore>
+  <div class="rp-kinds" aria-label="切换日报、周报、月报">
+    {KINDS.map((k) => (
+      <a class:list={['rp-kind', { on: k === kind }]} href={withBase(`${KIND_PATH[k]}/`)} aria-current={k === kind ? 'true' : undefined}>
+        {KIND_LABEL[k]}
+      </a>
+    ))}
+  </div>
+
+  <div class="rp-arch-title">往期</div>
+  <nav class="rp-arch" aria-label={`${KIND_LABEL[kind]}历史`}>
+    {groups.map((g) => (
+      <details class="rp-group" open={g.id === openGroup}>
+        <summary>
+          <span class="flip"><Icon name="chevron-down" size={13} /></span>
+          <span class="lbl">{g.label}</span>
+          <span class="cnt">{g.entries.length}</span>
+        </summary>
+        <ul>
+          {g.entries.map((e) => (
+            <li>
+              <a class:list={[{ cur: e.key === current }]} href={e.href} title={e.title}>
+                <span class="mk">
+                  <b>{e.big}</b>
+                  {e.small && <i>{e.small}</i>}
+                </span>
+                <span class="ti">{e.title}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </details>
+    ))}
+  </nav>
+
+  {kind === 'daily' && (
+    <a class="rp-comp" href={withBase('/daily/archive/')}>
+      日报合订本 <Icon name="arrow-right" size={13} />
+    </a>
+  )}
+</aside>

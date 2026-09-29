@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ReportPaper from '../../components/report/ReportPaper.astro';
+import { getWeeklyIndex, getWeeklyPaper } from '../../lib/reports';
+
+export function getStaticPaths() {
+  return getWeeklyIndex().map((e) => {
+    const paper = getWeeklyPaper(e.key)!;
+    return { params: { key: e.key }, props: { paper } };
+  });
+}
+
+const { paper } = Astro.props;
+---
+
+<Layout
+  title={`AI 周报 · ${paper.key}`}
+  description={paper.leadParagraph ?? undefined}
+  report="weekly"
+  reportKey={paper.key}
+>
+  <div data-pagefind-body>
+    <ReportPaper paper={paper} dated />
+    <span hidden data-pagefind-meta="title">{`AI 周报 · ${paper.key}`}</span>
+  </div>
+</Layout>

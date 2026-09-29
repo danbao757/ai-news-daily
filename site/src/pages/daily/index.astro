@@ -1,30 +1,23 @@
 ---
-// /daily = 最新一期日报（参照 AIHOT report-latest）
+// /daily = 最新一期日报（AIHOT report-latest）
 import Layout from '../../layouts/Layout.astro';
-import IssueMasthead from '../../components/IssueMasthead.astro';
-import IssueView from '../../components/IssueView.astro';
-import SideStats from '../../components/SideStats.astro';
-import SideHot from '../../components/SideHot.astro';
-import SideIssues from '../../components/SideIssues.astro';
-import { getIssues } from '../../lib/issues';
+import ReportPaper from '../../components/report/ReportPaper.astro';
+import { getDailyIndex, getDailyPaper } from '../../lib/reports';
 
-const latest = getIssues()[0];
+const latest = getDailyIndex()[0];
+const paper = latest ? getDailyPaper(latest.key) : null;
 ---
 
-<Layout title={latest ? `AI 日报 · 第 ${latest.issue} 期 · ${latest.date}` : 'AI 日报'} wide>
-  {latest ? (
+<Layout
+  title={paper ? `AI 日报 · 第 ${paper.issueNo} 期 · ${paper.key}` : 'AI 日报'}
+  description={paper?.leadParagraph ?? undefined}
+  report="daily"
+  reportKey={paper?.key ?? ''}
+>
+  {paper ? (
     <div data-pagefind-body>
-      <IssueMasthead issue={latest} />
-      <div class="layout-cols">
-        <div class="main-col">
-          <IssueView issue={latest} />
-        </div>
-        <aside class="side-col">
-          <SideStats issue={latest} />
-          <SideHot date={latest.date} />
-          <SideIssues current={latest.date} />
-        </aside>
-      </div>
+      <ReportPaper paper={paper} />
+      <span hidden data-pagefind-meta="title">{`AI 日报 · 第 ${paper.issueNo} 期 · ${paper.key}`}</span>
     </div>
   ) : (
     <div class="empty-tip">

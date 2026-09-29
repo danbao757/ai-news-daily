@@ -1,0 +1,41 @@
+---
+// 报告页手机端导航（AIHOT ReportPhoneNav）：日报/周报/月报胶囊切换 + 最近 3 期胶囊 + 更早。
+import { KINDS, KIND_LABEL, KIND_PATH, chipLabel, reportPath } from '../../lib/reports';
+import type { ReportKind } from '../../lib/reports';
+import { getDailyIndex, getWeeklyIndex, getMonthlyIndex } from '../../lib/reports';
+import { withBase } from '../../lib/url';
+
+interface Props {
+  kind: ReportKind;
+  current: string;
+}
+const { kind, current } = Astro.props;
+
+const index =
+  kind === 'daily' ? getDailyIndex() : kind === 'weekly' ? getWeeklyIndex() : getMonthlyIndex();
+const recent = index.slice(0, 3);
+---
+
+<div class="rp-phone" data-pagefind-ignore>
+  <div class="rp-kinds" aria-label="切换日报、周报、月报">
+    {KINDS.map((k) => (
+      <a class:list={['rp-kind', { on: k === kind }]} href={withBase(`${KIND_PATH[k]}/`)} aria-current={k === kind ? 'true' : undefined}>
+        {KIND_LABEL[k]}
+      </a>
+    ))}
+  </div>
+  {recent.length > 0 && (
+    <div class="rp-chips">
+      {recent.map((e) => (
+        <a class:list={['rp-chip', { on: e.key === current }]} href={reportPath(kind, e.key)}>
+          {chipLabel(kind, e.key)}
+        </a>
+      ))}
+      {index.length > 3 && (
+        <a class="rp-chip" href={kind === 'daily' ? withBase('/daily/archive/') : '#report-history'}>
+          更早
+        </a>
+      )}
+    </div>
+  )}
+</div>

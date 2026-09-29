@@ -1,14 +1,25 @@
 ---
 // AIHOT 式应用外壳：桌面（≥1024px）左侧 200px 竖排 sticky 导航栏；
 // 窄屏为顶部窄栏 + 底部 4 入口 tab bar，正文单列居中。
+// report 模式（日报/周报/月报页）：主区变为「归档竖栏 + 报纸版面」双列（AIHOT ReportLayout）。
 interface Props {
   title: string;
   description?: string;
-  wide?: boolean; // 日报等宽版式页使用更宽的正文列
+  wide?: boolean; // 宽版式页使用更宽的正文列
+  report?: 'daily' | 'weekly' | 'monthly'; // 报告模式：渲染归档竖栏
+  reportKey?: string; // 当前报告期次 key（日期/周键/月键），归档栏高亮用
 }
-const { title, description = '全网 AI 资讯每日精选：模型发布、产品更新、行业动态，每天一期。', wide = false } = Astro.props;
+const {
+  title,
+  description = '全网 AI 资讯每日精选：模型发布、产品更新、行业动态，每天一期。',
+  wide = false,
+  report,
+  reportKey = '',
+} = Astro.props;
 import '../styles/global.css';
 import Icon from '../components/Icon.astro';
+import ReportAside from '../components/report/ReportAside.astro';
+import ReportPhoneNav from '../components/report/ReportPhoneNav.astro';
 import { getIssues } from '../lib/issues';
 import { withBase } from '../lib/url';
 
@@ -16,10 +27,18 @@ const baseTrim = withBase('/').replace(/\/$/, '');
 const path = Astro.url.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '');
 const rel = path === baseTrim ? '/' : path.slice(baseTrim.length) || '/';
 
-// 当前导航项判定：前缀匹配（/daily 覆盖 /daily/[date]，但 /daily/archive 归「往期」）
+// 当前导航项判定：前缀匹配（/daily 覆盖 /daily/[date] 与周报/月报，但 /daily/archive 归「往期」）
 const isActive = (p: string) => {
   if (p === '/') return rel === '/';
-  if (p === '/daily' && rel.startsWith('/daily/archive')) return false;
+  if (p === '/daily') {
+    if (rel.startsWith('/daily/archive')) return false;
+    return (
+      rel === '/daily' ||
+      rel.startsWith('/daily/') ||
+      rel.startsWith('/weekly') ||
+      rel.startsWith('/monthly')
+    );
+  }
   return rel === p || rel.startsWith(p + '/');
 };
 const cur = (p: string) => (isActive(p) ? 'page' : undefined);
@@ -112,12 +131,27 @@ const latestIssue = getIssues()[0];
       </aside>
 
       <main id="main" class="shell-main">
-        <div class:list={['page', { wide }]}>
-          <slot />
-          <footer class="page-foot">
-            <span>内容由 LLM 自动采集加工，版权归原作者所有 · 本站仅做摘要与链接</span>
-          </footer>
-        </div>
+        {report ? (
+          <div class="report-shell">
+            <ReportAside kind={report} current={reportKey} />
+            <div class="report-main">
+              <ReportPhoneNav kind={report} current={reportKey} />
+              <div class="report-paper">
+                <slot />
+                <footer class="page-foot">
+                  <span>内容由 LLM 自动采集加工，版权归原作者所有 · 本站仅做摘要与链接</span>
+                </footer>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div class:list={['page', { wide }]}>
+            <slot />
+            <footer class="page-foot">
+              <span>内容由 LLM 自动采集加工，版权归原作者所有 · 本站仅做摘要与链接</span>
+            </footer>
+          </div>
+        )}
       </main>
 
       <!-- 窄屏底部 tab bar -->
