@@ -1,34 +1,54 @@
 ---
+// 首页 = 精选（参照 AIHOT home）：页面标题 + 筛选胶囊行 + 当前热点条 + 近几日精选时间线
 import Layout from '../layouts/Layout.astro';
-import IssueMasthead from '../components/IssueMasthead.astro';
-import IssueView from '../components/IssueView.astro';
-import SideStats from '../components/SideStats.astro';
-import SideHot from '../components/SideHot.astro';
-import SideCats from '../components/SideCats.astro';
-import { getIssues } from '../lib/issues';
+import FeedFilters from '../components/FeedFilters.astro';
+import DayTimeline from '../components/DayTimeline.astro';
+import HotStrip from '../components/HotStrip.astro';
+import Icon from '../components/Icon.astro';
+import { getItemIndex } from '../lib/issues';
+import { withBase } from '../lib/url';
 
-const issues = getIssues();
-const latest = issues[0];
+const idx = getItemIndex();
+const selected = [...idx.values()]
+  .filter((it) => it.selected)
+  .sort((a, b) => (b.published_at ?? '').localeCompare(a.published_at ?? ''));
+
+// 近 3 个「有精选」的日期（静态站不做无限滚动，往下走 /all）
+const daySet = new Set(selected.map((it) => it.date ?? ''));
+const recentDays = [...daySet].sort((a, b) => b.localeCompare(a)).slice(0, 3);
+const items = selected.filter((it) => recentDays.includes(it.date ?? ''));
+
+const today = recentDays[0];
+const todayCount = selected.filter((it) => it.date === today).length;
 ---
 
-<Layout title={latest ? `AI 日报 · 第 ${latest.issue} 期` : 'AI 日报'}>
-  {latest ? (
-    <>
-      <IssueMasthead issue={latest} />
-      <div class="layout-cols">
-        <div class="main-col">
-          <IssueView issue={latest} />
-        </div>
-        <aside class="side-col">
-          <SideStats issue={latest} />
-          <SideHot date={latest.date} />
-          <SideCats date={latest.date} />
-        </aside>
+<Layout title="精选 · AI 日报">
+  {items.length > 0 ? (
+    <div class="feed-page">
+      <header class="page-head">
+        <h1>精选</h1>
+        {today && (
+          <span class="ph-sub">
+            {today.slice(5).replace('-', '月')}日 · 今日 <b>{todayCount}</b> 条精选
+          </span>
+        )}
+      </header>
+
+      <FeedFilters items={items} />
+
+      <HotStrip />
+
+      <DayTimeline items={items} showReason />
+
+      <div class="feed-more" data-pagefind-ignore>
+        <a href={withBase('/all/?sel=1')}>
+          查看全部动态（含未精选）<Icon name="arrow-right" size={14} />
+        </a>
       </div>
-    </>
+    </div>
   ) : (
     <div class="empty-tip">
-      还没有生成任何日报。<br />
+      还没有精选内容。<br />
       在项目根目录运行 <code>python -m collector.pipeline</code> 生成第一期。
     </div>
   )}

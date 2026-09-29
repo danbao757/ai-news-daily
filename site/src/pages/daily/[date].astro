@@ -4,7 +4,7 @@ import IssueMasthead from '../../components/IssueMasthead.astro';
 import IssueView from '../../components/IssueView.astro';
 import SideStats from '../../components/SideStats.astro';
 import SideHot from '../../components/SideHot.astro';
-import SideCats from '../../components/SideCats.astro';
+import SideIssues from '../../components/SideIssues.astro';
 import { getIssues } from '../../lib/issues';
 
 export function getStaticPaths() {
@@ -17,7 +17,7 @@ export function getStaticPaths() {
 const { issue } = Astro.props;
 ---
 
-<Layout title={`AI 日报 · 第 ${issue.issue} 期 · ${issue.date}`}>
+<Layout title={`AI 日报 · 第 ${issue.issue} 期 · ${issue.date}`} wide>
   <div data-pagefind-body>
     <IssueMasthead issue={issue} />
     <div class="layout-cols">
@@ -27,7 +27,7 @@ const { issue } = Astro.props;
       <aside class="side-col">
         <SideStats issue={issue} />
         <SideHot date={issue.date} />
-        <SideCats date={issue.date} />
+        <SideIssues current={issue.date} />
       </aside>
     </div>
     <span hidden data-pagefind-meta="title">{`AI 日报 · 第 ${issue.issue} 期 · ${issue.date}`}</span>

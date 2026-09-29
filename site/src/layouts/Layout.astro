@@ -1,23 +1,49 @@
 ---
+// AIHOT 式应用外壳：桌面（≥1024px）左侧 200px 竖排 sticky 导航栏；
+// 窄屏为顶部窄栏 + 底部 4 入口 tab bar，正文单列居中。
 interface Props {
   title: string;
   description?: string;
+  wide?: boolean; // 日报等宽版式页使用更宽的正文列
 }
-const { title, description = '全网 AI 资讯每日精选：模型发布、产品更新、行业动态，每天一期。' } = Astro.props;
+const { title, description = '全网 AI 资讯每日精选：模型发布、产品更新、行业动态，每天一期。', wide = false } = Astro.props;
 import '../styles/global.css';
+import Icon from '../components/Icon.astro';
+import { getIssues } from '../lib/issues';
 import { withBase } from '../lib/url';
 
-// 导航当前页判定（兼容 base 路径与结尾斜杠差异）
 const baseTrim = withBase('/').replace(/\/$/, '');
 const path = Astro.url.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '');
-const cur = (p: string) => (path === (p === '/' ? baseTrim : baseTrim + p) ? 'page' : undefined);
+const rel = path === baseTrim ? '/' : path.slice(baseTrim.length) || '/';
+
+// 当前导航项判定：前缀匹配（/daily 覆盖 /daily/[date]，但 /daily/archive 归「往期」）
+const isActive = (p: string) => {
+  if (p === '/') return rel === '/';
+  if (p === '/daily' && rel.startsWith('/daily/archive')) return false;
+  return rel === p || rel.startsWith(p + '/');
+};
+const cur = (p: string) => (isActive(p) ? 'page' : undefined);
+
+const CONTENT_NAV = [
+  { href: '/', label: '精选', icon: 'bolt' },
+  { href: '/all', label: '全部动态', icon: 'list' },
+  { href: '/hot', label: '热点榜', icon: 'flame' },
+  { href: '/daily', label: 'AI 日报', icon: 'news' },
+] as const;
+const MORE_NAV = [
+  { href: '/daily/archive', label: '往期', icon: 'archive' },
+  { href: '/search', label: '搜索', icon: 'search' },
+  { href: '/rss.xml', label: 'RSS', icon: 'rss' },
+] as const;
+// 移动端 tab bar 只放前 4 个内容入口
+const latestIssue = getIssues()[0];
 ---
 
 <!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
@@ -36,43 +62,85 @@ const cur = (p: string) => (path === (p === '/' ? baseTrim : baseTrim + p) ? 'pa
     </script>
   </head>
   <body>
-    <header class="site-header">
-      <div class="inner">
-        <a class="brand" href={withBase('/')}>AI<em>日报</em></a>
-        <nav class="site-nav">
-          <a href={withBase('/')} aria-current={cur('/')}>本期</a>
-          <a href={withBase('/hot')} aria-current={cur('/hot')}>热榜</a>
-          <a href={withBase('/all')} aria-current={path.startsWith(baseTrim + '/all') ? 'page' : undefined}>全部</a>
-          <a href={withBase('/archive')} aria-current={cur('/archive')}>往期</a>
-          <a href={withBase('/search')} aria-current={cur('/search')}>搜索</a>
-          <button class="theme-toggle" id="theme-toggle" type="button" title="切换明暗主题" aria-label="切换明暗主题">
-            <span class="ico-moon">☾</span><span class="ico-sun">☀</span>
-          </button>
+    <a class="skip-link" href="#main">跳到正文</a>
+
+    <div class="shell">
+      <!-- 窄屏顶栏 -->
+      <header class="top-bar">
+        <a class="top-brand" href={withBase('/')}>AI<em>日报</em></a>
+        {latestIssue && (
+          <span class="top-date">{latestIssue.date.slice(5).replace('-', '月')}日 · 第 {latestIssue.issue} 期</span>
+        )}
+        <button class="theme-toggle" id="theme-toggle-m" type="button" title="切换明暗主题" aria-label="切换明暗主题">
+          <span class="ico-moon"><Icon name="moon" size={16} /></span><span class="ico-sun"><Icon name="sun" size={16} /></span>
+        </button>
+      </header>
+
+      <!-- 桌面侧栏（AIHOT Sidebar） -->
+      <aside class="side-nav" data-pagefind-ignore>
+        <a class="nav-brand" href={withBase('/')}>
+          <span class="word">AI<em>日报</em></span>
+          <span class="sub">AI NEWS DAILY</span>
+        </a>
+
+        <nav class="nav-list" aria-label="内容">
+          <div class="nav-sec">内容</div>
+          {CONTENT_NAV.map((n) => (
+            <a class="nav-item" href={withBase(n.href)} aria-current={cur(n.href)}>
+              <Icon name={n.icon} />
+              <span>{n.label}</span>
+            </a>
+          ))}
         </nav>
-      </div>
-    </header>
 
-    <main>
-      <slot />
-    </main>
+        <nav class="nav-list" aria-label="更多">
+          <div class="nav-sec">更多</div>
+          {MORE_NAV.map((n) => (
+            <a class="nav-item" href={withBase(n.href)} aria-current={cur(n.href)}>
+              <Icon name={n.icon} />
+              <span>{n.label}</span>
+            </a>
+          ))}
+        </nav>
 
-    <footer class="site-footer">
-      <div class="inner">
-        <span>内容由 LLM 自动采集加工，版权归原作者所有 · 本站仅做摘要与链接</span>
-        <span>
-          <a href={withBase('/archive')}>往期归档</a>
-          · <a href={withBase('/rss.xml')}>RSS 订阅</a>
-        </span>
-      </div>
-    </footer>
+        <div class="nav-foot">
+          {latestIssue && <span class="nav-meta">第 {latestIssue.issue} 期 · {latestIssue.date}</span>}
+          <button class="theme-toggle" id="theme-toggle" type="button" title="切换明暗主题" aria-label="切换明暗主题">
+            <span class="ico-moon"><Icon name="moon" size={15} /></span><span class="ico-sun"><Icon name="sun" size={15} /></span>
+          </button>
+        </div>
+      </aside>
+
+      <main id="main" class="shell-main">
+        <div class:list={['page', { wide }]}>
+          <slot />
+          <footer class="page-foot">
+            <span>内容由 LLM 自动采集加工，版权归原作者所有 · 本站仅做摘要与链接</span>
+          </footer>
+        </div>
+      </main>
+
+      <!-- 窄屏底部 tab bar -->
+      <nav class="tab-bar" aria-label="内容">
+        {CONTENT_NAV.map((n) => (
+          <a href={withBase(n.href)} aria-current={cur(n.href)}>
+            <Icon name={n.icon} size={21} />
+            <span>{n.label === '全部动态' ? '全部' : n.label}</span>
+          </a>
+        ))}
+      </nav>
+    </div>
 
     <script>
-      const btn = document.getElementById('theme-toggle');
-      btn?.addEventListener('click', () => {
-        const root = document.documentElement;
-        const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-        root.dataset.theme = next;
+      const toggle = (next: string) => {
+        document.documentElement.dataset.theme = next;
         try { localStorage.setItem('theme', next); } catch {}
+      };
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        toggle(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+      });
+      document.getElementById('theme-toggle-m')?.addEventListener('click', () => {
+        toggle(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
       });
     </script>
   </body>

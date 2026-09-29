@@ -1,0 +1,57 @@
+---
+// 按日分组的时间线（参照 AIHOT Timeline/DayList）：
+// 桌面 = 日期头（sticky）+ [时间 | 点线轨 | 卡片]，窄屏 = 日期条 + 紧凑行。
+// 每行带 data-cat / data-first / data-sel，供 FeedFilters 客户端筛选。
+import type { NewsItem } from '../lib/issues';
+import { fmtDate, fmtTime } from '../lib/issues';
+import FeedCard from './FeedCard.astro';
+
+interface Props {
+  items: NewsItem[];        // 已按时间倒序的条目
+  showReason?: boolean;
+  showTags?: boolean;
+}
+const { items, showReason = false, showTags = false } = Astro.props;
+
+const WEEKDAYS = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+const weekday = (d: string) => WEEKDAYS[new Date(`${d}T12:00:00+08:00`).getUTCDay()] ?? '';
+
+// 日分组（天倒序、天内时间倒序）
+const byDay = new Map<string, NewsItem[]>();
+for (const it of items) {
+  const d = it.date ?? it.collected_at?.slice(0, 10) ?? '';
+  if (!byDay.has(d)) byDay.set(d, []);
+  byDay.get(d)!.push(it);
+}
+const days = [...byDay.keys()].sort((a, b) => b.localeCompare(a));
+for (const d of days) {
+  byDay.get(d)!.sort((a, b) => (b.published_at ?? '').localeCompare(a.published_at ?? ''));
+}
+---
+
+<div class="tl">
+  {days.map((d) => (
+    <section class="tl-day" data-day={d} aria-label={d}>
+      <div class="tl-day-head">
+        <span class="d">{fmtDate(d)}</span>
+        <span class="rail-cell" aria-hidden="true"></span>
+        <span class="meta">{weekday(d)} · {byDay.get(d)!.length} 条</span>
+      </div>
+      <ol class="tl-list">
+        {byDay.get(d)!.map((it) => (
+          <li
+            class="tl-item"
+            data-cat={it.category ?? ''}
+            data-first={it.first_party ? '1' : ''}
+            data-sel={it.selected ? '1' : ''}
+          >
+            <time class="tl-time" datetime={it.published_at ?? undefined}>{fmtTime(it.published_at) || '—'}</time>
+            <span class="tl-rail" aria-hidden="true"></span>
+            <FeedCard item={it} showReason={showReason} showTags={showTags} />
+          </li>
+        ))}
+      </ol>
+    </section>
+  ))}
+  {days.length === 0 && <div class="empty-tip">暂无内容</div>}
+</div>

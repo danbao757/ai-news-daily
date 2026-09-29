@@ -1,10 +1,12 @@
 ---
+// 热点榜（参照 AIHOT hot）：NO.01 大卡（含热度面板）+ NO.02/03 次卡 + 4 名起行式列表
+// 数据 = 最新一个「有事件」日期的多源事件，按 来源数 → 最高分 → 时间 排序；
+// 事件不足时回退为当日精选条目榜（旧迁移期没有聚类数据）。
 import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
 import { getHotEvents, getIssues, getItemIndex } from '../lib/issues';
 import { withBase } from '../lib/url';
 
-// 热榜：最新一个「有事件」的日期的多源事件，按 来源数 → 最高分 → 时间 排序。
-// 事件不足时回退为当日精选条目榜（旧迁移期没有聚类数据）。
 const latest = getIssues()[0];
 const hotDate = getHotEvents()[0]?.date ?? latest?.date;
 const hot = getHotEvents().filter((e) => e.date === hotDate);
@@ -16,53 +18,119 @@ const fallback =
         .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
         .slice(0, 15)
     : [];
+
+const lead = hot[0];
+const runners = hot.slice(1, 3);
+const others = hot.slice(3);
+const trackBadge = (e: (typeof hot)[number]) =>
+  e.continued_from ? '追踪中' : e.source_count >= 4 ? '爆' : '';
 ---
 
-<Layout title={`热榜 · AI 日报`}>
-  <section class="masthead">
-    <div class="mast-rule" data-pagefind-ignore></div>
-    <div class="mast-body">
-      <div class="mast-main">
-        <div class="kicker">Hot Board</div>
-        <h1>今日热榜</h1>
+<Layout title={`热点榜 · AI 日报`}>
+  <header class="hot-head">
+    <div>
+      <div class="hot-kicker">
+        <span class="live-dot" aria-hidden="true"><i></i></span>
+        今日热度
       </div>
+      <h1>热点榜</h1>
+      <p class="hot-sub">
+        {hotDate ? `${hotDate} · ` : ''}{hot.length > 0 ? `${hot.length} 个多源事件，按独立来源数与热度排序` : '暂无聚类事件，展示当日精选'}
+      </p>
     </div>
-    <div class="mast-meta" data-pagefind-ignore>
-      <span class="date">{hotDate ?? '—'}</span>
-      <span class="sep" aria-hidden="true"></span>
-      <span>{hot.length > 0 ? `${hot.length} 个多源事件 · 按来源数与热度排序` : `${fallback.length} 条精选 · 按评分排序`}</span>
-    </div>
-  </section>
+  </header>
 
-  {hot.length > 0 ? (
-    <ol class="hot-grid">
-      {hot.map((ev) => {
-        const rep = idx.get(ev.representative_id);
-        return (
-          <li class="hot-card">
-            <span class="rank" aria-hidden="true"></span>
-            <h2 class="t"><a href={withBase(`/story/${ev.id}/`)}>{ev.title_zh}</a></h2>
-            {ev.digest_zh && <p class="digest">{ev.digest_zh}</p>}
-            <div class="meta">
-              <span class="src-count">◉ {ev.source_count} 家来源</span>
-              <span>{ev.sources.slice(0, 3).join(' / ')}{ev.sources.length > 3 ? ' 等' : ''}</span>
-              <span>· 最高 {ev.score_max} 分</span>
-              {ev.continued_from && <span>· 追踪中</span>}
-              {rep && (
-                <a href={rep.url} target="_blank" rel="noopener" style="margin-left:auto">
-                  代表报道 {rep.source} ↗
-                </a>
-              )}
+  {lead ? (
+    <>
+      <section class="hot-top" aria-label="热度前三">
+        <article class="hot-lead">
+          <div class="row-1">
+            <span class="no r1">NO.01</span>
+            {trackBadge(lead) && <span class="badge">{trackBadge(lead)}</span>}
+          </div>
+          <div class="lead-grid">
+            <div class="lead-main">
+              <h2><a href={withBase(`/story/${lead.id}/`)}>{lead.title_zh}</a></h2>
+              {lead.digest_zh && <p class="digest">{lead.digest_zh}</p>}
+              <div class="voices">
+                {lead.sources.slice(0, 4).join('、')}{lead.sources.length > 4 ? ` 等 ${lead.sources.length} 家` : ' 报道'}
+              </div>
             </div>
-          </li>
-        );
-      })}
-    </ol>
+            <div class="heat-panel">
+              <div class="big">
+                <b>{lead.source_count}</b>
+                <span>家独立来源</span>
+              </div>
+              <div class="heat-meta">
+                <span>最高 <b>{lead.score_max}</b> 分</span>
+                {lead.continued_from && <span>始于 {lead.continued_from}</span>}
+              </div>
+            </div>
+          </div>
+        </article>
+
+        {runners.map((e, i) => (
+          <article class="hot-runner">
+            <div class="row-1">
+              <span class:list={['no', `r${i + 2}`]}>NO.{String(i + 2).padStart(2, '0')}</span>
+              {trackBadge(e) && <span class="badge">{trackBadge(e)}</span>}
+            </div>
+            <h2><a href={withBase(`/story/${e.id}/`)}>{e.title_zh}</a></h2>
+            {e.digest_zh && <p class="digest">{e.digest_zh}</p>}
+            <div class="run-meta">
+              <span><b>{e.source_count}</b> 家来源</span>
+              <span>· 最高 <b>{e.score_max}</b> 分</span>
+            </div>
+          </article>
+        ))}
+      </section>
+
+      {others.length > 0 && (
+        <section class="hot-rest" aria-label="其余热点">
+          <div class="rest-head">
+            <h2>继续看 <span>NO.{String(4).padStart(2, '0')}–{String(hot.length).padStart(2, '0')}</span></h2>
+            <span class="hint">独立来源 · 最高分</span>
+          </div>
+          <ol class="hot-rows">
+            {others.map((e, i) => {
+              const rep = idx.get(e.representative_id);
+              return (
+                <li>
+                  <a href={withBase(`/story/${e.id}/`)}>
+                    <span class:list={['no', `r${Math.min(i + 4, 4)}`]}>{String(i + 4).padStart(2, '0')}</span>
+                    <span class="body">
+                      <span class="t">{e.title_zh}{trackBadge(e) && <span class="badge">{trackBadge(e)}</span>}</span>
+                      {e.digest_zh && <span class="d">{e.digest_zh}</span>}
+                    </span>
+                    <span class="nums">
+                      <span><b>{e.source_count}</b> 来源</span>
+                      <span><b>{e.score_max}</b> 分</span>
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
+          </ol>
+        </section>
+      )}
+
+      <details class="hot-method">
+        <summary>
+          <Icon name="info" size={15} />
+          热度是怎么算的？
+          <span class="flip"><Icon name="chevron-down" size={13} /></span>
+        </summary>
+        <div class="method-body">
+          <p>榜单来自当日采集资讯的自动聚类：同一事件被多家独立来源报道时聚合为一个热点，按「独立来源数 → 最高评分 → 时间」排序。它衡量的是讨论广度，不是报道质量评分。</p>
+          <p>「追踪中」表示该事件跨越多日仍在发展，点进事件页可看到各方报道与完整时间线。</p>
+        </div>
+      </details>
+    </>
   ) : fallback.length > 0 ? (
-    <ul class="brief-list">
+    <ul class="brief-list" data-pagefind-ignore>
       {fallback.map((item, i) => (
         <li>
-          <span class="score t90" data-pagefind-ignore style="color:var(--faint)">
+          <span class="score t90" style="color:var(--faint)">
             {String(i + 1).padStart(2, '0')}
           </span>
           <div class="body">

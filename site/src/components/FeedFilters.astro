@@ -1,0 +1,103 @@
+---
+// 筛选胶囊行（参照 AIHOT CategoryTabs/PillTabs）：全部 / 一手 / 各分类 单选，
+// 可选「只看精选」开关；纯客户端过滤所在 .feed-page 内的 .tl-item 行。
+// 支持 URL 预激活：?cat=<key> / ?first=1 / ?sel=1 / ?tag=<t>（首页与卡片标签跳转用）。
+import type { NewsItem } from '../lib/issues';
+import { CATEGORY_LABELS } from '../lib/issues';
+
+interface Props {
+  items: NewsItem[];   // 本页全部条目（用于计数）
+  showSel?: boolean;   // /all 提供「只看精选」开关
+}
+const { items, showSel = false } = Astro.props;
+
+const catCounts = new Map<string, number>();
+let firstCount = 0;
+for (const it of items) {
+  catCounts.set(it.category ?? '', (catCounts.get(it.category ?? '') ?? 0) + 1);
+  if (it.first_party) firstCount++;
+}
+const cats = Object.keys(CATEGORY_LABELS).filter((k) => catCounts.get(k));
+---
+
+<div class="pill-tabs" data-feed-filters data-pagefind-ignore>
+  <div class="track" role="tablist" aria-label="筛选">
+    <button class="pill on" data-f="">全部 <b>{items.length}</b></button>
+    {firstCount > 0 && <button class="pill" data-f="first">一手 <b>{firstCount}</b></button>}
+    {cats.map((k) => (
+      <button class="pill" data-f={k}>{CATEGORY_LABELS[k]} <b>{catCounts.get(k)}</b></button>
+    ))}
+    {showSel && <button class="pill pill-act" data-sel>★ 精选</button>}
+  </div>
+  <span class="filter-count" data-feed-count hidden></span>
+</div>
+
+<script>
+  // 客户端筛选：单选（全部/一手/分类）× 可选「只看精选」× 可选标签（来自 URL ?tag=）；
+  // 行级显隐 + 空日组隐藏。
+  for (const root of document.querySelectorAll<HTMLElement>('[data-feed-filters]')) {
+    const page = root.closest('.feed-page');
+    if (!page) continue;
+    const state = { f: '', sel: false, tag: '' };
+    const rows = Array.from(page.querySelectorAll<HTMLElement>('.tl-item'));
+
+    const apply = () => {
+      let shown = 0;
+      for (const li of rows) {
+        const okF =
+          state.f === '' ? true :
+          state.f === 'first' ? li.dataset.first === '1' :
+          li.dataset.cat === state.f;
+        const okSel = !state.sel || li.dataset.sel === '1';
+        const okTag = !state.tag || (li.querySelector('.fc-tags')?.textContent ?? '').includes(`#${state.tag}`);
+        const ok = okF && okSel && okTag;
+        li.style.display = ok ? '' : 'none';
+        if (ok) shown++;
+      }
+      for (const g of page.querySelectorAll<HTMLElement>('.tl-day')) {
+        const visible = Array.from(g.querySelectorAll('.tl-item')).some((li) => (li as HTMLElement).style.display !== 'none');
+        g.style.display = visible ? '' : 'none';
+      }
+      const count = page.querySelector<HTMLElement>('[data-feed-count]');
+      if (count && (state.f || state.sel || state.tag)) {
+        count.hidden = false;
+        count.textContent = `${shown} 条`;
+      } else if (count) {
+        count.hidden = true;
+      }
+    };
+
+    const pick = (btn: Element) => btn.dispatchEvent(new Event('click', { bubbles: true }));
+
+    root.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest('button');
+      if (!btn) return;
+      if (btn.dataset.sel !== undefined) {
+        state.sel = !state.sel;
+        btn.classList.toggle('on');
+      } else if (btn.dataset.f !== undefined) {
+        state.f = btn.dataset.f;
+        root.querySelectorAll('[data-f]').forEach((b) => b.classList.toggle('on', b === btn));
+      }
+      apply();
+    });
+
+    // URL 预激活（?cat= / ?first=1 / ?sel=1 / ?tag=）
+    const params = new URLSearchParams(location.search);
+    const pt = params.get('tag');
+    if (pt) state.tag = pt;
+    const pc = params.get('cat');
+    if (pc) {
+      const btn = root.querySelector(`[data-f="${CSS.escape(pc)}"]`);
+      if (btn) pick(btn);
+    } else if (params.get('first')) {
+      const btn = root.querySelector('[data-f="first"]');
+      if (btn) pick(btn);
+    }
+    if (params.get('sel')) {
+      const btn = root.querySelector('[data-sel]');
+      if (btn) pick(btn);
+    }
+    if (pc || pt || params.get('first') || params.get('sel')) apply();
+  }
+</script>

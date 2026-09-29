@@ -35,7 +35,7 @@ const days = ev.continued_from
   : 1;
 ---
 
-<Layout title={`${ev.title_zh} · 事件 · AI 日报`} description={ev.digest_zh || undefined}>
+<Layout title={`${ev.title_zh} · 事件 · AI 日报`} description={ev.digest_zh || undefined} wide>
   <div class="layout-cols">
     <div class="main-col">
       <section class="story-head">
@@ -88,7 +88,7 @@ const days = ev.continued_from
 
       <div class="month-nav" data-pagefind-ignore>
         <a href={withBase('/hot')}>← 返回热榜</a>
-        <a href={withBase(`/issue/${ev.date ?? ''}/`)}>查看当日日报 →</a>
+        <a href={withBase(`/daily/${ev.date ?? ''}/`)}>查看当日日报 →</a>
       </div>
     </div>
 

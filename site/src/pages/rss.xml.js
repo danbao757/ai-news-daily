@@ -39,7 +39,7 @@ function digestHtml(issue) {
 
 export function GET() {
   const items = getIssues().map((issue) => {
-    const link = `${SITE}${BASE}/issue/${issue.date}/`;
+    const link = `${SITE}${BASE}/daily/${issue.date}/`;
     return [
       '<item>',
       `  <title>${esc(issue.lead?.title || `AI 日报 · 第 ${issue.issue} 期（${issue.date}）`)}</title>`,

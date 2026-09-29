@@ -3,30 +3,27 @@ import Layout from '../../layouts/Layout.astro';
 import AllFeed from '../../components/AllFeed.astro';
 import { getItemIndex } from '../../lib/issues';
 
-// /all/ 渲染最新月份；历史月份在 /all/[month]/
+// /all 渲染最新月份；历史月份在 /all/[month]/
 const idx = getItemIndex();
 const months = [...new Set([...idx.values()].map((it) => (it.date ?? '').slice(0, 7)))]
   .filter(Boolean).sort((a, b) => b.localeCompare(a));
 const month = months[0];
 const items = month ? [...idx.values()].filter((it) => (it.date ?? '').startsWith(month)) : [];
+
+const today = items[0]?.date ?? month ?? '';
+const todayCount = items.filter((it) => it.date === today).length;
 ---
 
-<Layout title={`全部动态 · ${month ?? ''} · AI 日报`}>
-  <section class="masthead">
-    <div class="mast-rule" data-pagefind-ignore></div>
-    <div class="mast-body">
-      <div class="mast-main">
-        <div class="kicker">All Updates</div>
+<Layout title={`全部动态 · AI 日报`}>
+  {month ? (
+    <>
+      <header class="page-head">
         <h1>全部动态</h1>
-      </div>
-    </div>
-    <div class="mast-meta" data-pagefind-ignore>
-      <span class="date">{month ?? '—'}</span>
-      <span class="sep" aria-hidden="true"></span>
-      <span>{items.length} 条 · 含未精选 · 按日倒序</span>
-    </div>
-  </section>
-  {month ? <AllFeed items={items} month={month} months={months} /> : (
+        <span class="ph-sub">{today ? `${today.slice(5).replace('-', '月')}日` : month} · 今日 <b>{todayCount}</b> 条 · 含未精选</span>
+      </header>
+      <AllFeed items={items} month={month} months={months} />
+    </>
+  ) : (
     <div class="empty-tip">暂无数据</div>
   )}
 </Layout>

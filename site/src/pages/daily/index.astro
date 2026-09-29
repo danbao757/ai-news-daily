@@ -1,0 +1,35 @@
+---
+// /daily = 最新一期日报（参照 AIHOT report-latest）
+import Layout from '../../layouts/Layout.astro';
+import IssueMasthead from '../../components/IssueMasthead.astro';
+import IssueView from '../../components/IssueView.astro';
+import SideStats from '../../components/SideStats.astro';
+import SideHot from '../../components/SideHot.astro';
+import SideIssues from '../../components/SideIssues.astro';
+import { getIssues } from '../../lib/issues';
+
+const latest = getIssues()[0];
+---
+
+<Layout title={latest ? `AI 日报 · 第 ${latest.issue} 期 · ${latest.date}` : 'AI 日报'} wide>
+  {latest ? (
+    <div data-pagefind-body>
+      <IssueMasthead issue={latest} />
+      <div class="layout-cols">
+        <div class="main-col">
+          <IssueView issue={latest} />
+        </div>
+        <aside class="side-col">
+          <SideStats issue={latest} />
+          <SideHot date={latest.date} />
+          <SideIssues current={latest.date} />
+        </aside>
+      </div>
+    </div>
+  ) : (
+    <div class="empty-tip">
+      还没有生成任何日报。<br />
+      在项目根目录运行 <code>python -m collector.pipeline</code> 生成第一期。
+    </div>
+  )}
+</Layout>

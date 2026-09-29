@@ -8,11 +8,10 @@ const bundlePath = withBase('/pagefind/');
 ---
 
 <Layout title={`搜索 · AI 日报`}>
-  <section class="masthead">
-    <div class="kicker">Search</div>
-    <h1>站内搜索</h1>
-    <div class="meta">检索全部 {total} 期日报的标题与摘要</div>
-  </section>
+  <header class="page-head">
+    <h1>搜索</h1>
+    <span class="ph-sub">检索全部 {total} 期日报的标题与摘要</span>
+  </header>
 
   <link rel="stylesheet" href={withBase('/pagefind/pagefind-ui.css')} />
   <div id="search"></div>

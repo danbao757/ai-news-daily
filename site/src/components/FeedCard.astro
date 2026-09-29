@@ -1,0 +1,51 @@
+---
+// 信息流卡片（参照 AIHOT FeedItem）：来源/时间/评分一行 + 标题 + 摘要 + 标签 + 推荐理由
+// 桌面为白卡；窄屏为紧凑行（分隔线，理由灰底块）。标题直达原文。
+import type { NewsItem } from '../lib/issues';
+import { CATEGORY_LABELS } from '../lib/issues';
+import { withBase } from '../lib/url';
+
+interface Props {
+  item: NewsItem;
+  showReason?: boolean; // 首页精选流展示推荐理由
+  showTags?: boolean;   // /all 展示分类与标签（点击跳筛选）
+}
+const { item, showReason = false, showTags = false } = Astro.props;
+
+const tier = (score: number) =>
+  score >= 90 ? 't90' : score >= 75 ? 't75' : score >= 60 ? 't60' : 't40';
+const title = item.title_zh || item.title_orig;
+---
+
+<article class="feed-card">
+  <header class="fc-head">
+    <span class="fc-src">
+      <a href={item.url} target="_blank" rel="noopener">{item.source}</a>
+      {item.first_party && <span class="fc-first">一手</span>}
+    </span>
+    <span class="fc-side">
+      {item.selected && <span class="fc-sel">★ 精选</span>}
+      {typeof item.score === 'number' && <span class={`fc-score ${tier(item.score)}`}>{item.score}</span>}
+    </span>
+  </header>
+
+  <h3 class="fc-title">
+    <a href={item.url} target="_blank" rel="noopener">{title}</a>
+  </h3>
+  {item.summary_zh && <p class="fc-sum">{item.summary_zh}</p>}
+
+  {showTags && (item.category || (item.tags ?? []).length > 0) && (
+    <div class="fc-tags">
+      {item.category && (
+        <a href={withBase(`/all/?cat=${item.category}`)}>{CATEGORY_LABELS[item.category] ?? item.category}</a>
+      )}
+      {(item.tags ?? []).slice(0, 3).map((t) => (
+        <a href={withBase(`/all/?tag=${encodeURIComponent(t)}`)}>#{t}</a>
+      ))}
+    </div>
+  )}
+
+  {showReason && item.reason_zh && (
+    <p class="fc-reason">推荐理由：{item.reason_zh}</p>
+  )}
+</article>

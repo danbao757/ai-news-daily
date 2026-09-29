@@ -1,0 +1,36 @@
+---
+// 首页「当前热点」条（参照 AIHOT HotTopics）：live 点 + 前 5 个多源事件，
+// 排名前三用榜单色，右侧来源数，整行可点进事件页。
+import { getHotEvents } from '../lib/issues';
+import { withBase } from '../lib/url';
+import Icon from './Icon.astro';
+
+const hot = getHotEvents();
+const hotDate = hot[0]?.date;
+const entries = hot.filter((e) => e.date === hotDate).slice(0, 5);
+---
+
+{entries.length > 0 && (
+  <section class="hot-strip" aria-labelledby="hot-strip-t" data-pagefind-ignore>
+    <div class="strip-head">
+      <h2 id="hot-strip-t">
+        <span class="live-dot" aria-hidden="true"><i></i></span>
+        当前热点
+      </h2>
+      <a class="more" href={withBase('/hot')}>
+        完整榜单 <Icon name="arrow-right" size={13} />
+      </a>
+    </div>
+    <ol>
+      {entries.map((e, i) => (
+        <li>
+          <a href={withBase(`/story/${e.id}/`)}>
+            <span class:list={['rank', `r${Math.min(i + 1, 4)}`]}>{i + 1}</span>
+            <span class="t">{e.title_zh}</span>
+            <span class="heat"><b>{e.source_count}</b> 家来源</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </section>
+)}

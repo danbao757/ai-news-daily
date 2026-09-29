@@ -1,10 +1,10 @@
 ---
-// /all 全部动态：左侧筛选栏（sticky）+ 右侧按日时间线（纯客户端过滤，静态站可用）
-// 支持 ?cat=<key> 预激活分类筛选（首页侧栏分类卡跳转用）
+// /all 全部动态（参照 AIHOT all + DayList）：顶部筛选胶囊行 + 按日时间线 + 月份导航
+// 纯客户端过滤；?cat= / ?tag= / ?sel= / ?first= 预激活由 FeedFilters 处理
 import type { NewsItem } from '../lib/issues';
-import { CATEGORY_LABELS, fmtDate, fmtTime } from '../lib/issues';
+import FeedFilters from './FeedFilters.astro';
+import DayTimeline from './DayTimeline.astro';
 import { withBase } from '../lib/url';
-import CategoryChip from './CategoryChip.astro';
 
 interface Props {
   items: NewsItem[];       // 当月全部条目（含未精选）
@@ -13,173 +13,24 @@ interface Props {
 }
 const { items, month, months } = Astro.props;
 
-// 日分组（天倒序、天内时间倒序）
-const byDay = new Map<string, NewsItem[]>();
-for (const it of items) {
-  const d = it.date ?? it.collected_at?.slice(0, 10) ?? '';
-  if (!byDay.has(d)) byDay.set(d, []);
-  byDay.get(d)!.push(it);
-}
-const days = [...byDay.keys()].sort((a, b) => b.localeCompare(a));
-for (const d of days) {
-  byDay.get(d)!.sort((a, b) => (b.published_at ?? '').localeCompare(a.published_at ?? ''));
-}
-const dayCounts = new Map(days.map((d) => [d, byDay.get(d)!.length]));
-
-// 分类计数（筛选按钮右侧显示）
-const catCounts = new Map<string, number>();
-for (const it of items) catCounts.set(it.category ?? '', (catCounts.get(it.category ?? '') ?? 0) + 1);
-
-// 高频标签（出现 ≥2 次的前 14 个）
-const tagCount = new Map<string, number>();
-for (const it of items) for (const t of it.tags ?? []) tagCount.set(t, (tagCount.get(t) ?? 0) + 1);
-const topTags = [...tagCount.entries()].filter(([, n]) => n >= 2)
-  .sort((a, b) => b[1] - a[1]).slice(0, 14).map(([t]) => t);
-
 const pos = months.indexOf(month);
 const prevMonth = pos >= 0 && pos + 1 < months.length ? months[pos + 1] : null;
 const nextMonth = pos > 0 ? months[pos - 1] : null;
-
-const tier = (score: number | null) =>
-  score == null ? '' : score >= 90 ? 't90' : score >= 75 ? 't75' : score >= 60 ? 't60' : 't40';
 ---
 
-<div class="all-layout">
-  <aside class="filter-side" data-pagefind-ignore>
-    <div class="side-card">
-      <h3 class="side-title">分类 <span class="en">Filter</span></h3>
-      <div class="filter-row">
-        <button class="filter-tab on" data-cat="">全部 <span>{items.length}</span></button>
-        {Object.entries(CATEGORY_LABELS)
-          .filter(([key]) => catCounts.get(key))
-          .map(([key, label]) => (
-            <button class="filter-tab" data-cat={key}>{label} <span>{catCounts.get(key)}</span></button>
-          ))}
-      </div>
-    </div>
-    {topTags.length > 0 && (
-      <div class="side-card">
-        <h3 class="side-title">标签 <span class="en">Tags</span></h3>
-        <div class="filter-row">
-          {topTags.map((t) => (
-            <button class="filter-tab tag-chip" data-tag={t}>{t}</button>
-          ))}
-        </div>
-      </div>
-    )}
-    <div class="side-card">
-      <div class="filter-row" style="flex-direction:row">
-        <button class="filter-tab" data-sel="1">★ 只看精选</button>
-        <span class="filter-count" id="feed-count">{items.length} 条</span>
-      </div>
-    </div>
-  </aside>
+<div class="feed-page">
+  <FeedFilters items={items} showSel />
+  <div data-pagefind-body>
+    <DayTimeline items={items} showTags />
+  </div>
 
-  <div class="all-main">
-    <div data-pagefind-body>
-      {days.map((d) => (
-        <section class="day-group" data-day={d}>
-          <h2 data-pagefind-ignore>
-            {fmtDate(d)}
-            <span class="cnt">{dayCounts.get(d)} 条</span>
-          </h2>
-          <ul class="feed-list">
-            {byDay.get(d)!.map((it) => (
-              <li data-cat={it.category ?? ''} data-tags={(it.tags ?? []).join('|')} data-sel={it.selected ? '1' : ''}>
-                <span class="when" data-pagefind-ignore>{fmtTime(it.published_at) || '—'}</span>
-                <div class="body">
-                  <div class="t">
-                    {it.selected && <span class="sel-mark" title="精选">★</span>}
-                    <a href={it.url} target="_blank" rel="noopener">{it.title_zh || it.title_orig}</a>
-                  </div>
-                  <div class="row2" data-pagefind-ignore>
-                    <CategoryChip category={it.category} />
-                    {(it.tags ?? []).slice(0, 3).map((t) => <span class="tag">{t}</span>)}
-                    <span class="src">{it.source}</span>
-                    {typeof it.score === 'number' && <span class={`sc ${tier(it.score)}`}>{it.score}</span>}
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))}
-      {days.length === 0 && <div class="empty-tip">本月暂无数据</div>}
-    </div>
-
-    <div class="month-nav" data-pagefind-ignore>
-      {prevMonth
-        ? <a href={withBase(`/all/${prevMonth}/`)}>← {prevMonth}</a>
-        : <span></span>}
-      <span class="cur">{month} · {months.length} 个月</span>
-      {nextMonth
-        ? <a href={withBase(`/all/${nextMonth}/`)}>{nextMonth} →</a>
-        : <span></span>}
-    </div>
+  <div class="month-nav" data-pagefind-ignore>
+    {prevMonth
+      ? <a href={withBase(`/all/${prevMonth}/`)}>← {prevMonth}</a>
+      : <span></span>}
+    <span class="cur">{month} · {months.length} 个月</span>
+    {nextMonth
+      ? <a href={withBase(`/all/${nextMonth}/`)}>{nextMonth} →</a>
+      : <span></span>}
   </div>
 </div>
-
-<script>
-  // 客户端筛选：分类（单选）× 标签（多选 OR）× 仅精选，行级显隐 + 空日组隐藏；
-  // 支持 ?cat=<key> / ?tag=<t> 预激活（首页侧栏分类卡跳转）
-  const side = document.querySelector('.filter-side');
-  const count = document.getElementById('feed-count');
-  if (side && count) {
-    const state = { cat: '', tags: new Set<string>(), sel: false };
-    const rows = Array.from(document.querySelectorAll<HTMLElement>('.feed-list li'));
-
-    const apply = () => {
-      let shown = 0;
-      for (const li of rows) {
-        const okCat = !state.cat || li.dataset.cat === state.cat;
-        const tags = (li.dataset.tags || '').split('|').filter(Boolean);
-        const okTag = state.tags.size === 0 || tags.some((t) => state.tags.has(t));
-        const okSel = !state.sel || li.dataset.sel === '1';
-        const ok = okCat && okTag && okSel;
-        li.style.display = ok ? '' : 'none';
-        if (ok) shown++;
-      }
-      for (const g of document.querySelectorAll<HTMLElement>('.day-group')) {
-        const visible = Array.from(g.querySelectorAll('li')).some((li) => (li as HTMLElement).style.display !== 'none');
-        g.style.display = visible ? '' : 'none';
-      }
-      count.textContent = `${shown} 条`;
-    };
-
-    const activate = (btn: Element) => btn.dispatchEvent(new Event('click', { bubbles: true }));
-
-    side.addEventListener('click', (e) => {
-      const btn = (e.target as HTMLElement).closest('button');
-      if (!btn) return;
-      if (btn.dataset.cat !== undefined) {
-        state.cat = btn.dataset.cat;
-        side.querySelectorAll('[data-cat]').forEach((b) => b.classList.toggle('on', b === btn));
-      } else if (btn.dataset.tag !== undefined) {
-        const t = btn.dataset.tag;
-        if (state.tags.has(t)) state.tags.delete(t); else state.tags.add(t);
-        btn.classList.toggle('on');
-      } else if (btn.dataset.sel !== undefined) {
-        state.sel = !state.sel;
-        btn.classList.toggle('on');
-      }
-      apply();
-    });
-
-    // URL 预激活（?cat= / ?tag= / ?sel=1）
-    const params = new URLSearchParams(location.search);
-    const pc = params.get('cat');
-    if (pc) {
-      const btn = side.querySelector(`[data-cat="${CSS.escape(pc)}"]`);
-      if (btn) activate(btn);
-    }
-    const pt = params.get('tag');
-    if (pt) {
-      const btn = side.querySelector(`[data-tag="${CSS.escape(pt)}"]`);
-      if (btn) activate(btn);
-    }
-    if (params.get('sel')) {
-      const btn = side.querySelector('[data-sel]');
-      if (btn) activate(btn);
-    }
-  }
-</script>

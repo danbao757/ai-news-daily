@@ -1,0 +1,22 @@
+---
+// 侧栏「往期」卡（参照 AIHOT ReportArchive）：最近 8 期列表，当前期高亮
+import { getIssues, fmtDate } from '../lib/issues';
+import { withBase } from '../lib/url';
+
+interface Props { current?: string }
+const { current } = Astro.props;
+const issues = getIssues().slice(0, 8);
+---
+
+{issues.length > 1 && (
+  <div class="side-card" data-pagefind-ignore>
+    <h3 class="side-title">往期 <span class="en">Past Issues</span></h3>
+    <nav class="cat-rows">
+      {issues.map((it) => (
+        <a href={withBase(`/daily/${it.date}/`)} class:list={{ cur: it.date === current }}>
+          {fmtDate(it.date)} <b>第 {it.issue} 期</b>
+        </a>
+      ))}
+    </nav>
+  </div>
+)}

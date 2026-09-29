@@ -1,0 +1,43 @@
+---
+// 日报合订本（参照 AIHOT daily-archive）：按月分组的往期列表
+import Layout from '../../layouts/Layout.astro';
+import { getIssues, fmtDate } from '../../lib/issues';
+import { withBase } from '../../lib/url';
+
+const issues = getIssues();
+
+// 按月分组（降序）
+const byMonth = new Map<string, typeof issues>();
+for (const it of issues) {
+  const m = it.date.slice(0, 7);
+  if (!byMonth.has(m)) byMonth.set(m, []);
+  byMonth.get(m)!.push(it);
+}
+const months = [...byMonth.keys()].sort((a, b) => b.localeCompare(a));
+---
+
+<Layout title="AI 日报 · 历史存档">
+  <header class="page-head">
+    <h1>日报合订本</h1>
+    <span class="ph-sub">共 <b>{issues.length}</b> 期 · 每天一期</span>
+  </header>
+
+  {issues.length === 0 ? (
+    <div class="empty-tip">暂无内容</div>
+  ) : (
+    months.map((m) => (
+      <section class="arch-month">
+        <h2 class="arch-month-title">{m}</h2>
+        <ul class="archive-list">
+          {byMonth.get(m)!.map((it) => (
+            <li>
+              <span class="no">No.{it.issue}</span>
+              <span class="d"><a href={withBase(`/daily/${it.date}/`)}>{fmtDate(it.date)}</a></span>
+              <span class="cnt">{it.stats.selected} 条 · {it.stats.sources.length} 个来源</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  )}
+</Layout>
