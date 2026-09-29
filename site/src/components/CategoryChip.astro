@@ -1,15 +1,11 @@
 ---
-const CAT_CLASS: Record<string, string> = {
-  '模型': 'cat-model',
-  '产品': 'cat-product',
-  '行业': 'cat-industry',
-  '论文': 'cat-paper',
-  '开源': 'cat-oss',
-  '政策': 'cat-policy',
-  '观点': 'cat-opinion',
-};
-interface Props { category: string }
+import { CATEGORY_LABELS } from '../lib/issues';
+
+// category 是 collector/taxonomy.py 的 key（ai-models 等）；未知 key 落到通用样式
+interface Props { category: string | null }
 const { category } = Astro.props;
+const key = category && CATEGORY_LABELS[category] ? category : null;
+const label = key ? CATEGORY_LABELS[key] : '资讯';
 ---
 
-<span class={`chip ${CAT_CLASS[category] ?? ''}`} data-pagefind-ignore>{category}</span>
+<span class={`chip ${key ? `cat-${key}` : ''}`} data-pagefind-ignore>{label}</span>

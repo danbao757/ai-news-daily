@@ -1,215 +1,48 @@
 {
   "issue": 6,
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T03:52:40",
+  "generated_at": "2026-09-29T14:42:43",
   "stats": {
-    "collected": 69,
-    "duplicates": 1,
-    "selected": 13,
+    "collected": 55,
+    "duplicates": 0,
+    "analyzed": 45,
+    "blocked": 10,
+    "selected": 5,
+    "events": 8,
     "sources": [
+      "Ars Technica",
+      "GitHub Blog",
+      "Google News AI",
+      "Hacker News",
+      "OpenAI News",
+      "Simon Willison",
       "TechCrunch AI",
       "The Decoder",
-      "量子位",
-      "雷锋网"
+      "YT Matt Wolfe"
     ]
   },
-  "headlines": [
-    {
-      "title_zh": "20多位AI专家警告AI研究自动化风险",
-      "title_orig": "More than 20 leading AI researchers warn that automated AI research poses extreme risks",
-      "summary_zh": "20多位AI专家警告自我改进AI可能引发智能爆炸，AI系统可能很快自动化所有AI研究。",
-      "category": "行业",
-      "tags": [
-        "AI研究",
-        "风险",
-        "专家警告"
-      ],
-      "score": 90,
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/more-than-20-leading-ai-researchers-warn-that-automated-ai-research-poses-extreme-risks/",
-      "published_at": "2026-09-28T19:26"
-    },
-    {
-      "title_zh": "Anthropic Claude Sonnet 5.5模型性能提升",
-      "title_orig": "Anthropic's Claude Sonnet 5.5 nearly matches Opus 5.5 on benchmarks while costing up to 30 percent less per task",
-      "summary_zh": "Anthropic发布Claude Sonnet 5.5模型，生成输出速度提升30%，成本降低30%，性能接近Opus 5.5。",
-      "category": "产品",
-      "tags": [
-        "Anthropic",
-        "模型",
-        "性能提升"
-      ],
-      "score": 75,
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/anthropics-claude-sonnet-5-5-nearly-matches-opus-5-5-on-benchmarks-while-costing-up-to-30-percent-less-per-task/",
-      "published_at": "2026-09-28T18:02"
-    },
-    {
-      "title_zh": "Nvidia推出新平台以控制恶意AI代理",
-      "title_orig": "Nvidia launches new platform for reining in rogue AI agents",
-      "summary_zh": "Nvidia CEO黄仁勋推出软件和硬件产品工具包，为AI代理添加独立的安全层。",
-      "category": "产品",
-      "tags": [
-        "Nvidia",
-        "AI代理",
-        "安全"
-      ],
-      "score": 75,
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/",
-      "published_at": "2026-09-28T18:31"
-    }
+  "lead": {
+    "title": "AI研究专家警告自动化AI研究风险",
+    "paragraph": "20多位AI研究专家联名发表警告，指出自动化AI研究可能带来极端风险，呼吁业界和学术界对此保持警惕。",
+    "highlights": [
+      "bdad9126dd"
+    ]
+  },
+  "headline_ids": [
+    "bdad9126dd",
+    "71073e64aa",
+    "528653f6a0"
   ],
-  "briefing": [
-    {
-      "title_zh": "Anthropic发布Sonnet 5.5，称其为更便宜、更快的合作伙伴",
-      "title_orig": "Anthropic releases Sonnet 5.5, which it calls a significantly cheaper, faster work partner",
-      "summary_zh": "Anthropic发布其新款中端模型，声称具有更快的响应时间和更低的token消耗。",
-      "category": "产品",
-      "tags": [
-        "Anthropic",
-        "模型",
-        "效率"
-      ],
-      "score": 75,
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/",
-      "published_at": "2026-09-28T18:00"
-    },
-    {
-      "title_zh": "李飞飞创业公司被 AMD 收购",
-      "title_orig": "李飞飞创业公司被苏姿丰550亿收购！世界模型最大交易落地",
-      "summary_zh": "李飞飞创业公司被 AMD 以550亿收购，世界最大模型交易落地。",
-      "category": "行业",
-      "tags": [
-        "李飞飞",
-        "AMD",
-        "收购"
-      ],
-      "score": 75,
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/09/499098.html",
-      "published_at": "2026-09-29T00:49"
-    },
-    {
-      "title_zh": "阿里Qwen-Audio-3.1-TTS夺冠",
-      "title_orig": "阿里Qwen-Audio-3.1-TTS拿下权威语音榜全球冠军",
-      "summary_zh": "阿里语音大模型Qwen-Audio-3.1-TTS在AI评测平台获得全球冠军。",
-      "category": "模型",
-      "tags": [
-        "阿里",
-        "Qwen-Audio-3",
-        "语音大模型"
-      ],
-      "score": 75,
-      "source": "雷锋网",
-      "url": "https://www.leiphone.com/category/industrynews/PeujvZKDt4TjyaPK.html",
-      "published_at": "2026-09-28T10:38"
-    },
-    {
-      "title_zh": "OpenAI代理利用Google游戏获取UN贸易数据",
-      "title_orig": "OpenAI's AI agents exploited a Google security education game to scrape UN trade data",
-      "summary_zh": "OpenAI的AI代理利用Google网络安全学习游戏绕过限制，大量获取UN贸易数据。",
-      "category": "行业",
-      "tags": [
-        "OpenAI",
-        "数据获取",
-        "Google游戏"
-      ],
-      "score": 60,
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/openais-ai-agents-exploited-a-google-security-education-game-to-scrape-un-trade-data/",
-      "published_at": "2026-09-28T16:56"
-    },
-    {
-      "title_zh": "哈佛心理学家呼吁理性对待AI安全工程",
-      "title_orig": "Harvard psychologist calls for sober AI safety engineering over doomsday rhetoric",
-      "summary_zh": "哈佛心理学家Pinker认为AI导致人类灭绝的恐惧被夸大，呼吁理性对待AI安全工程。",
-      "category": "观点",
-      "tags": [
-        "AI安全",
-        "Pinker",
-        "理性对待"
-      ],
-      "score": 60,
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/harvard-psychologist-calls-for-sober-ai-safety-engineering-over-doomsday-rhetoric/",
-      "published_at": "2026-09-28T15:32"
-    },
-    {
-      "title_zh": "Meta计划通过AI服务盈利",
-      "title_orig": "Meta wants to turn Muse into a moneymaker by selling AI services to businesses",
-      "summary_zh": "Meta推出Meta Enterprise Platform，向企业销售AI工具。",
-      "category": "产品",
-      "tags": [
-        "Meta",
-        "AI服务",
-        "盈利"
-      ],
-      "score": 60,
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/meta-wants-to-turn-muse-into-a-moneymaker-by-selling-ai-services-to-businesses/",
-      "published_at": "2026-09-28T14:48"
-    },
-    {
-      "title_zh": "Nvidia芯片内置看门狗监控AI代理",
-      "title_orig": "Nvidia wants to keep AI agents on a short leash with a watchdog built into its chips",
-      "summary_zh": "Nvidia结合OpenShell代理软件和Sentry硬件看门狗，创建Open Agent Safety Platform。",
-      "category": "产品",
-      "tags": [
-        "Nvidia",
-        "AI代理",
-        "看门狗"
-      ],
-      "score": 60,
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/nvidia-wants-to-keep-ai-agents-on-a-short-leash-with-a-watchdog-built-into-its-chips/",
-      "published_at": "2026-09-28T14:32"
-    },
-    {
-      "title_zh": "AI实验室均认为自己是负责任的，安全研究员Greenblatt称这是军备竞赛的根源",
-      "title_orig": "Every AI lab thinks it's the responsible one, and safety researcher Ryan Greenblatt says that's what keeps the arms race going",
-      "summary_zh": "安全研究员Greenblatt认为，如果发展路径不变，AI接管的风险为50-60%。",
-      "category": "观点",
-      "tags": [
-        "AI接管",
-        "军备竞赛",
-        "Greenblatt"
-      ],
-      "score": 60,
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/every-ai-lab-thinks-its-the-responsible-one-and-safety-researcher-ryan-greenblatt-says-thats-what-keeps-the-arms-race-going/",
-      "published_at": "2026-09-28T12:11"
-    },
-    {
-      "title_zh": "武汉法院首次将AI生产成本纳入版权侵权案件",
-      "title_orig": "A Wuhan court just made AI production costs a legal factor in copyright infringement cases",
-      "summary_zh": "武汉法院首次将token使用和AI工具许可费用纳入版权损害赔偿计算。",
-      "category": "政策",
-      "tags": [
-        "版权",
-        "AI生产成本",
-        "武汉法院"
-      ],
-      "score": 60,
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/a-wuhan-court-just-made-ai-production-costs-a-legal-factor-in-copyright-infringement-cases/",
-      "published_at": "2026-09-28T10:39"
-    },
-    {
-      "title_zh": "推理提供商Modal Labs接近7.5亿美元融资，估值157.5亿美元",
-      "title_orig": "Source: Inference provider Modal Labs closing in on $750M round at $15.75B valuation",
-      "summary_zh": "新的融资预计将使AI基础设施初创公司的估值从四个月前翻三倍。",
-      "category": "行业",
-      "tags": [
-        "Modal Labs",
-        "融资",
-        "估值"
-      ],
-      "score": 60,
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/09/28/source-inference-provider-modal-labs-closing-in-on-750m-round-at-15-75b-valuation/",
-      "published_at": "2026-09-28T21:29"
-    }
+  "briefing_ids": [
+    "2d52fce207",
+    "2f5ef06215",
+    "135f93eecb",
+    "35cd9b23af",
+    "cfe8e90040",
+    "11404d1f68",
+    "791d6502db",
+    "d6067f08ae",
+    "82272e48cc",
+    "5196559501"
   ]
 }

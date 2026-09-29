@@ -1,0 +1,50 @@
+name: fetch
+
+# 海外源采集（Actions 海外 runner 免费）→ data/inbox 提交；
+# 过渡期（国内服务器未就绪）在同一任务里直接跑完整管线（stopgap），
+# 服务器接管后把仓库变量 STOPGAP_PIPELINE 设为 0，本流程退回只写 inbox。
+
+on:
+  schedule:
+    - cron: '13 0 * * *' # 主时段：北京时间 08:13（避开整点拥挤槽）
+    - cron: '47 1 * * *' # 备份时段：北京时间 09:47——当天已出刊则自动跳过
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch overseas sources into inbox
+        run: |
+          pip install -r collector/requirements.txt
+          python -m collector.fetch
+
+      - name: Run full pipeline (stopgap until server takes over)
+        if: vars.STOPGAP_PIPELINE != '0'
+        run: python -m collector.pipeline
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          SCORE_MODEL: ${{ vars.SCORE_MODEL }}
+          WRITE_MODEL: ${{ vars.WRITE_MODEL }}
+
+      - name: Commit inbox & issue data
+        run: |
+          git config user.name "news-bot"
+          git config user.email "news-bot@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || (git commit -m "chore: issue $(date +%F)" && git pull --rebase origin main && git push)

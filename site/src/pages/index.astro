@@ -1,17 +1,47 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import IssueView from '../components/IssueView.astro';
-import { getIssues } from '../lib/issues';
+import { getIssues, getHotEvents, getItemIndex } from '../lib/issues';
+import { withBase } from '../lib/url';
 
 const issues = getIssues();
 const latest = issues[0];
+// 热点区：最新日期的多源事件（首页只放 5 条，完整热榜在 /hot）
+const hot = latest ? getHotEvents().filter((e) => e.date === latest.date).slice(0, 5) : [];
+const idx = getItemIndex();
 ---
 
 <Layout title={latest ? `AI 日报 · 第 ${latest.issue} 期` : 'AI 日报'}>
   {latest ? <IssueView issue={latest} /> : (
     <div class="empty-tip">
       还没有生成任何日报。<br />
-      在项目根目录运行 <code>python -m collector.generate</code> 生成第一期。
+      在项目根目录运行 <code>python -m collector.pipeline</code> 生成第一期。
     </div>
+  )}
+
+  {hot.length > 0 && (
+    <>
+      <div class="section-title" data-pagefind-ignore>
+        今日热点 <span class="en">Hot Events</span>
+        <a class="more" href={withBase('/hot')}>完整热榜 →</a>
+      </div>
+      <ul class="hot-list">
+        {hot.map((ev) => {
+          const rep = idx.get(ev.representative_id);
+          return (
+            <li>
+              <span class="rank" aria-hidden="true"></span>
+              <div class="body">
+                <div class="t"><a href={withBase(`/story/${ev.id}/`)}>{ev.title_zh}</a></div>
+                <div class="meta">
+                  <span class="src-count">{ev.source_count} 家来源</span>
+                  <span>{rep?.source ?? ''}</span>
+                </div>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </>
   )}
 </Layout>

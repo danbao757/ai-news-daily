@@ -1,0 +1,251 @@
+{
+  "date": "2026-09-29",
+  "generated_at": "2026-09-29T14:42:43",
+  "events": [
+    {
+      "id": "ecd3a1408ac",
+      "title_zh": "Anthropic发布Sonnet 5.5模型",
+      "digest_zh": "Anthropic 发布了 Claude Sonnet 5.5 模型，其生成输出速度比前代快 30%，每项任务成本降低最多 30%，在知识工作基准测试中接近 Opus 5.5 的性能。",
+      "representative_id": "cd3a1408ac",
+      "member_ids": [
+        "2d52fce207",
+        "cd3a1408ac",
+        "d9aff05acb",
+        "8533002d66",
+        "69ff1c0516",
+        "50e18c5419"
+      ],
+      "sources": [
+        "Google News AI",
+        "Hacker News",
+        "MarkTechPost",
+        "Simon Willison",
+        "The Decoder"
+      ],
+      "source_count": 5,
+      "score_max": 67,
+      "continued_from": null,
+      "first_seen": "2026-09-29",
+      "latest_published_at": "2026-09-29T07:40+08:00",
+      "member_urls": [
+        "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/",
+        "https://the-decoder.com/anthropics-claude-sonnet-5-5-nearly-matches-opus-5-5-on-benchmarks-while-costing-up-to-30-percent-less-per-task/",
+        "https://www.marktechpost.com/2026/09/28/anthropic-releases-claude-sonnet-5-5-70-6-on-terminal-bench-4-0-at-the-same-2-10-price/",
+        "https://news.google.com/rss/articles/CBMixgFBVV95cUxQb0tWY0FLOVhwaXl3aXg5d3FWa092SjhfdUk0cHY1eEFaM2RHTlp5MGxRZkhBNmtMV3p6TGpjcjRyTWxnYWhtNjRXcTlqRU5wXzM0ZXJLSlZMNTk4Q1JNc3JlMkQ4OS1vU191M3BUcFNIaFlXTTQ1N19WMkRaSU1xcnVoZURTMkJlMWxpeVdFVFpnbU90S1RWUXVSaVMzM1JFdmR4eTVkZHRaSXVQdE9waUNRZ1EzSXFNVlpoZmYtM1Zibm9LaEE?oc=5",
+        "https://www.reuters.com/business/finance/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-2026-09-28/",
+        "https://www.anthropic.com/claude-sonnet-5-5"
+      ]
+    },
+    {
+      "id": "e528653f6a0",
+      "title_zh": "OpenAI因安全担忧推迟发布模型",
+      "digest_zh": "OpenAI 宣布取消发布 AI 模型 GPT-6.1 Astra，理由是安全担忧。",
+      "representative_id": "528653f6a0",
+      "member_ids": [
+        "6a134f5f31",
+        "220dea2c55",
+        "7037ec9d21",
+        "528653f6a0",
+        "2813ce4062"
+      ],
+      "sources": [
+        "Google News AI",
+        "Hacker News",
+        "TechCrunch AI",
+        "The Decoder"
+      ],
+      "source_count": 4,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-09-29",
+      "latest_published_at": "2026-09-29T08:34+08:00",
+      "member_urls": [
+        "https://the-decoder.com/openais-ai-agents-exploited-a-google-security-education-game-to-scrape-un-trade-data/",
+        "https://techcrunch.com/2026/09/28/openai-reportedly-ditches-model-over-safety-concerns/",
+        "https://news.google.com/rss/articles/CBMid0FVX3lxTFBnUDU1QlU3cmVCTU85Y29JYm9RRTZJWHBLWnQzQlR1UnIwZGhjOUhYRXRTQ0xRUWRjVF9iQ0pSekpiQV9tVzB1Mjl5d3RrVkRNYXB5LTJEeWRabl90U0diR0ItZWl0c1NjeFlhZTdzZVItcUQ0NmNZ?oc=5",
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOSExJX2RibHFyX3QwWDRia0VQYTFZS0tKTEtBRHF4TUlfSWh5Y0RQb1dheHk5X1BqMG9Za0c1R2NiU2lpSjdiWmNTdzE4cW9KX3pwZWV4N0gwSkNOdk5kb1diR1FWWU9RLVhIejlJQmRwcUdqRHF1a3gtdWZaemd5QmN5VXFmM0tnbFJzbjYzaWlSdGRyS082RkppVGxWNmNOTzh1UGdyWFnSAa4BQVVfeXFMTXB1R2UyUXQ4LVNoOVBpVnBUN29uclZvY0h0Z1RteXVuV2JCZEVwTzVKNUN0NkJ3alFZQ1F5M0REUmNZR05yWE1ZV0NsWkxjUVQ3MVd3dk50R3BJTHlwNVlDVnRrMXhlejJDR3lDazFkTm41QW1hb2JTWEpMVXBYOE83ZmJnSXQtT2poeF9FRGhMWGtzVVd1d1cwTHJxTFIwOTNWbTVWRmh0Q3Iwc2JB?oc=5",
+        "https://www.nytimes.com/2026/09/28/technology/openai-astra-safety.html"
+      ]
+    },
+    {
+      "id": "ebdad9126dd",
+      "title_zh": "AI研究安全与风险讨论",
+      "digest_zh": "20多位AI研究专家，包括Geoffrey Hinton和Yoshua Bengio，警告自我改进的AI可能导致即将到来的'智能爆炸'，AI系统可能很快就会自动化所有AI研究，将数年的进展压缩到几个月内。",
+      "representative_id": "bdad9126dd",
+      "member_ids": [
+        "bdad9126dd",
+        "e608c6ea1b",
+        "a54b0644ea",
+        "5333763250",
+        "d068e2d52f",
+        "a7a3b674e6",
+        "2cef15b9c2"
+      ],
+      "sources": [
+        "Gary Marcus",
+        "Hacker News",
+        "MarkTechPost",
+        "TechCrunch AI",
+        "The Decoder"
+      ],
+      "source_count": 5,
+      "score_max": 85,
+      "continued_from": null,
+      "first_seen": "2026-09-29",
+      "latest_published_at": "2026-09-29T05:13+08:00",
+      "member_urls": [
+        "https://the-decoder.com/more-than-20-leading-ai-researchers-warn-that-automated-ai-research-poses-extreme-risks/",
+        "https://the-decoder.com/harvard-psychologist-calls-for-sober-ai-safety-engineering-over-doomsday-rhetoric/",
+        "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
+        "https://www.marktechpost.com/2026/09/28/nvidia-launches-open-agent-safety-platform/",
+        "https://garymarcus.substack.com/p/breaking-florida-seeks-injunction",
+        "https://www.worldlabs.ai/blog/amd-announcement",
+        "https://calnewport.com/its-time-to-investigate-the-ai-labs/"
+      ]
+    },
+    {
+      "id": "e79c5767e26",
+      "title_zh": "企业AI服务与代理应用",
+      "digest_zh": "英伟达CEO黄仁勋周一推出了一套软件和硬件产品工具包，为AI代理添加独立的安全层，以确保它们即使在尝试突破测试环境时也能保持在其内。",
+      "representative_id": "79c5767e26",
+      "member_ids": [
+        "d6067f08ae",
+        "07c0d45eef",
+        "79c5767e26",
+        "a7b49b0e61"
+      ],
+      "sources": [
+        "Google News AI",
+        "TechCrunch AI",
+        "The Decoder"
+      ],
+      "source_count": 3,
+      "score_max": 37,
+      "continued_from": null,
+      "first_seen": "2026-09-29",
+      "latest_published_at": "2026-09-29T03:53+08:00",
+      "member_urls": [
+        "https://the-decoder.com/meta-wants-to-turn-muse-into-a-moneymaker-by-selling-ai-services-to-businesses/",
+        "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/",
+        "https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/",
+        "https://news.google.com/rss/articles/CBMidEFVX3lxTFB1eExJWlBudTJNb0Y5dVUzOXp1WW1La0RvYmdrM1ZGOVJNTkhybUg0ZThib1NNRms5OFVJbjdHUVlBSmdLc21JRDM0SFJTaTlaRzlmTy1KOG1QOWpSMURiNy1mNFZhTGl2M3RYbzYwVVdZV1lt?oc=5"
+      ]
+    },
+    {
+      "id": "e2f5ef06215",
+      "title_zh": "AI公司投资与收购",
+      "digest_zh": "AMD 宣布收购 Fei-Fei Li 创立的 World Labs，交易额为 82 亿美元。Fei-Fei Li 将加入 AMD 担任执行副总裁和首席科学家。",
+      "representative_id": "2f5ef06215",
+      "member_ids": [
+        "a84e841eac",
+        "2f5ef06215",
+        "ce7b13e0f7"
+      ],
+      "sources": [
+        "Ars Technica",
+        "TechCrunch AI"
+      ],
+      "source_count": 2,
+      "score_max": 67,
+      "continued_from": null,
+      "first_seen": "2026-09-29",
+      "latest_published_at": "2026-09-28T21:49+08:00",
+      "member_urls": [
+        "https://techcrunch.com/2026/09/28/source-inference-provider-modal-labs-closing-in-on-750m-round-at-15-75b-valuation/",
+        "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/",
+        "https://arstechnica.com/tech-policy/2026/09/nvidia-may-sell-more-chips-in-china-as-jensen-huangs-influence-over-trump-grows/"
+      ]
+    },
+    {
+      "id": "e71073e64aa",
+      "title_zh": "AI相关新闻与观点",
+      "digest_zh": "比尔·盖茨在《华盛顿邮报》发表文章，警告如果人工智能发展不当可能导致十亿人死亡，强调了对AI安全的关注。",
+      "representative_id": "71073e64aa",
+      "member_ids": [
+        "d505089143",
+        "992a71fbd0",
+        "71073e64aa",
+        "2135ae33f8",
+        "1bd3e82def",
+        "ddad9a8750",
+        "a3c1fe122c",
+        "be0a0222ed",
+        "ad619a0acb"
+      ],
+      "sources": [
+        "Google News AI",
+        "Hacker News",
+        "IT之家",
+        "雷锋网"
+      ],
+      "source_count": 4,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-09-29",
+      "latest_published_at": "2026-09-29T06:16+08:00",
+      "member_urls": [
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxORGRTVk5IZTk4ODR4OU5MUUJhUW84LXpvZjlOSE5MZFpId3hsb04wcDRDbi1XR0h3TVVhXzk1bmFjQ0ZkTlVSMV93QllxWWYzMnJubmlCczhYZndhMUllM0JVYnlwSHZhcnBtSU1hT29odllzdmhlTDFPSHY0OHNUU3VhV0JoUXFsVmFlb1c2ZnNuUVJyVklabFplMzZFd9IBowFBVV95cUxQTkpRUEFKWkNlSmhlWXJySVNmZEhITGZMQWxLOFdyVWUxOW9aek1iamM5S2E1WWw2U1R0dkwwSnZaOF9PMTdJYlIyNE5lQzJyLTBUOGNKY3VMb1ZGbG5jczVnMHY1bk5scFQ3eHp6ZmRDT285SWQ5cC11QS16NWtOdDE0bnZhQXRneXg3NmV4blhXYl9Ua3BSVlVGM2p0QUNoSlk4?oc=5",
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxPbUc2MERzWFFSMEZESW8xV0tucURaenNUQU54LTVvRUFZRnJ2blh6WGZtR2FuRFB0WDFLZkhPdGs2eThGdVlNNktzamtOQkpuNGZGYWU0R0VmR0VOUDVudHFiYi0yaDVjaEhBRWFVSmp6MWVleW1WU2NBWWFuZFJyTm5WS2ZBTk5pVnF5Q1hmczUxUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxOLTkta2R4T0VGUU5NQ2ZBV3JPbXJ0NjlHMnZRckdfdVJxRzNXWDlnMDktUUtoVzVPMWxvZ2xjU1FOcFRVdnRhRG5YV0c4SG1uSDFwMV9sVy1hZ2lTbkF3TzMwYkU0YktrZ3Q1TTJlbk1sakk4cGFqQnZIYjZoSkRhRWRTMTVmUG40Z0U4UG84Zk8zTnVfNlFINk10dzYzNDJrM2lwag?oc=5",
+        "https://www.leiphone.com/category/industrynews/ToizySV6K6ALZWLQ.html",
+        "https://www.leiphone.com/category/industrynews/eDhvnoxGSSJk1eQo.html",
+        "https://www.ithome.com/1/008/245.htm",
+        "https://www.ithome.com/1/008/240.htm",
+        "https://www.ithome.com/1/008/241.htm",
+        "https://www.lesswrong.com/posts/Nm4ewbYovtjq69dvH/pacing-the-frontier-is-not-the-actual-goal-for-ai-labs"
+      ]
+    },
+    {
+      "id": "e791d6502db",
+      "title_zh": "开源AI安全代理发现Android漏洞",
+      "digest_zh": "本文探讨了背后的AI任务流程，揭示了它们发现的严重Android漏洞，以及如何在您的应用上运行相同的开源代理。",
+      "representative_id": "791d6502db",
+      "member_ids": [
+        "791d6502db",
+        "c94a110c6c"
+      ],
+      "sources": [
+        "GitHub Blog",
+        "Simon Willison"
+      ],
+      "source_count": 2,
+      "score_max": 40,
+      "continued_from": null,
+      "first_seen": "2026-09-29",
+      "latest_published_at": "2026-09-28T19:11+08:00",
+      "member_urls": [
+        "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
+        "https://simonwillison.net/2026/Sep/28/joedaroo/"
+      ]
+    },
+    {
+      "id": "e135f93eecb",
+      "title_zh": "AI技术发展与应用",
+      "digest_zh": "Tensr公司推出机器人制造工厂，可生产类人机器人、末端执行器，并为国际空间站制造机器人，每笔订单都成为工厂改进下一产品的训练数据。",
+      "representative_id": "135f93eecb",
+      "member_ids": [
+        "d19a7dc330",
+        "abca1748f7",
+        "135f93eecb",
+        "09231f3d34"
+      ],
+      "sources": [
+        "Hacker News",
+        "MIT Tech Review",
+        "MarkTechPost",
+        "YT Matt Wolfe"
+      ],
+      "source_count": 4,
+      "score_max": 62,
+      "continued_from": null,
+      "first_seen": "2026-09-29",
+      "latest_published_at": "2026-09-29T04:58+08:00",
+      "member_urls": [
+        "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/",
+        "https://www.marktechpost.com/2026/09/28/alibaba-qwen-releases-qwen-audio-3-1-realtime-a-full-duplex-voice-model-trained-to-think-act-and-decide-when-to-speak/",
+        "https://www.youtube.com/shorts/aNWKngrCrw4",
+        "https://stateofutopia.com/experiments/microllmlab/"
+      ]
+    }
+  ]
+}

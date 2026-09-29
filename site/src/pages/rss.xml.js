@@ -13,11 +13,14 @@ function esc(s) {
 
 function digestHtml(issue) {
   const parts = [];
+  if (issue.lead?.paragraph) {
+    parts.push(`<p><b>${esc(issue.lead.title ?? '')}</b>${issue.lead.title ? '<br/>' : ''}${esc(issue.lead.paragraph)}</p>`);
+  }
   if (issue.headlines.length) {
     parts.push('<h3>头条</h3><ol>');
     for (const h of issue.headlines) {
       parts.push(
-        `<li><a href="${esc(h.url)}">${esc(h.title_zh)}</a>（${esc(h.source)} · 评分 ${h.score}）`,
+        `<li><a href="${esc(h.url)}">${esc(h.title_zh || h.title_orig)}</a>（${esc(h.source)} · 评分 ${h.score ?? '—'}）`,
       );
       if (h.summary_zh) parts.push(`<br/>${esc(h.summary_zh)}`);
       parts.push('</li>');
@@ -27,7 +30,7 @@ function digestHtml(issue) {
   if (issue.briefing.length) {
     parts.push('<h3>速览</h3><ul>');
     for (const b of issue.briefing) {
-      parts.push(`<li><a href="${esc(b.url)}">${esc(b.title_zh)}</a>（${esc(b.source)}）</li>`);
+      parts.push(`<li><a href="${esc(b.url)}">${esc(b.title_zh || b.title_orig)}</a>（${esc(b.source)}）</li>`);
     }
     parts.push('</ul>');
   }
@@ -39,7 +42,7 @@ export function GET() {
     const link = `${SITE}${BASE}/issue/${issue.date}/`;
     return [
       '<item>',
-      `  <title>${esc(`AI 日报 · 第 ${issue.issue} 期（${issue.date}）`)}</title>`,
+      `  <title>${esc(issue.lead?.title || `AI 日报 · 第 ${issue.issue} 期（${issue.date}）`)}</title>`,
       `  <link>${link}</link>`,
       `  <guid isPermaLink="true">${link}</guid>`,
       `  <pubDate>${new Date(issue.generated_at).toUTCString()}</pubDate>`,

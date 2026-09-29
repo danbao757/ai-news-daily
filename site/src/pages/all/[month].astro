@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AllFeed from '../../components/AllFeed.astro';
+import { getItemIndex } from '../../lib/issues';
+
+export function getStaticPaths() {
+  const idx = getItemIndex();
+  const months = [...new Set([...idx.values()].map((it) => (it.date ?? '').slice(0, 7)))]
+    .filter(Boolean).sort((a, b) => b.localeCompare(a));
+  return months.map((month) => ({
+    params: { month },
+    props: {
+      items: [...idx.values()].filter((it) => (it.date ?? '').startsWith(month)),
+      months,
+    },
+  }));
+}
+
+const { items, months } = Astro.props;
+const month = Astro.params.month!;
+---
+
+<Layout title={`全部动态 · ${month} · AI 日报`}>
+  <section class="masthead">
+    <div class="mast-rule" data-pagefind-ignore></div>
+    <div class="mast-body">
+      <div class="mast-main">
+        <div class="kicker">All Updates</div>
+        <h1>全部动态</h1>
+      </div>
+    </div>
+    <div class="mast-meta" data-pagefind-ignore>
+      <span class="date">{month}</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span>{items.length} 条 · 含未精选 · 按日倒序</span>
+    </div>
+  </section>
+  <AllFeed items={items} month={month} months={months} />
+</Layout>

@@ -1,0 +1,90 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getHotEvents, getItemIndex, fmtDate, fmtTime } from '../../lib/issues';
+import type { NewsItem } from '../../lib/issues';
+import { withBase } from '../../lib/url';
+
+// 事件页：只给多源事件（≥2 家独立来源）生成；
+// 跨日续接沿用同一 id，getStaticPaths 去重后取最新一天的定义。
+export function getStaticPaths() {
+  const idx = getItemIndex();
+  const seen = new Set<string>();
+  return getHotEvents()
+    .filter((e) => {
+      if (seen.has(e.id)) return false;
+      seen.add(e.id);
+      return (e.member_ids ?? []).some((id) => idx.has(id));
+    })
+    .map((ev) => {
+      const members = (ev.member_ids ?? [])
+        .map((id) => idx.get(id))
+        .filter(Boolean) as NewsItem[];
+      // 代表稿置顶，其余按分数/时间排
+      const rep = members.find((m) => m.id === ev.representative_id);
+      const rest = members
+        .filter((m) => m.id !== ev.representative_id)
+        .sort((a, b) => (b.score ?? 0) - (a.score ?? 0) || (b.published_at ?? '').localeCompare(a.published_at ?? ''));
+      return { params: { id: ev.id }, props: { ev, rep, rest } };
+    });
+}
+
+const { ev, rep, rest } = Astro.props;
+const days = ev.continued_from
+  ? Math.max(1, Math.round((new Date(ev.date ?? '').getTime() - new Date(ev.continued_from).getTime()) / 86400000) + 1)
+  : 1;
+---
+
+<Layout title={`${ev.title_zh} · 事件 · AI 日报`} description={ev.digest_zh || undefined}>
+  <section class="story-head">
+    <div class="kicker">Story</div>
+    <h1>{ev.title_zh}</h1>
+    <div class="story-meta">
+      <span class="src-count" style="color:var(--accent-deep);background:var(--accent-soft);border-radius:999px;padding:0.1em 0.6em;font-size:0.78rem;font-weight:700">◉ {ev.source_count} 家独立来源</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span>{ev.sources.join(' / ')}</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span>最高 {ev.score_max} 分</span>
+      {ev.continued_from && (
+        <>
+          <span class="sep" aria-hidden="true"></span>
+          <span>追踪 {days} 天（始于 {ev.continued_from}）</span>
+        </>
+      )}
+    </div>
+  </section>
+
+  {ev.digest_zh && <p class="story-digest">{ev.digest_zh}</p>}
+
+  <div class="section-title" data-pagefind-ignore>各方报道 <span class="en">Coverage</span></div>
+  <ul class="member-list" data-pagefind-body>
+    {rep && (
+      <li class="rep">
+        <div class="t"><a href={rep.url} target="_blank" rel="noopener">{rep.title_zh || rep.title_orig}</a></div>
+        {rep.summary_zh && <p class="sum">{rep.summary_zh}</p>}
+        <div class="meta">
+          <span class="badge-rep">代表报道</span>
+          <span>{rep.source}</span>
+          <span>· {fmtDate(rep.date ?? '')} {fmtTime(rep.published_at)}</span>
+          {typeof rep.score === 'number' && <span>· {rep.score} 分</span>}
+          <span>· <a href={rep.url} target="_blank" rel="noopener">原文 ↗</a></span>
+        </div>
+      </li>
+    )}
+    {rest.map((m) => (
+      <li>
+        <div class="t"><a href={m.url} target="_blank" rel="noopener">{m.title_zh || m.title_orig}</a></div>
+        <div class="meta">
+          <span>{m.source}</span>
+          <span>· {fmtDate(m.date ?? '')} {fmtTime(m.published_at)}</span>
+          {typeof m.score === 'number' && <span>· {m.score} 分</span>}
+          <span>· <a href={m.url} target="_blank" rel="noopener">原文 ↗</a></span>
+        </div>
+      </li>
+    ))}
+  </ul>
+
+  <div class="month-nav" data-pagefind-ignore>
+    <a href={withBase('/hot')}>← 返回热榜</a>
+    <a href={withBase(`/issue/${ev.date ?? ''}/`)}>查看当日日报 →</a>
+  </div>
+</Layout>

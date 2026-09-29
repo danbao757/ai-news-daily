@@ -1,0 +1,147 @@
+---
+// /all 全部动态：按日时间线 + 分类/标签筛选 + 仅精选开关（纯客户端过滤，静态站可用）
+import type { NewsItem } from '../lib/issues';
+import { CATEGORY_LABELS, fmtDate, fmtTime } from '../lib/issues';
+import { withBase } from '../lib/url';
+import CategoryChip from './CategoryChip.astro';
+
+interface Props {
+  items: NewsItem[];       // 当月全部条目（含未精选）
+  month: string;           // 当前月 YYYY-MM
+  months: string[];        // 全部月份（降序）
+}
+const { items, month, months } = Astro.props;
+
+// 日分组（天倒序、天内时间倒序）
+const byDay = new Map<string, NewsItem[]>();
+for (const it of items) {
+  const d = it.date ?? it.collected_at?.slice(0, 10) ?? '';
+  if (!byDay.has(d)) byDay.set(d, []);
+  byDay.get(d)!.push(it);
+}
+const days = [...byDay.keys()].sort((a, b) => b.localeCompare(a));
+for (const d of days) {
+  byDay.get(d)!.sort((a, b) => (b.published_at ?? '').localeCompare(a.published_at ?? ''));
+}
+
+// 高频标签（出现 ≥2 次的前 14 个）
+const tagCount = new Map<string, number>();
+for (const it of items) for (const t of it.tags ?? []) tagCount.set(t, (tagCount.get(t) ?? 0) + 1);
+const topTags = [...tagCount.entries()].filter(([, n]) => n >= 2)
+  .sort((a, b) => b[1] - a[1]).slice(0, 14).map(([t]) => t);
+
+const pos = months.indexOf(month);
+const prevMonth = pos >= 0 && pos + 1 < months.length ? months[pos + 1] : null;
+const nextMonth = pos > 0 ? months[pos - 1] : null;
+
+const tier = (score: number | null) =>
+  score == null ? '' : score >= 90 ? 't90' : score >= 75 ? 't75' : score >= 60 ? 't60' : 't40';
+---
+
+<div class="filter-bar" data-pagefind-ignore>
+  <div class="filter-row">
+    <span class="filter-label">分类</span>
+    <button class="filter-tab on" data-cat="">全部</button>
+    {Object.entries(CATEGORY_LABELS).map(([key, label]) => (
+      <button class="filter-tab" data-cat={key}>{label}</button>
+    ))}
+  </div>
+  {topTags.length > 0 && (
+    <div class="filter-row">
+      <span class="filter-label">标签</span>
+      {topTags.map((t) => (
+        <button class="filter-tab tag-chip" data-tag={t}>{t}</button>
+      ))}
+    </div>
+  )}
+  <div class="filter-row">
+    <button class="filter-tab" data-sel="1">★ 只看精选</button>
+    <span class="filter-count" id="feed-count">{items.length} 条</span>
+  </div>
+</div>
+
+<div data-pagefind-body>
+  {days.map((d) => (
+    <section class="day-group" data-day={d}>
+      <h2 data-pagefind-ignore>
+        {fmtDate(d)}
+        <span class="cnt">{byDay.get(d)!.length} 条</span>
+      </h2>
+      <ul class="feed-list">
+        {byDay.get(d)!.map((it) => (
+          <li data-cat={it.category ?? ''} data-tags={(it.tags ?? []).join('|')} data-sel={it.selected ? '1' : ''}>
+            <span class="when" data-pagefind-ignore>{fmtTime(it.published_at) || '—'}</span>
+            <div class="body">
+              <div class="t">
+                {it.selected && <span class="sel-mark" title="精选">★</span>}
+                <a href={it.url} target="_blank" rel="noopener">{it.title_zh || it.title_orig}</a>
+              </div>
+              <div class="row2" data-pagefind-ignore>
+                <CategoryChip category={it.category} />
+                {(it.tags ?? []).slice(0, 3).map((t) => <span class="tag">{t}</span>)}
+                <span class="src">{it.source}</span>
+                {typeof it.score === 'number' && <span class={`sc ${tier(it.score)}`}>{it.score}</span>}
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+  {days.length === 0 && <div class="empty-tip">本月暂无数据</div>}
+</div>
+
+<div class="month-nav" data-pagefind-ignore>
+  {prevMonth
+    ? <a href={withBase(`/all/${prevMonth}/`)}>← {prevMonth}</a>
+    : <span></span>}
+  <span class="cur">{month} · {months.length} 个月</span>
+  {nextMonth
+    ? <a href={withBase(`/all/${nextMonth}/`)}>{nextMonth} →</a>
+    : <span></span>}
+</div>
+
+<script>
+  // 客户端筛选：分类（单选）× 标签（多选 OR）× 仅精选，行级显隐 + 空日组隐藏
+  const bar = document.querySelector('.filter-bar');
+  const count = document.getElementById('feed-count');
+  if (bar && count) {
+    const state = { cat: '', tags: new Set<string>(), sel: false };
+    const rows = Array.from(document.querySelectorAll<HTMLElement>('.feed-list li'));
+
+    const apply = () => {
+      let shown = 0;
+      for (const li of rows) {
+        const okCat = !state.cat || li.dataset.cat === state.cat;
+        const tags = (li.dataset.tags || '').split('|').filter(Boolean);
+        const okTag = state.tags.size === 0 || tags.some((t) => state.tags.has(t));
+        const okSel = !state.sel || li.dataset.sel === '1';
+        const ok = okCat && okTag && okSel;
+        li.style.display = ok ? '' : 'none';
+        if (ok) shown++;
+      }
+      for (const g of document.querySelectorAll<HTMLElement>('.day-group')) {
+        const visible = Array.from(g.querySelectorAll('li')).some((li) => (li as HTMLElement).style.display !== 'none');
+        g.style.display = visible ? '' : 'none';
+      }
+      count.textContent = `${shown} 条`;
+    };
+
+    bar.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest('button');
+      if (!btn) return;
+      if (btn.dataset.cat !== undefined) {
+        state.cat = btn.dataset.cat;
+        bar.querySelectorAll('[data-cat]').forEach((b) => b.classList.toggle('on', b === btn));
+      } else if (btn.dataset.tag !== undefined) {
+        const t = btn.dataset.tag;
+        if (state.tags.has(t)) state.tags.delete(t); else state.tags.add(t);
+        btn.classList.toggle('on');
+      } else if (btn.dataset.sel !== undefined) {
+        state.sel = !state.sel;
+        btn.classList.toggle('on');
+      }
+      apply();
+    });
+  }
+</script>

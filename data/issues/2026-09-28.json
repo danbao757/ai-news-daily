@@ -5,7 +5,10 @@
   "stats": {
     "collected": 39,
     "duplicates": 0,
+    "analyzed": 13,
+    "blocked": 0,
     "selected": 13,
+    "events": 0,
     "sources": [
       "Google News AI",
       "Hacker News",
@@ -15,201 +18,22 @@
       "The Decoder"
     ]
   },
-  "headlines": [
-    {
-      "title_zh": "Google Research推出AI视频联合导演：4个代理框架用于生成连贯的视频",
-      "title_orig": "Google Research Introduces an AI Video Co-Director: 4 Agentic Frameworks for Coherent, Minutes-Long Video Generation",
-      "summary_zh": "Google Research推出AI视频联合导演，用于生成连贯的、几分钟长的视频。",
-      "category": "产品",
-      "tags": [
-        "Google Resea",
-        "视频生成",
-        "AI联合导演"
-      ],
-      "score": 75,
-      "source": "MarkTechPost",
-      "url": "https://www.marktechpost.com/2026/09/27/google-research-introduces-an-ai-video-co-director-4-agentic-frameworks-for-coherent-minutes-long-video-generation/",
-      "published_at": "2026-09-28T02:44"
-    },
-    {
-      "title_zh": "AI在模型开发中作用增强，决策仍由人类主导",
-      "title_orig": "AI agents do more of the work in model development, but humans still make the decisions",
-      "summary_zh": "研究团队分析769个任务日志，AI代理提供高达55%的方法建议，但人类做出超过85%的最终决策。",
-      "category": "论文",
-      "tags": [
-        "AI代理",
-        "模型开发",
-        "人类决策"
-      ],
-      "score": 60,
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/ai-agents-do-more-of-the-work-in-model-development-but-humans-still-make-the-decisions/",
-      "published_at": "2026-09-27T15:18"
-    },
-    {
-      "title_zh": "2026年LLM回顾",
-      "title_orig": "2026 in LLMs (so far)",
-      "summary_zh": "Simon Willison在WeAreDevelopers World Congress North America上发表主题演讲，回顾了2026年的关键趋势。",
-      "category": "行业",
-      "tags": [
-        "LLM",
-        "Simon Willis",
-        "趋势"
-      ],
-      "score": 60,
-      "source": "Simon Willison",
-      "url": "https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/",
-      "published_at": "2026-09-27T23:54"
-    }
+  "lead": null,
+  "headline_ids": [
+    "30dbbe306c",
+    "4918b2a37d",
+    "5588418545"
   ],
-  "briefing": [
-    {
-      "title_zh": "TypeSafe AI的Jev的20个代理用例",
-      "title_orig": "20 Agentic Use Cases of TypeSafe AI’s Jev",
-      "summary_zh": "TypeSafe AI的Jev提供基于概率的决策，验证了20个代理用例。",
-      "category": "产品",
-      "tags": [
-        "TypeSafe AI",
-        "Jev",
-        "代理用例"
-      ],
-      "score": 60,
-      "source": "MarkTechPost",
-      "url": "https://www.marktechpost.com/2026/09/27/20-agentic-use-cases-of-typesafe-ais-jev/",
-      "published_at": "2026-09-28T03:07"
-    },
-    {
-      "title_zh": "Anthropic CEO 讨论AI对人类威胁",
-      "title_orig": "SNL Weekend Update: Anthropic CEO Dario Amodei on A.I.'S Threat to Humanity [video]",
-      "summary_zh": "Anthropic CEO Dario Amodei 讨论AI对人类的潜在威胁。",
-      "category": "观点",
-      "tags": [
-        "Anthropic",
-        "AI威胁"
-      ],
-      "score": 60,
-      "source": "Hacker News",
-      "url": "https://www.youtube.com/watch?v=-Nvne3LzBls",
-      "published_at": "2026-09-28T01:32"
-    },
-    {
-      "title_zh": "OpenAI 停止训练最新模型",
-      "title_orig": "OpenAI halts training of latest models as reports mount of AI agents going rogue",
-      "summary_zh": "OpenAI 停止训练最新模型，因报告称AI代理行为异常。",
-      "category": "行业",
-      "tags": [
-        "OpenAI",
-        "AI代理"
-      ],
-      "score": 60,
-      "source": "Hacker News",
-      "url": "https://www.theguardian.com/technology/2026/sep/27/openai-halts-training-of-latest-models-as-reports-mount-of-ai-agents-going-rogue",
-      "published_at": "2026-09-28T00:29"
-    },
-    {
-      "title_zh": "Anthropic CEO将与特朗普总统共进晚餐",
-      "title_orig": "Anthropic’s CEO is about to have dinner with President Trump",
-      "summary_zh": "Dario Amodei将与唐纳德·特朗普进行一对一会议。",
-      "category": "行业",
-      "tags": [
-        "Anthropic",
-        "特朗普",
-        "会议"
-      ],
-      "score": 50,
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
-      "published_at": "2026-09-27T20:34"
-    },
-    {
-      "title_zh": "Muse能否克服Meta的信任问题？",
-      "title_orig": "Can Muse overcome Meta’s trust issues?",
-      "summary_zh": "讨论了Meta的AI公告如何从OpenAI和Anthropic手中夺走聚光灯。",
-      "category": "行业",
-      "tags": [
-        "Muse",
-        "Meta",
-        "AI公告"
-      ],
-      "score": 50,
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/09/27/can-muse-overcome-metas-trust-issues/",
-      "published_at": "2026-09-27T19:57"
-    },
-    {
-      "title_zh": "Anthropic的Dario Amodei接受SNL节目采访",
-      "title_orig": "Anthropic’s Dario Amodei gets the SNL treatment",
-      "summary_zh": "Amodei在采访中提到‘AI是恶魔，我是它的创造者。’",
-      "category": "行业",
-      "tags": [
-        "Anthropic",
-        "Dario Amodei",
-        "SNL"
-      ],
-      "score": 50,
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/",
-      "published_at": "2026-09-27T16:30"
-    },
-    {
-      "title_zh": "教授们在课堂中使用人工智能的看法不一 - 耶鲁日报",
-      "title_orig": "Professors varied on artificial intelligence use in the classroom - Yale Daily News",
-      "summary_zh": "耶鲁日报报道了教授们在课堂中使用人工智能的看法。",
-      "category": "行业",
-      "tags": [
-        "人工智能",
-        "课堂",
-        "耶鲁日报"
-      ],
-      "score": 50,
-      "source": "Google News AI",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPMU5iaXNDSHplU2VWVnVQOHNUbVpoZE5lSmdhbk9nTjlZTnozQkVYaUhTZjExamphLThSbk8zTE43SzNpb3dOS0ZqeXl0a1JjcjNuVDQzLU85UVhaTVpFVG1GYUNyUkM2YWtybDBrcC1Qa0ZTWWNWcWF6N2NPWS1RMTdOV2J5X3ZRZDZLMVA3OWI4dlg1X2doLURtRVVhSHUzVlE?oc=5",
-      "published_at": "2026-09-28T06:03"
-    },
-    {
-      "title_zh": "AI和能源不仅仅是需求故事 - GIS报告",
-      "title_orig": "AI and energy are more than a demand story - GIS Reports",
-      "summary_zh": "GIS报告探讨了AI和能源之间的关系。",
-      "category": "行业",
-      "tags": [
-        "AI",
-        "能源",
-        "GIS报告"
-      ],
-      "score": 50,
-      "source": "Google News AI",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5RaXNCcFgwd2pPMzN2TU1MY09rWUVFLXNJTjdrSGdRbUgyZ1UwaW1TUEpCZkJELXF6cmxxV3NVXzIxc2JnUGEwSlV4RVVyM3pEeUtIQzJwclBuYUU5ZUE?oc=5",
-      "published_at": "2026-09-28T06:00"
-    },
-    {
-      "title_zh": "Muse AI代理回应MX Keys Mini订单问题",
-      "title_orig": "Quoting Muse AI Agent",
-      "summary_zh": "MX Keys Mini订单处理不当，导致客户不满。",
-      "category": "产品",
-      "tags": [
-        "Muse",
-        "AI代理",
-        "订单问题"
-      ],
-      "score": 40,
-      "source": "Simon Willison",
-      "url": "https://simonwillison.net/2026/Sep/28/muse-ai-agent/",
-      "published_at": "2026-09-28T04:01"
-    },
-    {
-      "title_zh": "S3的未来与过去",
-      "title_orig": "S3 Is the Future, S3 Is the Past",
-      "summary_zh": "对S3价格变化的评论。",
-      "category": "行业",
-      "tags": [
-        "S3",
-        "价格变化",
-        "Hacker News"
-      ],
-      "score": 40,
-      "source": "Simon Willison",
-      "url": "https://simonwillison.net/2026/Sep/27/hn-49871741/",
-      "published_at": "2026-09-27T23:09"
-    }
+  "briefing_ids": [
+    "8bae98197a",
+    "c6f1dde946",
+    "f13e6555ac",
+    "79b213b759",
+    "eaa520eb58",
+    "8884274c1b",
+    "fb2b24a4ae",
+    "b5ac9c04ce",
+    "00e0e3a4ad",
+    "4cfa73e20d"
   ]
 }

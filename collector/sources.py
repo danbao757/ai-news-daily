@@ -62,8 +62,12 @@ def collect_rss(source: dict, window_hours: int) -> list[dict]:
         if not title or not url:
             continue
         items.append({
+            "source_id": source.get("id", source["name"]),
             "source": source["name"],
             "lang": source["lang"],
+            "tier": source.get("tier", "T2"),
+            "region": source.get("region", "overseas"),
+            "first_party": bool(source.get("first_party", False)),
             "priority": source["priority"],
             "title": _strip_html(title),
             "url": url,
@@ -100,8 +104,12 @@ def collect_hackernews(window_hours: int) -> list[dict]:
         title = (hit.get("title") or "").strip()
         hn_url = hit.get("url") or f"https://news.ycombinator.com/item?id={hit['objectID']}"
         items.append({
+            "source_id": "hacker-news",
             "source": "Hacker News",
             "lang": "en",
+            "tier": "T2",
+            "region": "overseas",
+            "first_party": False,
             "priority": 6,
             "title": title,
             "url": hn_url,

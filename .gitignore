@@ -9,3 +9,7 @@ site/.astro/
 
 # 本地环境
 .env
+
+# 管线瞬态：断点续跑 partial（成功后自动清理）与服务器日志
+data/state/
+deploy/server/sync.log

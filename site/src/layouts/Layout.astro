@@ -22,6 +22,18 @@ const cur = (p: string) => (path === (p === '/' ? baseTrim : baseTrim + p) ? 'pa
     <meta name="description" content={description} />
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
     <link rel="alternate" type="application/rss+xml" title="AI 日报" href={withBase('/rss.xml')} />
+    <script is:inline>
+      // 主题初始化要在首帧渲染前执行，避免闪白（FOUC）
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t !== 'dark' && t !== 'light') {
+            t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.dataset.theme = t;
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -29,8 +41,13 @@ const cur = (p: string) => (path === (p === '/' ? baseTrim : baseTrim + p) ? 'pa
         <a class="brand" href={withBase('/')}>AI<em>日报</em></a>
         <nav class="site-nav">
           <a href={withBase('/')} aria-current={cur('/')}>本期</a>
+          <a href={withBase('/hot')} aria-current={cur('/hot')}>热榜</a>
+          <a href={withBase('/all')} aria-current={path.startsWith(baseTrim + '/all') ? 'page' : undefined}>全部</a>
           <a href={withBase('/archive')} aria-current={cur('/archive')}>往期</a>
           <a href={withBase('/search')} aria-current={cur('/search')}>搜索</a>
+          <button class="theme-toggle" id="theme-toggle" type="button" title="切换明暗主题" aria-label="切换明暗主题">
+            <span class="ico-moon">☾</span><span class="ico-sun">☀</span>
+          </button>
         </nav>
       </div>
     </header>
@@ -48,9 +65,15 @@ const cur = (p: string) => (path === (p === '/' ? baseTrim : baseTrim + p) ? 'pa
         </span>
       </div>
     </footer>
+
+    <script>
+      const btn = document.getElementById('theme-toggle');
+      btn?.addEventListener('click', () => {
+        const root = document.documentElement;
+        const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        root.dataset.theme = next;
+        try { localStorage.setItem('theme', next); } catch {}
+      });
+    </script>
   </body>
 </html>
-
-<style>
-  /* Layout 级别的少量补充（保持 global.css 为主体） */
-</style>

@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getHotEvents, getIssues, getItemIndex } from '../lib/issues';
+import { withBase } from '../lib/url';
+
+// 热榜：最新一个「有事件」的日期的多源事件，按 来源数 → 最高分 → 时间 排序。
+// 事件不足时回退为当日精选条目榜（旧迁移期没有聚类数据）。
+const latest = getIssues()[0];
+const hotDate = getHotEvents()[0]?.date ?? latest?.date;
+const hot = getHotEvents().filter((e) => e.date === hotDate);
+const idx = getItemIndex();
+const fallback =
+  hot.length === 0 && latest
+    ? [...latest.headlines, ...latest.briefing]
+        .filter((it) => typeof it.score === 'number')
+        .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
+        .slice(0, 15)
+    : [];
+---
+
+<Layout title={`热榜 · AI 日报`}>
+  <section class="masthead">
+    <div class="mast-rule" data-pagefind-ignore></div>
+    <div class="mast-body">
+      <div class="mast-main">
+        <div class="kicker">Hot Board</div>
+        <h1>今日热榜</h1>
+      </div>
+    </div>
+    <div class="mast-meta" data-pagefind-ignore>
+      <span class="date">{hotDate ?? '—'}</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span>{hot.length > 0 ? `${hot.length} 个多源事件 · 按来源数与热度排序` : `${fallback.length} 条精选 · 按评分排序`}</span>
+    </div>
+  </section>
+
+  {hot.length > 0 ? (
+    <ol class="hot-list">
+      {hot.map((ev) => {
+        const rep = idx.get(ev.representative_id);
+        return (
+          <li>
+            <span class="rank" aria-hidden="true"></span>
+            <div class="body">
+              <div class="t"><a href={withBase(`/story/${ev.id}/`)}>{ev.title_zh}</a></div>
+              <div class="meta">
+                <span class="src-count">◉ {ev.source_count} 家来源</span>
+                <span>{ev.sources.slice(0, 4).join(' / ')}{ev.sources.length > 4 ? ' 等' : ''}</span>
+                <span>· 最高 {ev.score_max} 分</span>
+                {ev.continued_from && <span>· 追踪中（始于 {ev.continued_from}）</span>}
+              </div>
+              {ev.digest_zh && <p class="digest">{ev.digest_zh}</p>}
+              {rep && (
+                <div class="meta" style="margin-top:0.35rem">
+                  <a href={rep.url} target="_blank" rel="noopener">代表报道：{rep.source} ↗</a>
+                </div>
+              )}
+            </div>
+          </li>
+        );
+      })}
+    </ol>
+  ) : fallback.length > 0 ? (
+    <ul class="brief-list">
+      {fallback.map((item, i) => (
+        <li>
+          <span class="score t90" data-pagefind-ignore style="color:var(--faint)">
+            {String(i + 1).padStart(2, '0')}
+          </span>
+          <div class="body">
+            <span class="t"><a href={item.url} target="_blank" rel="noopener">{item.title_zh || item.title_orig}</a></span>
+            <span class="sub"><a href={item.url} target="_blank" rel="noopener">{item.source} ↗</a></span>
+          </div>
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <div class="empty-tip">暂无热榜数据（聚类管线尚未产出事件）</div>
+  )}
+</Layout>

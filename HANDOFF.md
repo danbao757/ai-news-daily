@@ -3,15 +3,16 @@
 > 本文档由 2026-09-24 的开发会话整理于 2026-09-28，供在其他环境接续开发使用。
 > 2026-09-28 第二次开发会话：新增站内搜索、RSS 订阅、软文过滤，修复站内链接 404。
 > 2026-09-28 第三次开发会话：前端报刊风改版、新增 5 个海外信源（OpenAI/DeepMind/Google News/YouTube）、无 key 机翻降级。
+> **2026-09-29 第四次开发会话（v2 大改）**：移植 AIHOT 编辑管线（预筛/双评/两档写作/身份防幻觉/聚类），三层数据 schema，前端换 AIHOT 设计 tokens + 新增热榜/全部动态/事件页，工作流拆分 fetch+deploy 并预留国内服务器分工。**§2.5 为当前架构速览，先读它**；§2 以下是 v1 存档（`llm.py`/`generate.py` 已删除，仅作背景）。
 > 项目已**完整上线并自动化运行**，接手即可迭代，无需从头搭建。
 
 | 关键信息 | 值 |
 |---|---|
 | 线上地址 | https://danbao757.github.io/ai-news-daily/ |
 | 代码仓库 | https://github.com/danbao757/ai-news-daily （**public**） |
-| 自动化 | GitHub Actions，双时段幂等触发：**08:13** 主时段（cron `13 0 * * *` UTC）+ **09:47** 备份（`47 1`，当天已出刊自动跳过）。原 08:05 拥挤槽曾连续两天被 GitHub 静默丢弃 |
-| 当前状态 | 已出至**第 5 期**（2026-09-24 ~ 09-28），降级模式含机翻中文标题 |
-| 站点功能 | 首页 / 往期归档 / **站内搜索** `/search` / **RSS 订阅** `/rss.xml` |
+| 自动化 | **fetch.yml**（08:13 主时段 + 09:47 备份，抓海外源写 `data/inbox`；仓库变量 `STOPGAP_PIPELINE≠0` 时同任务跑完整管线兜底）+ **deploy.yml**（`data/{issues,items,events}/**` 或 `site/**` 有 push 即构建部署 Pages）。国内服务器接管后设 `STOPGAP_PIPELINE=0`，见 `deploy/server/README.md` |
+| 当前状态 | 已出至**第 6 期**；v2 管线 E2E 已验证（2026-09-29 真实全量：55 采 → 45 析 → 5 精选 → 8 多源事件）；旧 5 期已迁移进新 schema |
+| 站点功能 | 首页（刊头+导语+编按） / **热榜** `/hot` / **全部动态** `/all`（分类/标签/精选筛选+按月分页） / **事件页** `/story/[id]` / 往期 / 搜索 / RSS；**明暗双主题**（`data-theme`，右上角切换） |
 | 本地路径 | `D:\ai-news-daily` |
 
 ---
@@ -27,7 +28,54 @@
 
 **产品逻辑**：每天自动从全网公开信源抓取最近 24 小时的 AI 新闻 → 去重 → LLM 加工（中文标题、摘要、分类、重要度评分）→ 选出头条 3 条 + 速览 10 条 → 生成静态站自动部署。页面上每条新闻点击跳转**原文出处**，本站只存标题/摘要/链接，不存正文（版权安全）。
 
-## 2. 架构与数据流
+## 2.5 v2 架构速览（2026-09-29 起，当前生效）
+
+```
+GitHub Actions（海外 runner，免费）                国内云服务器（LLM 国内直连）
+  fetch.yml 08:13                                    cron 09:30（deploy/server/sync.sh）
+  ├ 抓海外源+HN → data/inbox/DATE.jsonl              ├ git pull
+  ├ （过渡期兜底）STOPGAP_PIPELINE≠0 时              ├ python -m collector.pipeline
+  │   自己跑完整 pipeline                             │   ├ 消费 inbox（海外源）
+  └ git push ──────────────────────────────────→     │   ├ 直抓国内源（机器之心/量子位）
+                                                     │   ├ LLM 加工（逐条多步，断点续跑）
+                                                     │   └ 聚类出刊 → 三层数据
+                                                     └ git push（不通走 Gitee 镜像）
+                                                        ↓ push 触发
+                                              deploy.yml：Astro 构建 + Pages
+```
+
+**逐条多步管线**（`collector/steps.py`，移植 AIHOT editorial）：
+
+1. 免费闸 `_JUNK_TITLE_RE`（招聘/行情/促销标题直接 BLOCK，不花调用）
+2. `prefilter` 宽召回预筛（PASS/BLOCK/UNKNOWN；UNKNOWN 视同 PASS）
+3. `score` 五轴加权 **独立打两次**（sig/nov/cred/reson/act；两次之和 ≥ 2×分级门槛才精选）
+4. `structure` 分类/标签/主体/事实框架（`taxonomy.py` 三层词表 + 同义词归一）
+5. 两档写作：精选与近精选（>UNDERSTAND_FLOOR=50）用 understand 档（标题+答案先行摘要+编者按）；其余 summarize 便宜档
+6. `enforce_identity` 身份防幻觉（中文稿里公司原文没提到 → 标题退回原文/摘要丢弃）
+
+**聚类**（`cluster.py`）：日批窗口小（1-2 天 ≤120 条）不用 embedding，LLM 一次批量分组；跨日续接 = URL 精确命中 prev `member_urls`（**member_urls 必须落盘**）+ LLM continue 判定；拿不准宁可拆开。
+
+**三层数据 schema**：
+
+```
+data/issues/YYYY-MM-DD.json   # 日报：headline_ids/briefing_ids 引用式 + stats + lead（导语）
+data/items/YYYY-MM-DD.jsonl   # 当日全量分析条目（id=sha1(url)[:10]，含未精选；原始正文不进仓）
+data/events/YYYY-MM-DD.json   # 当日事件（member_ids 引用条目，source_count≥2 才有 /story 页）
+data/inbox/YYYY-MM-DD.jsonl   # Actions 抓的海外候选（服务器消费后删除）
+data/state/DATE.partial.jsonl # 断点续跑（gitignore，成功后自动清理）
+```
+
+**分级门槛已按本站评分模型校准**：`SELECTION_THRESHOLDS = {T1: 55, T1_5: 60, T2: 70}`（AIHOT 原值 60/65/76 是按其模型校准的；glm-4-flash 对重磅新闻普遍打 65-72，E2E 实测原门槛下 45 条仅 1 条精选）。选稿 = 精选优先（事件去重）+ 近精选按分回填，头条 3 + 速览 10。
+
+**前端**（`site/src/`）：`lib/issues.ts` 是唯一数据层（getItemIndex 全量条目索引 / getIssues 水合日报 / getHotEvents 热榜）；设计 tokens 在 `global.css`（暖纸白 `#faf9f6` + 墨色 + 青绿 `#176b75`，hairline，5 级 radius，`data-theme` 暗色）；报刊刊头与评分刻度两个 v1 签名元素保留。
+
+**v2 踩的新坑**：
+- 事件文件若剥掉 `member_urls` 再落盘，跨日 URL 续接永远失效（字段必须在场）
+- LLM 返回 JSON 用 `json.JSONDecoder().raw_decode` 提取——括号配平计数法会被字符串内花括号骗到
+- Actions UTC runner 上取"今天"必须显式 `datetime.now(BEIJING)`，`date.today()` 会拿到 UTC 日期（出刊日期错一天）
+- 分类从中文 label 改为 key（`ai-models` 等），前端 `CATEGORY_LABELS` 与 `taxonomy.py` 的映射要保持同步
+
+## 2. v1 架构存档（已被 v2 取代）
 
 ```
 RSS（11 源）─┐
@@ -49,25 +97,34 @@ Hacker News ─┘        │  URL精确 + 标题3-gram Jaccard≥0.55
 
 ```
 ai-news-daily/
-├── collector/               # Python 数据管线
-│   ├── config.py            # ★ 所有可调参数（加源/改窗口/换LLM厂商都改这里）
-│   ├── sources.py           # RSS(feedparser) + HN(Algolia API)
+├── collector/               # Python 数据管线（v2）
+│   ├── config.py            # ★ 所有可调参数（源/门槛/限速/换LLM厂商都改这里）
+│   ├── sources.py           # RSS(feedparser) + HN(Algolia API)，输出带 source_id/tier/region 元数据
 │   ├── dedup.py             # SeenStore 去重，落盘 data/seen.json
-│   ├── llm.py               # LLM 批量加工 + 无 key 降级 _fallback()
-│   └── generate.py          # 主入口 python -m collector.generate
+│   ├── taxonomy.py          # 分类/标签/主体/身份词典（前端 CATEGORY_LABELS 与此同步）
+│   ├── prompts/*.md         # 7 份提示词（prefilter/score/understand/summarize/structure/cluster/daily_lead）
+│   ├── prompts.py           # prompt 加载器（带缓存）
+│   ├── client.py            # OpenAI 兼容客户端：并发闸+最小间隔+退避重试+稳健 JSON 提取
+│   ├── steps.py             # 逐条多步加工 + enforce_identity 身份防幻觉
+│   ├── cluster.py           # LLM 批量聚类 + 跨日续接（URL 精确命中）
+│   ├── degrade.py           # 无 key 机翻降级（dict-chrome-ex）
+│   ├── pipeline.py          # ★ 主入口 python -m collector.pipeline（断点续跑）
+│   ├── fetch.py             # Actions 海外源采集器 → data/inbox
+│   └── migrate.py           # v1→v2 一次性迁移（已完成，幂等可重跑）
 ├── data/
-│   ├── issues/*.json        # 每期日报数据（Issue 结构见下）
+│   ├── issues|items|events/ # 三层数据（结构见 §2.5）
+│   ├── inbox/               # Actions→服务器的海外候选中转
 │   └── seen.json            # 去重记忆（14 天滚动）
+├── deploy/server/           # 国内服务器部署包（sync.sh + README.md）
 ├── site/                    # Astro 5 静态站
-│   ├── astro.config.mjs     # site + base 已按 GitHub Pages 配好
 │   └── src/
-│       ├── lib/issues.ts    # getIssues() 读项目根 data/issues
+│       ├── lib/issues.ts    # ★ v2 数据层：条目索引/水合日报/热榜事件
 │       ├── lib/url.ts       # withBase()：站内链接拼 base 前缀（防 404）
-│       ├── pages/           # index / archive / issue/[date] / search / rss.xml.js
-│       ├── components/      # IssueView.astro, CategoryChip.astro
-│       ├── layouts/         # Layout.astro（导航含"搜索"，head 含 RSS 自动发现）
-│       └── styles/global.css# 全部设计变量与组件样式（含 Pagefind UI 融合）
-└── .github/workflows/daily.yml
+│       ├── pages/           # index / hot / all/[month] / story/[id] / issue/[date] / archive / search / rss.xml.js
+│       ├── components/      # IssueView, CategoryChip, AllFeed（筛选交互）
+│       ├── layouts/         # Layout.astro（导航 + 主题切换 + 防闪白内联脚本）
+│       └── styles/global.css# v2 设计 tokens（AIHOT 体系）+ 全部组件样式
+└── .github/workflows/       # fetch.yml（采集+兜底出刊）+ deploy.yml（构建部署）
 ```
 
 构建命令 `npm run build` = `astro build && pagefind --site dist`（pagefind 为 devDependency，
