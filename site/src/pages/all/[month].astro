@@ -20,7 +20,7 @@ const { items, months } = Astro.props;
 const month = Astro.params.month!;
 ---
 
-<Layout title={`全部动态 · ${month} · AI 日报`}>
+<Layout title={`全部动态 · ${month} · AI 日报`} wide>
   <header class="page-head">
     <h1>全部动态</h1>
     <span class="ph-sub">{month} · <b>{items.length}</b> 条 · 含未精选</span>

@@ -34,7 +34,6 @@ for (const d of days) {
     <section class="tl-day" data-day={d} aria-label={d}>
       <div class="tl-day-head">
         <span class="d">{fmtDate(d)}</span>
-        <span class="rail-cell" aria-hidden="true"></span>
         <span class="meta">{weekday(d)} · {byDay.get(d)!.length} 条</span>
       </div>
       <ol class="tl-list">
