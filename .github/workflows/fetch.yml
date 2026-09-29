@@ -33,7 +33,9 @@ jobs:
           python -m collector.fetch
 
       - name: Run full pipeline (stopgap until server takes over)
-        if: vars.STOPGAP_PIPELINE != '0'
+        # 陷阱：GitHub 对不同类型比较会转数字，未设变量(null=0) 与 '0' 相等——
+        # 必须补「未设 = 开启」分支，否则 stopgap 在默认状态下永远被跳过
+        if: vars.STOPGAP_PIPELINE != '0' || vars.STOPGAP_PIPELINE == ''
         run: python -m collector.pipeline
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
