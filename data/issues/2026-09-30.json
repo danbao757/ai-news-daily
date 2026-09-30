@@ -1,0 +1,36 @@
+{
+  "issue": 7,
+  "date": "2026-09-30",
+  "generated_at": "2026-09-30T02:05:20",
+  "stats": {
+    "collected": 78,
+    "duplicates": 3,
+    "analyzed": 64,
+    "blocked": 11,
+    "selected": 13,
+    "events": 4,
+    "sources": [
+      "HuggingFace Blog",
+      "The Decoder",
+      "量子位"
+    ]
+  },
+  "lead": {
+    "title": "OpenAI发布新ChatGPT，更像操作系统",
+    "paragraph": "OpenAI今日发布全新ChatGPT版本，该版本不再仅仅是聊天机器人，更像是一个操作系统。同时，OpenAI还发布了GPT-6.1 Sol模型，AMD宣布收购AI模型初创公司World Labs，交易额达82亿美元，NVIDIA推出Kumo Tabular模型，为表格预测设定新的精度-效率前沿。",
+    "highlights": [
+      "e85ede5920",
+      "00dec4f5ee",
+      "952b29f09b",
+      "493cf3fce1"
+    ]
+  },
+  "headline_ids": [
+    "e85ede5920",
+    "00dec4f5ee",
+    "952b29f09b"
+  ],
+  "briefing_ids": [
+    "493cf3fce1"
+  ]
+}
