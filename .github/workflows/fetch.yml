@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  actions: write # 数据提交后主动 dispatch deploy
 
 concurrency:
   group: fetch
@@ -49,8 +50,26 @@ jobs:
           WRITE_MODEL: ${{ vars.WRITE_MODEL }}
 
       - name: Commit inbox & issue data
+        id: commit
         run: |
           git config user.name "news-bot"
           git config user.email "news-bot@users.noreply.github.com"
           git add data
-          git diff --cached --quiet || (git commit -m "chore: issue $(date +%F)" && git pull --rebase origin main && git push)
+          if git diff --cached --quiet; then
+            echo "pushed=0" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "chore: issue $(TZ=Asia/Shanghai date +%F)"
+            git pull --rebase origin main && git push
+            echo "pushed=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      # GITHUB_TOKEN 的 push 不会触发其他工作流（防递归），数据提交后
+      # 必须主动 dispatch deploy 才能自动上线（workflow_dispatch 是豁免通道）
+      - name: Trigger Pages deploy
+        if: steps.commit.outputs.pushed == '1'
+        run: |
+          curl -sf -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy.yml/dispatches" \
+            -d '{"ref":"main"}'
