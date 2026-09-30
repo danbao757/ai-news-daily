@@ -1,0 +1,204 @@
+{
+  "date": "2026-10-01",
+  "generated_at": "2026-09-30T18:25:33",
+  "events": [
+    {
+      "id": "eb5e5e43443",
+      "title_zh": "AI新闻与观点汇总",
+      "digest_zh": "OpenAI 与美国SBDC合作，为小型企业提供AI实操培训和本地支持，并发布了一份关于小型团队如何使用AI的新报告。",
+      "representative_id": "b5e5e43443",
+      "member_ids": [
+        "0a622a33b8",
+        "b5e5e43443",
+        "581ab3112c",
+        "560cb1e419",
+        "72e1a9ce06",
+        "fc7b7c3d36",
+        "59bab676e2",
+        "f6dc3f993c",
+        "8e63278d5d",
+        "4141c50f4d",
+        "f59f9ed0e2",
+        "4a00c2f7a1",
+        "9fcaf5c1a6",
+        "bae3c02ce1",
+        "8ce994a17c",
+        "0a404b915c",
+        "8cdf732788",
+        "a3c4b3dc87",
+        "8a483afc9f",
+        "c6105b6423",
+        "9dca213f0f",
+        "3a13a5e68c",
+        "82fc890c12",
+        "5945815491",
+        "970ebef21f",
+        "3e9b576df9",
+        "34abcd5ed8",
+        "623051ee1e",
+        "17786617b1",
+        "7856ca1ca9",
+        "cf9e97faaf",
+        "62c246d753",
+        "d0ff96814d",
+        "ae05e900dd",
+        "d3df5418ca",
+        "6fbc44660a"
+      ],
+      "member_urls": [
+        "https://deepmind.google/blog/introducing-synthid-bio/",
+        "https://openai.com/index/helping-small-businesses-put-ai-to-work",
+        "https://huggingface.co/blog/open-tts-leaderboard",
+        "https://the-decoder.com/ftc-launches-sweeping-probe-into-openai-anthropic-and-other-ai-labs-over-consumer-protection-concerns/",
+        "https://the-decoder.com/chinas-ai-industry-closes-ranks-as-deepseek-ships-open-source-software-for-huaweis-ascend-chips/",
+        "https://the-decoder.com/google-is-paying-almost-no-publishers-almost-nothing-for-content-used-in-ai-answers/",
+        "https://the-decoder.com/anthropic-says-zhipus-open-weight-glm-5-3-nearly-matches-claude-mythos-preview-at-building-exploits/",
+        "https://the-decoder.com/trump-and-tech-ceos-sign-an-ai-code-of-conduct-thats-only-morally-binding/",
+        "https://techcrunch.com/2026/09/30/destro-ais-secret-sauce-is-getting-robots-and-humans-on-the-same-page/",
+        "https://techcrunch.com/2026/09/30/doordash-launches-an-ai-agent-you-can-text-to-order-food/",
+        "https://techcrunch.com/2026/09/30/meta-disputes-claim-that-muse-read-a-users-private-messages-without-permission/",
+        "https://techcrunch.com/2026/09/30/restate-lands-20m-as-the-need-for-durable-infrastructure-increases-with-ai-agents/",
+        "https://techcrunch.com/2026/09/30/cerebras-systems-andrew-feldman-on-whether-ai-can-keep-scaling-at-techcrunch-disrupt-2026/",
+        "https://arstechnica.com/science/2026/09/google-figures-out-how-to-watermark-ai-designed-proteins/",
+        "https://www.technologyreview.com/2026/09/30/1145339/were-not-going-to-shoot-ourselves-in-the-foot-over-hugging-face-says-openais-chief-research-officer/",
+        "https://www.technologyreview.com/2026/09/30/1145350/the-download-openai-chief-research-officer-hacking-response/",
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOUU3QU5PWVZxUHlxZVhVcVFBR1VNVWw3Z21pS2FLYm5uWXJVeGlWZ0MwOTd4NDU3b1dFeVhMcXZNTHNPNlJKZnRFb1VFM2hXam05VnA2OFZSaXBRSzZjVmRBNUdCQkc2NE1kVHhyYi1pamUxa01fbjNIcjFKMnNqRWJ6U1Y2aHZBSjlZZzgxSU1rYzVncjdHOC1fcktnVy04Zm5xa2ZqUERubW1NWERsZGlGejY?oc=5",
+        "https://news.google.com/rss/articles/CBMitgFBVV95cUxQRmZ1aVVHUTVfSS1Wc21nbTZkUHJJVVB2eE0tVnByNmlJbVNFOEJqcUFIanZSQTVCRVlZUjZDc2NyN013eVFVRkhLcXZIcUYtVHNoZlNmcl8tTGpBU1hHSjkzVTVpUk5na0NtVUNRSnphUURfZExUZnFSaXF0UC1JTVhFSFVRamE5aUtkQTRMQnlILTNEM29UWDNySS1PWkhKenBQRURybHh1TmFleTJwcjZFQ2dfdw?oc=5",
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxNa1BEUzRGSGlnWDhmODlieDdRcU9XREstMW9zbVNtZzBzYUQ2RVVUWTI2dl93RFhtYlNlOF9GYmFYWXFlaG1fUWluZUl4XzZaTEU1OXIxY1dJWGY1bEwtU3ppZmtvaUxlVzhkcm5NUUV1VWdnaERVUEdPakp5SFJVMmZYdDVYdUlJZ0tRa0pxTmt1bHk0SHczQ2dtYlhPSDJfX3c?oc=5",
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRzFOWjFuaGk2bGlGeWktOUNGU0hxMmxQSklha3Vtc3FjeldLbE9YT3pRTkZaNlRLX0pFTVFqX1VtLVdtaTJnTENsR2xqZG1QZG5pbkM3dG9RMDRybzRkVlVEYlBKVnpQVVJzVkFNUjVQSjFFUlVpdHdEM0stVjlmcERONVBzVnVDX1JBLTIzbkdpY05KdkV0eTVzaEd1SWJHSHcw?oc=5",
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxPTmZQSWZHZGQ3N2hLa3NrWl81ZmxhaGJmMGNFS2JfcXlXbFRsQ3lvMV9LOGgwQUxUMDdsc3R5eUltVkJoWUEyRTlWNFpFR3RfSmhfSDZIS05NSEdJbDBkVXREWTM2aE1UM05CSVFtLVFsR0NHSTVJV2dYaG1Zb1BucmJienVReEdybkRTWnpVVzh0QVB6RGVQTkg2X3dQR21OeTJsdjdWczhUQnE3NV9z?oc=5",
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxNNl93ODZzTkgwV0ctbUlYMVQtLVhfQklKLU1mOWNvWHJDSWhiMTBmVlNGdzZ1MFFHOGh2cm01Zl9hTk82d2wtT0FkZ1FMVlQ2UkZ4N3pBXzNCT21LS2tOa2lfXzVRck1nWTl5bHFJVm90bGZQU2JSVC00V0d2dG52QkZJT2hVV0FQcnNMNXhjbGNQOTRJQWstRWFNVlVyVVhra1E?oc=5",
+        "https://news.google.com/rss/articles/CBMieEFVX3lxTE9jQzd0MER0QmprUUZGUl9VMjNXdll4bThyVHJBcDhNV1ZUYjFRUmgzcm85UkdKbk52dDJobGVvcWc5QnBHM0toTmRIVml0eWE2d2tZdUhxVk5iVzRscGQtamR5amxFTzd6RmxWNWpYdnpQZk9ZTk5RbQ?oc=5",
+        "https://insufferable.dev/posts/the-ai-race-just-got-awkward/",
+        "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdzYzcTVSY1JmRld3cFRBRlRaX0w0YVZHTjU3NWVvVG5BcXFIZGFwdXViLXBLNnhJQ3d0RS13T2VURWdNQ19ySkJuVXNlV2NWX0E3LUExYUZQaFBsTTVEaC1NMXJtR0RGYlllQVotQmM3VlRaVmd2em04YWdzTXFkMjhsUlQ0b1JlcVJBRENNRFFBT1NLcU00YUtqU0N5LUlJa0YxaEhzdU1mR1lkUTJ0MFhLMjA3a1FJVlQ5RXpMOEIxdw?oc=5",
+        "https://artificialanalysis.ai/articles/gpt-6-1-sol-replaces-gpt-6-sol-after-just-7-days-with-near-astra-intelligence",
+        "https://prospect.org/2026/09/29/artificial-intelligence-agents-openai-microsoft-sam-altman-greg-brockman-ah-nice/",
+        "https://lfm.xiffy.nl/",
+        "https://agmai.org/general-sep29/",
+        "https://www.qbitai.com/2026/09/499605.html",
+        "https://www.qbitai.com/2026/09/499654.html",
+        "https://www.qbitai.com/2026/09/499597.html",
+        "https://www.qbitai.com/2026/09/499592.html",
+        "https://www.qbitai.com/2026/09/499493.html",
+        "https://www.qbitai.com/2026/09/499263.html",
+        "https://www.qbitai.com/2026/09/499308.html"
+      ],
+      "sources": [
+        "Ars Technica",
+        "DeepMind Blog",
+        "Google News AI",
+        "Hacker News",
+        "HuggingFace Blog",
+        "MIT Tech Review",
+        "OpenAI News",
+        "TechCrunch AI",
+        "The Decoder",
+        "量子位"
+      ],
+      "source_count": 10,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-10-01",
+      "latest_published_at": "2026-10-01T01:55+08:00"
+    },
+    {
+      "id": "e6a91381a42",
+      "title_zh": "OpenAI相关新闻",
+      "digest_zh": "OpenAI 官方报道，揭示了对抗性蒸馏的防御加强，对安全领域有重要意义。",
+      "representative_id": "6a91381a42",
+      "member_ids": [
+        "6a91381a42",
+        "ec7f1e61ac",
+        "f872b5f1d0"
+      ],
+      "member_urls": [
+        "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
+        "https://the-decoder.com/meta-dodges-billions-in-us-taxes-by-calling-its-ai-data-centers-experiments/",
+        "https://the-decoder.com/google-drops-gems-for-skills-joining-openai-and-anthropic-in-the-shift-to-agent-ready-prompt-formats/"
+      ],
+      "sources": [
+        "OpenAI News",
+        "The Decoder"
+      ],
+      "source_count": 2,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-10-01",
+      "latest_published_at": "2026-10-01T02:16+08:00"
+    },
+    {
+      "id": "e1720359e63",
+      "title_zh": "OpenAI开源项目进展",
+      "digest_zh": "DeepSeek开源了一套针对华为昇腾NPU的算子工具链，包括TileLang等核心产品，旨在提升芯片性能并降低开发门槛。",
+      "representative_id": "1720359e63",
+      "member_ids": [
+        "1720359e63",
+        "3fb2160a6e"
+      ],
+      "member_urls": [
+        "https://www.leiphone.com/category/yanxishe/UUIfK7eeFE9Ws1JI.html",
+        "https://www.leiphone.com/category/yanxishe/7bPyLlZDfncTOw5B.html"
+      ],
+      "sources": [
+        "雷锋网"
+      ],
+      "source_count": 1,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-10-01",
+      "latest_published_at": "2026-09-30T18:58+08:00"
+    },
+    {
+      "id": "e043b9d59a8",
+      "title_zh": "百度AI办公产品动态",
+      "digest_zh": "多个平台推出Personal Agent产品，如OpenAI的dots和Meta的Muse，这些产品具有长期在线、自主执行任务的能力，可能改变现有工作流。",
+      "representative_id": "043b9d59a8",
+      "member_ids": [
+        "eadc9423f1",
+        "043b9d59a8"
+      ],
+      "member_urls": [
+        "https://www.leiphone.com/category/industrynews/7q7ZyMuKeWjc1uGz.html",
+        "https://www.leiphone.com/category/yanxishe/Zqcw9XvSO2Ht6FIQ.html"
+      ],
+      "sources": [
+        "雷锋网"
+      ],
+      "source_count": 1,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-10-01",
+      "latest_published_at": "2026-09-30T19:50+08:00"
+    },
+    {
+      "id": "ed1b6095b99",
+      "title_zh": "科技产品发布与新闻",
+      "digest_zh": "美国外卖平台DoorDash宣布在加州北部推出无人机送餐服务，初期合作餐厅包括Chipotle和Popeyes，送餐无人机配备6个螺旋桨，理想情况下5分钟送达。",
+      "representative_id": "d1b6095b99",
+      "member_ids": [
+        "09d5481e7f",
+        "e41c0fff61",
+        "726e3bf693",
+        "50f00bc9de",
+        "d1b6095b99",
+        "1ff05fa5aa"
+      ],
+      "member_urls": [
+        "https://www.ithome.com/1/008/950.htm",
+        "https://www.ithome.com/1/008/946.htm",
+        "https://www.ithome.com/1/008/944.htm",
+        "https://www.ithome.com/1/008/943.htm",
+        "https://www.ithome.com/1/008/942.htm",
+        "https://www.ithome.com/1/008/941.htm"
+      ],
+      "sources": [
+        "IT之家"
+      ],
+      "source_count": 1,
+      "score_max": 45,
+      "continued_from": null,
+      "first_seen": "2026-10-01",
+      "latest_published_at": "2026-10-01T00:15+08:00"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "issue": 8,
+  "date": "2026-10-01",
+  "generated_at": "2026-09-30T18:25:33",
+  "stats": {
+    "collected": 68,
+    "duplicates": 7,
+    "analyzed": 52,
+    "blocked": 9,
+    "selected": 4,
+    "events": 2,
+    "sources": [
+      "IT之家",
+      "OpenAI News",
+      "The Decoder",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "美国FTC全面调查AI实验室",
+    "paragraph": "今日，美国联邦贸易委员会（FTC）对OpenAI、Anthropic等AI实验室展开全面调查，同时OpenAI打破协调的模型蒸馏活动，DoorDash在加州北部推出无人机送餐服务，AI智能体泄露企业敏感信息事件引发关注。",
+    "highlights": [
+      "560cb1e419",
+      "6a91381a42",
+      "c1e2e97cd1",
+      "d1b6095b99"
+    ]
+  },
+  "headline_ids": [
+    "560cb1e419",
+    "6a91381a42",
+    "043b9d59a8"
+  ],
+  "briefing_ids": [
+    "1720359e63",
+    "e475b17cc2",
+    "c1e2e97cd1",
+    "8739732d36",
+    "d1b6095b99"
+  ]
+}
