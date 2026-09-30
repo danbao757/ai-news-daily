@@ -1,0 +1,67 @@
+name: watchdog
+
+# 出刊监控：检查当日（北京日期）是否已生成 data/issues/YYYY-MM-DD.json。
+# 未出刊 → 自动 dispatch fetch 补救（dispatch 不受 cron 丢弃影响）+ 开 Issue 告警。
+# cron 本身也可能被 GitHub 丢弃，故铺 3 个检查时段；检查幂等，
+# 告警按天去重（当天已有未关闭告警 Issue 则不重复开）。
+
+on:
+  schedule:
+    - cron: '37 2 * * *' # 北京 10:37（08:13/09:47 两槽之后）
+    - cron: '51 7 * * *' # 北京 15:51（12:23 槽之后）
+    - cron: '3 13 * * *' # 北京 21:03（当日最后一道，兜所有时段全丢的情况）
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write # dispatch fetch 补救
+  issues: write # 开 Issue 告警
+
+concurrency:
+  group: watchdog
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check today's issue
+        id: check
+        run: |
+          TODAY=$(TZ=Asia/Shanghai date +%F)
+          if [ -f "data/issues/${TODAY}.json" ]; then
+            echo "published=1" >> "$GITHUB_OUTPUT"
+            echo "${TODAY} 已出刊"
+          else
+            echo "published=0" >> "$GITHUB_OUTPUT"
+            echo "::warning::${TODAY} 未出刊"
+          fi
+
+      - name: Recover & alert
+        if: steps.check.outputs.published == '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          TODAY=$(TZ=Asia/Shanghai date +%F)
+          echo "== 自动补救：dispatch fetch =="
+          curl -sf -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$REPO/actions/workflows/fetch.yml/dispatches" \
+            -d '{"ref":"main"}'
+          echo "== 开告警 Issue（按天去重）=="
+          dup=$(curl -sf -H "Authorization: Bearer $GH_TOKEN" \
+            "https://api.github.com/repos/$REPO/issues?state=open&per_page=100" \
+            | jq -r --arg t "[出刊异常] ${TODAY}" 'any(.[]; (.title | startswith($t)))')
+          if [ "$dup" = "true" ]; then
+            echo "当天告警已存在，跳过"
+          else
+            curl -sf -X POST \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/$REPO/issues" \
+              -d "{\"title\": \"[出刊异常] ${TODAY} 未按时出刊（已自动补救）\", \"body\": \"监控发现 ${TODAY} 的日报未按时生成，已自动触发 fetch 补救。\\n\\n- 补救成功则本 Issue 可直接关闭；\\n- 仍失败请查 [fetch 运行日志](https://github.com/${REPO}/actions/workflows/fetch.yml)。\"}"
+          fi
