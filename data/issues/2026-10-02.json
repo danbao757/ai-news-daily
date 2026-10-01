@@ -1,0 +1,27 @@
+{
+  "issue": 9,
+  "date": "2026-10-02",
+  "generated_at": "2026-10-01T18:50:33",
+  "stats": {
+    "collected": 63,
+    "duplicates": 0,
+    "analyzed": 52,
+    "blocked": 11,
+    "selected": 4,
+    "events": 1,
+    "sources": [
+      "MarkTechPost"
+    ]
+  },
+  "lead": {
+    "title": "OpenAI 发布 GPT-6.1 Sol",
+    "paragraph": "OpenAI今日发布了新的模型GPT-6.1 Sol，其在近Astra编码和计算机使用方面表现出色，且价格仅为Astra代币的五分之一。",
+    "highlights": [
+      "649c571de6"
+    ]
+  },
+  "headline_ids": [
+    "649c571de6"
+  ],
+  "briefing_ids": []
+}
