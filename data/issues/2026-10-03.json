@@ -1,0 +1,27 @@
+{
+  "issue": 10,
+  "date": "2026-10-03",
+  "generated_at": "2026-10-02T18:20:27",
+  "stats": {
+    "collected": 53,
+    "duplicates": 0,
+    "analyzed": 45,
+    "blocked": 8,
+    "selected": 0,
+    "events": 1,
+    "sources": [
+      "TechCrunch AI"
+    ]
+  },
+  "lead": {
+    "title": "白宫重新定义AI为“超级智能”",
+    "paragraph": "白宫近日将人工智能重新定义为‘超级智能’，并召集包括谷歌、微软等科技巨头在内的企业签署AI安全承诺，旨在推动AI技术的安全发展。",
+    "highlights": [
+      "fcd1b322a9"
+    ]
+  },
+  "headline_ids": [
+    "fcd1b322a9"
+  ],
+  "briefing_ids": []
+}
