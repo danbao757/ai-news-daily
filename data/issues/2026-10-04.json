@@ -1,0 +1,36 @@
+{
+  "issue": 11,
+  "date": "2026-10-04",
+  "generated_at": "2026-10-03T17:07:54",
+  "stats": {
+    "collected": 55,
+    "duplicates": 3,
+    "analyzed": 39,
+    "blocked": 13,
+    "selected": 1,
+    "events": 4,
+    "sources": [
+      "MarkTechPost",
+      "The Decoder",
+      "YT Matt Wolfe"
+    ]
+  },
+  "lead": {
+    "title": "微软发布 MAI-Transcribe-2-Streaming",
+    "paragraph": "微软近日发布了MAI-Transcribe-2-Streaming实时语音转文字模型，该模型在实时语音转文字领域排名第一。同时，IBM发布了Bob智能体功能，支持自托管和空气隔离环境，而OpenAI安全研究人员离职事件持续引发关注。",
+    "highlights": [
+      "ae39c209ec",
+      "280bb1c2cb",
+      "dfb77fda9e"
+    ]
+  },
+  "headline_ids": [
+    "ae39c209ec",
+    "6b258645ae",
+    "280bb1c2cb"
+  ],
+  "briefing_ids": [
+    "dfb77fda9e",
+    "3f8b1d6773"
+  ]
+}

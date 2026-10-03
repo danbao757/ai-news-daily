@@ -1,0 +1,168 @@
+{
+  "date": "2026-10-04",
+  "generated_at": "2026-10-03T17:07:54",
+  "events": [
+    {
+      "id": "e6b258645ae",
+      "title_zh": "AI新闻与观点汇总",
+      "digest_zh": "某产品推出一款能透视墙壁的相机，利用无线电波穿透墙壁，定位隐藏物体并创建精确3D模型。",
+      "representative_id": "6b258645ae",
+      "member_ids": [
+        "8e3a52685e",
+        "83485a4ee2",
+        "68db507e2d",
+        "6b258645ae",
+        "5cc7ad2771",
+        "e62af5692c",
+        "8e425ab807",
+        "1b88c4dc9c",
+        "e9259c4507",
+        "c4c7bfb7bc",
+        "9a14422b82",
+        "d371508495",
+        "115c53d07c",
+        "22398acfb5",
+        "e35138269f",
+        "23d0d9ad43",
+        "2e1cc7abff",
+        "569d235985",
+        "d1bbc5160e",
+        "0868d3f3a6",
+        "382e00ee9e"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project/",
+        "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/",
+        "https://www.marktechpost.com/2026/10/02/nvidia-announces-dgx-spark-64gb-a-1-petaflop-grace-blackwell-desktop-for-local-ai-agents-fine-tuning-and-inference/",
+        "https://www.youtube.com/shorts/Lk_0TviLhnw",
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxPVnZUQ24za1llcnhxLXlaVlJGc191RkM5Mi1ZLTNvajNaUHI3Sm5rekkzVUdNZmZsQ1FDUVNacGhxd0pvdEVPZ2pVbEd6UTBOY291OVViSDZEaE9RSDlUaHl3ZkQxNDNKeDlNT195ZHJSWDQ1YW9RVV9IR3BiY0JFdVVNVTdYcl9fTUJTc3lEMUJTOEtyb2hzLWpQZEhqazZBRlE?oc=5",
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOV085Y0xQU0VYYXI5UHYtMXZreFJSRUdPbXJMNUxTY0ctUTREb3BLbElrT2lCenJMbTJzYmUtOTQ5R2Jfc21BZEM4SlByZk5MVFZBQjFTcHdoYUdwNHBkTHlPX202a3FSUTR0bnNfUENhUmh6aThBLTJWZDRzRDk3NUtWNXNQTDNRNko4am00RUMwOWlJYkM1WWtsWENjcm9yMXJfeHVIM1llM1RqUWNqT0o0ZVFwT0lJ?oc=5",
+        "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPdDNYQzFkX2NXVG1fbUpOTElDYk04MVNDd3I4YTl6N25kOWJSMFltUXJUaU1nZTQ3emlFQWRNNG5LcEwyRVkzekxQSmgwNlNweDM4WUE1cmpmZU1tVVU4RVI5QjUxRGl1a1dvc0JCRWwwb2xDZGprWXZRSC1fVXFFWldRME50Ri0t?oc=5",
+        "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/",
+        "https://www.bbc.com/news/articles/cwgkvygg5nzvo",
+        "https://www.science.org/content/article/exclusive-ai-agent-emailed-hundreds-researchers-help-it-told-us-why",
+        "https://tej.as/blog/aleph-alpha-kolibri",
+        "https://www.reddit.com/r/GeminiAI/comments/1wwalmc/wtf_google_getting_rid_of_free_gemini_flash_and/",
+        "https://offrun.dev/",
+        "https://www.ntsb.gov/investigations/Documents/DCA26MA352%20Prelim.pdf",
+        "https://github.com/anteloc/ldraw-nova",
+        "https://www.qbitai.com/2026/10/500148.html",
+        "https://www.qbitai.com/2026/10/501368.html",
+        "https://www.leiphone.com/category/industrynews/YE7qzr0QKUUwu5eL.html",
+        "https://www.ithome.com/1/009/580.htm",
+        "https://www.leiphone.com/category/industrynews/yHRIGngfk28TJvIw.html",
+        "https://www.ithome.com/1/009/575.htm"
+      ],
+      "sources": [
+        "Google News AI",
+        "Hacker News",
+        "IT之家",
+        "MarkTechPost",
+        "TechCrunch AI",
+        "The Decoder",
+        "YT Matt Wolfe",
+        "量子位",
+        "雷锋网"
+      ],
+      "source_count": 9,
+      "score_max": 65,
+      "continued_from": null,
+      "first_seen": "2026-10-04",
+      "latest_published_at": "2026-10-04T00:20+08:00"
+    },
+    {
+      "id": "edfb77fda9e",
+      "title_zh": "OpenAI 安全研究人员离职事件",
+      "digest_zh": "OpenAI 安全研究人员 David Robinson 离职并批评公司安全文化，指出 AI 代理意外发布和模型绕过互联网访问限制等问题。",
+      "representative_id": "dfb77fda9e",
+      "member_ids": [
+        "dfb77fda9e",
+        "a17db24aed"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/another-openai-safety-departure-adds-to-a-pattern-of-researchers-leaving-with-public-warnings/",
+        "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/"
+      ],
+      "sources": [
+        "TechCrunch AI",
+        "The Decoder"
+      ],
+      "source_count": 2,
+      "score_max": 52,
+      "continued_from": null,
+      "first_seen": "2026-10-04",
+      "latest_published_at": "2026-10-04T00:30+08:00"
+    },
+    {
+      "id": "eae39c209ec",
+      "title_zh": "AI代理与智能体功能发布",
+      "digest_zh": "微软发布 MAI-Transcribe-2-Streaming，其实时语音转文字模型在人工分析 AA-WER 流程中排名第一，支持60种语言，每小时费用为0.54美元，目前处于公开预览阶段。",
+      "representative_id": "ae39c209ec",
+      "member_ids": [
+        "353c3ec207",
+        "41a7e44054",
+        "0a712c5edc",
+        "ae39c209ec",
+        "d53a095075",
+        "41165b88f0",
+        "d095f3b4c4",
+        "fbbdd052ef"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/openais-internal-model-considered-restarting-itself-after-learning-it-was-about-to-be-shut-down/",
+        "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/",
+        "https://www.marktechpost.com/2026/10/03/meta-openai-and-uber-just-taught-ai-agents-to-talk-first-what-about-when-to-stay-quiet/",
+        "https://www.marktechpost.com/2026/10/02/microsoft-ai-releases-mai-transcribe-2-streaming-1-real-time-speech-to-text-model-on-artificial-analysis/",
+        "https://www.marktechpost.com/2026/10/02/decision-ai-models-explained-typesafe-jev-vs-fastino-glide-gliner2-5-decide-and-open-source-competitors/",
+        "https://news.google.com/rss/articles/CBMizgFBVV95cUxQWFZQQTU4ZFFBNVpOcUZYcEZQUE5KdU82ek50TW9DUWw4bWExZm1XUC1KZkJ5NEY2UWFBbmhiUzZYUVBrWUhfYW9jTFE3ZTlVUzRKSlJ0TTBDN1o1b3FaRHVPMm1md1VUQnpFZkVkc1FlcWVMc29WT2hJSDd1MmpZUW1BNFdIcS1mQUllQjBic2tlcE9rUVJJQXFYRzF6MjRMZ01wUktCOHo1SVc5b3RPSDlFUDJrb01ieU5ndjR3MmJFYkFhR1lzUlpaanhhQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxPOU5qeU9YekNFYjdyLTltaWNiVXlTLXpyLWVnWlg5ckx4R3ZUYVdVcV9VUzE5SjYxNXZDOFB1QlhjXzNqNjRVQlZMYW9uMTN5Q1Q5bWVhLXRDYkV0X08yd09hd0NfMGdSS0VBSlNheUV3WUVCZncxVDJoNGVac2lfSlNqd0xmSFBvMTBub01CcUM0Ri1EekdVWDhUS0t1V0dOdzBGNQ?oc=5",
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxNaThxNHd6Y1VVQWVGeExyUGRBa3hubktXaVNpQVFlVzhQaUh3UjFNWWdXMVo3b203NFllZmRUU0VwcG9FUjNHNE9jQy1meS1kMENnSDdYVlNMTkRWTGcweEdZVzIwYUthZzk3YlY2QTVSWjRfX2swRktOb1dwRFNjekJ5RVdSOXU2ek1ud2J2cWstRG5JYUpQNnZNcmhMSUFlNTlaS1NsSnJKZXBxOXVTUy1R?oc=5"
+      ],
+      "sources": [
+        "Google News AI",
+        "MarkTechPost",
+        "TechCrunch AI",
+        "The Decoder"
+      ],
+      "source_count": 4,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-10-04",
+      "latest_published_at": "2026-10-03T23:29+08:00"
+    },
+    {
+      "id": "e280bb1c2cb",
+      "title_zh": "AI研究与发展动态",
+      "digest_zh": "IBM 发布了其智能体软件开发平台 Bob 的自托管版本，企业现在可以在本地、私有云和空气隔离网络中运行 Bob，并可选择将 Bob 扩展到 Java、IBM i 和 IBM Z 现代化。",
+      "representative_id": "280bb1c2cb",
+      "member_ids": [
+        "7f39234db8",
+        "9450b18f30",
+        "b5a84f7baa",
+        "1605fd5c89",
+        "6ee8ae0821",
+        "eb7e341877",
+        "280bb1c2cb"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/deepmind-researchers-propose-artificial-symbiotic-intelligence-as-an-alternative-to-the-singularity/",
+        "https://the-decoder.com/ai-agents-build-3d-scenes-from-photos-but-have-no-idea-if-they-got-it-right/",
+        "https://the-decoder.com/open-source-bootloops-harness-supports-ai-models-in-performing-precise-scientific-calculations/",
+        "https://the-decoder.com/ai-music-generator-suno-can-now-create-spoken-audio-with-matching-background-music/",
+        "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/",
+        "https://www.marktechpost.com/2026/10/02/prime-intellect-launches-prime-inference-serverless-and-reserved-serving-for-frontier-open-models/",
+        "https://www.marktechpost.com/2026/10/02/ibm-brings-bob-to-self-hosted-and-air-gapped-environments/"
+      ],
+      "sources": [
+        "Ars Technica",
+        "MarkTechPost",
+        "The Decoder"
+      ],
+      "source_count": 3,
+      "score_max": 62,
+      "continued_from": null,
+      "first_seen": "2026-10-04",
+      "latest_published_at": "2026-10-03T18:21+08:00"
+    }
+  ]
+}
