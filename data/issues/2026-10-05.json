@@ -1,0 +1,45 @@
+{
+  "issue": 12,
+  "date": "2026-10-05",
+  "generated_at": "2026-10-04T17:24:50",
+  "stats": {
+    "collected": 42,
+    "duplicates": 0,
+    "analyzed": 32,
+    "blocked": 10,
+    "selected": 1,
+    "events": 2,
+    "sources": [
+      "Google News AI",
+      "Hacker News",
+      "IT之家",
+      "MarkTechPost",
+      "Simon Willison",
+      "The Decoder",
+      "量子位"
+    ]
+  },
+  "lead": {
+    "title": "马斯克更信中国制造，AI算力硬合作",
+    "paragraph": "今日AI动态中，马斯克对中国制造的信任提升成为焦点，AI算力合作加强。同时，Aleph Alpha发布Kolibri模型，谷歌研究防止AI智能体记住测试的方法，NASA与IBM开源月球模型，以及特朗普宣布成立AI“超级智能部队”等新闻值得关注。",
+    "highlights": [
+      "54bb6bf5ee",
+      "38be749b24",
+      "6e0a54bf2f",
+      "dbc6bbaa71",
+      "5cd038dc75"
+    ]
+  },
+  "headline_ids": [
+    "38be749b24",
+    "6e0a54bf2f",
+    "dbc6bbaa71"
+  ],
+  "briefing_ids": [
+    "5a3f1f4a82",
+    "5cd038dc75",
+    "45efb6c464",
+    "54bb6bf5ee",
+    "83913d49e9"
+  ]
+}

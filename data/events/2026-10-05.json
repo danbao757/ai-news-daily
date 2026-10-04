@@ -1,0 +1,196 @@
+{
+  "date": "2026-10-05",
+  "generated_at": "2026-10-04T17:24:50",
+  "events": [
+    {
+      "id": "e6e0a54bf2f",
+      "title_zh": "谷歌AI模型调整与研究方向",
+      "digest_zh": "谷歌研究人员提出了一种名为RRSI的新方法，可以防止自我改进的AI智能体记住测试任务，从而在未见过的基准测试上提高了表现，同时使用的token数量减少了约30%。",
+      "representative_id": "6e0a54bf2f",
+      "member_ids": [
+        "6e0a54bf2f",
+        "720bd99717",
+        "1972e8c5c7",
+        "72e2c0eba0"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/google-researchers-find-a-way-to-keep-self-improving-ai-agents-from-memorizing-their-tests/",
+        "https://the-decoder.com/chinese-ai-models-parrot-state-doctrine-or-refuse-to-answer-on-sensitive-topics/",
+        "https://the-decoder.com/googles-new-gemini-tiers-cut-free-users-to-its-weakest-model-and-lock-5-month-subscribers-out-of-pro/",
+        "https://the-decoder.com/apparently-openai-isnt-trying-to-build-magic-intelligence-in-the-sky-anymore/"
+      ],
+      "sources": [
+        "The Decoder"
+      ],
+      "source_count": 1,
+      "score_max": 52,
+      "continued_from": null,
+      "first_seen": "2026-10-05",
+      "latest_published_at": "2026-10-04T20:40+08:00"
+    },
+    {
+      "id": "e38be749b24",
+      "title_zh": "AI研究进展与工具发布",
+      "digest_zh": "Aleph Alpha 发布了 Kolibri，一个 78.1B 参数的英德混合专家模型，仅激活 3.46B 个参数。它具有 1M 令牌的上下文和每请求推理能力，Apache 2.0 FP8 权重可在单个 B200 或 H200 上运行。",
+      "representative_id": "38be749b24",
+      "member_ids": [
+        "2c5221cda5",
+        "8a80da1cc2",
+        "319496b2d6",
+        "38be749b24"
+      ],
+      "member_urls": [
+        "https://www.marktechpost.com/2026/10/04/google-research-moves-federated-learning-into-tees-gboard-now-trains-with-externally-verifiable-differential-privacy/",
+        "https://www.marktechpost.com/2026/10/03/deepseek-harness-v0-2-brings-official-desktop-apps-to-its-open-source-agent-harness/",
+        "https://www.marktechpost.com/2026/10/03/inside-nvidias-isaacteleop-from-hand-and-controller-tracking-to-robot-actions-with-the-graph-based-retargeting-engine/",
+        "https://www.marktechpost.com/2026/10/04/aleph-alpha-releases-kolibri-a-78-1b-open-weight-english-german-moe-model-with-only-3-46b-active-parameters/"
+      ],
+      "sources": [
+        "MarkTechPost"
+      ],
+      "source_count": 1,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-10-05",
+      "latest_published_at": "2026-10-04T15:29+08:00"
+    },
+    {
+      "id": "e89764eae00",
+      "title_zh": "AI预算与数据库问题",
+      "digest_zh": "文章讨论了代理与数据库之间在任务完成状态上的不一致问题。",
+      "representative_id": "89764eae00",
+      "member_ids": [
+        "89764eae00",
+        "5a3f1f4a82"
+      ],
+      "member_urls": [
+        "https://huggingface.co/blog/microsoft/thinkingbox",
+        "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/"
+      ],
+      "sources": [
+        "HuggingFace Blog",
+        "Simon Willison"
+      ],
+      "source_count": 2,
+      "score_max": 45,
+      "continued_from": null,
+      "first_seen": "2026-10-05",
+      "latest_published_at": "2026-10-04T07:34+08:00"
+    },
+    {
+      "id": "e5cd038dc75",
+      "title_zh": "AI相关新闻与观点",
+      "digest_zh": "特朗普宣布成立名为‘超级智能部队’的AI组织。",
+      "representative_id": "5cd038dc75",
+      "member_ids": [
+        "f628fb2d6b",
+        "4a4f9fb48d",
+        "015e7253f8",
+        "5cd038dc75",
+        "c1bb6dce96",
+        "2b0e7b4b8d",
+        "f5bf2b68ae"
+      ],
+      "member_urls": [
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxQTGZYYVEyMU90NlZlSWJSaDV0RmUtSDNPd3pEbWZOMms5bmlDRVAtSkdjLXphdEFXNHFqOUE5S3R5aTNld1BIS1ZKdzFRZnJtWXM3alZzcl9zSXZ2b0pBUG1tMzRLeGUxNzRVdjl5bFRQVTYzcGxCN0xwNXo1SERadENzaXRwOXA1T3hwU00zSG11WHlEcDhn?oc=5",
+        "https://news.google.com/rss/articles/CBMivwFBVV95cUxQS1BrTXRqZTZnMnZ5X3plWl9fSEZGNlRXOVFRS2lDQl92MVI0MzEyZW5BU1lMWm5XZWdhV25wdlI2WWRrZ1NRb2t6U3pnM25nLVdSREdUYk50YzgtUHh6di1Wc19RdXRLeU90alZtWUg4SE9tNV9mcXphaHV1c1A3MHR3Rm40bWdmWVVacUpwSW44VGJnb1FndjgyS3Z0NnI3SWp3MEFPaloxejgxd2NFSGtZem9GbERzaDd1WmVONA?oc=5",
+        "https://news.google.com/rss/articles/CBMikwFBVV95cUxPa0U1LTVMNWlSdGtCcmVZdjg5Y0ZTRVdEMHlOYk5pT3RueG56ejlwdzRtcFhSQWpFOEZ6U0VURmNja1BXM082M0FVcE1DWkV2VHQxOXYtV2hIckozUldpYm02RVZhY2dDSDBIUDVRRTBWdXhTbEt2Q3MyQTFNaXM5MGZVN0ZkMUlpN3Q1ZlRMcGd1a2c?oc=5",
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxPbzN5aFk5YXQ1bXNDRVBTc25iSmg1MkJXQjA3NzNlS3NrMUM2NlVXTFdNVGhZUW1ieWg3SWVrbWhaQjNhWmRNUFBYdXgtZEhBcFRMZXE1amFkeEwtcG1zaFl6NXdMN3lZWng2RTIyMzc4WVpPd1N3R0JLVnlIMTNHRA?oc=5",
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQWc5Z3ZxQjQ4UzFYTnU5eWVrZ2JCWkZBdHduMkFhU0F6NWlISE5ZVElQUXpCQWVvdkVDRGFnT1Q1UU1JTUtUakUtR1Q4ekx6cFJ6eWgwNnp1SGd2LWZjVlVud2lYWnpIUTlrbGoxRDZwZDJhaEVkZ2s5ZWNqUjg1THM5eVR5Z3RmVU9ldG8xakFKdFBm?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxQSmxpc2RpLXFTam1BeDJfZFVLNFhoZzVTR0x5WkdWVUI3QlFGT09wVlkyZklrQVhWQjQyTDl5Vk0zdUpPaGpGRUlHSFRVazlnNmVid3ZOd3pnSzhVM2c4YklFWUpKSkYzdmo3TW9QS2xCbmoxT2k3Qk5pYUlqeUtyWmthMHdFcTFreDFwWmJSWkNlZzQ2WUVvZjQ2WW9vVzhNYU85QjBlNXEyOVJzcHh1RQ?oc=5",
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxNeXFlVjlFZjllRFpuSGJsRkR0a3BjQmdqbnRnNUlHTG9GNHE0alZJcXh0THlKYmNfUngtV3lzUkxiV2RTY0NBVUlIaktwdDhaLW95b3N6cnIxTDE3NEJhYzdyTExVOV9FdXI3cnYwUGdYaUllQkpob19ZZWtuV3V0RlVuVl9JZGxseWdwcU0yRE5HQQ?oc=5"
+      ],
+      "sources": [
+        "Google News AI"
+      ],
+      "source_count": 1,
+      "score_max": 40,
+      "continued_from": null,
+      "first_seen": "2026-10-05",
+      "latest_published_at": "2026-10-05T01:19+08:00"
+    },
+    {
+      "id": "e83913d49e9",
+      "title_zh": "AI技术与应用讨论",
+      "digest_zh": "OpenAI 的安全负责人离职，对公司的文化表示担忧，认为其‘已破裂’。",
+      "representative_id": "83913d49e9",
+      "member_ids": [
+        "567a67be41",
+        "c83b565fc2",
+        "83913d49e9",
+        "9d6f505968",
+        "7d102ed417",
+        "b437562805",
+        "979d52d891"
+      ],
+      "member_urls": [
+        "https://github.com/allenv0/SCM",
+        "https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html",
+        "https://www.theguardian.com/technology/2026/oct/03/openai-safety-leader-quits-warning-ai-companys-culture-is-broken",
+        "https://www.telegraph.co.uk/business/2026/10/02/anthropic-lobbied-pope-to-argue-ai-conscious-being/",
+        "https://www.astralcodexten.com/p/our-ai-midwife",
+        "https://aviationa2z.com/index.php/2026/08/19/two-american-airlines-flights-end-up-with-same-flight-numbers-again/",
+        "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "score_max": 35,
+      "continued_from": null,
+      "first_seen": "2026-10-05",
+      "latest_published_at": "2026-10-04T17:24+08:00"
+    },
+    {
+      "id": "e54bb6bf5ee",
+      "title_zh": "AI行业动态与岗位信息",
+      "digest_zh": "英特尔将提供先进工艺，前端使用14A，后端由台积电补充工厂运营、良率和封装能力。",
+      "representative_id": "54bb6bf5ee",
+      "member_ids": [
+        "54bb6bf5ee",
+        "febcfecb3b",
+        "15a458018c"
+      ],
+      "member_urls": [
+        "https://www.qbitai.com/2026/10/501605.html",
+        "https://www.neowin.net/news/system76-bans-ai-generated-code-across-many-of-its-cosmic-codebases/",
+        "https://www.qbitai.com/2026/10/501506.html"
+      ],
+      "sources": [
+        "Hacker News",
+        "量子位"
+      ],
+      "source_count": 2,
+      "score_max": 35,
+      "continued_from": null,
+      "first_seen": "2026-10-05",
+      "latest_published_at": "2026-10-04T14:12+08:00"
+    },
+    {
+      "id": "e45efb6c464",
+      "title_zh": "AI相关事件与项目进展",
+      "digest_zh": "海南商业航天发射场二期项目已基本建成，新增三号、四号发射工位，年发射能力将提升至60发以上。",
+      "representative_id": "45efb6c464",
+      "member_ids": [
+        "986056e0d8",
+        "c24bcca737",
+        "45efb6c464",
+        "97e1126c14"
+      ],
+      "member_urls": [
+        "https://www.ithome.com/1/009/736.htm",
+        "https://www.ithome.com/1/009/734.htm",
+        "https://www.ithome.com/1/009/731.htm",
+        "https://www.ithome.com/1/009/728.htm"
+      ],
+      "sources": [
+        "IT之家"
+      ],
+      "source_count": 1,
+      "score_max": 37,
+      "continued_from": null,
+      "first_seen": "2026-10-05",
+      "latest_published_at": "2026-10-04T23:22+08:00"
+    }
+  ]
+}
