@@ -1,0 +1,39 @@
+{
+  "issue": 13,
+  "date": "2026-10-06",
+  "generated_at": "2026-10-05T16:31:15",
+  "stats": {
+    "collected": 50,
+    "duplicates": 0,
+    "analyzed": 37,
+    "blocked": 13,
+    "selected": 0,
+    "events": 2,
+    "sources": [
+      "GitHub Blog",
+      "IT之家",
+      "MarkTechPost",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "Aleph Alpha发布Kolibri模型，主张欧洲AI主权",
+    "paragraph": "今日AI界重要动态，Aleph Alpha发布Kolibri模型，强调欧洲AI主权，同时OpenAI为ChatGPT和Codex添加欧盟文本输出隐形水印，AI代码审查开源基准测试ReviewBench发布，以及麻省理工学院报告指出AI正在改变办公室和学习环境。",
+    "highlights": [
+      "2b8dc6980d",
+      "d8afdab2a0",
+      "4b0c57f287",
+      "96d1fbb09f"
+    ]
+  },
+  "headline_ids": [
+    "2b8dc6980d",
+    "4fac0b8f30",
+    "96d1fbb09f"
+  ],
+  "briefing_ids": [
+    "4b0c57f287",
+    "d8afdab2a0",
+    "4d08c5e90e"
+  ]
+}
