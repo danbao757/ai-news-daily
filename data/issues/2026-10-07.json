@@ -1,0 +1,39 @@
+{
+  "issue": 14,
+  "date": "2026-10-07",
+  "generated_at": "2026-10-06T18:57:05",
+  "stats": {
+    "collected": 58,
+    "duplicates": 1,
+    "analyzed": 50,
+    "blocked": 7,
+    "selected": 3,
+    "events": 2,
+    "sources": [
+      "HuggingFace Blog",
+      "MarkTechPost",
+      "OpenAI News",
+      "Simon Willison",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "Mistral AI发布Mistral Large 4",
+    "paragraph": "Mistral AI推出多模态MoE模型Mistral Large 4（Le Chonk），参数量达1.05T，同时欧洲对拒绝安全工作的美国模型作出回应，推出万亿参数的Mistral Large 4。",
+    "highlights": [
+      "3243cb7117",
+      "1dadc05550"
+    ]
+  },
+  "headline_ids": [
+    "3243cb7117",
+    "1f25b120c3",
+    "1dadc05550"
+  ],
+  "briefing_ids": [
+    "60ef2af305",
+    "9964af802e",
+    "f66486df2f",
+    "085f7195b6"
+  ]
+}
