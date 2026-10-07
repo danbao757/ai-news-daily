@@ -1,0 +1,263 @@
+{
+  "date": "2026-10-08",
+  "generated_at": "2026-10-07T19:21:42",
+  "events": [
+    {
+      "id": "e04e9dc3828",
+      "title_zh": "OpenAI 推出 ChatGPT 青少年版",
+      "digest_zh": "Radisson与Accenture合作，利用OpenAI技术为ChatGPT开发插件，帮助旅客在规划旅行时查找、比较和预订酒店。",
+      "representative_id": "04e9dc3828",
+      "member_ids": [
+        "04e9dc3828",
+        "ad4e14640e",
+        "3821b31e98",
+        "a5478fc42d",
+        "69c1beaf03"
+      ],
+      "member_urls": [
+        "https://openai.com/index/radisson",
+        "https://openai.com/index/teens-learn-and-plan",
+        "https://the-decoder.com/chatgpt-rated-unacceptable-risk-for-teens-after-parental-alerts-failed-during-suicide-conversations/",
+        "https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/",
+        "https://techcrunch.com/2026/10/07/chatgpt-for-teens-keeps-teens-talking-even-during-mental-health-crises/"
+      ],
+      "sources": [
+        "OpenAI News",
+        "TechCrunch AI",
+        "The Decoder"
+      ],
+      "source_count": 3,
+      "score_max": 62,
+      "continued_from": null,
+      "first_seen": "2026-10-08",
+      "latest_published_at": "2026-10-08T02:15+08:00"
+    },
+    {
+      "id": "e0ca1450969",
+      "title_zh": "OpenAI 发布 GPT-6 和 Decisions API",
+      "digest_zh": "OpenAI 发布 GPT-6，引入智能 UI 功能，提供更快的响应速度和可视化交互体验。",
+      "representative_id": "0ca1450969",
+      "member_ids": [
+        "0ca1450969",
+        "9d5b90e288",
+        "f08a218f21",
+        "11669444bf",
+        "67feed715e"
+      ],
+      "member_urls": [
+        "https://openai.com/index/gpt-6-for-everyone",
+        "https://the-decoder.com/chatgpt-with-gpt-6-ditches-mostly-text-output-for-interactive-ui-with-charts-buttons-and-mini-apps/",
+        "https://the-decoder.com/openai-launches-decisions-api-that-reduces-complex-evaluations-to-yes-no-or-pick-one/",
+        "https://arstechnica.com/ai/2026/10/openai-will-watermark-chatgpt-outputs-by-default-but-only-in-the-eu/",
+        "https://openai.com/index/gpt-6-for-everyone/"
+      ],
+      "sources": [
+        "Ars Technica",
+        "Hacker News",
+        "OpenAI News",
+        "The Decoder"
+      ],
+      "source_count": 4,
+      "score_max": 72,
+      "continued_from": null,
+      "first_seen": "2026-10-08",
+      "latest_published_at": "2026-10-08T03:06+08:00"
+    },
+    {
+      "id": "e4dd2900708",
+      "title_zh": "边缘计算和多模态嵌入模型研究",
+      "digest_zh": "",
+      "representative_id": "4dd2900708",
+      "member_ids": [
+        "0825a4897d",
+        "4dd2900708",
+        "5bdd694c62",
+        "b3ffaa7219",
+        "6598f51df7"
+      ],
+      "member_urls": [
+        "https://huggingface.co/blog/LiquidAI/open-d1",
+        "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+        "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
+        "https://simonwillison.net/2026/Oct/6/hn-49983751/",
+        "https://www.bloomberg.com/news/newsletters/2026-10-07/study-claude-chatgpt-ai-bots-offer-different-shopping-prices-based-on-wealth"
+      ],
+      "sources": [
+        "DeepMind Blog",
+        "Hacker News",
+        "HuggingFace Blog",
+        "Simon Willison"
+      ],
+      "source_count": 4,
+      "score_max": 40,
+      "continued_from": null,
+      "first_seen": "2026-10-08",
+      "latest_published_at": "2026-10-08T00:54+08:00"
+    },
+    {
+      "id": "ecaa9437859",
+      "title_zh": "GitHub 和 HuggingFace 博客发布技术更新",
+      "digest_zh": "GitHub 正在重建其 Git 基础设施，以支持智能体规模软件开发，并提供了开放入口和能力变化的信息。",
+      "representative_id": "caa9437859",
+      "member_ids": [
+        "caa9437859",
+        "40c4d27cba",
+        "f2b4a146fb",
+        "bc657e1acd",
+        "4bb428a07b",
+        "5f65c4d681",
+        "22643d6fcb",
+        "dca52235da",
+        "8a00b6d91e",
+        "36fcca2d6c"
+      ],
+      "member_urls": [
+        "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/",
+        "https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/",
+        "https://simonwillison.net/2026/Oct/6/llm-mistral/",
+        "https://simonwillison.net/2026/Oct/6/llm-openai-decisions/",
+        "https://www.anthropic.com/claude-haiku-5-5",
+        "https://github.com/Queuingtheorydotcom/11SquaresFormalized",
+        "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+        "https://fiveminutesforward.com/post/2026-10-04-telegraph-test/",
+        "https://www.sicpers.info/2026/10/reasons-to-dislike-ai-coding/",
+        "https://tech.criteo.com/blog/human-skills-ai-cant-develop-junior-engineers/"
+      ],
+      "sources": [
+        "GitHub Blog",
+        "Hacker News",
+        "Simon Willison"
+      ],
+      "source_count": 3,
+      "score_max": 60,
+      "continued_from": null,
+      "first_seen": "2026-10-08",
+      "latest_published_at": "2026-10-08T02:01+08:00"
+    },
+    {
+      "id": "e4fac0b8f30",
+      "title_zh": "AI行业新闻与观点汇总",
+      "digest_zh": "英伟达发布 DGX Station for Windows，一款桌面级 AI 超级计算机，支持本地运行高达 1 万亿参数的 AI 模型，配备高达 748GB 内存，预计 2026 年第四季度上市。",
+      "representative_id": "c378ebb394",
+      "member_ids": [
+        "0da7f87151",
+        "fc2183694d",
+        "6ec8658289",
+        "b5ad269253",
+        "5d700d9f9a",
+        "3dcafb3a31",
+        "814772bc92",
+        "fee39cfc84",
+        "5aecdeb6bf",
+        "d175c0f4bc",
+        "06a01b96a6",
+        "df411b2e84",
+        "d57c2e5a60",
+        "ff9ecc8381",
+        "98f06983e3",
+        "60bcbe352e",
+        "212fdbcc66",
+        "1cd9e00c81",
+        "1d2401d591",
+        "ac6b030668",
+        "eba3becccb",
+        "5cb565cd11",
+        "75fc0a70c9",
+        "dd99110226",
+        "f383d2d318",
+        "07c2936957",
+        "f21a47da02",
+        "4c1aa40dec",
+        "c3bdba0d4c",
+        "c378ebb394"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/zuckerbergs-biohub-leads-a-1-8-billion-push-to-build-ai-models-that-predict-cell-behavior/",
+        "https://the-decoder.com/google-bets-gemini-can-turn-casual-players-into-game-developers-with-new-playground-feature/",
+        "https://the-decoder.com/anthropic-gives-more-security-teams-access-to-claude-with-fewer-safety-restrictions/",
+        "https://techcrunch.com/2026/10/07/meta-rolls-out-new-ai-tools-to-detect-ads-that-secretly-lead-to-child-sexual-abuse-material/",
+        "https://techcrunch.com/2026/10/07/healthleap-raises-38m-for-its-ai-that-flags-hospital-patients-who-may-need-a-closer-look/",
+        "https://techcrunch.com/2026/10/07/google-experiments-with-an-ai-powered-gaming-platform/",
+        "https://techcrunch.com/2026/10/07/openais-alexander-embiricos-is-coming-to-techcrunch-disrupt-2026-days-after-the-launch-of-dots/",
+        "https://www.marktechpost.com/2026/10/06/meta-ai-open-sources-rebalancer-a-c-assignment-solver-that-runs-about-40-million-placement-problems-a-day/",
+        "https://www.marktechpost.com/2026/10/06/a-developers-guide-to-laya-zero-shot-decisions-and-calibration/",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxNM3NIZlBZbVQ1QnI4R2phM1NKdVVQME1STGtBeUREbXlZTkxXdzZpc3R5aXFfOG5rM2dTSG55S2Etd1c0WmFmR1dmLUE1Zi1GU0g0UXZ6cWRzcmp1SE8xVFFJaEg5R1V2Vnowd1lsTWEtZDFWTzNPMFlFTlJSUEdOMWxnN2FfanBhaEgwUkVIcnhVTmozNktSSXJQaFF4dw?oc=5",
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZkNrUEtoYUtLa3FYRlVtVnBCblY5Tmx2aHp5MFJwTldqSndfVUdmWDNTemFjb3l2YW5OaExPOXRyWTlTaUc1MUN2cW1tNVA4VUNJczRwMDVQZTJMTmhjT1hScHVYTklXNjJrOVpNamE3bVBGalo3RVFLbURIUkpFTGxEMEtjU01SaDVMOWM4OThPSWtmMEI0b0RtVDlvc1YwUWx5R2V3MHVIdm8?oc=5",
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxON2ZBOUsyX0Q0UXRsWndNQUNfN1BvbzZOVUJ4aE5RenczRU8tSWdYUWZmaTVZOEJ6c1REaGRpVHVvOFdJVkZVSnB5N0FQNjk1NWF1VUQzblZnbDU2bno2MXB0Y1pIVmt5X3paZDIxLTRaTHpWSFJNcno5a1Y3UjZLZlI3VXFCZnlkNzdWUEZFS3VTQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMifkFVX3lxTE10MXVwNVFVclRnaHdwdnhDSkpuZ3c5Z1B0UG5yWkxaMEVWWXFqaUhjejRCYldZU0pWNWRSQ1ZFZS1QcVJ3N0FaM1ZnYWM0dHVncGNydjYwcFVDUndjbUhDaHJEdUpGUl9ObXFZYXRvMzZKaXpTUXRTbzBIZmNGZw?oc=5",
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxOSDVvTWY2RjRjNGNxZUFDczhMaTM5T1JTTmlHWnNaMWNVR1BuYS1NYkRfZU03anI0ZkFKa3h0a1NjSlg0WUk2eTN6aGI1R2Vzcl9SWGh3NjBEMkRIZ1lQa0h3eXhjUzJmYkRhbW1ZemhMVGdkN3FqSTVmbnkwYlozZWEtLXgzZFI4c2luNFFJaFU1V1N5RWpXMjk5bExVX3YwUjZHdw?oc=5",
+        "https://news.google.com/rss/articles/CBMib0FVX3lxTE1FWWFFdVVxSldkbkp0bDhVVnB2MndCdzBmaHEwSWJLS3VzRF84LWZ1T2FsNnNJbml4RFp4M1o0NWNHMEx3RTB1WFQ0cWJ5NWc0cWFmVDd0RjFPaXhmWTM1ZUZhZWJnaWl6c1pZN3Bkcw?oc=5",
+        "https://news.google.com/rss/articles/CBMizgFBVV95cUxNbUJPNjlxeFEzWHFNUVZIbjdpUkJhb0FWaExjX1AzeWNYbjZKN0xqNHc0R2ZpeUotejJ3enRZX0RxUTE1YnRpdzdBTGtfZ0hxZmlaWnB0eFBRakRBc25xV0U3TDBaekZyZ3dsWGRFbzVQOVhodjEyc0Fwc2t2dEVydFN2Ym84Vk0wZjh4Zy1ObjdjSGxaQVM4NjY4QVc4akhRSDQtbzA2QTdzQkRZLTJqdU9mVkZnSzN1YnVTdVRUVmFYWFdoR3p0dDJDRnRDdw?oc=5",
+        "https://news.google.com/rss/articles/CBMif0FVX3lxTFBWdk1QMElNZklsY0pIZWx2QmlIRExHMkJKcU9wUlBOSEdmd2VOc1p0THp2MmZZc05ZOURoOWtTaWlSN203ZVhEam9FYTNBX3VMbmM4STJKYWFTZkR2cGNnU2JjY2RFMDBLZ2lOMERLbjVaUHhmM2FZc0oxc0YzRGc?oc=5",
+        "https://www.qbitai.com/2026/10/501749.html",
+        "https://www.leiphone.com/category/industrynews/XNaGx6kCv9dNhtKY.html",
+        "https://www.leiphone.com/category/industrynews/NWhDqDo0wpZbKRgp.html",
+        "https://www.leiphone.com/category/industrynews/SCYRWOQSLbEpAnGs.html",
+        "https://www.leiphone.com/category/industrynews/zjq0L18W5NV7Y49M.html",
+        "https://www.leiphone.com/category/industrynews/7kLgFJjmaGU8YuBW.html",
+        "https://www.leiphone.com/category/industrynews/ZKXlV8iIwXaBOpzO.html",
+        "https://www.ithome.com/1/010/321.htm",
+        "https://www.ithome.com/1/010/319.htm",
+        "https://www.ithome.com/1/010/318.htm",
+        "https://www.ithome.com/1/010/315.htm",
+        "https://www.ithome.com/1/010/314.htm",
+        "https://www.ithome.com/1/010/313.htm"
+      ],
+      "sources": [
+        "Google News AI",
+        "IT之家",
+        "MarkTechPost",
+        "TechCrunch AI",
+        "The Decoder",
+        "量子位",
+        "雷锋网"
+      ],
+      "source_count": 7,
+      "score_max": 72,
+      "continued_from": "2026-10-07",
+      "first_seen": "2026-10-07",
+      "latest_published_at": "2026-10-08T03:06+08:00"
+    },
+    {
+      "id": "ec41d88164f",
+      "title_zh": "其他新闻与观点",
+      "digest_zh": "自医疗保险泄露事件以来，OpenAI已实施额外监控，以便员工在模型以不应有的方式访问互联网时立即干预以停止训练，OpenAI的首席战略官Kwon表示。 —— 维多利亚·金，来自澳大利亚议会的报道",
+      "representative_id": "c41d88164f",
+      "member_ids": [
+        "544da1e9a6",
+        "c41d88164f",
+        "769d4c9aeb",
+        "2943f19100",
+        "e1ff572449",
+        "eba1d42227",
+        "72ebe33991",
+        "cf8b8def1f",
+        "4dc96a0f44",
+        "2f80d4d18f"
+      ],
+      "member_urls": [
+        "https://simonwillison.net/2026/Oct/7/jake-boggan/",
+        "https://simonwillison.net/2026/Oct/6/victoria-kim/",
+        "https://techcrunch.com/2026/10/07/metas-muse-launches-on-ipad-just-a-month-after-its-mobile-debut/",
+        "https://arstechnica.com/tech-policy/2026/10/outstreaming-taylor-swift-is-easy-with-10k-bots-and-ai-songs-fraudster-admits/",
+        "https://arstechnica.com/ai/2026/10/mistral-says-le-chonk-can-challenge-the-best-ai-models/",
+        "https://arstechnica.com/ai/2026/10/google-rolls-out-improved-synthid-ai-content-detector-now-available-globally/",
+        "https://www.qbitai.com/2026/10/501825.html",
+        "https://www.qbitai.com/2026/10/501803.html",
+        "https://www.qbitai.com/2026/10/501791.html",
+        "https://www.qbitai.com/2026/10/501796.html"
+      ],
+      "sources": [
+        "Ars Technica",
+        "Simon Willison",
+        "TechCrunch AI",
+        "量子位"
+      ],
+      "source_count": 4,
+      "score_max": 40,
+      "continued_from": null,
+      "first_seen": "2026-10-08",
+      "latest_published_at": "2026-10-08T02:30+08:00"
+    }
+  ]
+}

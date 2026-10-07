@@ -1,0 +1,43 @@
+{
+  "issue": 15,
+  "date": "2026-10-08",
+  "generated_at": "2026-10-07T19:21:42",
+  "stats": {
+    "collected": 75,
+    "duplicates": 1,
+    "analyzed": 68,
+    "blocked": 6,
+    "selected": 4,
+    "events": 6,
+    "sources": [
+      "DeepMind Blog",
+      "GitHub Blog",
+      "IT之家",
+      "Simon Willison",
+      "TechCrunch AI",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "ChatGPT GPT-6 智能体功能发布",
+    "paragraph": "今日AI界重磅消息，ChatGPT推出GPT-6智能体功能，并转向交互式UI界面，同时英伟达发布DGX Station for Windows，支持本地运行1万亿参数AI模型，内存高达748GB。",
+    "highlights": [
+      "9d5b90e288",
+      "c378ebb394",
+      "caa9437859"
+    ]
+  },
+  "headline_ids": [
+    "9d5b90e288",
+    "c378ebb394",
+    "caa9437859"
+  ],
+  "briefing_ids": [
+    "3821b31e98",
+    "c03f180fd7",
+    "b96780151f",
+    "4dd2900708",
+    "c41d88164f",
+    "c1d0cf6b00"
+  ]
+}
