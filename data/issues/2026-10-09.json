@@ -1,0 +1,41 @@
+{
+  "issue": 16,
+  "date": "2026-10-09",
+  "generated_at": "2026-10-08T19:20:52",
+  "stats": {
+    "collected": 75,
+    "duplicates": 3,
+    "analyzed": 63,
+    "blocked": 9,
+    "selected": 3,
+    "events": 1,
+    "sources": [
+      "GitHub Blog",
+      "OpenAI News",
+      "Simon Willison",
+      "TechCrunch AI",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "AI黑客工具威胁韩国银行安全",
+    "paragraph": "今日，AI日报关注到，AI驱动的黑客工具可能使单一攻击者入侵多家韩国银行，同时OpenAI采取措施打击AI驱动的虚假信息活动。此外，Zenity研究人员发现单个提示即可劫持AWS账户中的所有AI代理，引发安全担忧。",
+    "highlights": [
+      "5c8f1f60d8",
+      "077dea1e8a",
+      "4f1f83bc1c"
+    ]
+  },
+  "headline_ids": [
+    "5c8f1f60d8",
+    "077dea1e8a",
+    "4f1f83bc1c"
+  ],
+  "briefing_ids": [
+    "dce3afa5ad",
+    "33937c147a",
+    "7dcbf8a5af",
+    "e98e25a5c1",
+    "0f47a943c0"
+  ]
+}
