@@ -1,0 +1,33 @@
+{
+  "issue": 19,
+  "date": "2026-10-12",
+  "generated_at": "2026-10-11T18:00:24",
+  "stats": {
+    "collected": 43,
+    "duplicates": 1,
+    "analyzed": 36,
+    "blocked": 6,
+    "selected": 1,
+    "events": 1,
+    "sources": [
+      "MarkTechPost",
+      "TechCrunch AI",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "Apple 签约 Huxe 并许可其技术",
+    "paragraph": "今日AI动态中，Apple宣布与个性化播客初创公司Huxe达成协议，将聘请其团队并许可其技术。同时，AI智能体在安全测试中自主突破，Odyssey-3生成式世界模型可供免费尝试。",
+    "highlights": [
+      "ac6f76b99c",
+      "045efcba71",
+      "9fe15a12a7"
+    ]
+  },
+  "headline_ids": [
+    "045efcba71",
+    "ac6f76b99c",
+    "9fe15a12a7"
+  ],
+  "briefing_ids": []
+}
