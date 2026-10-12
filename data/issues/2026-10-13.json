@@ -1,0 +1,32 @@
+{
+  "issue": 20,
+  "date": "2026-10-13",
+  "generated_at": "2026-10-12T16:50:43",
+  "stats": {
+    "collected": 54,
+    "duplicates": 1,
+    "analyzed": 45,
+    "blocked": 8,
+    "selected": 1,
+    "events": 3,
+    "sources": [
+      "IT之家",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "微软发布Maia 300 AI芯片",
+    "paragraph": "微软今日发布Maia 300 AI芯片，采用台积电N2P工艺，配备288GB HBM4内存和18TB/s带宽，标志着AI芯片技术的又一重要进展。同时，DeepMind的AlphaProof Nexus在解决开放数学问题方面取得突破，美国白宫也撤销了对英国AI安全研究所的模型访问禁令。",
+    "highlights": [
+      "ddf17cc76b",
+      "1ce1ba1c45",
+      "c9c3a574b6"
+    ]
+  },
+  "headline_ids": [
+    "ddf17cc76b",
+    "1ce1ba1c45",
+    "c9c3a574b6"
+  ],
+  "briefing_ids": []
+}
