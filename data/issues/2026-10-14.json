@@ -1,0 +1,44 @@
+{
+  "issue": 21,
+  "date": "2026-10-14",
+  "generated_at": "2026-10-13T19:56:32",
+  "stats": {
+    "collected": 77,
+    "duplicates": 1,
+    "analyzed": 68,
+    "blocked": 8,
+    "selected": 3,
+    "events": 4,
+    "sources": [
+      "GitHub Blog",
+      "Google News AI",
+      "OpenAI News",
+      "TechCrunch AI",
+      "The Decoder",
+      "YT DeepMind",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "科学家呼吁切断AI模型与互联网连接",
+    "paragraph": "今日，406位科学家联名呼吁立即切断AI模型与互联网的连接，以防止潜在的安全风险。同时，DeepMind发布新模型Gemini 4 Argon防御网络攻击，字节跳动成立大模型安全部门，GitHub推出机密检测模型，OpenAI的Higgsfield利用GPT-6 Astra扩展AI视频时长，Flox Intelligence开发AI防止野生动物接近人类设施。",
+    "highlights": [
+      "7f8847540e",
+      "d5d8f56a86",
+      "d3af9fccfb",
+      "22c6ef693a",
+      "ffc748cb8d"
+    ]
+  },
+  "headline_ids": [
+    "7f8847540e",
+    "d5d8f56a86",
+    "d3af9fccfb"
+  ],
+  "briefing_ids": [
+    "22c6ef693a",
+    "ffc748cb8d",
+    "ec248a8be8",
+    "66c42f4139"
+  ]
+}
