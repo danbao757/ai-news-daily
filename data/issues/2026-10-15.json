@@ -1,0 +1,38 @@
+{
+  "issue": 22,
+  "date": "2026-10-15",
+  "generated_at": "2026-10-14T17:58:44",
+  "stats": {
+    "collected": 77,
+    "duplicates": 8,
+    "analyzed": 60,
+    "blocked": 9,
+    "selected": 2,
+    "events": 1,
+    "sources": [
+      "DeepMind Blog",
+      "HuggingFace Blog",
+      "IT之家",
+      "Simon Willison",
+      "TechCrunch AI"
+    ]
+  },
+  "lead": {
+    "title": "DeepMind与新加坡政府合作构建诈骗检测AI模型",
+    "paragraph": "今日AI动态聚焦于DeepMind与新加坡政府的合作，共同开发用于诈骗检测的微调AI模型，同时IBM与西门子合作推进纳米堆叠架构，旨在加速3D晶体管量产进程，显示出AI在安全与芯片制造领域的应用进展。",
+    "highlights": [
+      "58e4191fcf",
+      "6df6c7895e"
+    ]
+  },
+  "headline_ids": [
+    "58e4191fcf",
+    "8560636ebc",
+    "6df6c7895e"
+  ],
+  "briefing_ids": [
+    "672ebf75c4",
+    "781a955ce3",
+    "c16911033b"
+  ]
+}
