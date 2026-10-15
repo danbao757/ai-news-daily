@@ -1,0 +1,42 @@
+{
+  "issue": 23,
+  "date": "2026-10-16",
+  "generated_at": "2026-10-15T17:46:55",
+  "stats": {
+    "collected": 72,
+    "duplicates": 1,
+    "analyzed": 60,
+    "blocked": 11,
+    "selected": 2,
+    "events": 1,
+    "sources": [
+      "DeepMind Blog",
+      "GitHub Blog",
+      "HuggingFace Blog",
+      "IT之家",
+      "Simon Willison",
+      "TechCrunch AI",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "英伟达发布Nemotron 3.5 Super VL大模型",
+    "paragraph": "英伟达发布1200亿参数大模型Nemotron 3.5 Super VL，单GPU智能体任务吞吐量最高提升5倍，74B版本压缩至24GB，同时GPT-6-Astra解决49/50个物理研究问题，Ricursive Intelligence押注AI设计芯片以解决计算危机。",
+    "highlights": [
+      "5fc53424de",
+      "0e910847e5",
+      "f86858c1d8"
+    ]
+  },
+  "headline_ids": [
+    "5fc53424de",
+    "0e910847e5",
+    "f86858c1d8"
+  ],
+  "briefing_ids": [
+    "9d251ac683",
+    "996b33c09a",
+    "86f0f518c7",
+    "bbc1e25e9e"
+  ]
+}
