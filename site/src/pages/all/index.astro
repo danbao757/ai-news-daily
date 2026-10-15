@@ -10,7 +10,8 @@ const months = [...new Set([...idx.values()].map((it) => (it.date ?? '').slice(0
 const month = months[0];
 const items = month ? [...idx.values()].filter((it) => (it.date ?? '').startsWith(month)) : [];
 
-const today = items[0]?.date ?? month ?? '';
+// idx 按文件名升序插入，items[0] 是当月最早一天——「今日」必须取最大日期
+const today = items.reduce<string>((max, it) => ((it.date ?? '') > max ? it.date! : max), '');
 const todayCount = items.filter((it) => it.date === today).length;
 ---
 

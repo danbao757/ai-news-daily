@@ -13,3 +13,6 @@ site/.astro/
 # 管线瞬态：断点续跑 partial（成功后自动清理）与服务器日志
 data/state/
 deploy/server/sync.log
+
+# 本地 E2E 截图工件（Chrome DevTools 实测产出，不进仓）
+e2e-shots/
