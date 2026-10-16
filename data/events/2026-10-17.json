@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-17",
+  "generated_at": "2026-10-16T17:17:05",
+  "events": [
+    {
+      "id": "ea72d1e4da6",
+      "title_zh": "OpenAI推出Rosalind学术计划",
+      "digest_zh": "推出 Rosalind 学术计划，为符合条件的学术实验室提供 GPT-Rosalind 和生命科学研究工具的赞助访问。",
+      "representative_id": "a72d1e4da6",
+      "member_ids": [
+        "a72d1e4da6",
+        "bd83f26c46"
+      ],
+      "member_urls": [
+        "https://openai.com/index/introducing-the-rosalind-academic-plan",
+        "https://the-decoder.com/openais-new-rosalind-academic-plan-gives-research-labs-up-to-30-free-seats-for-a-year/"
+      ],
+      "sources": [
+        "OpenAI News",
+        "The Decoder"
+      ],
+      "source_count": 2,
+      "score_max": 42,
+      "continued_from": null,
+      "first_seen": "2026-10-17",
+      "latest_published_at": "2026-10-16T21:15+08:00"
+    },
+    {
+      "id": "eba4e7337ab",
+      "title_zh": "HuggingFace发布新模型和功能",
+      "digest_zh": "HuggingFace推出扩展的印度语预训练模型，包含280万亿个标记，并开放数据生成管道。",
+      "representative_id": "ba4e7337ab",
+      "member_ids": [
+        "849b423196",
+        "a01e02239d",
+        "ba4e7337ab"
+      ],
+      "member_urls": [
+        "https://huggingface.co/blog/reflection-beam",
+        "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+        "https://huggingface.co/blog/nvidia/scaling-indic-pretraining"
+      ],
+      "sources": [
+        "HuggingFace Blog"
+      ],
+      "source_count": 1,
+      "score_max": 40,
+      "continued_from": null,
+      "first_seen": "2026-10-17",
+      "latest_published_at": "2026-10-16T09:44+08:00"
+    },
+    {
+      "id": "edf881c7c11",
+      "title_zh": "Meta发布开源多模态模型Muse Spark Open",
+      "digest_zh": "Meta 发布了 Muse Spark Open，一个 816B 参数的开放权重 MoE 模型，具有 42B 活跃参数和 1M 上下文支持，在 MCP-Atlas 上领先开放模型，并可在 2 M5 Ultra Mac Studios 上运行。",
+      "representative_id": "df881c7c11",
+      "member_ids": [
+        "c591bcc32a",
+        "df881c7c11"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/muse-spark-open-is-metas-answer-to-qwen-glm-and-kimi-in-the-open-weight-race/",
+        "https://www.marktechpost.com/2026/10/15/meta-muse-spark-open-816b-open-weight-model/"
+      ],
+      "sources": [
+        "MarkTechPost",
+        "The Decoder"
+      ],
+      "source_count": 2,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-10-17",
+      "latest_published_at": "2026-10-16T10:26+08:00"
+    },
+    {
+      "id": "e6f0ec75f9d",
+      "title_zh": "TechCrunch报道AI和机器人相关新闻",
+      "digest_zh": "Elorian评估显示，Glimpse在科学图表推理和短视频标题生成方面优于GPT-6 Astra，在其他视觉推理任务上也有竞争力。",
+      "representative_id": "6f0ec75f9d",
+      "member_ids": [
+        "3ee888866e",
+        "1f9b468e86",
+        "6f0ec75f9d",
+        "7524c167f0",
+        "9d337093f9",
+        "fa1478d967"
+      ],
+      "member_urls": [
+        "https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/",
+        "https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/",
+        "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/",
+        "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/",
+        "https://techcrunch.com/2026/10/16/mark-wahlberg-on-using-ai-in-film-the-right-way-and-being-open-to-an-ai-clone-carrying-on-his-legacy/",
+        "https://techcrunch.com/2026/10/16/replits-ceo-says-the-future-of-work-is-the-self-driving-company/"
+      ],
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "source_count": 1,
+      "score_max": 45,
+      "continued_from": null,
+      "first_seen": "2026-10-17",
+      "latest_published_at": "2026-10-17T00:30+08:00"
+    },
+    {
+      "id": "ecac3ca3cd8",
+      "title_zh": "多领域科技新闻汇总",
+      "digest_zh": "Nick Cammarata 论文指出，AI的可解释性并非不可逾越，通过先进的算法和Agent团队，99%的神经元可以被清晰解释。",
+      "representative_id": "cac3ca3cd8",
+      "member_ids": [
+        "36209e2ea5",
+        "bb62f8b7f6",
+        "1c9ddf4180",
+        "0c443fbb87",
+        "938772a594",
+        "dd8d6cf6fb",
+        "ba6bd4625b",
+        "340971e12d",
+        "c9125dc111",
+        "a50a09cdac",
+        "f1b9799ad3",
+        "44bfbaba05",
+        "22d04cd04f",
+        "34bf133078",
+        "cac3ca3cd8",
+        "e26e7b98ec",
+        "b4af47ff28",
+        "f59c9a22c3",
+        "4fd5f9e762",
+        "6fbec23658",
+        "a3b3d6af01",
+        "d1e15220c5",
+        "6d24ba305e"
+      ],
+      "member_urls": [
+        "https://www.technologyreview.com/2026/10/16/1146766/pet-biotech-longevity-cloning-cryonics/",
+        "https://www.technologyreview.com/2026/10/16/1145840/prima-implant-restores-sight-macular-degeneration-patients/",
+        "https://www.marktechpost.com/2026/10/15/liquid-ai-d1-ultra-decision-model/",
+        "https://www.marktechpost.com/2026/10/15/nvidia-nemotron-3-5-super-vl-release/",
+        "https://news.google.com/rss/articles/CBMifEFVX3lxTFAwY2RSVzdmNzhZSGZMM3J3VFp1SWRCdUgyeVBVbDJ1RFNVSGNJSGhKYUJaS1VoV1Vkel9aYXRTNllFLXlVbDhyb05VWWlQTi1OV0RmcHpROVptX25wdkppaHFsYTg5NlBCUUx2UGV0c0RlWS05T2ppWHVIbG0?oc=5",
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdm5VTll1VmRrVEdWNm9HMmh4dUtxaDN2alV3YnJxUmtZdVJjZV9obW5Kc2tOYTNEQVdQNE1XMnFNbk1PaFBTTHZqcWxFZklDOVRtYm9IOWhnMjRuZTYyM2U0NVA1WmY0a3ZGQTFJbFp5cU1ha3h2WXBwLVFBSmtjRnVmZm8xdUtCMWlaX1YyUkpCSDhZamRzRG9UV3paVU9MalVpa0FFbzRBZw?oc=5",
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMXlhU1kzY09uSjZ3ZkVzWTRGNDFNeHZYRlBPcGRkVHEtTGRhQUJlLVRUZHJHQXpzekdSWGNITDRIWms4LUxwbldZU09pQ01wLTBzY0hkYVoxbnpvWVItTEtsWE4yLV9NS280amEwMVNnRnR6Sl9jNlZZVFQycEVHNVFjTXd4VEhDRkpFT1hKWE5MVWRGTGRMTngtUUU?oc=5",
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxPczhFbDlxMUtHWkRpS1BnbzNZeklWRmt3cV9CNGZLSXlqcU52LU1HTUwweXcxNjFvUHloVXFINWF1SEZjRk9IOGxNV0R3VEJ3dldrVDg2Y3lIa0RpZ1VDdlB6N0QtNG9VeUVIQXl4d2xCSzlpcG80Sy1DN2tUT1dUUklxdmZWOWdUOFBwRXlkblpETTNKT196NQ?oc=5",
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdDlxTzR2MzFRX3haLUlodmdXQnJZOEw1SjNMdkFCbVdnTkpOV1VtNFY3cThYTE04emVDYXVPU2pKUXRuVklzMWtmMzlpcVFOcHltSy0xa0VLclJ4S0NnbmI3YWIxVkpNcDJTN1JTV3BDODRIdnhQLWJMaXJVajhPSmdnMXF0TWlTV3pPREtnMDBoY1c0dTFmMHZHVlhoSVVFSDlCS3cwZ0M1aTd2WDNFdDdCVE5sNEJyRmZZaA?oc=5",
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE9lVXd1czJJbDR2dERvNWhxOUZqSFpfQkRHZlFxb1Fxa2pYWU16RjQ2aGstWTN0d3FISTdnNW5fcGh5VzJlSEZtVjBlXzhKV295TUFGZUNTVjJtVVhPLXI1VXhoTDYzcVdIaVpJcmlDZkk?oc=5",
+        "https://news.google.com/rss/articles/CBMif0FVX3lxTE95UnJFUGhLZERkMlU4aW50YjlZRzZkWmpQSXZNQXNWVTZjMHNaOEszd1U2akRvUGNMV1lHa2VvdWd0SWpQdHpSLTgzbmMwckxKRHc2d1dMajlZTHNzd0hVZDlwTjdOZWQxVWc3dUFmd1dPZlJsYkxiRFBvWUZPaEU?oc=5",
+        "https://www.currentaffairs.org/news/why-were-banning-ai",
+        "https://starskirmish.com/bench/v0-2/",
+        "https://research.meta.ai/blog/muse-spark-open",
+        "https://www.leiphone.com/category/yanxishe/Vr0JmbkUeZV5D9Qz.html",
+        "https://www.leiphone.com/category/industrynews/LDt2TEiUf3wgi2Os.html",
+        "https://www.leiphone.com/category/zaobao/EReMkZNn9w5H85Tf.html",
+        "https://www.leiphone.com/category/industrynews/8IM46Vzpf7IFumo7.html",
+        "https://www.ithome.com/1/014/188.htm",
+        "https://www.ithome.com/1/014/185.htm",
+        "https://www.ithome.com/1/014/184.htm",
+        "https://www.ithome.com/1/014/182.htm",
+        "https://www.ithome.com/1/014/181.htm"
+      ],
+      "sources": [
+        "Google News AI",
+        "Hacker News",
+        "IT之家",
+        "MIT Tech Review",
+        "MarkTechPost",
+        "雷锋网"
+      ],
+      "source_count": 6,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-10-17",
+      "latest_published_at": "2026-10-17T00:53+08:00"
+    },
+    {
+      "id": "e9d79e68762",
+      "title_zh": "AI可解释性、AI模型性能和AI应用新闻",
+      "digest_zh": "Google DeepMind的Gemini 4 Argon在ARC-AGI-3基准测试中取得了97.5%的分数，成为继OpenAI之后第二个突破95%的实验室。",
+      "representative_id": "9d79e68762",
+      "member_ids": [
+        "dc8fe0ad2c",
+        "9d79e68762",
+        "8abaa4ee13"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/is-ai-interpretability-close-to-a-breakthrough-a-new-essay-has-researchers-divided/",
+        "https://the-decoder.com/googles-gemini-4-argon-is-closer-to-the-ai-frontier-than-any-google-model-in-months/",
+        "https://the-decoder.com/anthropic-gives-metr-inside-access-to-audit-its-ai-models-and-safety-practices/"
+      ],
+      "sources": [
+        "The Decoder"
+      ],
+      "source_count": 1,
+      "score_max": 62,
+      "continued_from": null,
+      "first_seen": "2026-10-17",
+      "latest_published_at": "2026-10-16T23:03+08:00"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "issue": 24,
+  "date": "2026-10-17",
+  "generated_at": "2026-10-16T17:17:05",
+  "stats": {
+    "collected": 57,
+    "duplicates": 1,
+    "analyzed": 44,
+    "blocked": 12,
+    "selected": 3,
+    "events": 3,
+    "sources": [
+      "Ars Technica",
+      "GitHub Blog",
+      "Google News AI",
+      "HuggingFace Blog",
+      "MIT Tech Review",
+      "MarkTechPost",
+      "OpenAI News",
+      "Simon Willison",
+      "TechCrunch AI",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "MIT研发可恢复AMD患者视力的植入物",
+    "paragraph": "今日AI动态，MIT发布可恢复AMD患者视力的植入物产品，Meta推出Muse Spark Open模型，Google DeepMind的Gemini 4 Argon在基准测试中表现优异，Elorian首个AI模型专注于图像推理，OpenAI将GPT-Rosalind引入学术研究，GitHub和HuggingFace分别发布新一代开发者界面和环境智能模型。",
+    "highlights": [
+      "bb62f8b7f6",
+      "df881c7c11",
+      "9d79e68762",
+      "a72d1e4da6",
+      "a72d1e4da6"
+    ]
+  },
+  "headline_ids": [
+    "bb62f8b7f6",
+    "df881c7c11",
+    "9d79e68762"
+  ],
+  "briefing_ids": [
+    "6f0ec75f9d",
+    "a72d1e4da6",
+    "5b6680e2f8",
+    "849b423196",
+    "cadb90ee9e",
+    "ae8741fad8",
+    "84007b3bda",
+    "08c7976423"
+  ]
+}
