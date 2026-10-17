@@ -1,0 +1,36 @@
+{
+  "issue": 25,
+  "date": "2026-10-18",
+  "generated_at": "2026-10-17T16:14:35",
+  "stats": {
+    "collected": 48,
+    "duplicates": 3,
+    "analyzed": 35,
+    "blocked": 10,
+    "selected": 3,
+    "events": 1,
+    "sources": [
+      "IT之家",
+      "OpenAI News",
+      "Simon Willison",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "Anthropic的Claude破解NSA密码学谜题",
+    "paragraph": "Anthropic的AI模型Claude成功破解了25年的NSA密码学谜题，成为今日AI领域的重大突破。同时，伊塔乌银行和广汽埃安Ray7的AI应用也值得关注。",
+    "highlights": [
+      "161e6aee41",
+      "65442e7082",
+      "e37d22dead"
+    ]
+  },
+  "headline_ids": [
+    "161e6aee41",
+    "65442e7082",
+    "e946af68fd"
+  ],
+  "briefing_ids": [
+    "e37d22dead"
+  ]
+}
