@@ -1,0 +1,30 @@
+{
+  "issue": 26,
+  "date": "2026-10-19",
+  "generated_at": "2026-10-18T16:27:35",
+  "stats": {
+    "collected": 39,
+    "duplicates": 0,
+    "analyzed": 32,
+    "blocked": 7,
+    "selected": 0,
+    "events": 2,
+    "sources": [
+      "IT之家",
+      "MarkTechPost"
+    ]
+  },
+  "lead": {
+    "title": "Google开源Harness2，递归智能体封装框架",
+    "paragraph": "今日，Google开源了Harness2，这是一个用于递归智能体的封装框架。同时，三星宣布将采用台积电3nm工艺为英伟达生产下一代HBM基底裸片，标志着半导体制造技术的进一步突破。",
+    "highlights": [
+      "9454a5de09",
+      "4dc8bfce0f"
+    ]
+  },
+  "headline_ids": [
+    "9454a5de09",
+    "4dc8bfce0f"
+  ],
+  "briefing_ids": []
+}
