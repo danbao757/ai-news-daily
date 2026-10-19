@@ -1,0 +1,43 @@
+{
+  "issue": 27,
+  "date": "2026-10-20",
+  "generated_at": "2026-10-19T19:14:25",
+  "stats": {
+    "collected": 60,
+    "duplicates": 2,
+    "analyzed": 50,
+    "blocked": 8,
+    "selected": 1,
+    "events": 4,
+    "sources": [
+      "Google News AI",
+      "HuggingFace Blog",
+      "MIT Tech Review",
+      "MarkTechPost",
+      "Simon Willison"
+    ]
+  },
+  "lead": {
+    "title": "AI世界被颠覆：关于神经网络本质的爆炸性声明",
+    "paragraph": "今天AI界发生重大事件，MIT Tech Review发布了一项关于神经网络本质的爆炸性声明，可能彻底改变我们对AI的理解。同时，Mistral AI发布了超越Google的Timestral预测模型，以及多个重要产品和技术更新。",
+    "highlights": [
+      "7216fffbb8",
+      "24bcfc655b",
+      "fcf776a502",
+      "9dbc0d55ff",
+      "f855dbfae6"
+    ]
+  },
+  "headline_ids": [
+    "7216fffbb8",
+    "24bcfc655b",
+    "fcf776a502"
+  ],
+  "briefing_ids": [
+    "00b8e8c47e",
+    "9dbc0d55ff",
+    "f855dbfae6",
+    "12899128ec",
+    "b43eced132"
+  ]
+}

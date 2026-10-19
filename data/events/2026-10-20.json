@@ -1,0 +1,202 @@
+{
+  "date": "2026-10-20",
+  "generated_at": "2026-10-19T19:14:25",
+  "events": [
+    {
+      "id": "e12899128ec",
+      "title_zh": "Simon Willison发布软件版本",
+      "digest_zh": "Simon Willison发布了llm-echo 0.5版本，更新了模拟令牌使用计数，考虑了工具调用、系统提示和推理令牌。",
+      "representative_id": "12899128ec",
+      "member_ids": [
+        "b8a89dddc6",
+        "12899128ec"
+      ],
+      "member_urls": [
+        "https://simonwillison.net/2026/Oct/18/llm-tools-datasette/",
+        "https://simonwillison.net/2026/Oct/18/llm-echo/"
+      ],
+      "sources": [
+        "Simon Willison"
+      ],
+      "source_count": 1,
+      "score_max": 5,
+      "continued_from": null,
+      "first_seen": "2026-10-20",
+      "latest_published_at": "2026-10-19T07:43+08:00"
+    },
+    {
+      "id": "efcf776a502",
+      "title_zh": "Kling AI发布4.0版本及相关新闻",
+      "digest_zh": "某产品发布了 M3.1 Flash 智能体模型，具有 428B 个参数，每 1M 令牌的 API 价格为 0.15 美元。",
+      "representative_id": "fcf776a502",
+      "member_ids": [
+        "bf7f8c0e40",
+        "ea382cae63",
+        "2473538547",
+        "fcf776a502"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/kling-ai-drops-version-4-0-with-stereo-audio-multilingual-lip-sync-and-a-lighter-flash-variant/",
+        "https://the-decoder.com/minimax-m3-1-flash-shows-chinas-ai-price-race-has-no-floor-in-sight/",
+        "https://the-decoder.com/stripe-says-ai-agent-purchases-are-adding-up-but-it-wont-share-the-numbers/",
+        "https://www.marktechpost.com/2026/10/19/minimax-m3-1-flash-release/"
+      ],
+      "sources": [
+        "MarkTechPost",
+        "The Decoder"
+      ],
+      "source_count": 2,
+      "score_max": 62,
+      "continued_from": null,
+      "first_seen": "2026-10-20",
+      "latest_published_at": "2026-10-20T02:22+08:00"
+    },
+    {
+      "id": "e24bcfc655b",
+      "title_zh": "AI领域融资与技术动态",
+      "digest_zh": "Mistral AI 发布了 Timestral，一个从 5M 到 209M 参数的时间序列基础模型家族。其中 209M 模型在零样本模型中领先 GIFT-Eval、TIME 和 fev-bench，且在 CPU 上运行。",
+      "representative_id": "24bcfc655b",
+      "member_ids": [
+        "2b4495cd96",
+        "36c2a79412",
+        "071096a571",
+        "24bcfc655b",
+        "bfe3d8bc59"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/the-neocloud-shakeout-is-coming-and-nvidia-has-the-most-to-lose/",
+        "https://techcrunch.com/2026/10/19/tenstorrent-hits-6-2b-valuation-to-scale-open-weight-ai-chips/",
+        "https://www.marktechpost.com/2026/10/18/nvidia-runai-open-source-gpu-orchestration-kubernetes/",
+        "https://www.marktechpost.com/2026/10/18/mistral-timestral-time-series-foundation-model/",
+        "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/"
+      ],
+      "sources": [
+        "Hacker News",
+        "MarkTechPost",
+        "TechCrunch AI",
+        "The Decoder"
+      ],
+      "source_count": 4,
+      "score_max": 65,
+      "continued_from": null,
+      "first_seen": "2026-10-20",
+      "latest_published_at": "2026-10-20T02:37+08:00"
+    },
+    {
+      "id": "e9454a5de09",
+      "title_zh": "AI新闻与观点汇总",
+      "digest_zh": "Goodfire公司的研究员Nick Cammarata提出关于神经网络本质的新观点，引发AI领域的广泛讨论和猜测。",
+      "representative_id": "7216fffbb8",
+      "member_ids": [
+        "2187a688e9",
+        "e37065d0e7",
+        "71c2d7263c",
+        "f93d80856f",
+        "d88320583f",
+        "5d37bd28a1",
+        "fbbcdbe57a",
+        "7216fffbb8",
+        "b327983725",
+        "19f98acef2",
+        "fc5e0d238f",
+        "74b5ee0e50",
+        "8e146873d8",
+        "b545fc6d94",
+        "200fdbd706",
+        "3b57f550cd",
+        "f30a44480c",
+        "99d62aec10",
+        "c08e28e17a",
+        "370144937a",
+        "a59b2acc8c",
+        "4f0198409c",
+        "a43da92cd3",
+        "e7d6ed4860",
+        "52814b0bdd",
+        "9aa0c32d6d",
+        "c53a997b4d",
+        "15cd736428",
+        "680962df95",
+        "dcd336a4ca",
+        "1aa04467d1",
+        "a31fa90f45",
+        "e936c4bc25",
+        "fb32f832b8"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/anthropic-plans-fund-for-workers-threatened-by-ai-musk-counters-with-spacex-shares-for-children/",
+        "https://techcrunch.com/2026/10/19/tolan-snags-30m-for-its-ai-companion-that-helps-users-navigate-life/",
+        "https://techcrunch.com/2026/10/19/replikas-founder-built-the-ai-assistant-she-pitched-at-disrupt-12-years-ago/",
+        "https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again/",
+        "https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/",
+        "https://arstechnica.com/gaming/2026/10/ai-game-clones-are-making-indie-developers-afraid-to-show-their-work/",
+        "https://www.technologyreview.com/2026/10/19/1147186/making-the-internet-better-for-ai-agents-might-make-it-worse-for-everyone-else/",
+        "https://www.technologyreview.com/2026/10/19/1147149/we-were-looking-at-it-wrong-the-explosive-claim-thats-upended-the-ai-world/",
+        "https://www.technologyreview.com/2026/10/19/1147095/ai-stranded-claude-virtual-desert-island-play/",
+        "https://www.technologyreview.com/2026/10/19/1145904/tr-explains-how-far-can-we-push-computing/",
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxPbjZpb1ZUa3ZVMGIxWDNac01lMDhoMFYxYnd6RWNibHdDT2RVNnVyVnAxRlJyR1JVZzFOUU94Y1RqZjNNc0xGWDNPdG54ZmJkY1pEYmZnYVp4TW0zYmM4SFJwNnE3ZUc3RENwWGtmNTUzbmhjU0FSUkdHWVVvQlh0U3M5bkxPd0QxS0NUQ0o0cWVNV25kVEU1UjFCUzVFbjdrMTVn?oc=5",
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxNYXZDeU9tOFpLbjJxdnpqSEpYbFUtOS1tbUlkT3h5cnRtMEdJRFNSVk9UaWZtLVZBX3M4OGR0VTFYQmRjeS11cWwtQVVYQi1zclJ3ZTFXV0dfWnF0MUUzWDhJUlhxSnlLNDVnY1EzUndBOW82aTg5WjZoeTlsWTlVZEg3RQ?oc=5",
+        "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRlZPaHBBRndCMkNzUGlWOUJMUkRubVZqNkpkVVpJYmVKWWliT3ZSQ2Z3eHh5RjhKRld6SXlGWmtJSjJXVE1zVlBTcmJ1TjVreTlwVkVFSFktNTVPUFpxc3pqNUNSZFN2TElYalhRUVptclFVX2QwSDRTMHhkUGQ4ZVZSSHY3dms?oc=5",
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxPVG5xT0hGemdVU2VjTC1tTGVkYkVoWlljXzlUSV9iWkhmLVdLS0FOOW9adUlDdU1oSDlpVmZpQnBVUTNfQncwRXVvNEVjVVFGMEtKZjBtTUFSOFpYZTg5enFSRWw0RzJXQXRBVnRFVlZWOXh0RjZKb0ZremMwTURZTVIxRWJWSG13Q3pqVE9rMUE1bGdZb3I3NjRFRl9QSTdYTlZZ?oc=5",
+        "https://www.reuters.com/business/europe-ev-sales-rose-70-september-almost-30-market-share-2026-10-19/",
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxQSFY4bllzWTJWZUpxcUV6VWNLUXN0VHVJSGhkYktGUGc2VlZ0S3FuSWs4SzdaSWI1M1FiLUVRMWl6VmhPVkgyUHhmNDZzQ1plMjJzVDllaGVadDJIT05JMHlnMmNRWXZqMWJSZnI5dXRKQVBGUlhEYUswSlUyejhmN1VkSWtQcW8zRnphZlNJX2NnVFdQdHVNS3dYVjZITDFfSUE?oc=5",
+        "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
+        "https://www.theatlantic.com/ideas/2026/10/ai-regulation-transhumanism-oligarchs/689013/",
+        "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins",
+        "https://github.com/kividbio/kividb",
+        "https://100toolkit.com/blog/deslop-model/",
+        "https://github.com/IsuruMaduranga/harness-engineering-101",
+        "https://www.leiphone.com/category/private/7vTJq8gu376Dldil.html",
+        "https://www.leiphone.com/category/industrynews/prCErk1x9AsQgxw1.html",
+        "https://www.leiphone.com/category/private/QgMWStz8hCPsFf68.html",
+        "https://www.leiphone.com/category/industrynews/uCsyLxONvXeV9qXc.html",
+        "https://www.leiphone.com/category/chips/1LbhTsMb0OyPhsw6.html",
+        "https://www.ithome.com/1/015/065.htm",
+        "https://www.leiphone.com/category/chips/56PWzwTNdteGx04q.html",
+        "https://www.ithome.com/1/015/064.htm",
+        "https://www.ithome.com/1/015/063.htm",
+        "https://www.ithome.com/1/015/054.htm",
+        "https://www.ithome.com/1/015/062.htm",
+        "https://www.leiphone.com/category/weiwu/LNx9jMPQsgXikqfp.html"
+      ],
+      "sources": [
+        "Ars Technica",
+        "Google News AI",
+        "Hacker News",
+        "IT之家",
+        "MIT Tech Review",
+        "TechCrunch AI",
+        "The Decoder",
+        "雷锋网"
+      ],
+      "source_count": 8,
+      "score_max": 70,
+      "continued_from": "2026-10-19",
+      "first_seen": "2026-10-19",
+      "latest_published_at": "2026-10-20T03:00+08:00"
+    },
+    {
+      "id": "e9dbc0d55ff",
+      "title_zh": "VS Code与AWS Trainium相关新闻",
+      "digest_zh": "",
+      "representative_id": "9dbc0d55ff",
+      "member_ids": [
+        "0f3dfef227",
+        "9dbc0d55ff"
+      ],
+      "member_urls": [
+        "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/",
+        "https://huggingface.co/blog/hf-torchneuron"
+      ],
+      "sources": [
+        "GitHub Blog",
+        "HuggingFace Blog"
+      ],
+      "source_count": 2,
+      "score_max": 30,
+      "continued_from": null,
+      "first_seen": "2026-10-20",
+      "latest_published_at": "2026-10-20T02:47+08:00"
+    }
+  ]
+}
