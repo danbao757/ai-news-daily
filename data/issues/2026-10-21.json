@@ -1,0 +1,30 @@
+{
+  "issue": 28,
+  "date": "2026-10-21",
+  "generated_at": "2026-10-20T17:57:45",
+  "stats": {
+    "collected": 74,
+    "duplicates": 3,
+    "analyzed": 59,
+    "blocked": 12,
+    "selected": 1,
+    "events": 1,
+    "sources": [
+      "HuggingFace Blog",
+      "MarkTechPost"
+    ]
+  },
+  "lead": {
+    "title": "Inception发布Mercury 3扩散型LLM",
+    "paragraph": "今日AI界迎来重大进展，Inception公司发布全新扩散型大型语言模型Mercury 3，其每秒处理能力高达1068个标记，显著提升LLM处理速度。同时，HuggingFace Blog发表关于LLM决策公平性的新论文，对公平性进行深入评估。",
+    "highlights": [
+      "884a0dfb56",
+      "ca293d8533"
+    ]
+  },
+  "headline_ids": [
+    "884a0dfb56",
+    "ca293d8533"
+  ],
+  "briefing_ids": []
+}
