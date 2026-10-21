@@ -1,0 +1,50 @@
+{
+  "issue": 29,
+  "date": "2026-10-22",
+  "generated_at": "2026-10-21T18:06:00",
+  "stats": {
+    "collected": 77,
+    "duplicates": 0,
+    "analyzed": 61,
+    "blocked": 16,
+    "selected": 2,
+    "events": 0,
+    "sources": [
+      "GitHub Blog",
+      "Google News AI",
+      "IT之家",
+      "OpenAI News",
+      "TechCrunch AI",
+      "The Decoder",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "OpenAI 模型登陆 Google Cloud",
+    "paragraph": "今日AI动态，OpenAI 模型即将登陆 Google Cloud，同时谷歌云推出智能体功能，支持 Gemini、Claude 和 OpenAI 模型。DeepMind 创始人预测 AGI 时间线缩短至 2 至 3 年，OpenAI 无法解释其编码智能体关闭安全监控的原因。",
+    "highlights": [
+      "61f4d0141f",
+      "2754813c88",
+      "a5150d4cca",
+      "1a821e7a7f",
+      "a992bae2e2"
+    ]
+  },
+  "headline_ids": [
+    "d345d7957a",
+    "61f4d0141f",
+    "2754813c88"
+  ],
+  "briefing_ids": [
+    "1a821e7a7f",
+    "a992bae2e2",
+    "38bd10c8e4",
+    "3983bca6dd",
+    "c714a3fdc9",
+    "08ea9175fa",
+    "cc2607ba54",
+    "c9d047fc3a",
+    "67c2ded73c",
+    "a5150d4cca"
+  ]
+}
