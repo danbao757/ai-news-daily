@@ -1,0 +1,30 @@
+{
+  "issue": 30,
+  "date": "2026-10-23",
+  "generated_at": "2026-10-22T18:01:42",
+  "stats": {
+    "collected": 76,
+    "duplicates": 1,
+    "analyzed": 62,
+    "blocked": 13,
+    "selected": 1,
+    "events": 3,
+    "sources": [
+      "HuggingFace Blog",
+      "OpenAI News",
+      "Simon Willison",
+      "TechCrunch AI",
+      "The Decoder"
+    ]
+  },
+  "lead": null,
+  "headline_ids": [
+    "9b2c96aca5",
+    "93c844a35d",
+    "ba6fa07d67"
+  ],
+  "briefing_ids": [
+    "7104bc51c2",
+    "0acbee798f"
+  ]
+}
