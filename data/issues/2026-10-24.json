@@ -1,0 +1,40 @@
+{
+  "issue": 31,
+  "date": "2026-10-24",
+  "generated_at": "2026-10-23T17:52:14",
+  "stats": {
+    "collected": 71,
+    "duplicates": 1,
+    "analyzed": 61,
+    "blocked": 9,
+    "selected": 3,
+    "events": 3,
+    "sources": [
+      "IT之家",
+      "MIT Tech Review",
+      "OpenAI News",
+      "TechCrunch AI",
+      "The Decoder",
+      "YT Matt Wolfe"
+    ]
+  },
+  "lead": {
+    "title": "Anthropic Claude 模型新增代码编写与安全性证明功能",
+    "paragraph": "Anthropic 公司的 Claude 模型近日升级，新增了编写代码和自动证明其安全性的功能，标志着AI在代码生成和安全验证领域的又一重要进展。同时，OpenAI 发布了 Habitat 智能体功能升级，旨在提升 ChatGPT 用户的存储性能。",
+    "highlights": [
+      "970c9920af",
+      "298c8de07d"
+    ]
+  },
+  "headline_ids": [
+    "970c9920af",
+    "5ed3e655fb",
+    "298c8de07d"
+  ],
+  "briefing_ids": [
+    "2aedd54f3e",
+    "d8c2939ee8",
+    "94cd4ca5fb",
+    "33a7cd6a27"
+  ]
+}
