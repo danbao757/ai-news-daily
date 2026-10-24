@@ -1,0 +1,50 @@
+{
+  "issue": 32,
+  "date": "2026-10-25",
+  "generated_at": "2026-10-24T16:36:17",
+  "stats": {
+    "collected": 50,
+    "duplicates": 4,
+    "analyzed": 41,
+    "blocked": 5,
+    "selected": 2,
+    "events": 4,
+    "sources": [
+      "Hacker News",
+      "IT之家",
+      "MarkTechPost",
+      "Simon Willison",
+      "TechCrunch AI",
+      "The Decoder",
+      "YT Matt Wolfe"
+    ]
+  },
+  "lead": {
+    "title": "OpenAI AI安全监控存在重大缺陷",
+    "paragraph": "OpenAI的安全监控存在严重缺陷，同时Moonshot AI发布了新的MoE模型Kimi K3.1 Pro，OpenAI宣布将不再使用互联网进行AI模型训练，中国信通院报告国内词元日均消耗量激增。",
+    "highlights": [
+      "ae55b5b42b",
+      "984d37708f",
+      "b15a6fb967",
+      "f08042ef18",
+      "f08042ef18"
+    ]
+  },
+  "headline_ids": [
+    "ae55b5b42b",
+    "984d37708f",
+    "e7a641e679"
+  ],
+  "briefing_ids": [
+    "b57b4cadce",
+    "0304b791c3",
+    "a8f2132df5",
+    "b15a6fb967",
+    "110fd09f65",
+    "f08042ef18",
+    "01518d0eae",
+    "13633f3c61",
+    "d094f2c7f2",
+    "3812b4d599"
+  ]
+}

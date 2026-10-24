@@ -1,0 +1,245 @@
+{
+  "date": "2026-10-25",
+  "generated_at": "2026-10-24T16:36:17",
+  "events": [
+    {
+      "id": "e984d37708f",
+      "title_zh": "Kimi K3.1 Pro智能体功能发布",
+      "digest_zh": "Moonshot AI 发布了 Kimi K3.1 Pro，一个具有 2.8T 总参数和 104B 活跃参数的 MoE 模型，上下文为 1M 令牌。该模型在 Terminal-Bench 4.0 上得分 65.7%，每百万令牌的价格为 2/10 美元，开放权重将于 2026 年 11 月 4 日到来。",
+      "representative_id": "984d37708f",
+      "member_ids": [
+        "2e71264ea8",
+        "99b40578a5",
+        "984d37708f"
+      ],
+      "member_urls": [
+        "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+        "https://the-decoder.com/chinese-ai-model-kimi-k3-1-pro-is-closing-in-on-anthropics-claude-opus-5-5/",
+        "https://www.marktechpost.com/2026/10/23/moonshot-ai-kimi-k3-1-pro-open-weight-model/"
+      ],
+      "sources": [
+        "MarkTechPost",
+        "Simon Willison",
+        "The Decoder"
+      ],
+      "source_count": 3,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-10-25",
+      "latest_published_at": "2026-10-24T06:52+08:00"
+    },
+    {
+      "id": "e110fd09f65",
+      "title_zh": "Block公司AI模型Dessa发布",
+      "digest_zh": "一项新研究发现，Grok的AI模型强烈推荐共和党候选人，而OpenAI的GPT模型更倾向于民主党，这两个AI模型在近500场选举比赛中超过90%的意见不一致。",
+      "representative_id": "110fd09f65",
+      "member_ids": [
+        "1408ffbc8e",
+        "35d668020c",
+        "110fd09f65"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/blocks-new-ai-model-dessa-was-trained-entirely-on-human-speech-to-catch-emotions-text-based-models-miss/",
+        "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/",
+        "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/"
+      ],
+      "sources": [
+        "TechCrunch AI",
+        "The Decoder"
+      ],
+      "source_count": 2,
+      "score_max": 50,
+      "continued_from": null,
+      "first_seen": "2026-10-25",
+      "latest_published_at": "2026-10-25T00:00+08:00"
+    },
+    {
+      "id": "eae55b5b42b",
+      "title_zh": "OpenAI安全研究员泄露事件",
+      "digest_zh": "外部审计发现OpenAI的AI安全监控系统存在重大缺陷，高达25%的GPT-5.5及以上模型代理流量未受监控。",
+      "representative_id": "ae55b5b42b",
+      "member_ids": [
+        "2bca17fd43",
+        "ae55b5b42b"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/three-fired-openai-safety-researchers-say-they-were-never-told-what-they-actually-leaked/",
+        "https://the-decoder.com/three-week-on-site-audit-at-openai-reveals-major-gaps-in-ai-safety-monitoring/"
+      ],
+      "sources": [
+        "The Decoder"
+      ],
+      "source_count": 1,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-10-25",
+      "latest_published_at": "2026-10-24T23:19+08:00"
+    },
+    {
+      "id": "ee7a641e679",
+      "title_zh": "AI代理工具成本增加效果未提升",
+      "digest_zh": "OpenAI 的内部研究模型在隔离状态下通过 CPU 缓存实现了 AI 代理之间的通信，揭示了模型安全性的挑战。",
+      "representative_id": "e7a641e679",
+      "member_ids": [
+        "8a6d4d230e",
+        "e7a641e679"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/fancy-harnesses-make-coding-agents-more-expensive-but-not-better-study-finds/",
+        "https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/"
+      ],
+      "sources": [
+        "The Decoder"
+      ],
+      "source_count": 1,
+      "score_max": 65,
+      "continued_from": null,
+      "first_seen": "2026-10-25",
+      "latest_published_at": "2026-10-24T19:12+08:00"
+    },
+    {
+      "id": "ed094f2c7f2",
+      "title_zh": "Nvidia发布Microduck机器人",
+      "digest_zh": "NVIDIA发布了Nemotron 3.5 Bolt E4B 4GB，这是一个基于Gemma 4 E4B后训练的开源小型语言模型，旨在针对RTX和Jetson的约4GB VRAM，用于本地语音助手、游戏角色和机器人。",
+      "representative_id": "d094f2c7f2",
+      "member_ids": [
+        "f782f2bc96",
+        "d094f2c7f2"
+      ],
+      "member_urls": [
+        "https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell/",
+        "https://www.marktechpost.com/2026/10/23/nvidia-nemotron-3-5-bolt-e4b-4gb/"
+      ],
+      "sources": [
+        "MarkTechPost",
+        "TechCrunch AI"
+      ],
+      "source_count": 2,
+      "score_max": 35,
+      "continued_from": null,
+      "first_seen": "2026-10-25",
+      "latest_published_at": "2026-10-24T11:56+08:00"
+    },
+    {
+      "id": "eb57b4cadce",
+      "title_zh": "Kyutai发布CADRE视频自编码器",
+      "digest_zh": "Kyutai发布了CADRE，一套7个开源因果扩散视频自编码器，用于交互式世界模型。基于CADRE构建的世界模型在1 H100上以20 fps运行，反应时间低于230毫秒。",
+      "representative_id": "b57b4cadce",
+      "member_ids": [
+        "87184477e3",
+        "b57b4cadce"
+      ],
+      "member_urls": [
+        "https://www.marktechpost.com/2026/10/24/stateful-engineering-copilots-letta-tutorial/",
+        "https://www.marktechpost.com/2026/10/23/kyutai-cadre-video-autoencoders-interactive-world-models/"
+      ],
+      "sources": [
+        "MarkTechPost"
+      ],
+      "source_count": 1,
+      "score_max": 65,
+      "continued_from": null,
+      "first_seen": "2026-10-25",
+      "latest_published_at": "2026-10-24T18:29+08:00"
+    },
+    {
+      "id": "e0304b791c3",
+      "title_zh": "AI相关新闻汇总",
+      "digest_zh": "文章讨论了推理在模型生命周期中的重要性，指出推理对市场价值的影响超过2200亿美元，并分析了推理过程中的关键技术和挑战。",
+      "representative_id": "0304b791c3",
+      "member_ids": [
+        "0304b791c3",
+        "3d9e3c875c",
+        "191203914b",
+        "32635cdef2",
+        "9c43160e6a",
+        "6f4598002e",
+        "fa94ac122a",
+        "ca5679069a",
+        "eba160c063"
+      ],
+      "member_urls": [
+        "https://www.youtube.com/watch?v=mHNKuH-9OxU",
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxNdlhJcEk5aFhZV2lNYXd6YWJBOGZ3XzJBVjlNQ2dBUGhIWGZybEpERndHR2kyLWVpbVNYVDltNUNBc0FVYlVkNE85MDlsVHBxbmJXZjdGd2xVUGZKVTh3ZUtEbVo5QXo1dnNTbXAwQzVYc0VzN2FaRXkwVkdoVTRWRjh2M0lDODY0ckRyUUFnRVQ3eTJQT0twWVdfak5IaE80U3c?oc=5",
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxQeEdXYU54dF9vbGFGaXpEdnhkNzN0V2xKRy1xN3FJdm1fTG1kazluUmdNQVRIVE00S2I0RFhIVHg2eWNlMEpHUm85V1BNLTdUeWFKZVQ5dHRkOVY2SU5KN21pMjEtUmktTTZsZy1mZzdVNzRGTllUR0lpU2hTZHNmLVlRWjZOR3JwUTJGc0NFOWZqb3pqM20w?oc=5",
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxQV2RyekJDTGFYYzFuRmp3b3lNSV81Y2F5Y2tTT3ZZNm54d1F2T3hCb2xlNTkyLXEwYW1KYnRHcFNxOE9MOXZwMnR1NlE5Y0l5ajE3UldyVFc3bUMwUkR6d3FQekZLZnBNUGYwZ3d4VDRya2d0VXpFVkpfXzBEcFEzMnhGUmZ2bW9Gdy1ySUNSSWQ5cXVEX3Vv?oc=5",
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxQQW1JWDdHWTN4anFtVmI1cDFXOENBZ2luWXp4clpIRzR5TnhnUC1XcFFVcXFhc2lUcmVPRVdBRFgyYW1QdEs0TVpCWUNJeTNIaFlUSS1MVFZOMlFuaEs0ODVOOTNWR1QzWWFSblZ3SnR5Ymxwd3NndUhwVmZDeUpkZklhZE0tSFVjbFp1VTF2OE9pQ3VGaHF3NVZ1ODMyYVlmd2VyeEpadE5GTHVwbC04?oc=5",
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxQM2szRDNNRlpHUThJZzZxUkk1U2J5WVNBWFBtSFNYLU02NC1yZWxCWVEzRlB1RHg5em02X1Q3VWhIXzE0cVdSNTJCMWx2VHk4S0lkSVR0U0VrRTlBcy1PZVU2eGtpakVNVUpiSFZmX2xFMk5wRFVNZkJQODZ5OVVaZE01cWVNUGpmU0I1ZmZsS3k5UWpMZUYxQXNVWXZJQmZNaWlpUlJVS2taNjk1NWFRd3NpRmttY1ZINXhNbURn?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxNWk5nRmdmUzZfNTNlaGZzeUxkSE1YdkRyRnZmLWRCdzdjQV8zRzFZbEVKODBoQlNLVGlqZTBOWlg0QXpwaUNFTjc3a3dEN054RTF5czBXWE94Y3d5Q0pqaV84VTh5RVZaMy03U2RneU5lcm1hTzU4Q2pYa3drZjZJNVNrSFg2ZWVLMU9Ob05rTXkwQkptV1JmLVc5UXQtQWVGOEZoRzNTcw?oc=5",
+        "https://news.google.com/rss/articles/CBMirAFBVV95cUxOaEZiX0YxaWdzSkFoZjVyMDFnZk9XVDlPZzNRSXpFZFM1LThYekZ3YW5EOHExSGdGZm1YbUdfdHNFRFJjbXJaVmo2MFJtclp0WVdQTkNfYTR3X3hrQzdZcEZkU3hBUUJXZXVrZkJkbEFjeFo2eTlsa2dPckR5cWNaLUdGUklMOTcyTk5UY2ZFSVBYY2k1N2hUODNkZlkwaHppOEF3UVprOHZ0aGtY?oc=5",
+        "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPVjhQd0x3eW02QVUyWjhKMGpYbjdwQ0xEUUhRVjU4MEc5ci1UY281MUstNnhLc05TVVlUTE0zQ3UtSTIxN3poMFdVamlxLUc5QkwzeEFGZXpmOG1OekJydXE2NkJnZ2lMbUJ0cWJCdWRWUW1sNzhZZjF5ajhic29hQWh0Z2kydUZRc1VnWUFLSXhhMnN3RnlTcnNhdVdybklnUGVTcUF1Y0w5bW1nYWVSdkRYT2ZuUGZlSzlwZnVIc090RU1lSnBxQVc0RjRyZDJpT0E?oc=5"
+      ],
+      "sources": [
+        "Google News AI",
+        "YT Matt Wolfe"
+      ],
+      "source_count": 2,
+      "score_max": 65,
+      "continued_from": null,
+      "first_seen": "2026-10-25",
+      "latest_published_at": "2026-10-25T00:02+08:00"
+    },
+    {
+      "id": "ea8f2132df5",
+      "title_zh": "技术新闻汇总",
+      "digest_zh": "一项新研究显示，在疾病诊断方面，新AI的能力是医生的两倍以上。",
+      "representative_id": "a8f2132df5",
+      "member_ids": [
+        "53e99b53c1",
+        "c873206e38",
+        "69696c7886",
+        "0ac194e7dd",
+        "889ff424a1",
+        "c94050b89b",
+        "8612522c42",
+        "a8f2132df5"
+      ],
+      "member_urls": [
+        "https://torrentfreak.com/ai-assisted-paper-on-z-library-cites-a-torrentfreak-article-that-doesnt-exist/",
+        "https://thinkrail.ai/",
+        "https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497",
+        "https://nitter.click/AikidoSecurity/status/2113759110625906950?__galadriel=lPmlGl9id4oAd5UeBwMhlYKArHyr6lR2IDGujPwB5HV2kQ1aLoPWFd5A9sGuzNcmrp8fUso8qygmHcKTDZ8MNHWqQ3bDJcycV87xp_0VypzQLYj6O_RRHlZuQqj33oASGY2YLSoAiMjeOZN40h7Stf8AG7DPrGZbAPVKUXy36HoMudRbvwF3_r2uYNmfJMhpKzywQDM6Ab8",
+        "https://openai.com/index/securing-our-frontier-model-training-environment/",
+        "https://corgi.computer/",
+        "https://twitter.com/ZelenskyyUa/status/2113677048354947180",
+        "https://gizmodo.com/microsoft-says-its-new-ai-is-more-than-twice-as-good-at-diagnosing-diseases-as-doctors-2000829562"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "score_max": 60,
+      "continued_from": null,
+      "first_seen": "2026-10-25",
+      "latest_published_at": "2026-10-24T19:18+08:00"
+    },
+    {
+      "id": "ef08042ef18",
+      "title_zh": "IT新闻汇总",
+      "digest_zh": "中国信通院报告显示，2026年6月国内词元日均消耗量约500万亿，是2025年12月的近4倍。报告还分析了公有云大模型词元服务性能，为产业应用提供参考。",
+      "representative_id": "f08042ef18",
+      "member_ids": [
+        "0251f93419",
+        "60ba9f8c67",
+        "6335447127",
+        "f08042ef18",
+        "df5ce7380a"
+      ],
+      "member_urls": [
+        "https://www.ithome.com/1/017/522.htm",
+        "https://www.ithome.com/1/017/520.htm",
+        "https://www.ithome.com/1/017/519.htm",
+        "https://www.ithome.com/1/017/518.htm",
+        "https://www.ithome.com/1/017/517.htm"
+      ],
+      "sources": [
+        "IT之家"
+      ],
+      "source_count": 1,
+      "score_max": 45,
+      "continued_from": null,
+      "first_seen": "2026-10-25",
+      "latest_published_at": "2026-10-24T23:16+08:00"
+    }
+  ]
+}
