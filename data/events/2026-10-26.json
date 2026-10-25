@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-26",
+  "generated_at": "2026-10-25T17:03:21",
+  "events": [
+    {
+      "id": "e1a4147d6e8",
+      "title_zh": "Anthropic 和 OpenAI 相关新闻",
+      "digest_zh": "斯坦福和加州大学伯克利分校的研究人员推出了 TokenGate，一个用于 LLM 的学习型标记修剪模块，通过降低长上下文预填充时间，将速度提升至 11.3 倍，同时保持准确率。",
+      "representative_id": "1a4147d6e8",
+      "member_ids": [
+        "8e9b69b49b",
+        "7241bd68f0",
+        "b5153a9c99",
+        "32d6e56da9",
+        "c3917e71d1",
+        "b7ca3dd28f",
+        "1a4147d6e8",
+        "40aec43715",
+        "db66727afb"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/anthropic-says-one-ai-agent-beats-many-subagents-now-that-models-can-handle-complexity-alone/",
+        "https://the-decoder.com/anthropic-co-founder-jack-clark-moves-his-prediction-for-self-improving-ai-forward-to-2027/",
+        "https://the-decoder.com/ex-google-ceo-eric-schmidt-calls-openai-and-anthropic-modern-colonial-trading-companies/",
+        "https://the-decoder.com/openmobile-2-proves-open-source-smartphone-agents-can-rival-proprietary-models/",
+        "https://the-decoder.com/openai-offers-discounts-up-to-90-percent-to-poach-anthropics-biggest-customers/",
+        "https://www.marktechpost.com/2026/10/25/anthropic-launches-oss-scanner-a-free-ai-vulnerability-scanner/",
+        "https://www.marktechpost.com/2026/10/25/stanford-berkeley-tokengate-learned-token-pruning-llm-prefill/",
+        "https://www.marktechpost.com/2026/10/24/microsoft-agensh-multi-agent-harness-1024-agents/",
+        "https://www.marktechpost.com/2026/10/24/cognition-devin-vulnerability-fixes-plugin-php2shell-nodejs-gitlab/"
+      ],
+      "sources": [
+        "MarkTechPost",
+        "The Decoder"
+      ],
+      "source_count": 2,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-10-26",
+      "latest_published_at": "2026-10-25T20:12+08:00"
+    },
+    {
+      "id": "e2325af3360",
+      "title_zh": "AI 领域新闻与观点",
+      "digest_zh": "Cerebras公司部署了万亿参数的AI模型。",
+      "representative_id": "2325af3360",
+      "member_ids": [
+        "b0af889ad0",
+        "dafa673ad7",
+        "df8c2b0333",
+        "3ba56544e5",
+        "5d3aea041b",
+        "1453ca9eab",
+        "af2835af40",
+        "ed94fe60f3",
+        "001201dc1f",
+        "8a99d48c2a",
+        "b82b80f167",
+        "4945f84ab0",
+        "e04ac878b4",
+        "2325af3360",
+        "8f5707e9a1",
+        "074b7d5e16"
+      ],
+      "member_urls": [
+        "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxNN3JKcms5UjVjeV93TWhFU29SaHUzU2pRUVdvOTFWVnhqYjBJenBUY1BKWlM5RnlJbFF6TkZnM3BhUnZ6alVhY1dPbWtoN1AzVUpRSC1pWDBuTF9OWXh4dVFBYlpMcl92SGZSN0JjWTMxXzdtSHhOeTl3Q3dtMDNQV1diTEJ0SWNnb2ZvMHR2RldHa0J6SEdn?oc=5",
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxPdW12T0lNZlRqeWc1MTlFNWJDTjZrS01WV3BZR1REdlpyVGRLcldMSXNnNDdUb21pd1JiRTQ2N3pNS0wtOGxMVDNvSHl1dGVvMklmcnNCVmN2R18xSWN4Ujk3d2YzTEhDZXFud3Vfa0FabEgzNzJGT0ptcV9uMjMtb3B5YVhXUkNTSGh5Q01wVTVMa2RNTkE?oc=5",
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSVFXY3VJVkpWeVpPQmJKY2ZZNnpvWWtIckNWbDB3Z3VEWjAtTFRZb0ZKNWRTOGFKRkE2czdlanJKcGwzb1RDMzZscVJiUjJuOXJHNDJWUVdKOUpoRmhLSGZEaG1jWTRfaHk5aWJ0YlJPVlFSbHlHZEpGUVBoWlRNQXVNeXlHMXNmci1V?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxONDJCNmxsUXlncFRuMjBCTTJ1UVFyRWdjSzBYUFdycDNRcXdMcUFLdnZYLS1MS3NwdGhEVi0tMGhXZ1F3X1l6RHdWM1E0bVdob285UWFYWmdRcHYwUjRZOHBSeld1T2w5cUtGSXZXbFBZaEpQZlNnclNubFgySWNQeWNzXy1lRjFfSlFVLVhRLVdsUl9ZYjdBTExaQm5VUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSHItOWZIUmZBOFlnQTg4enY1MzdmQkQyV1V5Q3d5dFE2bWFFVGhOa0QwbVdsZ1Btcy1RYU41UEZyZWxNVVVsbGNlUkJBYlB0SXRXbW9pWml4Q3o2TXo0YzAzanU3clRIc0Ezc2tobm1uYUozQVZGMFVsdXBuRmZmVGE5Y3ZqY1JIYzBEdTFRTGQ5bUVuSDNZakl4SlFuWUI5?oc=5",
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE14Tmg2cXRWUzNFZEY0dzl1dzFkZElUOTIyNzhRUEh6SXRDMnJRYW5sVTVoY2pJS2VZNFVQMThXX2FvWXZpbjlYQ0xzQWhTSnRHUGZEd243c1VvVnM4WXNuMWRnTy1RSDNMSDBYV1ZkTlg?oc=5",
+        "https://www.reddit.com/r/opensource/comments/1xelcuf/your_tokens_arent_valuable_no_more_ai",
+        "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOdjNhU2JiWEJNalpHQjhoNko3SDFGQUo5UjRLV1F2UUxQOXpCUk9BY1QyZUJXaGNZRUp4OWFpa2lRWVlPLXZJWGNRZk5aOFV5UFBTcklSZmd6eTAwbl9XdGVyYlZNUWVXc0djWjkyYnd0QnV2LTg2VnZpTUFEejFvd1A0RFdWZUhjaS1FNUNMRGp5RlVwX1dSLVhHbVkxZEE4X1RxcG9EdExOT1Q5OXhPTDZac2E4WUp3Snhwc2Z0SU82SFV5MGJ6UFhNZUdpbGpfUjNiRFlDVjJPLWhoeERidnFPbVNfZjRX?oc=5",
+        "https://twitter.com/boneGPT/status/2114035719853265264",
+        "https://www.techspot.com/news/114171-nikon-photography-contest-winner-loses-title-after-scientists.html",
+        "https://www.showbiz411.com/2026/10/23/controversial-musk-documentary-pulled-from-almost-every-one-of-472-theaters-after-one-week-by-newly-sold-bleecker-street-films",
+        "https://ratfactor.com/cards/limitations",
+        "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+        "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
+        "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector"
+      ],
+      "sources": [
+        "Google News AI",
+        "Hacker News",
+        "TechCrunch AI"
+      ],
+      "source_count": 3,
+      "score_max": 47,
+      "continued_from": null,
+      "first_seen": "2026-10-26",
+      "latest_published_at": "2026-10-26T00:24+08:00"
+    },
+    {
+      "id": "e06ca48dfcd",
+      "title_zh": "苹果公司相关新闻",
+      "digest_zh": "苹果即将发布首款触屏 MacBook Pro，引入触控操作和 OLED 屏幕，标志着公司产品策略的重大转变。",
+      "representative_id": "06ca48dfcd",
+      "member_ids": [
+        "1fc99de924",
+        "953bf3589e",
+        "4f936c4f3d",
+        "c9ba1ea4a3",
+        "96513ecbc5",
+        "29603fa3b1",
+        "06ca48dfcd"
+      ],
+      "member_urls": [
+        "https://www.ithome.com/1/017/717.htm",
+        "https://www.ithome.com/1/017/719.htm",
+        "https://www.ithome.com/1/017/716.htm",
+        "https://www.ithome.com/1/017/715.htm",
+        "https://www.ithome.com/1/017/713.htm",
+        "https://www.ithome.com/1/017/712.htm",
+        "https://www.ithome.com/1/017/711.htm"
+      ],
+      "sources": [
+        "IT之家"
+      ],
+      "source_count": 1,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-10-26",
+      "latest_published_at": "2026-10-25T23:36+08:00"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "issue": 33,
+  "date": "2026-10-26",
+  "generated_at": "2026-10-25T17:03:21",
+  "stats": {
+    "collected": 38,
+    "duplicates": 0,
+    "analyzed": 36,
+    "blocked": 2,
+    "selected": 2,
+    "events": 2,
+    "sources": [
+      "Hacker News",
+      "IT之家",
+      "MarkTechPost",
+      "TechCrunch AI",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "TokenGate令长上下文预填充速度提升11.3倍",
+    "paragraph": "今日AI界重大进展，斯坦福和加州大学伯克利分校研究人员推出TokenGate，大幅提升长上下文预填充速度。同时，苹果即将发布首款触屏MacBook Pro，Nvidia开源Flora降低机器人视频标注成本，Cerebras部署万亿参数AI模型，AI对大多数公司财务回报分析等值得关注。",
+    "highlights": [
+      "06ca48dfcd",
+      "44ca99664d",
+      "2325af3360",
+      "71334093a4"
+    ]
+  },
+  "headline_ids": [
+    "1a4147d6e8",
+    "06ca48dfcd",
+    "44ca99664d"
+  ],
+  "briefing_ids": [
+    "2325af3360",
+    "71334093a4",
+    "4262d71f08",
+    "c2e8b57f2c"
+  ]
+}
