@@ -1,0 +1,35 @@
+{
+  "issue": 34,
+  "date": "2026-10-27",
+  "generated_at": "2026-10-26T19:10:47",
+  "stats": {
+    "collected": 49,
+    "duplicates": 3,
+    "analyzed": 42,
+    "blocked": 4,
+    "selected": 1,
+    "events": 3,
+    "sources": [
+      "Hacker News",
+      "TechCrunch AI",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "DeepSeek开源推理框架刷新性能记录",
+    "paragraph": "今日AI界迎来多项重要动态，其中DeepSeek开源推理框架DeepInfer刷新性能记录，Anthropic正式申请上市，SpaceX与Apollo签署400亿美元GPU融资协议，行业瞩目。",
+    "highlights": [
+      "67c5ff7d2c",
+      "2c43c28405",
+      "4a24365e96"
+    ]
+  },
+  "headline_ids": [
+    "67c5ff7d2c",
+    "2c43c28405",
+    "4a24365e96"
+  ],
+  "briefing_ids": [
+    "ce5ce5fc43"
+  ]
+}
