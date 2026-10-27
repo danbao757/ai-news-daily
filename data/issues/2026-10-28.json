@@ -1,0 +1,43 @@
+{
+  "issue": 35,
+  "date": "2026-10-28",
+  "generated_at": "2026-10-27T18:40:50",
+  "stats": {
+    "collected": 68,
+    "duplicates": 2,
+    "analyzed": 57,
+    "blocked": 9,
+    "selected": 5,
+    "events": 4,
+    "sources": [
+      "IT之家",
+      "TechCrunch AI",
+      "The Decoder",
+      "YT DeepMind",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "文心 Unlimited OCR 2 开源发布",
+    "paragraph": "今日，文心 Unlimited OCR 2 开源发布，标志着OCR技术迈向3.0时代。同时，OpenAI邀请外部专家检查AI生成的证明，DeepMind发布新一代世界模拟模型Genie 4，蚂蚁灵波具身大模型挑战赛即将决赛。",
+    "highlights": [
+      "74ecc27ab8",
+      "3b0550dad5",
+      "8a965d9f9c",
+      "d7b5f57024"
+    ]
+  },
+  "headline_ids": [
+    "74ecc27ab8",
+    "3b0550dad5",
+    "9ffebaf1b2"
+  ],
+  "briefing_ids": [
+    "8a965d9f9c",
+    "d7b5f57024",
+    "1986df1289",
+    "ab692c119c",
+    "ff7c168f31",
+    "745150dc93"
+  ]
+}
