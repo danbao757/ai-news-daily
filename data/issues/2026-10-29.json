@@ -1,0 +1,43 @@
+{
+  "issue": 36,
+  "date": "2026-10-29",
+  "generated_at": "2026-10-28T18:51:03",
+  "stats": {
+    "collected": 74,
+    "duplicates": 0,
+    "analyzed": 66,
+    "blocked": 8,
+    "selected": 1,
+    "events": 2,
+    "sources": [
+      "GitHub Blog",
+      "Simon Willison",
+      "TechCrunch AI",
+      "The Decoder",
+      "YT Matt Wolfe",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "华为发布新一代通信网创新成果",
+    "paragraph": "华为今日发布新一代通信网全系列创新成果，同时Nvidia推出开源Nemotron 3.5 Transcribe，Google开放Android开发给第三方AI智能体并推出新的Gemini API。",
+    "highlights": [
+      "02ae5a99f9",
+      "09e3fdf794",
+      "becd12354f"
+    ]
+  },
+  "headline_ids": [
+    "02ae5a99f9",
+    "09e3fdf794",
+    "becd12354f"
+  ],
+  "briefing_ids": [
+    "93b9dc1d31",
+    "d8f853e661",
+    "5a4ad4fc9d",
+    "6c275e5fd0",
+    "765a5a74d2",
+    "5d9615019e"
+  ]
+}
