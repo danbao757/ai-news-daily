@@ -1,0 +1,39 @@
+{
+  "issue": 37,
+  "date": "2026-10-30",
+  "generated_at": "2026-10-29T18:55:19",
+  "stats": {
+    "collected": 65,
+    "duplicates": 1,
+    "analyzed": 57,
+    "blocked": 7,
+    "selected": 5,
+    "events": 2,
+    "sources": [
+      "IT之家",
+      "MIT Tech Review",
+      "Simon Willison",
+      "The Decoder",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "DeepMind发布新一代世界模型Genie 4",
+    "paragraph": "今日，Google DeepMind发布了新一代世界模型Genie 4，该模型在Argon发布两周后取得了全面进步，标志着AI在模型构建领域的又一重要突破。同时，星闪SLE 2.0技术升级，高清音频和高精测距功能受到关注。",
+    "highlights": [
+      "2caeea9abb",
+      "492abb5938",
+      "0768597c58"
+    ]
+  },
+  "headline_ids": [
+    "2caeea9abb",
+    "672400a4a7",
+    "ee403acd35"
+  ],
+  "briefing_ids": [
+    "492abb5938",
+    "0768597c58",
+    "184dfdbb5b"
+  ]
+}
