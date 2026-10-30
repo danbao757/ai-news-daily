@@ -1,0 +1,42 @@
+{
+  "issue": 38,
+  "date": "2026-10-31",
+  "generated_at": "2026-10-30T18:33:38",
+  "stats": {
+    "collected": 69,
+    "duplicates": 0,
+    "analyzed": 55,
+    "blocked": 14,
+    "selected": 2,
+    "events": 4,
+    "sources": [
+      "HuggingFace Blog",
+      "Simon Willison",
+      "TechCrunch AI",
+      "The Decoder",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "GLM 5.3模型48小时构建Firefox漏洞利用链",
+    "paragraph": "今日，GLM 5.3模型在极短时间内成功构建了Firefox漏洞利用链，显示出AI在安全领域的强大能力。同时，李飞飞在AI领域的探索引发关注，OpenAI调整付费计划应对竞争，ChatGPT订阅者获得API积分福利。",
+    "highlights": [
+      "12d807cd2c",
+      "e7b95d0df7",
+      "6db7353038",
+      "07b8277675",
+      "1c585585e6"
+    ]
+  },
+  "headline_ids": [
+    "12d807cd2c",
+    "e7b95d0df7",
+    "6db7353038"
+  ],
+  "briefing_ids": [
+    "07b8277675",
+    "1c585585e6",
+    "8cb2db80dc",
+    "b2263e9f84"
+  ]
+}
