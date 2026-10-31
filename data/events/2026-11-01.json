@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-01",
+  "generated_at": "2026-10-31T17:37:18",
+  "events": [
+    {
+      "id": "e6493bae290",
+      "title_zh": "AI技术与应用多样化新闻",
+      "digest_zh": "微软、谷歌、甲骨文等科技巨头承诺将在数据中心等领域投入超过3万亿美元，反映了AI基础设施建设的竞争态势和行业对AI技术的重视。",
+      "representative_id": "6493bae290",
+      "member_ids": [
+        "43d96e1e3c",
+        "f9a1b5def1",
+        "8c0b7e9213",
+        "2c75f48ca2",
+        "9e1171f2fe",
+        "f1f6194d20",
+        "ce0cce9f3b",
+        "538ea1326a",
+        "65d255a745",
+        "78c1c1a14c",
+        "a5c6759870",
+        "00aeec5afb",
+        "a8738faa1f",
+        "5670c77cfa",
+        "cc511e68e1",
+        "1badc8b1f1",
+        "120e946ec4",
+        "aae834a371",
+        "17eb77de17",
+        "1507783ccd",
+        "5be14df72c",
+        "3f1baaed83",
+        "73acf00ea1",
+        "381223935a",
+        "b112e6ada6",
+        "6d8713a114",
+        "60ba719a05",
+        "b2a08cbfc9",
+        "c8930ac4a4",
+        "97b9c1d2e1",
+        "7d4ff45be7",
+        "867eed385a",
+        "6493bae290",
+        "a592fb52ff",
+        "d836de2cf0",
+        "6f9e8cae45"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/openai-plans-to-train-models-on-daybreak-blue-cybersecurity-session-data-that-was-previously-off-limits/",
+        "https://the-decoder.com/beekeeping-tips-and-wrestling-advice-can-train-ai-models-to-sabotage-oversight/",
+        "https://the-decoder.com/microsoft-offers-a-quarter-of-its-workforce-voluntary-severance-while-shielding-ai-critical-teams/",
+        "https://the-decoder.com/google-deepmind-creates-a-global-map-of-forests-with-satellite-data-and-ai/",
+        "https://the-decoder.com/a-claude-model-autonomously-chose-a-gene-therapy-and-operated-on-a-mouse-brain-with-no-human-decision-making/",
+        "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/",
+        "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+        "https://arstechnica.com/ai/2026/10/doordash-says-outside-ai-agents-have-only-led-to-hundreds-of-orders-so-far/",
+        "https://arstechnica.com/tech-policy/2026/10/dartmouths-provost-warned-us-about-ai-cheating-but-his-own-ai-use-cost-him-his-job/",
+        "https://www.marktechpost.com/2026/10/31/vercel-labs-agent-desktop-computer-use/",
+        "https://www.marktechpost.com/2026/10/31/factory-droid-1-0-frontier-harness/",
+        "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/",
+        "https://www.marktechpost.com/2026/10/30/ai-security-agents-claude-codex-mantis-cloudflare/",
+        "https://news.google.com/rss/articles/CBMie0FVX3lxTE1vRGMwR1NPWWdDR0pCc1BMc1I3TlZHWWxaQVZnMTZzalRtQWphUEh0UG1zN01TTGlqWHlZend3TTBsbG0yaFdrLTJ1Ukd0UllPaTVnaWM1alYwWFJvVWZHVlNOMTdnVTJCVVkyYXFfbTR3aGtvQ0RkemRLdw?oc=5",
+        "https://news.google.com/rss/articles/CBMiZkFVX3lxTE8tRjVwRjhYM2ZNQjlPSzJxN3BaanY0aldUWVhDVVhaZlRQRjdmOFhFMlRqRFRiMEZrNmllUUtrUnBrcmY2ZXJ0SFF5QVZ4MGZ5alcwLS1KZ2hMUVoybzV4VHZnb0UwUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ZREQzcEpPX1I3N1JablUzRzE2dktjcmpfajR0ejdQVTVYLWV1YU1FVVFaOTJVd3FncEkzTGVPOGxERS1aT296X2F4d3I5VDZGdGtCRVRiM0gtZmlZb3J1UW4xeE9tOHlrOWNyOUdES3ZGV1U?oc=5",
+        "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE51Z0Y5Z2JBdmEwMW9PZTZneldtV2VQWU1STXlkOFhYYzlCT3RZbGZxdlFvS1B2WlhqNjBkLUJfdmhzZHkwUU81cGJiX0tUQlJkLUlNaFlwa3RMbGxlM1BQNzlkV3dmWkk?oc=5",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE1kdGptM21BazhjOEFqZjN5SS02T0xiTDBfWHJpY2ZHdFNkenR2Q3A3Ni1qcE1BZ1NkRzRKZ2NtS2RZOUZrTDlTSWVtdXBUVDJOVG9GVl8ydnJQRWFaWkljWWplSFFwVnFSRE9LdnR3?oc=5",
+        "https://www.indiatoday.in/technology/news/story/ai-startup-hacks-anthropic-in-12-hours-gains-access-to-employee-details-and-internal-messages-3025452-2026-10-26",
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPRDV5QnAwYzVvbE80TWd0SDRueTY2Wl9uSDdQb01GeWR2UWQtUVJyejRUcm5tUDl0ZHRidFVtZXRvUFNQcWtSYVhRTUNmQUxnOUk3LVRWOXkyS1hzMkxmZk50dFV2Um55SVZ6OU1OUEQyaXVjTEw3a3NUdjl3UXJFTWpPelUtNjdYaFFTQXlQRTZjamxFYTlqVkRaVVFjby0wU0UzMWJKYkM?oc=5",
+        "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/",
+        "https://www.thebignewsletter.com/p/why-anthropics-filing-crushed-tech",
+        "https://vitalik.eth.limo/general/2026/10/31/digital_minimalism.html",
+        "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+        "https://www.wsj.com/tech/ai/openai-raises-less-than-half-of-30-billion-target-in-latest-round-91aecdc5",
+        "https://www.reuters.com/business/nasdaq-futures-tumble-amazon-intel-results-deepen-ai-spending-woes-2026-10-30/",
+        "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/",
+        "https://www.qbitai.com/2026/10/506866.html",
+        "https://www.leiphone.com/category/industrynews/00recUTGoMQ1JRh4.html",
+        "https://www.qbitai.com/2026/10/506855.html",
+        "https://www.leiphone.com/category/transportation/pqEtZnYepE5D1PzD.html",
+        "https://www.leiphone.com/category/industrynews/es0ZV9LsDEsG7QLE.html",
+        "https://www.ithome.com/1/020/632.htm",
+        "https://www.ithome.com/1/020/630.htm",
+        "https://www.ithome.com/1/020/629.htm",
+        "https://www.ithome.com/1/020/627.htm"
+      ],
+      "sources": [
+        "Ars Technica",
+        "Google News AI",
+        "Hacker News",
+        "IT之家",
+        "MarkTechPost",
+        "TechCrunch AI",
+        "The Decoder",
+        "量子位",
+        "雷锋网"
+      ],
+      "source_count": 9,
+      "score_max": 75,
+      "continued_from": null,
+      "first_seen": "2026-11-01",
+      "latest_published_at": "2026-11-01T01:12+08:00"
+    },
+    {
+      "id": "e6198118eee",
+      "title_zh": "英伟达与AI数据中心相关新闻",
+      "digest_zh": "英特尔因PC销量下滑，同时AI行业消耗内存和其他组件导致PC价格上涨而受损。",
+      "representative_id": "6198118eee",
+      "member_ids": [
+        "6336aff37e",
+        "43523836c6",
+        "6198118eee"
+      ],
+      "member_urls": [
+        "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/",
+        "https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/",
+        "https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake/"
+      ],
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "source_count": 1,
+      "score_max": 35,
+      "continued_from": null,
+      "first_seen": "2026-11-01",
+      "latest_published_at": "2026-10-31T09:20+08:00"
+    },
+    {
+      "id": "e16ee8df74a",
+      "title_zh": "AI投资与市场动态",
+      "digest_zh": "OpenAI调整了其融资目标，而Meta因现金流和支出问题收到信用警告。",
+      "representative_id": "16ee8df74a",
+      "member_ids": [
+        "b7e1f436f0",
+        "16ee8df74a"
+      ],
+      "member_urls": [
+        "https://news.google.com/rss/articles/CBMibEFVX3lxTE9fNG4ydmgyVlRnTldmdmJJc3IzcHFoWnJ6OU5XTHpIY29qTFR6cWFSN0J2a09Pd3hYaENveWRHOVNRU0syRWk0QkR0UHI0Q2w1N2dOcU11TURTcUVhMzhfVmhWRTFsX2liUU9wSQ?oc=5",
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQOU1oQjF2YllOMmQxYnVkczh2Q0VZbzhsSHA3VkZjQkZYVmNqUm1MVVhwVHdyczFEOFZGb01BVHNzV2pxcjdFaXd2WHhSbGl5ZUpFSWFpTE1kWlhzMWpoTmE5M09TZm80RWR2cVdubnVIX29JMDQyRXBmTVRqdWt4R0EtQUUwVjNhZ2lpYWY4Z2JlV0I1emVJQ1JJcV9yNDY2a2lrTmphdVRBUQ?oc=5"
+      ],
+      "sources": [
+        "Google News AI"
+      ],
+      "source_count": 1,
+      "score_max": 35,
+      "continued_from": null,
+      "first_seen": "2026-11-01",
+      "latest_published_at": "2026-11-01T01:15+08:00"
+    }
+  ]
+}

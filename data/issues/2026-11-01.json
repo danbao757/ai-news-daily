@@ -1,0 +1,36 @@
+{
+  "issue": 39,
+  "date": "2026-11-01",
+  "generated_at": "2026-10-31T17:37:18",
+  "stats": {
+    "collected": 57,
+    "duplicates": 5,
+    "analyzed": 42,
+    "blocked": 10,
+    "selected": 2,
+    "events": 1,
+    "sources": [
+      "Google News AI",
+      "IT之家",
+      "Simon Willison",
+      "TechCrunch AI"
+    ]
+  },
+  "lead": {
+    "title": "AI基建投资超3万亿，巨头承诺投入",
+    "paragraph": "今日AI行业动态中，微软、谷歌、甲骨文等科技巨头承诺投入超过3万亿美元用于AI基建，推动军备竞赛。同时，英特尔股价暴跌，政府持股价值蒸发120亿美元，OpenAI降低融资目标，Meta因现金流和支出问题获信用警告。",
+    "highlights": [
+      "6493bae290",
+      "6198118eee",
+      "16ee8df74a"
+    ]
+  },
+  "headline_ids": [
+    "6493bae290",
+    "6198118eee",
+    "16ee8df74a"
+  ],
+  "briefing_ids": [
+    "1649c5dd07"
+  ]
+}
