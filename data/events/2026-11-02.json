@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-02",
+  "generated_at": "2026-11-01T18:21:53",
+  "events": [
+    {
+      "id": "ec7606af40d",
+      "title_zh": "OpenAI发布新措施与策略",
+      "digest_zh": "OpenAI、谷歌、微软和Anthropic宣布采用新标准，允许内容发布方拒绝AI抓取自家网站内容，旨在简化内容使用偏好的声明流程。",
+      "representative_id": "5d73c455f9",
+      "member_ids": [
+        "22a7ec6444",
+        "e351ad9260",
+        "b7d898c156",
+        "d66aef25de",
+        "5d73c455f9"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/adobe-is-testing-how-well-ai-agents-can-use-editing-tools-like-a-photoshop-professional-would/",
+        "https://the-decoder.com/openai-is-steering-chatgpt-users-toward-more-paid-usage/",
+        "https://the-decoder.com/openais-upcoming-chat-and-work-merger-in-chatgpt-signals-the-end-of-all-you-can-prompt-pricing/",
+        "https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models/",
+        "https://www.ithome.com/1/020/837.htm"
+      ],
+      "sources": [
+        "IT之家",
+        "The Decoder"
+      ],
+      "source_count": 2,
+      "score_max": 62,
+      "continued_from": "2026-10-31",
+      "first_seen": "2026-10-31",
+      "latest_published_at": "2026-11-01T22:56+08:00"
+    },
+    {
+      "id": "efc995ace8b",
+      "title_zh": "AI技术与应用多样化新闻",
+      "digest_zh": "一项研究发现，中国AI模型在政治问题上的回答不如预期地统一，西方模型有时也会采纳北京官方立场。语言提示对回答的政治倾向有显著影响。",
+      "representative_id": "fc995ace8b",
+      "member_ids": [
+        "bc9463905b",
+        "5264e49da2",
+        "fc995ace8b",
+        "06ba1909c9"
+      ],
+      "member_urls": [
+        "https://simonwillison.net/2026/Oct/31/datasette-llm/",
+        "https://the-decoder.com/empathetic-prompts-can-turn-ai-chatbots-into-seemingly-traumatized-conversational-partners/",
+        "https://the-decoder.com/chinese-ai-models-are-politically-complex-not-just-government-mouthpieces-study-finds/",
+        "https://the-decoder.com/google-wants-video-ai-to-understand-what-people-need-as-they-workgoogle-researchers-are-teaching-a-video-assistant-when-to-offer-help/"
+      ],
+      "sources": [
+        "Simon Willison",
+        "The Decoder"
+      ],
+      "source_count": 2,
+      "score_max": 60,
+      "continued_from": null,
+      "first_seen": "2026-11-02",
+      "latest_published_at": "2026-11-01T22:36+08:00"
+    },
+    {
+      "id": "eed8981433d",
+      "title_zh": "AI技术与应用多样化新闻",
+      "digest_zh": "Pika 发布了基于 MiniMax H3 的 H3 Flex 模型，支持音视频联合生成，提供多种输入和输出格式，并开放了适配器权重和推理代码。",
+      "representative_id": "ed8981433d",
+      "member_ids": [
+        "89c6cb6d29",
+        "3cc4ce3d74",
+        "b78eced8d4",
+        "05a2e7aa35",
+        "52b82f1823",
+        "7ab0b56193",
+        "511bb4825e",
+        "8e39a7d3eb",
+        "4e1353b654",
+        "a95dccc332",
+        "42c5fdd361",
+        "4ebd24d831",
+        "664224e893",
+        "8f7e0709d3",
+        "cb6a16e144",
+        "15e704003a",
+        "fe548f5497",
+        "d7e241d7cf",
+        "2b639ec436",
+        "77cf6f6f7d",
+        "3ba6d6c683",
+        "96603222f1",
+        "2e7f3427dd",
+        "ed8981433d",
+        "74f5f012b0",
+        "26a0e014bc",
+        "fc2f034942"
+      ],
+      "member_urls": [
+        "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
+        "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/",
+        "https://www.marktechpost.com/2026/11/01/nace-ai-open-sources-drex-max-v1-local-inference/",
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE95OE1kdXZpVWJhWGRiWjJnTFdNck9TUnY3NmlycWZrZ294TnAwY29ldkRiajkyS3RuQjZYbFRMLUdyV2VnUnU2WGZkWmRydU50WHZOTFRtMEhuTFFVT3FmSDNlRmQtNU5tVm10ZEdlRzI?oc=5",
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQOWNlWXk3cDZneUh3TEVwRjAtcjBlODVGV01BbmhVaXVhelVyT29nOUxYTGVZN0lhT2VhLXBwREZKTWg0N28wdExWVlluTmhGeVF2X2JxeDJjTHRETmM4YkhJLVJzRGxEb2tYcVlNMy0wal9Vai1nRV9FczF3eGlOaFFoYk4tNTBlNXI5T0NUTHJCM1NTWlo3YW1CTEJsbEsyVVZSUk5ubU9WbEJZODFlVUFseVltVXEwNU9V?oc=5",
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxQNmZCWm1wR0hsUXRkYlVXcVp0aDBFbWJkSUpZeE5oOXNnM0FzU0ZaeHhFbndfRUI1ZXBueGF5R1VheEptX1dmektlZzlwbTFtR0kzWXI5Y25XbGd6NXVjUnpybFhxWTFyOHpDX0RLMTJSTm9fYzAtX0N0d3IxaFN3VVgxQ2dEb1FFcUVEMHJCNjFTNnMzM3VkVXU5aWpaakFrOEthcC1kbnd1TlhmeGFNbjY5eG83SVZxaFZQY1Bn?oc=5",
+        "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdlRTSktsR1lfYmNBOURrNzZSbDJRcG55dmhHQ2E3d1JQSXNQMjRrdVpHdTlUcHotNF9UaVdnX0QzRlVONWtPSmsteUtQSTc0cTRxRjVjOXM1WWExcTdkdkJqLTdmc19seXlxYXd3ZGlZejREMTJTeUsxWFVaVHFjemkwQVVZTk0?oc=5",
+        "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcUVYNHhDczR6M0ljS2Y4Y2YyUTNiZ3huaTlyeWhaY3dwUjBnQm82c0VROXBsa0xYdm1LRi1NRXl2WDAzTHlzZlIyOTI2Mnl5T1Q4YzNwVXdYZm9NN21lODlFNjIxalpFSXo5Vk9CVnlvc2tOdU45ajV5RE95RFFjbzRfTUU3bHZh?oc=5",
+        "https://news.google.com/rss/articles/CBMif0FVX3lxTE1QdGpfaVhGbDAxeXJfX2MtdUUyU25JTTRwMF9veXBGMUlTOHhOLUtOMjBENUF3TVRCZmJmR1htUzdlQkkyaVpDU084M2VJaWVGWXotVVMySXZVdzhYYWxDaHlrakpxNWNNNFdaSXlhMWlUdHY3RWFOT0ltbEJWR3M?oc=5",
+        "https://news.google.com/rss/articles/CBMixAFBVV95cUxOWnY0TlNna3R5aF9Gam81UXVhdmJ3dGc2ejVheE1nNjV5emlEYm9xOW5ZSGZ6dGRXc2t1WFoxTW9zdFhSSjJTT1RGZjlWS1lETDJWaXZyMklROWJ3a1VKQk8wZ3hyMVExVEpnRU5fZ3VrSE5SMG1RV2EzLUJacGFfZVNKOVVEVmdMa2ZwX2diYWdKcWdINGhveDBZWGRDQWZ0Mi1IS0xOUVJPT01ac2hqdHkybjM1SUxDemZZUER6UkEyRU9W?oc=5",
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE4zX3dLYjZ1SXVkdVhxSjh0WlEzRnBBUkFBdEJVOXdKNUFkTGkzak9JVjE2X3dNeUpvaDhELXVjOFJycHpYWmFqeWFlYVFtX3hlYW9HVnFaM2VLajdhVXhueEo4NUlaX3FWcTV1VXEwelg?oc=5",
+        "https://www.reddit.com/r/frontierairlines/comments/1xl20e8/psa_email_scam/",
+        "https://hackerbooks.org",
+        "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-agent-swarms-unleashed-in-minecraft-to-build-a-thriving-civilization-50-agent-teams-fail-after-falling-into-paralyzing-bureaucracy",
+        "https://news.ycombinator.com/item?id=50326727",
+        "https://www.tomshardware.com/tech-industry/data-centers/openai-ceo-says-its-quite-terrible-for-your-pc-to-have-ram-sam-altman-says-data-centers-offer-better-utilization",
+        "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
+        "https://arxiv.org/abs/2409.02292",
+        "https://bbrouter.com/bbrouter/ben-eater-sap-1",
+        "https://www.qbitai.com/2026/11/507076.html",
+        "https://www.qbitai.com/2026/11/507038.html",
+        "https://www.qbitai.com/2026/11/507031.html",
+        "https://www.ithome.com/1/020/841.htm",
+        "https://www.leiphone.com/category/industrynews/MK1z0js4sqcp1xca.html",
+        "https://www.ithome.com/1/020/840.htm",
+        "https://www.ithome.com/1/020/839.htm",
+        "https://www.ithome.com/1/020/832.htm"
+      ],
+      "sources": [
+        "Google News AI",
+        "Hacker News",
+        "IT之家",
+        "MarkTechPost",
+        "TechCrunch AI",
+        "量子位",
+        "雷锋网"
+      ],
+      "source_count": 7,
+      "score_max": 67,
+      "continued_from": null,
+      "first_seen": "2026-11-02",
+      "latest_published_at": "2026-11-02T02:11+08:00"
+    }
+  ]
+}

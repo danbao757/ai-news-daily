@@ -1,0 +1,34 @@
+{
+  "issue": 40,
+  "date": "2026-11-02",
+  "generated_at": "2026-11-01T18:21:53",
+  "stats": {
+    "collected": 48,
+    "duplicates": 1,
+    "analyzed": 37,
+    "blocked": 10,
+    "selected": 0,
+    "events": 3,
+    "sources": [
+      "Simon Willison",
+      "The Decoder",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "OpenAI 合并 Chat 和 Work 模式至 ChatGPT",
+    "paragraph": "今日AI界两大新闻：OpenAI宣布将Chat和Work模式合并至ChatGPT，标志着无限提示定价的终结；Pika发布H3 Flex模型，实现音视频联合生成，引领技术新趋势。",
+    "highlights": [
+      "b7d898c156",
+      "ed8981433d"
+    ]
+  },
+  "headline_ids": [
+    "ed8981433d",
+    "b7d898c156",
+    "fc995ace8b"
+  ],
+  "briefing_ids": [
+    "835fd14063"
+  ]
+}
