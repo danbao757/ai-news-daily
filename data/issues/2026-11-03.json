@@ -1,0 +1,50 @@
+{
+  "issue": 41,
+  "date": "2026-11-03",
+  "generated_at": "2026-11-02T17:06:57",
+  "stats": {
+    "collected": 59,
+    "duplicates": 0,
+    "analyzed": 47,
+    "blocked": 12,
+    "selected": 0,
+    "events": 3,
+    "sources": [
+      "GitHub Blog",
+      "Google News AI",
+      "Hacker News",
+      "IT之家",
+      "MIT Tech Review",
+      "MarkTechPost",
+      "OpenAI News",
+      "TechCrunch AI",
+      "YT Matt Wolfe",
+      "量子位",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "Anthropic营收暴涨，AI融资热潮持续",
+    "paragraph": "Anthropic第三季度营收达到170亿美元，同比暴涨11倍，冲刺史上最大IPO；同时，42AI融资6250万美元，推出智能体功能，预测人类行为；RoboScience完成A2轮融资，资本押注具身智能。",
+    "highlights": [
+      "00ca644f60",
+      "6e11dddc7a",
+      "36b372ceab"
+    ]
+  },
+  "headline_ids": [
+    "6e11dddc7a",
+    "b1a953809a",
+    "00ca644f60"
+  ],
+  "briefing_ids": [
+    "4e84ca416d",
+    "36b372ceab",
+    "728c21b3de",
+    "6eb1302ea5",
+    "03bbcd83ab",
+    "9b41357b53",
+    "19244c7aa2",
+    "8efc4c266d"
+  ]
+}

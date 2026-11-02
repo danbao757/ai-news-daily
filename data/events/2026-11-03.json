@@ -1,0 +1,262 @@
+{
+  "date": "2026-11-03",
+  "generated_at": "2026-11-02T17:06:57",
+  "events": [
+    {
+      "id": "e19244c7aa2",
+      "title_zh": "OpenAI发布电网守护者计划及相关措施",
+      "digest_zh": "OpenAI的电网守护者计划将与公用事业公司合作，帮助未来的计算园区支持电网可靠性并保护消费者电费。",
+      "representative_id": "19244c7aa2",
+      "member_ids": [
+        "19244c7aa2",
+        "33c086ca14",
+        "869219a7f1"
+      ],
+      "member_urls": [
+        "https://openai.com/index/grid-protectors-program",
+        "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
+        "https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/"
+      ],
+      "sources": [
+        "OpenAI News",
+        "TechCrunch AI"
+      ],
+      "source_count": 2,
+      "score_max": 35,
+      "continued_from": null,
+      "first_seen": "2026-11-03",
+      "latest_published_at": "2026-11-02T23:00+08:00"
+    },
+    {
+      "id": "e6e11dddc7a",
+      "title_zh": "AI公司Humain收购与AI智能体模拟实验",
+      "digest_zh": "42AI推出新的智能体功能，并获得了6250万美元的融资，其世界模型能够预测人类行为。",
+      "representative_id": "6e11dddc7a",
+      "member_ids": [
+        "6bf0704cb5",
+        "d29c837ccc",
+        "e137d0a0c4",
+        "6e11dddc7a",
+        "3059ef1574"
+      ],
+      "member_urls": [
+        "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
+        "https://the-decoder.com/saudi-aramco-takes-49-percent-stake-in-ai-firm-humain-with-2-6-billion-deal/",
+        "https://the-decoder.com/one-brutal-minecraft-night-scared-50-ai-agents-into-inventing-chicken-handoff-protocols-a-fertilizer-officer-and-fishing-shifts/",
+        "https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior/",
+        "https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs/"
+      ],
+      "sources": [
+        "Simon Willison",
+        "TechCrunch AI",
+        "The Decoder"
+      ],
+      "source_count": 3,
+      "score_max": 67,
+      "continued_from": null,
+      "first_seen": "2026-11-03",
+      "latest_published_at": "2026-11-03T00:30+08:00"
+    },
+    {
+      "id": "e728c21b3de",
+      "title_zh": "智能网络与智能代理网络发展",
+      "digest_zh": "当开发者给AI代理一个编码任务时，代理不仅回答一次。它还规划、生成代码、运行测试并重复此过程以纠正错误。单个任务可能比基本聊天提示使用多10到50倍的令牌。代理越有用，调用次数越多。",
+      "representative_id": "728c21b3de",
+      "member_ids": [
+        "54d517bb13",
+        "728c21b3de",
+        "e49f46b109"
+      ],
+      "member_urls": [
+        "https://www.technologyreview.com/2026/11/02/1147889/the-download-agentic-web-arrives-eliminating-traffic-deaths/",
+        "https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/",
+        "https://www.technologyreview.com/2026/11/02/1147846/the-agentic-web-is-here/"
+      ],
+      "sources": [
+        "MIT Tech Review"
+      ],
+      "source_count": 1,
+      "score_max": 40,
+      "continued_from": null,
+      "first_seen": "2026-11-03",
+      "latest_published_at": "2026-11-02T21:10+08:00"
+    },
+    {
+      "id": "e6eb1302ea5",
+      "title_zh": "NVIDIA发布Auto Ontology与qwenGPU",
+      "digest_zh": "NVIDIA发布了一个名为Auto Ontology的开源库，该库基于企业元数据生成语义层，将代理SQL与认证定义相结合，并通过MCP、CLI和API提供上下文。",
+      "representative_id": "6eb1302ea5",
+      "member_ids": [
+        "6eb1302ea5",
+        "f2dd5ffff0"
+      ],
+      "member_urls": [
+        "https://www.marktechpost.com/2026/11/01/nvidia-auto-ontology-open-source-semantic-layer-ai-agents/",
+        "https://www.marktechpost.com/2026/11/01/qwengpu-simt-gpu-compiled-into-qwen3-5-2b-weights-runs-cuda/"
+      ],
+      "sources": [
+        "MarkTechPost"
+      ],
+      "source_count": 1,
+      "score_max": 40,
+      "continued_from": null,
+      "first_seen": "2026-11-03",
+      "latest_published_at": "2026-11-02T15:47+08:00"
+    },
+    {
+      "id": "e9b41357b53",
+      "title_zh": "人工智能与宗教、宗教政策、云服务AI竞赛等新闻",
+      "digest_zh": "Forrester预测，到2027年，云服务领域的AI竞赛将变得更加复杂。",
+      "representative_id": "9b41357b53",
+      "member_ids": [
+        "09f4441834",
+        "cf3b96394b",
+        "ca39891216",
+        "9b41357b53",
+        "23eb2c4b71",
+        "2094849ea9",
+        "07e367bccc",
+        "0684970530"
+      ],
+      "member_urls": [
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxQN3RyQjZzQmdZR0FtbTlFSmxtVDVaXzRDY0U2LUdNMGY3ZFVpRTVOUHFsOFgwM0RjYi12WmxtUjFlZEZtOTd0QnFsX1NBQThVTHdCZFhqVjJWeTFqcnE2cGp5SjlOMnJGaXc5OGQ4Y1dPazEydFdfcklUdFRGRng5UmJjbw?oc=5",
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbHBleF8wbUpmbDBXOWx6ZWdEczgwZ0U5LVpNaUtrenI4QXV6NXhYMWNWdHF3NUZ5amFXQS1NS0dUWmcxWVZTTnlYbU1yS1RtT09Oald2TXZHZ2trLXF2TnJHTGtaZ01SS1gybnB3ZDg1M1hYTmxSVzk1cGpqSlQtZkVFWmRhVVJrajVPaXQyM1Z4MWRTOUczUlducTl5TUZja1NyVHBGTDhWbERGaVVxMDZvWEQ?oc=5",
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxQYUl1MGpMQXdIVk9qNWltUm1BazJHRjZ4V3dseWQxZ3F6WEI5Smx6M1lKdGJ6eTBPZEpfeVB2alNXUVpfWFJvTmpSd1c4RU9WRXBCRmNNci1LeDVPd09iSHVxd1htX0FDalFXQlQxWklPckpJV2UzamIyU21MM2hmMkZKMnVUemFSeDN6R3U4dDRLV2VRN0pj?oc=5",
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxPYXJoWjU5R3NCZG1hWTdEMGhzS29PU3o1UTFndHpoRVVZLVZtd2tjT2xHLTV2V3VSazFKTnhQYWxwc1RRT0g0WENYR1NFWll4TWRNZFhsSEUtZHdRdHVXbUg1VkZnWmlCVG9BTHc1VDRTV0VnOGd0Sm40NFc1NERpUlRjNA?oc=5",
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxOY1UyUHRLRmJId09SbmlmM2M2OHhiM0JPVWVRc2VqTWl4SUdJS1hkS0czYmVqTnNEVFkwdldtWTg5aExtVjhRRHZ0YnU1UXZrREh3QzBvLUpRek92MUdvMDh6V3pIZnBoMlhvaWdYZV9heW1nN3RKTEt5SlFsdDlWS0FhemQ1ZXJEMnFzRU5FZ3J2blJFWnc?oc=5",
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxNTDRMRTJlUmhMTFRvdXYxQm1meWRienlpcWs4LTNSajRDSnlQY05Jcnp2dklWTFA4bTdPSjByOVIzN2VyTEd1aFUtTG1zQVI4bENyaWVnQ19sVk1zZkNIdXpnTEJTSGR6SlJhV2lOaEJoTWk4UjVqNkpGN2xsVmtnaGJXQU01Nkx2RVBoY1RXWVZhREZK?oc=5",
+        "https://news.google.com/rss/articles/CBMipgFBVV95cUxPZU5yUnVfaEJFc2dqLWdPQjZxaUJmVEJSeVlvREhHRkJhTURWT2ktdWZ3YmNrOHFFYlZwTENLVkE0aVBULWxjUWxkR3ZCQ2JoVFJrbXU3SFdMdnYzdlRZRHZreEZMSzhWVWlLWmxHcVhjQUlkV21DQkRQWVBlVFlWbmJHZ1gwX0xibEJjU1Z0NmJMdm1ackM4QnRubVhseTVkNEFnMGJn?oc=5",
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxOc01IeDljYkxEaWZBUHVSTmVQMnJJbmF1OUtJbnhUVUZ0TGI2TEYzZ0lYbTRKTjZYVWg3cGtHVlFHcmo1a1N5UDhHcmk0TmtMNHpvWnNtbk5xd2YxQ1FRU0FYMUNSWGJRUzJvdFJhWmpDelJnNGtQY2JFREdFVmYtYW41U0w4dzJCQnlMc3NaMVo4ay03YnNuY2lkMA?oc=5"
+      ],
+      "sources": [
+        "Google News AI"
+      ],
+      "source_count": 1,
+      "score_max": 37,
+      "continued_from": null,
+      "first_seen": "2026-11-03",
+      "latest_published_at": "2026-11-03T00:50+08:00"
+    },
+    {
+      "id": "e4e84ca416d",
+      "title_zh": "AI相关社会与行业动态",
+      "digest_zh": "商务部发布了中国首份前沿AI出口管制政策，编号为第48号。",
+      "representative_id": "4e84ca416d",
+      "member_ids": [
+        "6d29f3b89c",
+        "d7eb8c9cee",
+        "d822a9117e",
+        "4e84ca416d",
+        "f1f3bd09de",
+        "bf4bb9141e",
+        "5bbad0fbe1",
+        "e20993caf9"
+      ],
+      "member_urls": [
+        "https://www.bloomberg.com/news/features/2026-09-17/san-francisco-s-ai-wealth-boom-skirts-engineers-as-openai-anthropic-ipos-near",
+        "https://twitter.com/OcanaSantero/status/2115442964574908902",
+        "https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html",
+        "https://labs.cloudsecurityalliance.org/research/csa-research-note-china-ai-export-controls-announcement-48-2/",
+        "https://news.ycombinator.com/",
+        "https://www.eurogamer.net/ai-fan-wikis-errors-complicating-games-culture",
+        "https://wikihack.netlify.app",
+        "https://picon.dev/en/publications/ai-assisted-engineering/"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "score_max": 60,
+      "continued_from": null,
+      "first_seen": "2026-11-03",
+      "latest_published_at": "2026-11-02T22:40+08:00"
+    },
+    {
+      "id": "eb1a953809a",
+      "title_zh": "OpenAI与小米AI产品相关新闻",
+      "digest_zh": "OpenAI提出了新版‘机器人三定律’，强调大模型应忠于人类，这一观点可能对大模型的发展产生重要影响。",
+      "representative_id": "b1a953809a",
+      "member_ids": [
+        "c443a3544a",
+        "b1a953809a",
+        "4f1cd76f57"
+      ],
+      "member_urls": [
+        "https://www.qbitai.com/2026/11/507150.html",
+        "https://www.qbitai.com/2026/11/507225.html",
+        "https://www.qbitai.com/2026/11/507107.html"
+      ],
+      "sources": [
+        "量子位"
+      ],
+      "source_count": 1,
+      "score_max": 65,
+      "continued_from": null,
+      "first_seen": "2026-11-03",
+      "latest_published_at": "2026-11-02T15:27+08:00"
+    },
+    {
+      "id": "e36b372ceab",
+      "title_zh": "AI产品与应用相关新闻",
+      "digest_zh": "RoboScience 机器科学完成 A2 轮融资，累计融资数亿元，反映了资本对具身智能领域的关注。公司逆势获得资本青睐，并在具身智能领域取得了一系列产品和技术落地。",
+      "representative_id": "36b372ceab",
+      "member_ids": [
+        "332d8ac0e0",
+        "12045bf363",
+        "36b372ceab",
+        "747a63c554",
+        "a8bdf9c223",
+        "b0200ec081",
+        "b17be9f044",
+        "da095f1f03"
+      ],
+      "member_urls": [
+        "https://www.leiphone.com/category/industrynews/kqJzcDsRfxHUQGy9.html",
+        "https://www.leiphone.com/category/ai/1mfsMzxNwaTmqZ7e.html",
+        "https://www.leiphone.com/category/ai/GqrJT2vlPFBxElDY.html",
+        "https://www.leiphone.com/category/ai/d2myOaWdKKFW23lm.html",
+        "https://www.leiphone.com/category/weiwu/AfQerzZ1HwVzZ2yZ.html",
+        "https://www.leiphone.com/category/industrynews/oPrDWg9bNg1Dgy4a.html",
+        "https://www.leiphone.com/category/industrynews/JrXpr0xuLSNA9sOY.html",
+        "https://www.leiphone.com/category/industrynews/R3J4f2BoqbmygKli.html"
+      ],
+      "sources": [
+        "雷锋网"
+      ],
+      "source_count": 1,
+      "score_max": 52,
+      "continued_from": null,
+      "first_seen": "2026-11-03",
+      "latest_published_at": "2026-11-02T21:13+08:00"
+    },
+    {
+      "id": "e00ca644f60",
+      "title_zh": "科技公司与AI产品动态",
+      "digest_zh": "Anthropic 第三季度营收达到170亿美元，同比增长11倍，计划进行史上最大规模的IPO。",
+      "representative_id": "00ca644f60",
+      "member_ids": [
+        "8c325a24b2",
+        "00ca644f60",
+        "19ee9b9510",
+        "8b6feb2795",
+        "34a3fd5177"
+      ],
+      "member_urls": [
+        "https://www.ithome.com/1/021/280.htm",
+        "https://www.ithome.com/1/021/277.htm",
+        "https://www.qbitai.com/2026/11/507277.html",
+        "https://www.ithome.com/1/021/274.htm",
+        "https://www.qbitai.com/2026/11/507082.html"
+      ],
+      "sources": [
+        "IT之家",
+        "量子位"
+      ],
+      "source_count": 2,
+      "score_max": 62,
+      "continued_from": null,
+      "first_seen": "2026-11-03",
+      "latest_published_at": "2026-11-02T23:40+08:00"
+    }
+  ]
+}
