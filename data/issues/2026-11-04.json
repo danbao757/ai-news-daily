@@ -1,0 +1,27 @@
+{
+  "issue": 42,
+  "date": "2026-11-04",
+  "generated_at": "2026-11-03T20:06:44",
+  "stats": {
+    "collected": 76,
+    "duplicates": 0,
+    "analyzed": 67,
+    "blocked": 9,
+    "selected": 2,
+    "events": 1,
+    "sources": [
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "百度Apollo World世界模型发布",
+    "paragraph": "百度近日发布了Apollo World世界模型，这一创新技术有望推动无人驾驶产业迈向更高级别的通用人工智能（AGI）时代。",
+    "highlights": [
+      "5f5608ab08"
+    ]
+  },
+  "headline_ids": [
+    "5f5608ab08"
+  ],
+  "briefing_ids": []
+}
