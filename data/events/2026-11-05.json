@@ -1,0 +1,201 @@
+{
+  "date": "2026-11-05",
+  "generated_at": "2026-11-04T20:25:16",
+  "events": [
+    {
+      "id": "e3a06f84c0f",
+      "title_zh": "OpenAI 收购 Pierre Computer Company",
+      "digest_zh": "OpenAI 宣布收购 Pierre Computer Company，以扩展其 Codex 代码构建、理解和审查工具的功能。",
+      "representative_id": "3a06f84c0f",
+      "member_ids": [
+        "3a06f84c0f",
+        "921b1232ce",
+        "647d6f84fe"
+      ],
+      "member_urls": [
+        "https://openai.com/index/openai-to-acquire-pierre",
+        "https://the-decoder.com/openai-acquires-pierre-computer-company-to-make-git-keep-up-with-ai-coding-agents/",
+        "https://openai.com/index/openai-to-acquire-pierre/"
+      ],
+      "sources": [
+        "Hacker News",
+        "OpenAI News",
+        "The Decoder"
+      ],
+      "source_count": 3,
+      "score_max": 65,
+      "continued_from": null,
+      "first_seen": "2026-11-05",
+      "latest_published_at": "2026-11-05T02:41+08:00"
+    },
+    {
+      "id": "e73998216b5",
+      "title_zh": "Anthropic 文本水印与模型身份验证",
+      "digest_zh": "Anthropic在欧盟AI法案12月截止日期前，为四个Claude模型推出文本水印。但在Claude Opus 4.6和Sonnet 4.6等较老模型上，API用户可以通过更改单个采样参数来禁用水印。Anthropic对这一漏洞的回应是一则合规警告。",
+      "representative_id": "73998216b5",
+      "member_ids": [
+        "73998216b5",
+        "fd3bbf26ab"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/anthropics-text-watermark-is-easy-to-bypass-on-several-older-claude-models/",
+        "https://the-decoder.com/anthropics-new-prototype-proves-which-model-wrote-an-ai-response-without-exposing-its-weights/"
+      ],
+      "sources": [
+        "The Decoder"
+      ],
+      "source_count": 1,
+      "score_max": 42,
+      "continued_from": null,
+      "first_seen": "2026-11-05",
+      "latest_published_at": "2026-11-05T03:03+08:00"
+    },
+    {
+      "id": "eda4881477d",
+      "title_zh": "AI 在政治与教育领域的应用与政策",
+      "digest_zh": "民主党在中期选举中的胜利预示着对科技和人工智能的审查将更加严格。",
+      "representative_id": "da4881477d",
+      "member_ids": [
+        "c0846d91a5",
+        "66a48728a1",
+        "44295aec71",
+        "4666879a35",
+        "da4881477d"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/exit-polls-show-ai-ranked-last-among-voter-priorities-in-the-2026-u-s-midterms/",
+        "https://the-decoder.com/schools-that-turn-off-googles-ai-will-lose-search-too-starting-in-2027/",
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOM0QwSXAxRzRqZmE2d0I1STloM1FicUpPR1VGNGl4S0xUMHIzRjVvZXBYV0FGT3pxbHpqNEFsOHc4cW10RkEyMWhhSXRTZmUtaDhCU2x3TDNjWjZ4T2tWcmlmLXZVTzdsSXFxTGdjWS1SUW1IMDBpNWlYVjhHRUxxUjNKeXdOWXFXNHJxTUJZOWQzbWhTWlRReDViQmYxcGpIMkFuaGNFR2NWRmc?oc=5",
+        "https://news.google.com/rss/articles/CBMirAFBVV95cUxOTXEtTVhlUlVrQk5XRElqWUxJTzFOQW9qUW9LZnNnTHhoUm9LOVFpVGlmUzM0YTFnaDA2cmNjdkJfYV9aaF9VR3NFTHFZaHhaM0dCX25OQjJZcFdaQ1NZSUNRLUhUcEg4cWtOYWYxcnJZdWRtbUJZbll1V2EtMkpEN0xObGhjaU5LSk44ZWFWaWg2UTVHa0Frb1dJRTVzRlR4TGtheExEZzNoRnlT?oc=5",
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxNRHVBd081d3JtazF2cEJKXzF2OWp5aExWV0RTX09UOHVzQTNBbEVxVUVGcmhxS2J5cjBPVjFVaUMyVnBLMEIteVhBakRWYmVacUd0NnNhTlpPdm03SHA0dllQRUJ1WWxPd0FRYTVCVHE1T3VOUW1KeWd4b1F1ZTBnMXBuUzZLaGxSYzFFRkU0a2RZVVlh?oc=5"
+      ],
+      "sources": [
+        "Google News AI",
+        "The Decoder"
+      ],
+      "source_count": 2,
+      "score_max": 40,
+      "continued_from": null,
+      "first_seen": "2026-11-05",
+      "latest_published_at": "2026-11-05T03:31+08:00"
+    },
+    {
+      "id": "e26c6032e1d",
+      "title_zh": "AI 技术与应用多样化新闻",
+      "digest_zh": "Anthropic 的 Fable 5.5 模型通过纯代码生成了一段 66 秒的动画，展示了其在动画制作方面的能力，包括场景设计、画面渲染和声音合成。",
+      "representative_id": "de093b86e8",
+      "member_ids": [
+        "604513e69c",
+        "089b0efaf0",
+        "58f69099ba",
+        "f901cc10a3",
+        "2550523e2a",
+        "f5f168ec4f",
+        "8c4cd4032a",
+        "aa4043993a",
+        "90a8b08254",
+        "0c3c503e54",
+        "d94c9f77dd",
+        "bd936fe1d4",
+        "fa31568224",
+        "793baf0e54",
+        "07dbf5f156",
+        "68c44263a0",
+        "f46bd8b988",
+        "68d6e2cfb5",
+        "a7cbab617b",
+        "8d4a48eb32",
+        "c7fb864905",
+        "1ac3a672ea",
+        "b57b03fce8",
+        "3a230c848b",
+        "67cf4b63b7",
+        "f953e6a74e",
+        "cb6e0d22aa",
+        "ab111f75a8",
+        "31d1c97e30",
+        "abc36ac32a",
+        "de093b86e8",
+        "f122183a6d",
+        "61f044a1c8",
+        "6462e4d6a9"
+      ],
+      "member_urls": [
+        "https://techcrunch.com/video/open-source-ai-is-booming-hugging-face-explains-who-profits/",
+        "https://techcrunch.com/podcast/building-on-open-source-ai-hugging-faces-policy-chief-on-the-costs-risks-and-trade-offs/",
+        "https://techcrunch.com/2026/11/04/i-tried-apples-siri-recaps-theyre-surprisingly-useful-and-a-little-unsettling/",
+        "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/",
+        "https://www.technologyreview.com/2026/11/04/1148043/texas-was-the-new-epicenter-of-the-ai-data-center-buildout-that-might-be-kaput/",
+        "https://www.technologyreview.com/2026/11/04/1147596/securing-the-agentic-enterprise-with-data-lineage/",
+        "https://www.marktechpost.com/2026/11/03/tencent-wevisone-vl-vision-language-model/",
+        "https://news.google.com/rss/articles/CBMiggJBVV95cUxNckRNMHRUa3pSYU9GMkdtMHNnaHNTcm9hTVJMNE1qRWJwVldiR1lLUzlRYllMWXpXakFtV2xiU25nRzNqME53dlNxal9idlVGZXVvUGxFVDJVMVJ0NU51ejh2d3lnNHNGTXZlUFhDN0dseHVJRnFkTmZuTDZXQUFGNnJoS1NvYjl0MkJiQ3gxR2NKOF9wVDdPZ1hoWjRqTTZnRF85a3NKZ1p6ZnpwTXBXbzYzdWNKTGxjRnlYTzVsTkRtdW1VVUJXcTNJUVJYbXdqQTg5Rk41dUFDbmtHMmE5Zm0zZGpiS0J3MXowd1hTSUhCRk9KWTFyeWt0Y2NGUE53OXc?oc=5",
+        "https://www.marktechpost.com/2026/11/03/nvidia-dgx-spark-moe-inference-ling-3-0-flash/",
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQVHBHYWpjdWxPUUszcVo2UmdxQ0UzUWpLZlh6TFdlZXhwWDRCWDM1S1V2eW0xODY4bFN4bzNmM3REWTlYTmpZdm1MYWFlZTdkY2pFZXhncGRfR2x5WjlYdVZoRW9YbUJhV1RxODR5NHhGLVYySlRVa0QwZ0pKMU4yUHd2RkQwWm8zV2pDaFU4VzI3NXhYN0tsVHY3ejV4dmE4YTZrUkNZTDlEUQ?oc=5",
+        "https://www.anthropic.com/research/provable-inference",
+        "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
+        "https://pcdealcheck.com/",
+        "https://news.ycombinator.com/item?id=50366117",
+        "https://hy.tencent.ai/research/hy4",
+        "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+        "https://www.qbitai.com/2026/11/507647.html",
+        "https://www.qbitai.com/2026/11/507586.html",
+        "https://www.qbitai.com/2026/11/507574.html",
+        "https://www.qbitai.com/2026/11/507567.html",
+        "https://www.qbitai.com/2026/11/507533.html",
+        "https://www.leiphone.com/category/industrynews/30nTa8g0yzQmZGys.html",
+        "https://www.leiphone.com/category/industrynews/5gyZIVYyxDzi67wu.html",
+        "https://www.leiphone.com/category/industrynews/vxZxNvbxdDFhYp55.html",
+        "https://www.leiphone.com/category/industrynews/KStlwPyruE6hJ107.html",
+        "https://www.leiphone.com/category/ai/0F072La1etrUN0Tr.html",
+        "https://www.leiphone.com/category/industrynews/KAD74l2DdSMcKPgY.html",
+        "https://www.leiphone.com/category/industrynews/UB25ocDFu1ntNMtz.html",
+        "https://www.ithome.com/1/022/472.htm",
+        "https://www.ithome.com/1/022/469.htm",
+        "https://www.ithome.com/1/022/468.htm",
+        "https://www.ithome.com/1/022/459.htm",
+        "https://www.ithome.com/1/022/447.htm",
+        "https://www.ithome.com/1/022/440.htm"
+      ],
+      "sources": [
+        "Google News AI",
+        "Hacker News",
+        "IT之家",
+        "MIT Tech Review",
+        "MarkTechPost",
+        "TechCrunch AI",
+        "量子位",
+        "雷锋网"
+      ],
+      "source_count": 8,
+      "score_max": 70,
+      "continued_from": "2026-11-04",
+      "first_seen": "2026-11-04",
+      "latest_published_at": "2026-11-05T04:03+08:00"
+    },
+    {
+      "id": "e5afc49da7b",
+      "title_zh": "Simon Willison 发布 datasette 相关版本",
+      "digest_zh": "Dharma Field Extractor可以将任何文档输入转换为结构化字段并以JSON格式输出。",
+      "representative_id": "5afc49da7b",
+      "member_ids": [
+        "5afc49da7b",
+        "196e073af2",
+        "c3dba75669"
+      ],
+      "member_urls": [
+        "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
+        "https://simonwillison.net/2026/Nov/3/datasette-agent/",
+        "https://simonwillison.net/2026/Nov/4/datasette-apps/"
+      ],
+      "sources": [
+        "HuggingFace Blog",
+        "Simon Willison"
+      ],
+      "source_count": 2,
+      "score_max": 17,
+      "continued_from": null,
+      "first_seen": "2026-11-05",
+      "latest_published_at": "2026-11-05T01:50+08:00"
+    }
+  ]
+}
