@@ -1,0 +1,41 @@
+{
+  "issue": 44,
+  "date": "2026-11-06",
+  "generated_at": "2026-11-05T20:36:39",
+  "stats": {
+    "collected": 73,
+    "duplicates": 0,
+    "analyzed": 65,
+    "blocked": 8,
+    "selected": 6,
+    "events": 2,
+    "sources": [
+      "GitHub Blog",
+      "Google News AI",
+      "HuggingFace Blog",
+      "OpenAI News",
+      "Simon Willison",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "百度开源文心5.5 Flash Base，刷新同尺寸模型 SOTA",
+    "paragraph": "今日，百度开源了文心5.5 Flash Base，该模型刷新了同尺寸模型的性能记录。同时，OpenAI发布了GPT-6 Cyber网络安全智能体模型，HuggingFace推出Phonon TTS，GitHub揭秘新Git存储架构。",
+    "highlights": [
+      "ad627458ee",
+      "53c56afbaf",
+      "89209ab642",
+      "e8ad3aaf9c"
+    ]
+  },
+  "headline_ids": [
+    "ad627458ee",
+    "53c56afbaf",
+    "89209ab642"
+  ],
+  "briefing_ids": [
+    "e8ad3aaf9c",
+    "3089c4e12a",
+    "208a2dcd4a"
+  ]
+}
