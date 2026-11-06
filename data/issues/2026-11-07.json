@@ -1,0 +1,39 @@
+{
+  "issue": 45,
+  "date": "2026-11-07",
+  "generated_at": "2026-11-06T19:59:38",
+  "stats": {
+    "collected": 73,
+    "duplicates": 1,
+    "analyzed": 60,
+    "blocked": 12,
+    "selected": 2,
+    "events": 2,
+    "sources": [
+      "Ars Technica",
+      "Hacker News",
+      "IT之家",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "OpenAI GPT-6 Cyber发布，既能入侵系统又能提出修复方案",
+    "paragraph": "OpenAI最新发布的GPT-6 Cyber模型，不仅能够入侵系统，还能提出相应的修复方案，标志着AI在安全领域的重大突破。同时，华为MatePad Edge升级至鸿蒙7.0，支持电脑模式运行Linux环境，为用户带来更丰富的使用体验。",
+    "highlights": [
+      "24d6171445",
+      "6632f75fae",
+      "6632f75fae"
+    ]
+  },
+  "headline_ids": [
+    "24d6171445",
+    "a67b49ab07",
+    "6632f75fae"
+  ],
+  "briefing_ids": [
+    "1756f2ed2a",
+    "95ff043a27",
+    "feae6a47e0",
+    "df945c9f08"
+  ]
+}
