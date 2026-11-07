@@ -1,0 +1,32 @@
+{
+  "issue": 46,
+  "date": "2026-11-08",
+  "generated_at": "2026-11-07T18:01:41",
+  "stats": {
+    "collected": 45,
+    "duplicates": 3,
+    "analyzed": 33,
+    "blocked": 9,
+    "selected": 3,
+    "events": 2,
+    "sources": [
+      "IT之家",
+      "The Decoder",
+      "YT Matt Wolfe"
+    ]
+  },
+  "lead": {
+    "title": "Google Health应用推出高血压检测功能",
+    "paragraph": "Google Health应用新增基于智能手表的高血压检测功能，标志着医疗健康领域AI技术的进一步应用。同时，GitHub推出新的Git存储架构，支持大规模代码仓库的智能协作。",
+    "highlights": [
+      "36d024f10f",
+      "4eb80af410"
+    ]
+  },
+  "headline_ids": [
+    "36d024f10f",
+    "d90ace3827",
+    "4eb80af410"
+  ],
+  "briefing_ids": []
+}
