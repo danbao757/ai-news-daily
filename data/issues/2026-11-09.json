@@ -1,0 +1,36 @@
+{
+  "issue": 47,
+  "date": "2026-11-09",
+  "generated_at": "2026-11-08T18:20:30",
+  "stats": {
+    "collected": 36,
+    "duplicates": 0,
+    "analyzed": 29,
+    "blocked": 7,
+    "selected": 1,
+    "events": 1,
+    "sources": [
+      "Google News AI",
+      "Simon Willison",
+      "The Decoder",
+      "YT Matt Wolfe"
+    ]
+  },
+  "lead": {
+    "title": "AI系统险些误判美军攻击中国船只",
+    "paragraph": "今日AI动态中，最引人关注的是一款AI系统险些导致美军攻击中国船只的事件，凸显了AI系统潜在的安全风险。同时，业界对AI在治愈癌症方面的潜力进行探讨，大脑与计算机的隐喻在AI发展中的影响也被提出质疑。",
+    "highlights": [
+      "d6b593760e",
+      "817d4ec400",
+      "ef39af466b"
+    ]
+  },
+  "headline_ids": [
+    "d6b593760e",
+    "817d4ec400",
+    "ef39af466b"
+  ],
+  "briefing_ids": [
+    "3880bf849b"
+  ]
+}
