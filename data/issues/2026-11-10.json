@@ -1,0 +1,50 @@
+{
+  "issue": 48,
+  "date": "2026-11-10",
+  "generated_at": "2026-11-09T17:29:55",
+  "stats": {
+    "collected": 61,
+    "duplicates": 0,
+    "analyzed": 46,
+    "blocked": 15,
+    "selected": 2,
+    "events": 2,
+    "sources": [
+      "Google News AI",
+      "Hacker News",
+      "HuggingFace Blog",
+      "MIT Tech Review",
+      "MarkTechPost",
+      "Simon Willison",
+      "The Decoder",
+      "量子位",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "阿里云获中国专利金奖，破解AI算力调度难题",
+    "paragraph": "阿里云凭借其在AI算力调度方面的创新技术，荣获中国专利金奖。同时，Google发布四种TPU变体，加剧与Nvidia的竞争。腾讯混元模型跻身最强开源模型，展示其在多模态Agent领域的实力。",
+    "highlights": [
+      "360ae89007",
+      "c3600664cc",
+      "d51ea73e96"
+    ]
+  },
+  "headline_ids": [
+    "360ae89007",
+    "4b648bbd2e",
+    "15e748c80f"
+  ],
+  "briefing_ids": [
+    "c3600664cc",
+    "70e942b8f9",
+    "d51ea73e96",
+    "99d6b0ebd7",
+    "285f830566",
+    "fa1a1cfe55",
+    "a92667754b",
+    "50d303e5bf",
+    "0b9d8a427a",
+    "057e22ab69"
+  ]
+}
