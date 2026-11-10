@@ -1,0 +1,46 @@
+{
+  "issue": 49,
+  "date": "2026-11-11",
+  "generated_at": "2026-11-10T20:25:02",
+  "stats": {
+    "collected": 77,
+    "duplicates": 0,
+    "analyzed": 63,
+    "blocked": 14,
+    "selected": 2,
+    "events": 4,
+    "sources": [
+      "DeepMind Blog",
+      "HuggingFace Blog",
+      "IT之家",
+      "MIT Tech Review",
+      "MarkTechPost",
+      "Simon Willison",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "DeepMind推出AlphaProof Code，验证复杂软件突破性进展",
+    "paragraph": "DeepMind在博客上宣布推出AlphaProof Code，这是一项在深度层面验证复杂软件的突破性技术。同时，MiniMax开源H3-Image生图模型，可在10秒内生成4K图像。Anthropic启动IPO路演，目标估值高达1万亿美元，多国及顶级AI实验室签署巴黎宣言，关注AI安全和安全关闭机制。",
+    "highlights": [
+      "428ac4b42c",
+      "5930b430ed",
+      "963da2d69d",
+      "9891d3bb8c"
+    ]
+  },
+  "headline_ids": [
+    "428ac4b42c",
+    "5930b430ed",
+    "963da2d69d"
+  ],
+  "briefing_ids": [
+    "9891d3bb8c",
+    "c93c64172e",
+    "8e72752131",
+    "3229de0d91",
+    "997ee517f7",
+    "724fae9251",
+    "75546f2ae8"
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "date": "2026-11-11",
+  "generated_at": "2026-11-10T20:25:02",
+  "events": [
+    {
+      "id": "e3588ceed41",
+      "title_zh": "OpenAI、DeepMind、HuggingFace等公司AI产品更新",
+      "digest_zh": "OpenAI与Upwork的新研究显示，自由职业需求发生变化，AI相关项目预算增加且工时延长。",
+      "representative_id": "3588ceed41",
+      "member_ids": [
+        "5ca4dc7b6d",
+        "46ecb159c1",
+        "01a8528fa1",
+        "3588ceed41",
+        "11f91b3f82",
+        "ccdccf818b",
+        "fd8e1c638d",
+        "78ee2f5f35",
+        "5b76c936eb",
+        "5175b6a2b7",
+        "7737e173e3",
+        "e884d1655a",
+        "6719652bbf",
+        "252a67cf93",
+        "9d78811020",
+        "593498d54f",
+        "a7266a93fa",
+        "3fca741465",
+        "3872694bbd",
+        "ecb9cbad4a",
+        "518bcaaf99",
+        "1a803f206d",
+        "98bc2c7f68",
+        "87db8b88be",
+        "20afccfb79",
+        "558ea01966",
+        "6ea215fc01",
+        "406460b90a",
+        "b2740ce6d5",
+        "6c859a1302",
+        "8627c0b229",
+        "5930b430ed",
+        "f946ddcb63",
+        "34e677ceb9"
+      ],
+      "member_urls": [
+        "https://openai.com/index/introducing-businesses-chatgpt",
+        "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
+        "https://openai.com/index/closing-ai-guidance-gap-education",
+        "https://openai.com/index/ai-effect-on-freelance-work",
+        "https://the-decoder.com/openai-turns-chatgpt-into-a-business-directory-with-ai-agents-that-handle-customer-questions/",
+        "https://techcrunch.com/2026/11/10/openai-rolls-out-new-business-profiles-making-chatgpt-just-a-little-bit-more-like-google/",
+        "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxONGpXeWNILTNEanFCXzVFUmhBRWl4cEVXMWZnczhzYXpZS0VJZEFoWjhCUThHeUJ3Uk4tNHNBclcyVVVoZEdvRWFVdmJHZ0F6REdKbTdqek90d0VqcHBjSUNrMnZqSFBWVXNtNW9zLTJFQjVUaDBXOERab0Uyc1Q2RUhjYXZpZEQxU2VYU3JZLU9JQnRuRDNxRnZBOVdzeTlPeTRRUVJmV2djdU9oRUxKejMxLVk?oc=5",
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOYkN3bE9kbEZlZTJMZmVZM2xfclJ6OHp6X3kwdVNfX0MtZmF4THg1cWlQRkRIRno5UmFUVEI0WWh0SVQydmt2N2U4VWt2N0p4bjFlOTFVbTU4cG5ZdHNuS0NHVzFvRU9MUFdoVnpyWFpTRDRPUmxHbi1KYl8wc1Y2ejRianBXbm5pX005cUZQWENrZ24td243Z2J6NlV4UVlNd0ZLQjEzUUw?oc=5",
+        "https://github.com/GoogleChrome/modern-web-guidance",
+        "https://claude.com/resources/articles/sheets-whiteboards-data",
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+        "https://www.wsj.com/finance/stocks/anthropic-to-seek-1-3-trillion-valuation-in-ipo-8337b669",
+        "https://letoverlambda.com/",
+        "https://www.wired.com/story/meet-the-sad-wives-of-ai/",
+        "https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/",
+        "https://www.notion.com/help/security-incident-involving-a-third-party-ai-vendor",
+        "https://www.qbitai.com/2026/11/508998.html",
+        "https://www.qbitai.com/2026/11/508996.html",
+        "https://www.qbitai.com/2026/11/508991.html",
+        "https://www.qbitai.com/2026/11/508985.html",
+        "https://www.qbitai.com/2026/11/508919.html",
+        "https://www.qbitai.com/2026/11/508828.html",
+        "https://www.leiphone.com/category/industrynews/dew7AYBxkGAYilZj.html",
+        "https://www.leiphone.com/category/industrynews/dZrtBnDtC720JWGW.html",
+        "https://www.leiphone.com/category/industrynews/Qhv28gnFkgFPCbXV.html",
+        "https://www.leiphone.com/category/industrynews/Hh7kHix5gWd00cEC.html",
+        "https://www.leiphone.com/category/transportation/P7zNFoMQbmQynIE8.html",
+        "https://www.leiphone.com/category/industrynews/Z3dOHYCNYfPNwijf.html",
+        "https://www.ithome.com/1/025/195.htm",
+        "https://www.ithome.com/1/025/192.htm",
+        "https://www.ithome.com/1/025/191.htm",
+        "https://www.ithome.com/1/025/190.htm",
+        "https://www.ithome.com/1/025/189.htm"
+      ],
+      "sources": [
+        "Google News AI",
+        "Hacker News",
+        "IT之家",
+        "OpenAI News",
+        "TechCrunch AI",
+        "The Decoder",
+        "量子位",
+        "雷锋网"
+      ],
+      "source_count": 8,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-11-11",
+      "latest_published_at": "2026-11-11T04:17+08:00"
+    },
+    {
+      "id": "e428ac4b42c",
+      "title_zh": "DeepMind发布Gemini 4 Carbon和Gemini Robotic",
+      "digest_zh": "",
+      "representative_id": "428ac4b42c",
+      "member_ids": [
+        "0b2e1c02de",
+        "428ac4b42c",
+        "dbfcdcd8f5",
+        "0336087d2a",
+        "004c51f512"
+      ],
+      "member_urls": [
+        "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+        "https://deepmind.google/blog/introducing-alphaproof-code/",
+        "https://the-decoder.com/gemini-4-carbon-arrives-just-in-time-to-feel-like-yesterdays-news-in-the-fastest-model-cycle-yet/",
+        "https://the-decoder.com/google-deepminds-gemini-robotics-2-5-scores-96-percent-sorting-metal-parts-in-a-mercedes-benz-assembly-pilot/",
+        "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak/"
+      ],
+      "sources": [
+        "Ars Technica",
+        "DeepMind Blog",
+        "The Decoder"
+      ],
+      "source_count": 3,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-11-11",
+      "latest_published_at": "2026-11-11T02:19+08:00"
+    },
+    {
+      "id": "ec93c64172e",
+      "title_zh": "Simon Willison发布Muse Ember和Claude Fable ",
+      "digest_zh": "某产品发布新的智能体功能，包括Fable 5.2和Mythos 5.2，这些模型在物理黑洞物理学方面解决了两个开放性问题，并提供了开放入口和主要能力变化。",
+      "representative_id": "c93c64172e",
+      "member_ids": [
+        "fabe838d73",
+        "c8bf0b8e91",
+        "c93c64172e",
+        "d363b026f0",
+        "d3fbcf24d3"
+      ],
+      "member_urls": [
+        "https://simonwillison.net/2026/Nov/10/muse-ember/",
+        "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
+        "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+        "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+        "https://www.marktechpost.com/2026/11/09/meta-muse-ember-small-agent-model/"
+      ],
+      "sources": [
+        "MarkTechPost",
+        "Simon Willison"
+      ],
+      "source_count": 2,
+      "score_max": 52,
+      "continued_from": null,
+      "first_seen": "2026-11-11",
+      "latest_published_at": "2026-11-10T15:28+08:00"
+    },
+    {
+      "id": "e963da2d69d",
+      "title_zh": "Anthropic公司动态和AI技术发展",
+      "digest_zh": "Anthropic 正在启动 IPO 路演，计划以每股 70 至 78 美元的价格发行股票，目标估值高达 1.02 万亿美元。",
+      "representative_id": "963da2d69d",
+      "member_ids": [
+        "2c91002de0",
+        "0fafd06790",
+        "963da2d69d",
+        "2800935556",
+        "5ef445c1e8",
+        "0504529861",
+        "d2822dd331",
+        "3cccdea335",
+        "deaa6d3af7",
+        "b2c0800acf",
+        "1379b77263"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/anthropic-turns-claude-into-a-full-workspace-with-plugins-spreadsheets-whiteboards-and-soon-meeting-notes/",
+        "https://the-decoder.com/anthropics-fable-5-2-completes-41-percent-of-real-freelance-jobs-up-from-2-5-percent-a-year-ago/",
+        "https://the-decoder.com/anthropic-kicks-off-ipo-roadshow-offering-shares-at-70-to-78-and-targeting-a-trillion-dollar-valuation/",
+        "https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/",
+        "https://techcrunch.com/2026/11/10/google-broadens-its-ai-hardware-portfolio-with-two-new-specialized-chips/",
+        "https://techcrunch.com/2026/11/10/metas-ai-agent-muse-lands-on-apple-watch-and-wear-os/",
+        "https://news.google.com/rss/articles/CBMiygFBVV95cUxNWHd5VHJkOFpZbnlRMXByWkxxWU9Vb0RES0JITlZDY1hpTkVXRzB5VHNxdkZhZWpXX2Z2c21HbldMdFYwVlRNY2pIa256YTZlMXdCQ012QUN2Y1A5OWpuZWFMSXNfU0xBOWx6T21DNmNPVFNhQVNVT2Y0al8wbDd6VGE3Y05xd0YtTkJsdy1jM1hTYVlqUU9pcUZwdENySUt0THctWGUzVHloWGRRNmpvOENrTU44M0ZjU3UwQmQwRVdPam1qcEhFMnlB?oc=5",
+        "https://news.google.com/rss/articles/CBMiTkFVX3lxTE8tZ01Pa0dVblI5U29rT1Q3SmhvNE81eGprY2pHdEN1U0VpX0p4VmZzNV9seGdiTi1qdVRoUENOV3hmVG1ZbHNhaTN6OUc3dw?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNaUtnS210c1pKNVpEZXJ1V1JpdUdyZ0h5OGh2SzVCXzJaVGRwaDZnb0NQZUxFS0ZFWmxwbU53ZlJtdlBkOWplZHdaNkloU0xwV3hvdlpjNnh0R1FISXdMOExfc09JckJqTWxjSWlZSjZpN0RWR1kyRUF6YUlXN0dqSm5XQU5TUmFmbWpFbGlzT3FZRllaMGU4cld0cDlsaFVYY0IzV2ZNYmwxYW0yd1FDaw?oc=5",
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPeF9xakxrdjlRSHZiNUVSa0RIeTU0dWJLajBQT2hMY1I3SmhTMEs3YzdGRkFHTGxPREpKQkVlXzZoNXRWZk9WMllIMVFta1l2S1pQai12YmxIYk90d1JpVHQtS0gyQjVEd3NGdlAwM1duUTVYN3pDVmVzNVQxdWlsTFBySjJvaVk1VmVj?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOWThpN0oyRGxIYkd0aW9LWXJVRktBVzNnOUJZem5tM1ZpR3lVZGNwek1HWjh5SGlucVhjYjd4TDZyMG5xR0puQURHRjByOV96azdHVnJPTzZWb1Q4cHVoeW5xZXI4ZUdscWtRZTN3eXdlTEgyYXQ0czlxVVMtS3U3MVZEU0g3ejZzMk9TakllY3dOV2lWSWFpeWdXWHktRWtxbmJjLU5oN19nUjluZWs3QzcyUQ?oc=5"
+      ],
+      "sources": [
+        "Google News AI",
+        "TechCrunch AI",
+        "The Decoder"
+      ],
+      "source_count": 3,
+      "score_max": 65,
+      "continued_from": null,
+      "first_seen": "2026-11-11",
+      "latest_published_at": "2026-11-11T04:05+08:00"
+    },
+    {
+      "id": "e8e72752131",
+      "title_zh": "Zyphra和Anthropic发布AI模型",
+      "digest_zh": "Zyphra发布了ZONOS3-Mini，一个拥有800M总参数和100M活动参数的开源文本到语音模型，能够克隆声音、逐词引导语音输出并在浏览器中实时运行。",
+      "representative_id": "8e72752131",
+      "member_ids": [
+        "8e72752131",
+        "978008989f"
+      ],
+      "member_urls": [
+        "https://www.marktechpost.com/2026/11/10/zyphra-zonos3-mini-open-source-tts/",
+        "https://www.marktechpost.com/2026/11/10/anthropic-claude-fable-5-2-mythos-5-2-release/"
+      ],
+      "sources": [
+        "MarkTechPost"
+      ],
+      "source_count": 1,
+      "score_max": 52,
+      "continued_from": null,
+      "first_seen": "2026-11-11",
+      "latest_published_at": "2026-11-10T23:42+08:00"
+    },
+    {
+      "id": "e9891d3bb8c",
+      "title_zh": "AI安全和巴黎宣言",
+      "digest_zh": "多国及顶级AI实验室签署巴黎宣言，承诺实施安全关闭机制、独立审计和披露已知风险，但缺乏具有约束力的制裁或截止日期。",
+      "representative_id": "9891d3bb8c",
+      "member_ids": [
+        "5b07820462",
+        "9891d3bb8c"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/nvidias-model-gr00t-2-watches-humans-on-video-then-imagines-itself-as-the-robot/",
+        "https://the-decoder.com/eight-countries-and-top-ai-labs-agree-to-shutdown-mechanisms-in-new-paris-declaration/"
+      ],
+      "sources": [
+        "The Decoder"
+      ],
+      "source_count": 1,
+      "score_max": 60,
+      "continued_from": null,
+      "first_seen": "2026-11-11",
+      "latest_published_at": "2026-11-11T02:41+08:00"
+    }
+  ]
+}
