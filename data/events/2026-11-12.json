@@ -1,0 +1,245 @@
+{
+  "date": "2026-11-12",
+  "generated_at": "2026-11-11T20:10:40",
+  "events": [
+    {
+      "id": "e8c999d6885",
+      "title_zh": "JioStar首席架构师谈AI发现",
+      "digest_zh": "JioStar的Vijay Seshadri解释了在5000万用户规模上实现AI发现的经验。阅读他在评估、限制条件和将AI投入生产方面的教训。",
+      "representative_id": "8c999d6885",
+      "member_ids": [
+        "8c999d6885",
+        "234e561c31"
+      ],
+      "member_urls": [
+        "https://openai.com/index/jiostar-vijay-seshadri",
+        "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9FaGthelhlWTdUWkdFdW5DdWF4c01rOGg0ZHYtR0pJSlA5ajVTRUd1cWpwMXBCZlJDUGZKLTIwQ0Q1RnAyUHZNWHl2LVJxUkxNQjlKMTBKdXdXTWs?oc=5"
+      ],
+      "sources": [
+        "Google News AI",
+        "OpenAI News"
+      ],
+      "source_count": 2,
+      "score_max": 30,
+      "continued_from": null,
+      "first_seen": "2026-11-12",
+      "latest_published_at": "2026-11-12T02:53+08:00"
+    },
+    {
+      "id": "eb22522d14a",
+      "title_zh": "HuggingFace发布BotPsy和Token Pooling感知训练",
+      "digest_zh": "HuggingFace推出名为BotPsy的设备端个人助理，采用亚亿参数的代理语言模型。",
+      "representative_id": "b22522d14a",
+      "member_ids": [
+        "b22522d14a",
+        "d2296a64c0"
+      ],
+      "member_urls": [
+        "https://huggingface.co/blog/qvac/botpsy",
+        "https://huggingface.co/blog/token-pooling"
+      ],
+      "sources": [
+        "HuggingFace Blog"
+      ],
+      "source_count": 1,
+      "score_max": 42,
+      "continued_from": null,
+      "first_seen": "2026-11-12",
+      "latest_published_at": "2026-11-11T13:01+08:00"
+    },
+    {
+      "id": "e448196bbc4",
+      "title_zh": "DeepMind发布AlphaGenome 2",
+      "digest_zh": "DeepMind发布了AlphaGenome 2，该研究旨在通过AI读取非编码DNA，以单细胞分辨率定位疾病诱因突变，并帮助研究人员解决医学难题。",
+      "representative_id": "448196bbc4",
+      "member_ids": [
+        "5b916f1bea",
+        "448196bbc4",
+        "ef892408be",
+        "79ecf6fd15"
+      ],
+      "member_urls": [
+        "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+        "https://www.youtube.com/watch?v=uND6iY2qp_c",
+        "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup/",
+        "https://www.ithome.com/1/025/822.htm"
+      ],
+      "sources": [
+        "Ars Technica",
+        "DeepMind Blog",
+        "IT之家",
+        "YT DeepMind"
+      ],
+      "source_count": 4,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-11-12",
+      "latest_published_at": "2026-11-12T02:00+08:00"
+    },
+    {
+      "id": "e4ae5d980f7",
+      "title_zh": "多AI相关新闻和动态",
+      "digest_zh": "DeepMind的AlphaProof Code使用Gemini Carbon驱动的AI智能体在四周内完成了Signal密码学核心代码的数学验证，通常这一过程需要数年。",
+      "representative_id": "4ae5d980f7",
+      "member_ids": [
+        "a19ce5d70a",
+        "4ae5d980f7",
+        "f4f976966f",
+        "d7faf46e2c",
+        "150739597a",
+        "be3ddfba98",
+        "03a27d01d5",
+        "4c6410aa9a",
+        "48f83e9a12",
+        "34c63b1acf",
+        "22fd5d01b4",
+        "49d94632bc",
+        "8951d2824c",
+        "917fab19a3",
+        "e3c1f66505",
+        "1deffd8f09",
+        "c0a7d49575",
+        "7c78fca0b3",
+        "e782a34509",
+        "2d013ee6fa",
+        "5b9f691915",
+        "db66188bf7",
+        "9e7098a4fc",
+        "3e9c43baf8",
+        "903bc862b6",
+        "b1c66f8a4a",
+        "c3917f85d0",
+        "865d1068fd"
+      ],
+      "member_urls": [
+        "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
+        "https://the-decoder.com/google-deepminds-alphaproof-code-verified-signals-cryptographic-core-in-four-weeks-instead-of-years/",
+        "https://the-decoder.com/anthropic-says-ai-is-eroding-nvidias-cuda-lead-cutting-an-amd-chip-switch-from-months-to-three-days/",
+        "https://the-decoder.com/enterprise-sales-push-openais-quarterly-revenue-to-10-billion-though-it-still-trails-anthropic/",
+        "https://the-decoder.com/us-corporate-ai-spending-hits-a-new-high-in-october-but-growth-slows-to-1-65-percent/",
+        "https://www.marktechpost.com/2026/11/10/ifm-pan-2-open-world-model/",
+        "https://www.marktechpost.com/2026/11/10/meta-fair-e-means-k-means-faiss/",
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxPem9ZTW5ac04yQXJsSXE2S29IZl8zSlU0YklYcm1xZW04OWptOVpvYjJMM0pIc2I0d3FkdXVhRjdhNVVSN2g4d2Vncm01SFhtUVduRHJXQVV4aGdnZmJ5VW5vLUtyVzFHd21iOFg3ZnpjMVI1RkRPNjFwcGdJaXFuRERTTWJfOU1IdGdVUldJSzQ2d0dfMGl3U3NKemtydVB2TkE?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxNUVZoWU1fQUd2Y1M2Qnl1T2JaMTkwaXBkaDIwWjVHejZoQmdDUnVzUVlSWDVsWW1pVDRVcXQ2ZTdrRTRiMDdMNWJDS3Atem91bUpDMnFLUkZ6NjhjaTliYWV1ODRLMnk0Slh3Wk5wNGtHTDhvaEZpTFIyUlVpQ2tNdTUyb2ZLbEZGOHlTZWRJNzVScUpIS3V5a1FacGwzby00RURBa2htZFFqZmw3Z2pRS2NDWQ?oc=5",
+        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQM1NWVnBwLThXQXVwQjdBU3o3SjMxRkZqdlVSc1czRjFBQm9aQ2NCMDZOc1JTYVg2U3ppWTBKMTRZczVJcTNpTUtuZjhpZWg5NUpaMktaUm1xd1IzUFhaeFNzUjBiRF9LMFdXZjF5ckJLQXNnV2lKaEx1eGkyU24tUy1CU083enJVQnBKb2YwdWFfRWtwcUdDamp6UmhtRmNOYWdPbF9tOFEtTXJfWmJqSUFrbzltQ2tEdE1WVzI3QXc?oc=5",
+        "https://news.google.com/rss/articles/CBMipgFBVV95cUxPbWtNdXFyV1R6aDVhN1MzSzFISWY5THlpRFdWWlFBckVNQkYwWWRWTVI4R191TXhMRXVnOU9lOV9YcXoxRFFYUzFNd0hmODdUMlRZUEVtcTRjSG1fLThnZFdldDlZeER0UVFubkNWZFQ2cU8teXVKYmFpd25wNUJwSkUzbTd0ZnpKWGYteHhWU3RDOFdib3VkbHV4S29FaWJsS3dnRE1R?oc=5",
+        "https://news.google.com/rss/articles/CBMixAFBVV95cUxNVlJLSUtLZnlkQ2FuamtrbzJqMUw5RFVQWnAtV0tyUmI4YVJzeXpSYS0wS2dGSkdvb0RybTR5ck9FRFFGY25pb1V6cm1RbFpSTGhhZUNIN3BjVHFyTmpoYVJOTWhGZjFDb21WNUYtMFFVUWgzUG9CTURNUTFsQWtUcGw5Tmh5TFA3ZHRKZzhRWFVVRjZFaFBWQzZrV0tkYkZSS2FMWGN5OFpTM1JsR0xKSEhkYWFKRFBKcVFTU0hDaktQMEox?oc=5",
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxOTHNTeGo3MEtHZmRrMk84RE43WVZlbWJhTS1ORnMwdm5nR3FWR3Z2ajJUVUtfQ21xbm1ZR3k4Ym02LUphRDZiZFVvd2hhT3ZYQ2JKb1hwaFBadTBHNzN6Wm94UXQxZmRoZEhrOURlVHlqXzFrV1hkS0dVdzlrUVpOaVhQbDZNRENiM2xOUkNNS3NHTHgxMFE0?oc=5",
+        "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNYkpNbkI3cFpMcU9tSHVMcVBBM3BmbDFSZUo1TlBhVGg1ZlREcHVNT1NKajVsYTA4WmVMcWl1S0ZXeEJteWN3YmtIRzY4aTI5bjBjVDhVbjhNMHlzampCTDl3Tkg1S0ZlNFpucmxSX3BlcHFGV1BWS2JlcWgxQ0RWZnhlZ2NxbGdjVm9iQkRYYkVvdGdRdVNHZUZqdEkzQVNWOFdUYmVZRmJiR3NrS1FkLTFINEduQ3pnenpKb2hQWGtlRERzTmIwRDUyU2swLTVHYmdqbkVWb3BFZlF0?oc=5",
+        "https://pietromiotti.com/latest/maya-site/?maya",
+        "https://www.qbitai.com/2026/11/509214.html",
+        "https://tis-100.wincon.dev/",
+        "https://www.qbitai.com/2026/11/509224.html",
+        "https://www.qbitai.com/2026/11/509203.html",
+        "https://www.qbitai.com/2026/11/509146.html",
+        "https://www.qbitai.com/2026/11/509052.html",
+        "https://www.leiphone.com/category/weiwu/7us3N77Jwt0jzWda.html",
+        "https://www.leiphone.com/category/industrynews/JfRMJsIb0HJvjdrl.html",
+        "https://www.leiphone.com/category/industrynews/588lnnPVveccwufm.html",
+        "https://www.leiphone.com/category/industrynews/sqz0hf4DoTPX5mqI.html",
+        "https://www.ithome.com/1/025/824.htm",
+        "https://www.ithome.com/1/025/821.htm",
+        "https://www.ithome.com/1/025/817.htm"
+      ],
+      "sources": [
+        "Google News AI",
+        "Hacker News",
+        "IT之家",
+        "MarkTechPost",
+        "Simon Willison",
+        "The Decoder",
+        "量子位",
+        "雷锋网"
+      ],
+      "source_count": 8,
+      "score_max": 72,
+      "continued_from": null,
+      "first_seen": "2026-11-12",
+      "latest_published_at": "2026-11-12T03:48+08:00"
+    },
+    {
+      "id": "ead52ee8ca1",
+      "title_zh": "TechCrunch报道AI相关新闻和动态",
+      "digest_zh": "Fish Audio发布了Live 3，一款面向语音代理的全双工语音模型，能够在说话的同时倾听，区分“嗯嗯”等非真实中断，并能在最短186毫秒内做出反应。",
+      "representative_id": "ad52ee8ca1",
+      "member_ids": [
+        "c063829a61",
+        "019cc9ec16",
+        "32bc3a2f62",
+        "7d4c517a68",
+        "7c021a2e6c",
+        "d48e4f7a31",
+        "cd1dc6d6e6",
+        "c4b2e9a503",
+        "ad8780c2a1",
+        "df94b6a880",
+        "ad52ee8ca1"
+      ],
+      "member_urls": [
+        "https://techcrunch.com/2026/11/11/coreweave-turns-to-customer-prepayments-shorter-contracts-to-fund-ai-growth/",
+        "https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/",
+        "https://techcrunch.com/2026/11/11/is-jensen-huangs-bad-behavior-more-commonplace-than-it-seems/",
+        "https://techcrunch.com/2026/11/11/databricks-new-ai-agent-tells-ceo-ali-ghodsi-the-unvarnished-truth/",
+        "https://techcrunch.com/2026/11/11/plurai-wants-to-help-ai-agents-work-better-using-the-same-approach-that-helped-get-self-driving-cars-to-roads/",
+        "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/",
+        "https://arstechnica.com/ai/2026/11/ring-cameras-go-mobile-as-amazon-debuts-ai-powered-security-drone-and-robot/",
+        "https://arstechnica.com/science/2026/11/what-happens-to-mathematics-when-ai-becames-an-oracle/",
+        "https://www.technologyreview.com/2026/11/11/1148424/the-download-preserving-minds-open-ai-risks/",
+        "https://www.marktechpost.com/2026/11/11/marktechpost-gpu-leaderboard-chrome-extension-launch/",
+        "https://www.marktechpost.com/2026/11/10/fish-audio-live-3-full-duplex-voice-model/"
+      ],
+      "sources": [
+        "Ars Technica",
+        "MIT Tech Review",
+        "MarkTechPost",
+        "TechCrunch AI"
+      ],
+      "source_count": 4,
+      "score_max": 45,
+      "continued_from": null,
+      "first_seen": "2026-11-12",
+      "latest_published_at": "2026-11-12T03:54+08:00"
+    },
+    {
+      "id": "edca5a7d47c",
+      "title_zh": "其他AI相关新闻和动态",
+      "digest_zh": "Claroc安全公司发现超过35,000个由Grok构建的应用程序对任何人开放，包括患者数据和SpaceXSI的机密文件。SpaceXSI仅下线了自己的24个员工应用程序，其余仍然可访问。",
+      "representative_id": "dca5a7d47c",
+      "member_ids": [
+        "95dd2fdb04",
+        "c1fbfe2e3f",
+        "68825b30ae",
+        "dca5a7d47c",
+        "9e2e1c68cf",
+        "b8e33e1731",
+        "05f97f1db3",
+        "3f42633dc5",
+        "f6b29b4e2a",
+        "a44764839f"
+      ],
+      "member_urls": [
+        "https://simonwillison.net/2026/Nov/11/tools-tags/",
+        "https://simonwillison.net/2026/Nov/10/llm-gemini/",
+        "https://the-decoder.com/with-its-new-voice-model-deepl-voice-now-translates-intonation-and-speaking-speed-into-other-languages-as-well/",
+        "https://the-decoder.com/grok-built-apps-exposed-patient-data-plaintext-passwords-and-spacexsis-own-sales-pipeline/",
+        "https://arstechnica.com/gaming/2026/11/big-walk-used-ai-to-fix-a-bug-now-the-indie-gaming-world-is-having-a-reckoning/",
+        "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
+        "https://cabird.com/talks/shipping-faster/",
+        "https://github.com/klad-app/klad",
+        "https://github.com/FrigadeHQ/yogurt",
+        "https://osssaysno.com"
+      ],
+      "sources": [
+        "Ars Technica",
+        "Hacker News",
+        "Simon Willison",
+        "The Decoder"
+      ],
+      "source_count": 4,
+      "score_max": 55,
+      "continued_from": null,
+      "first_seen": "2026-11-12",
+      "latest_published_at": "2026-11-12T02:42+08:00"
+    }
+  ]
+}

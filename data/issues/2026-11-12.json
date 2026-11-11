@@ -1,0 +1,42 @@
+{
+  "issue": 50,
+  "date": "2026-11-12",
+  "generated_at": "2026-11-11T20:10:40",
+  "stats": {
+    "collected": 78,
+    "duplicates": 1,
+    "analyzed": 61,
+    "blocked": 16,
+    "selected": 6,
+    "events": 5,
+    "sources": [
+      "HuggingFace Blog",
+      "IT之家",
+      "MarkTechPost",
+      "OpenAI News",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "DeepMind的AlphaProof Code验证Signal密码学核心代码",
+    "paragraph": "DeepMind的AlphaProof Code在四周内成功验证了Signal的密码学核心代码，标志着安全通信领域的一大进展。同时，DeepMind发布了AlphaGenome 2基因序列模型，识别致病变异的能力提升近一倍，进一步推动了生物信息学的发展。",
+    "highlights": [
+      "4ae5d980f7",
+      "79ecf6fd15"
+    ]
+  },
+  "headline_ids": [
+    "4ae5d980f7",
+    "bea9cd3b05",
+    "79ecf6fd15"
+  ],
+  "briefing_ids": [
+    "e2874c2728",
+    "dca5a7d47c",
+    "ad52ee8ca1",
+    "b22522d14a",
+    "80b38ea7da",
+    "8c999d6885",
+    "f28f90d289"
+  ]
+}
