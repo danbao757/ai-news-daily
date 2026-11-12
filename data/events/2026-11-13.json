@@ -1,0 +1,194 @@
+{
+  "date": "2026-11-13",
+  "generated_at": "2026-11-12T16:25:38",
+  "events": [
+    {
+      "id": "eb06379671e",
+      "title_zh": "OpenAI支持AI与儿童安全研究",
+      "digest_zh": "OpenAI 捐资 200 万美元用于研究 AI 与儿童安全，支持开发衡量年轻人风险和机会的共享工具。",
+      "representative_id": "b06379671e",
+      "member_ids": [
+        "b06379671e",
+        "0990939c7d"
+      ],
+      "member_urls": [
+        "https://openai.com/index/children-first-declaration",
+        "https://openai.com/business/customer-stories/holidays-extras-codex"
+      ],
+      "sources": [
+        "OpenAI News"
+      ],
+      "source_count": 1,
+      "score_max": 35,
+      "continued_from": null,
+      "first_seen": "2026-11-13",
+      "latest_published_at": "2026-11-12T17:30+08:00"
+    },
+    {
+      "id": "e3aa38f9204",
+      "title_zh": "澳大利亚AI安全法案提议",
+      "digest_zh": "澳大利亚政府提议将前沿AI公司的安全规则纳入法律，要求独立模型审计并设定严厉的违规处罚。",
+      "representative_id": "3aa38f9204",
+      "member_ids": [
+        "ac66ffc607",
+        "3aa38f9204"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/elevenlabs-scribe-v3-live-uses-conversational-context-to-stop-voice-agents-from-cutting-off-callers-mid-sentence/",
+        "https://the-decoder.com/australias-proposed-ai-safety-bill-would-force-frontier-model-makers-to-open-up-to-independent-testing/"
+      ],
+      "sources": [
+        "The Decoder"
+      ],
+      "source_count": 1,
+      "score_max": 62,
+      "continued_from": null,
+      "first_seen": "2026-11-13",
+      "latest_published_at": "2026-11-12T21:48+08:00"
+    },
+    {
+      "id": "e448196bbc4",
+      "title_zh": "DeepMind发布AlphaGenome 2",
+      "digest_zh": "DeepMind 发布了 AlphaGenome 2，一个分析单个细胞类型遗传变异的 AI 模型，其识别的疾病相关基因变化数量是其前身的两倍。该模型可通过 API 用于非商业研究，并计划集成到 Google 的智能体平台 Antigravity 中。",
+      "representative_id": "4a23741080",
+      "member_ids": [
+        "4a23741080",
+        "89831e7248"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/google-deepmind-shifts-genomics-ai-from-bulk-tissue-predictions-to-single-cell-type-resolution-with-alphagenome-2/",
+        "https://www.marktechpost.com/2026/11/11/google-deepmind-alphagenome-2-cell-type-variant-effects/"
+      ],
+      "sources": [
+        "MarkTechPost",
+        "The Decoder"
+      ],
+      "source_count": 2,
+      "score_max": 70,
+      "continued_from": "2026-11-12",
+      "first_seen": "2026-11-12",
+      "latest_published_at": "2026-11-12T20:09+08:00"
+    },
+    {
+      "id": "e741dfa258d",
+      "title_zh": "谷歌推出Gemini Decision 1",
+      "digest_zh": "Google DeepMind 推出新的 Gemini Decision 1 智能体功能，能够单次处理最多 1,000 个问题，包括文本、图像、音频和视频，处理速度比 Gemini 3.5 Flash-Lite 快五倍，成本降低。",
+      "representative_id": "741dfa258d",
+      "member_ids": [
+        "741dfa258d",
+        "faee25e7ee"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/google-joins-the-decision-model-wave-with-gemini-decision-1-scoring-1000-questions-in-a-single-pass/",
+        "https://www.marktechpost.com/2026/11/11/google-gemini-decisions-api-gemini-decision-1/"
+      ],
+      "sources": [
+        "MarkTechPost",
+        "The Decoder"
+      ],
+      "source_count": 2,
+      "score_max": 62,
+      "continued_from": null,
+      "first_seen": "2026-11-13",
+      "latest_published_at": "2026-11-12T05:21+08:00"
+    },
+    {
+      "id": "edca5a7d47c",
+      "title_zh": "多AI相关新闻和动态",
+      "digest_zh": "Kimi K3刷新了图论参考纪录，通过构造出630条边的图，展示了AI在数学研究领域的潜力，对理论计算机科学领域有重要意义。",
+      "representative_id": "8a74ed88bf",
+      "member_ids": [
+        "1ef055a1fc",
+        "ffa5412113",
+        "6154ca0132",
+        "edf1d5276d",
+        "38a2445e85",
+        "237e865d1f",
+        "0eafb557bf",
+        "a71561f4a1",
+        "1399104b49",
+        "a60329acf5",
+        "8e4104a923",
+        "70a69d3bb5",
+        "71cb7085c6",
+        "86c3365af1",
+        "69f3ed20cc",
+        "7707ba4f83",
+        "8a74ed88bf",
+        "bff82217dc",
+        "191f48f346",
+        "2822890be8",
+        "8b2c0eaa18",
+        "fcf8975927",
+        "eb0da0d2c2",
+        "6fc28ea927",
+        "54331f8395",
+        "3ecc9a4c8f"
+      ],
+      "member_urls": [
+        "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQYk9wcWljeGJ2OVNPNzF3X3ZFbTlHb0N5dFBKbU1IUnphTWJnUWc2OGxvTUpCTVVUQm1MdFVoWFBxWjhDSG9uSTBrLWRHeHhTQVBDaU1EZV9yOEFCWW1mY0pNemVXbHZoOFd3SVJnU0trT0tYaWc?oc=5",
+        "https://news.google.com/rss/articles/CBMihAFBVV95cUxQQi14UWMwUThOSTVIZ2NqUGdaRjR5ZGw3SzBndjFDQVFadDkzN0FObzdGNWVQZ0JFTnhZUWpTRnBRT3pQTk9Fek5DVUlsOGRxeEpQVlJMdkxMdlFDVGpXZzkwbnRmMVk2b2dTOWJIUU5vVVF4eXVkZDlBSGNqcTJ0RFFSei0?oc=5",
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSHdrb0R5VXhWd18teW1sUUhlQ3BFVDRGQmNzOWJWbTFYU0JGV1MyQzBqR0NGUFl5VkkzWDItVjNpNnR1Y3dGUTVnNGw0X0YyY3lNVzBXUEhmQWhfa24wZXhhR3FYbGJkeWZiemJtbzNxUGlEWWo3UkFsVk5pOUplWjY1WFFTQm8tZXdUSUJ5bUFOZzIycl9LTjNBQV9Ec21md3NZYkI4VFRDWWRJTFJiU1R3?oc=5",
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxOdWFZcGp2ejhwSk82VDlCUkFYemJQbW1Vc0tRcEtnZjlPVUk0SjdtdWozZzNYUm44VFdhTGJ0VFA0RlBrRlpPWXM1YW80XzljOWNmMWpyRFhOZUhGMElBZFQxZzc1ZEdVODl6NjFLNXUzX0JZUG02ajJVS3lRbFVhbnllQkxCbjhldXA1VXdRaVFSZlNJVjJfekRMUEVILWRFRUl4M2sybzJuOEtaUDRB?oc=5",
+        "https://news.google.com/rss/articles/CBMixgFBVV95cUxQdXJDVWZwYXloMEs0VmRYQ0NmTHRfQXJON2tXeXJQQVpFYkkzTVFPcWZ5YTdETW12Wjh5NF9kLVYyS0ZPVFdOVW9uVkJZR0NFLXUwZ0pqd2UxWHBGODlsV1FZZ1QwZGxsRlRmcUtUSmZSTEhDN0sxSHBqNHd4a252WGxyQmpQQU1DbG1XMDNFSmxXclFwOTExTl81ZHcwaDVOY2Fpd3N1bXdTd25SbURiXzdhZEpqbHczbjhfemxGRm9DWkZNenc?oc=5",
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVHBYaWw1LVpERThucXY5dDV3aWtBZ2hFSjNhTURsSzJaTWtPTzUzR0ZOXzVzX0RhYjhhNy1DVGQ3VzE1S0ZNRnFlR2dBdm9fR3lRVVgxLUtKQnNKaERBWUV4Znk0V3lfRUk3S3A2WXN3U0tscExkZ0FlQ1R6VjFTX2ZsczFOQ0JfVU9xOXp2TnFUWnM0T1owb3NESXlJMFltUVhENUlqbDBFVlk?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxPVGJpMUN2U0Y3REdwR1UyalVVaUdpbDlKakFoMjR4bGZhLXBJUjdxTjRCaWtLbkhlRVlrLWhWaGdWMXF1OE41b093QjdwRVlXbS12ZER1d1ZFSmEwaWJCdG95ZHg4Mm1GQmJHbG5sNUJGVFZIVTRqMXFCR3BlTUxBRkJSNUQ0Y3hFNG45MU5XZW5rTk5sZjVfRlFyUUVsc3dMaGRSTUNucFpWckRRS2hWcVhEaHpFdjg?oc=5",
+        "https://news.google.com/rss/articles/CBMipgFBVV95cUxPT1V2YTJabTBmV245c2ktdHdQbXlUM1l2M0t1YThSakFxZE55NnpydlR3aTUyZmN6Mm1LS1ZTR3RuYjR2V1hyT2NhelRvUnQ5S3FRRl9uWEFjdjRGZS16aTJiV2JaTWVVaXZpQ1h0M3F4alRDMUd2dE84c1p1RXFDeEJLMWxDZTBSRTdyLVFCMFE0V3FCNi01MDViRkdMUGVJLVFfZGNB?oc=5",
+        "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+        "https://lpeproject.org/blog/your-retirement-savings-are-fueling-the-ai-bubble/",
+        "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+        "https://github.com/aws/aws-emulator",
+        "https://news.ycombinator.com/item?id=50455811",
+        "https://www.qbitai.com/2026/11/509291.html",
+        "https://www.leiphone.com/category/chips/ouA8GvSp9LIhZPmp.html",
+        "https://www.leiphone.com/category/transportation/15g9g1m5Ij7LVRSe.html",
+        "https://www.leiphone.com/category/ai/3vRqaeAILJdgRlhL.html",
+        "https://www.leiphone.com/category/industrynews/Nzg2vNxG99TT4bob.html",
+        "https://www.leiphone.com/category/ai/YcIBZiMtehhzYJsR.html",
+        "https://www.leiphone.com/category/industrynews/h1DNbnHTUjHsMd3c.html",
+        "https://www.leiphone.com/category/private/zLDQiemmN9KxgnVW.html",
+        "https://www.leiphone.com/category/industrynews/zfKZjBL19g9udZv0.html",
+        "https://www.ithome.com/1/026/437.htm",
+        "https://www.ithome.com/1/026/435.htm",
+        "https://www.ithome.com/1/026/431.htm",
+        "https://www.ithome.com/1/026/430.htm"
+      ],
+      "sources": [
+        "Google News AI",
+        "Hacker News",
+        "IT之家",
+        "量子位",
+        "雷锋网"
+      ],
+      "source_count": 5,
+      "score_max": 70,
+      "continued_from": "2026-11-12",
+      "first_seen": "2026-11-12",
+      "latest_published_at": "2026-11-13T00:19+08:00"
+    },
+    {
+      "id": "ee1c841be3d",
+      "title_zh": "银河智学AI进入课堂之路",
+      "digest_zh": "璇玑致力于解决企业AI的难题，旨在成为企业AI的语义基础设施。",
+      "representative_id": "e1c841be3d",
+      "member_ids": [
+        "51f5443e5e",
+        "e1c841be3d",
+        "f075810ad7"
+      ],
+      "member_urls": [
+        "https://www.qbitai.com/2026/11/509404.html",
+        "https://www.qbitai.com/2026/11/509349.html",
+        "https://www.qbitai.com/2026/11/509285.html"
+      ],
+      "sources": [
+        "量子位"
+      ],
+      "source_count": 1,
+      "score_max": 40,
+      "continued_from": null,
+      "first_seen": "2026-11-13",
+      "latest_published_at": "2026-11-12T18:45+08:00"
+    }
+  ]
+}

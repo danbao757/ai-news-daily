@@ -1,0 +1,51 @@
+{
+  "issue": 51,
+  "date": "2026-11-13",
+  "generated_at": "2026-11-12T16:25:38",
+  "stats": {
+    "collected": 73,
+    "duplicates": 10,
+    "analyzed": 45,
+    "blocked": 18,
+    "selected": 3,
+    "events": 3,
+    "sources": [
+      "Ars Technica",
+      "Hacker News",
+      "HuggingFace Blog",
+      "MarkTechPost",
+      "OpenAI News",
+      "Simon Willison",
+      "TechCrunch AI",
+      "The Decoder",
+      "量子位",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "DeepMind发布AlphaGenome 2，基因组学AI转向单细胞类型解析",
+    "paragraph": "DeepMind宣布推出AlphaGenome 2模型，标志着基因组学AI技术从组织预测转向对单细胞类型的深入解析。同时，澳大利亚提出AI安全法案，要求前沿模型制造商接受独立测试，而Google推出Gemini Decision 1智能体功能，单次处理最多1,000个问题。",
+    "highlights": [
+      "4a23741080",
+      "3aa38f9204",
+      "741dfa258d"
+    ]
+  },
+  "headline_ids": [
+    "4a23741080",
+    "8a74ed88bf",
+    "bb485df9f4"
+  ],
+  "briefing_ids": [
+    "3aa38f9204",
+    "741dfa258d",
+    "02f705171a",
+    "4d944021cd",
+    "e1c841be3d",
+    "b06379671e",
+    "5f96a0ebfa",
+    "56dac742ff",
+    "56c83c766c",
+    "7ed9c1c82c"
+  ]
+}
