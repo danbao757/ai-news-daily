@@ -1,0 +1,44 @@
+{
+  "issue": 52,
+  "date": "2026-11-14",
+  "generated_at": "2026-11-13T20:28:02",
+  "stats": {
+    "collected": 74,
+    "duplicates": 2,
+    "analyzed": 59,
+    "blocked": 13,
+    "selected": 3,
+    "events": 3,
+    "sources": [
+      "GitHub Blog",
+      "HuggingFace Blog",
+      "IT之家",
+      "MarkTechPost",
+      "TechCrunch AI",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "Anthropic IPO订单量超六倍，创历史最大公开募股",
+    "paragraph": "Anthropic的IPO订单量超出预期六倍，预示着其可能成为历史上最大的公开募股之一。同时，中国最强大的AI模型背后依赖禁运的Nvidia芯片，谷歌发布了性能提升的Gemini 4 Hydrogen模型，OpenAI推出ChatGPT Wallet支付功能，以及ElevenLabs推出面向团队和企业的会议笔记和语音识别应用等AI动态值得关注。",
+    "highlights": [
+      "aac20b374e",
+      "3dc626ea28",
+      "e13d8feb54",
+      "a53636679d",
+      "744da6a287"
+    ]
+  },
+  "headline_ids": [
+    "aac20b374e",
+    "3dc626ea28",
+    "e13d8feb54"
+  ],
+  "briefing_ids": [
+    "a53636679d",
+    "657af3312a",
+    "40e78db660",
+    "744da6a287",
+    "f240bb3109"
+  ]
+}
