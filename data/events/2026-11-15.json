@@ -1,0 +1,217 @@
+{
+  "date": "2026-11-15",
+  "generated_at": "2026-11-14T18:43:29",
+  "events": [
+    {
+      "id": "ea41cf41c3f",
+      "title_zh": "Simon Willison发布新版本工具",
+      "digest_zh": "datasette-cluster-map 0.19版本发布，支持Datasette 1.0a42，依赖datasette-leaflet确保OpenStreetMap瓦片请求带有引用头。",
+      "representative_id": "a41cf41c3f",
+      "member_ids": [
+        "a41cf41c3f",
+        "2ff8c47f48"
+      ],
+      "member_urls": [
+        "https://simonwillison.net/2026/Nov/13/datasette-cluster-map/",
+        "https://simonwillison.net/2026/Nov/13/datasette-leaflet/"
+      ],
+      "sources": [
+        "Simon Willison"
+      ],
+      "source_count": 1,
+      "score_max": 5,
+      "continued_from": null,
+      "first_seen": "2026-11-15",
+      "latest_published_at": "2026-11-14T07:02+08:00"
+    },
+    {
+      "id": "ed586df59cc",
+      "title_zh": "AI研究进展与成果发布",
+      "digest_zh": "Google的Gemini 4 Carbon和Anthropic的Fable 5.2在数学基准测试中超越OpenAI的GPT-6.1 Sol，但价格更高。",
+      "representative_id": "d586df59cc",
+      "member_ids": [
+        "d586df59cc",
+        "703d5a8bd2",
+        "59895b4562",
+        "e2d674adf4",
+        "1c4e572d1e"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/gemini-4-carbon-takes-the-matharena-crown-but-costs-15-times-more-than-gpt-6-1-sol/",
+        "https://the-decoder.com/openai-reassigns-robotics-researchers-to-other-teams-as-general-purpose-models-might-make-specialized-robotics-ai-unnecessary/",
+        "https://the-decoder.com/anthropic-says-outdated-prompting-habits-are-slowing-down-claude-opus-5-5/",
+        "https://the-decoder.com/anthropic-can-already-retrain-mythos-with-a-fraction-of-the-compute-originally-needed-says-former-researcher-coxon/",
+        "https://the-decoder.com/runways-open-source-praxis-1-turns-video-ai-into-a-robot-controller/"
+      ],
+      "sources": [
+        "The Decoder"
+      ],
+      "source_count": 1,
+      "score_max": 62,
+      "continued_from": null,
+      "first_seen": "2026-11-15",
+      "latest_published_at": "2026-11-15T00:48+08:00"
+    },
+    {
+      "id": "eec577d4c46",
+      "title_zh": "AI行业动态与事件",
+      "digest_zh": "在黄仁勋的领导下，英伟达向AI初创公司投入了数十亿美元。随着他的离职，风险投资家和创始人预计将面临更小的投资额和更低的估值。",
+      "representative_id": "ec577d4c46",
+      "member_ids": [
+        "7134e7e1ad",
+        "ec577d4c46"
+      ],
+      "member_urls": [
+        "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+        "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/"
+      ],
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "source_count": 1,
+      "score_max": 45,
+      "continued_from": null,
+      "first_seen": "2026-11-15",
+      "latest_published_at": "2026-11-15T01:30+08:00"
+    },
+    {
+      "id": "ead306b16c1",
+      "title_zh": "技术公司发布新产品或工具",
+      "digest_zh": "斯坦福研究人员开源了Memorilla，一个用于冻结LLMs的潜在记忆模块，该模块将文档集合压缩为16个记忆标记，在FactKG上达到84.33%的准确率，比全上下文少用108倍的文档标记。",
+      "representative_id": "ad306b16c1",
+      "member_ids": [
+        "eb6c9f2667",
+        "ad306b16c1",
+        "87b8686439"
+      ],
+      "member_urls": [
+        "https://www.marktechpost.com/2026/11/14/cmpnd-dspy-wsp-weight-space-programming/",
+        "https://www.marktechpost.com/2026/11/14/stanford-memorilla-memory-system-16-memory-tokens/",
+        "https://www.marktechpost.com/2026/11/13/vercel-ui-sdk-agent-ui-behaviors/"
+      ],
+      "sources": [
+        "MarkTechPost"
+      ],
+      "source_count": 1,
+      "score_max": 55,
+      "continued_from": null,
+      "first_seen": "2026-11-15",
+      "latest_published_at": "2026-11-15T00:45+08:00"
+    },
+    {
+      "id": "ee232635541",
+      "title_zh": "AI相关新闻与观点",
+      "digest_zh": "文章分析了Jensen Huang在AI领域的地位变化，探讨了其对行业的影响。",
+      "representative_id": "e232635541",
+      "member_ids": [
+        "05b2dc02bc",
+        "cb4f04f2c2",
+        "53a21cfbe9",
+        "e232635541",
+        "6da813342f",
+        "5cc9dd5325"
+      ],
+      "member_urls": [
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOazBQN1JzaDBOWGl5OTZZRlRjOV9OWmxkaW9yWTRJNThqaXZzWkFIWmxQZnpzT05vU1VTbTR1TXB3RnIxcGpCcTFhTk1tY1hweGlwa0lhck1ZTm9DcWFZRlhETkZfVDFfRW1ITTQ3SWFjSno4QjY4aWRaYzVsV2NuYU1nYWcwLW9sbEh3?oc=5",
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxPak9nTi1jZUdSb3hVYVAzYlhIa01nXzczcV91YlNJcDlZRmMwRmQ0UmR0aUdTQ3RUNThEYXlHNGhHM3FWT3ZDbElNU2twU0F1Ni1sWHlOenJ5dmFKXzFsUE96bVhkQl9ta01SLXVQWWtMTjRsVWcwYzJiM1ZDVVFISDZWOWdXNEUwYU5hVUNLLXMwZw?oc=5",
+        "https://news.google.com/rss/articles/CBMiywFBVV95cUxQcHZ4cmtrWmFOWXB6M0oyLWFDX2dJMEdOV3ZVelNIUUxpZDF4ZkdJaU5EZ2t6bUduUk9MaFJleEdsOHAzY3V6bWRzNmpxaTJFVGxYQVFic1BBU2VsUU01TjQ3S2dHNWlhZVhZczVzNi1aNTFLV3FnYmx0SVNsNjh1RC1FX21LZ0V0R0ktaDRLWTJjSWl6MHU1bUlrN3UxN0dXMklxNmV6T0VCalBZWm1aYUZYY05LdXJaWGtpM1c3UUFQb1Q5Q1M0Wk5YWQ?oc=5",
+        "https://news.google.com/rss/articles/CBMiggFBVV95cUxOcFk2S1dFVDJDV3VhRmtwZFB5WjYzMjFwU252QlU1c0NpMHBNT2p2eTBPY0NyQ1ZBM29sVHpGZXpUeXQ4SXNTbnBKOUJLN1NtQlJzWmNBeFoyZEJxR0ZUaHdfZ016bkVMWF9lYkJPbWJSVmNQTDBjV1RtNUg5U1Q5ZlN3?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxPS0prWjNaMHAySzZ0S2ktN0tKaHlXS0dxaDZNM0c2bFZQS1Y0M25ISlFLNmt0Szc3YjNBdWhvOWVKcEZiYmdFYkRnUmE2enVpT3VXSXN6bHFhcDhpS1N1bkhYOFdtVEVYOFVCTnNDU0l1QzNiRlhxT3l3NmtiaHFEYWhJSE11SjZDa21NaDZxUUthWmFILXRaeDZMX3RXQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxQTG0welA5eGpFX1hPbWUzS2ZNUEc3U21NLXhrM0NoMlNRZG5EdGpmdmZXQUxPVDhyci01TmF2QU5wdl9HWTBPd3lvSEhfQk9NZ0E5cHlvTEtMWTRSbFp1NlA3cTBpblVJRDlYOTJrMEo3OTh3c3VFc1IyTlV5OGhOZzdGZ0R1LWpiT203YWYzSE94WE1YQ3Y3R0pLUFRYRktTd0hLSA?oc=5"
+      ],
+      "sources": [
+        "Google News AI"
+      ],
+      "source_count": 1,
+      "score_max": 60,
+      "continued_from": null,
+      "first_seen": "2026-11-15",
+      "latest_published_at": "2026-11-15T02:23+08:00"
+    },
+    {
+      "id": "ec6caa4d4f0",
+      "title_zh": "AI技术与应用新闻",
+      "digest_zh": "Hacker News上一热门帖子，获得967个赞和583条评论。",
+      "representative_id": "c6caa4d4f0",
+      "member_ids": [
+        "dbb6a7059a",
+        "5bfa2e37b7",
+        "6c6d01a907",
+        "4d0c29e8f5",
+        "7cf80c14f9",
+        "c6caa4d4f0",
+        "a9dc79e6aa",
+        "10c60fc60c"
+      ],
+      "member_urls": [
+        "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/",
+        "https://gitlab.com/snipedbywifi/terminactory",
+        "https://www.netmeister.org/blog/claude-delusion.html",
+        "https://news.ycombinator.com/item?id=50494696",
+        "https://www.theguardian.com/world/2026/nov/12/israeli-airstrike-nasser-hospital-gaza-kills-surgeon",
+        "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+        "https://claude.com/resources/articles/projects-redesigned",
+        "https://unsloth.ai/docs/models/qwen3.8"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "score_max": 42,
+      "continued_from": null,
+      "first_seen": "2026-11-15",
+      "latest_published_at": "2026-11-14T22:09+08:00"
+    },
+    {
+      "id": "ec481d3ae1b",
+      "title_zh": "AI研究进展与基准发布",
+      "digest_zh": "十余家顶尖团队共同发布了「史上最严」的湿实验预测基准，即使推理能力提升和算力增加5倍，也无法达到基准要求。",
+      "representative_id": "c481d3ae1b",
+      "member_ids": [
+        "c481d3ae1b",
+        "67049349b5"
+      ],
+      "member_urls": [
+        "https://www.qbitai.com/2026/11/510232.html",
+        "https://www.qbitai.com/2026/11/510003.html"
+      ],
+      "sources": [
+        "量子位"
+      ],
+      "source_count": 1,
+      "score_max": 60,
+      "continued_from": null,
+      "first_seen": "2026-11-15",
+      "latest_published_at": "2026-11-14T17:58+08:00"
+    },
+    {
+      "id": "e778fbf3e20",
+      "title_zh": "科技行业新闻与产品发布",
+      "digest_zh": "百度词元所发布首日，新增供应商超过100家，新增客户超过1000家。该平台旨在成为大模型的交易所，提供模型验真与征信服务，已上架40余款模型，包括百度自研文心系列和其他主流模型。",
+      "representative_id": "778fbf3e20",
+      "member_ids": [
+        "778fbf3e20",
+        "edb7c3a6d0",
+        "51f734b4bd",
+        "2bd7995bc8",
+        "c8aaf85617"
+      ],
+      "member_urls": [
+        "https://www.leiphone.com/category/industrynews/cqPXhF38rM4VcVa7.html",
+        "https://www.ithome.com/1/027/247.htm",
+        "https://www.ithome.com/1/027/244.htm",
+        "https://www.ithome.com/1/027/243.htm",
+        "https://www.ithome.com/1/027/242.htm"
+      ],
+      "sources": [
+        "IT之家",
+        "雷锋网"
+      ],
+      "source_count": 2,
+      "score_max": 62,
+      "continued_from": null,
+      "first_seen": "2026-11-15",
+      "latest_published_at": "2026-11-14T23:28+08:00"
+    }
+  ]
+}

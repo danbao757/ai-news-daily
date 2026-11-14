@@ -1,0 +1,44 @@
+{
+  "issue": 53,
+  "date": "2026-11-15",
+  "generated_at": "2026-11-14T18:43:29",
+  "stats": {
+    "collected": 49,
+    "duplicates": 5,
+    "analyzed": 33,
+    "blocked": 11,
+    "selected": 0,
+    "events": 1,
+    "sources": [
+      "Google News AI",
+      "Hacker News",
+      "MarkTechPost",
+      "Simon Willison",
+      "TechCrunch AI",
+      "The Decoder",
+      "量子位",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "Gemini 4 Carbon夺数学基准测试冠军",
+    "paragraph": "今日AI动态，Gemini 4 Carbon在数学基准测试中夺冠，但成本是GPT-6.1 Sol的15倍；百度词元所发布首日，供应商和客户数量激增；同时，黄仁勋离职引发AI初创公司融资动荡。",
+    "highlights": [
+      "d586df59cc",
+      "778fbf3e20",
+      "ec577d4c46"
+    ]
+  },
+  "headline_ids": [
+    "d586df59cc",
+    "778fbf3e20",
+    "c481d3ae1b"
+  ],
+  "briefing_ids": [
+    "e232635541",
+    "ad306b16c1",
+    "ec577d4c46",
+    "c6caa4d4f0",
+    "a41cf41c3f"
+  ]
+}
