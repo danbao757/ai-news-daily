@@ -1,0 +1,27 @@
+{
+  "issue": 54,
+  "date": "2026-11-16",
+  "generated_at": "2026-11-15T19:18:55",
+  "stats": {
+    "collected": 30,
+    "duplicates": 1,
+    "analyzed": 25,
+    "blocked": 4,
+    "selected": 0,
+    "events": 1,
+    "sources": [
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "美团发布1.6万亿参数智能体模型",
+    "paragraph": "美团近日发布了一款名为「模型」的1.6万亿参数智能体模型，值得注意的是，该模型在训练过程中并未使用Nvidia GPU。",
+    "highlights": [
+      "5ecf69042f"
+    ]
+  },
+  "headline_ids": [
+    "5ecf69042f"
+  ],
+  "briefing_ids": []
+}
