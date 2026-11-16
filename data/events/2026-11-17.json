@@ -1,0 +1,324 @@
+{
+  "date": "2026-11-17",
+  "generated_at": "2026-11-16T17:03:41",
+  "events": [
+    {
+      "id": "e91e58e2ea9",
+      "title_zh": "OpenAI多领域合作与进展",
+      "digest_zh": "LVMH媒体部门与OpenAI合作，旨在利用AI支持新闻业，并通过ChatGPT使出版物更易于访问。",
+      "representative_id": "91e58e2ea9",
+      "member_ids": [
+        "b0ded74e06",
+        "cfcc7acb02",
+        "91e58e2ea9",
+        "e3915f7e4c",
+        "87d7014c15",
+        "4b0fc5b701"
+      ],
+      "member_urls": [
+        "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+        "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+        "https://openai.com/index/lvmh-media-division-partnership",
+        "https://openai.com/index/the-kings-trust-and-openai",
+        "https://openai.com/index/step-toward-defining-the-standard-model",
+        "https://openai.com/index/our-new-blog-for-science"
+      ],
+      "sources": [
+        "OpenAI News"
+      ],
+      "source_count": 1,
+      "score_max": 62,
+      "continued_from": null,
+      "first_seen": "2026-11-17",
+      "latest_published_at": "2026-11-16T17:00+08:00"
+    },
+    {
+      "id": "e128a04bf78",
+      "title_zh": "Simon Willison发布datasette系列版本",
+      "digest_zh": "发布了Datasette的新地理空间插件datasette-maplibre 0.1a0，该插件结合了MapLibre GL库和OpenFreeMap免费矢量地图服务器。",
+      "representative_id": "128a04bf78",
+      "member_ids": [
+        "3f50af6724",
+        "128a04bf78",
+        "67eb98ac1c"
+      ],
+      "member_urls": [
+        "https://simonwillison.net/2026/Nov/15/datasette-2/",
+        "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+        "https://simonwillison.net/2026/Nov/15/datasette/"
+      ],
+      "sources": [
+        "Simon Willison"
+      ],
+      "source_count": 1,
+      "score_max": 5,
+      "continued_from": null,
+      "first_seen": "2026-11-17",
+      "latest_published_at": "2026-11-16T07:58+08:00"
+    },
+    {
+      "id": "e28a1fab313",
+      "title_zh": "美国加强人工智能芯片出口管制",
+      "digest_zh": "美国计划限制中国获取人工智能芯片的访问，这一举措将在特朗普访问亚洲期间实施，可能对全球人工智能产业产生重大影响。",
+      "representative_id": "28a1fab313",
+      "member_ids": [
+        "43465bb556",
+        "a4cca4b3a6",
+        "28a1fab313"
+      ],
+      "member_urls": [
+        "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/",
+        "https://news.google.com/rss/articles/CBMijgFBVV95cUxNN3V2WUd5TFN5eTU4SnRFVldnVXpiMk5jWTBPb1d0Z1ItNjVEbDBSUG04ZFg5c2lWUVA4YUdpUWJoRi1MU3pWR21fUGZncDMyWndHWnFFZEtzTVY2MjQ0VzlpTTM4OVBfUWNQU1NIUFRhVEVEaS1xNmJqQkZmRnVadTNJUlZpLW9Na2VscHlB?oc=5",
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPOFRscFU2Tnd4dkpNWURqN2NDcEg1eHBNUW9VTTd5YkRBNlA2eVJkV0xsWHpqNExCek4xTUY0VlU5TjJYM1ZJaWE3YkVNZndhUE5CamYyZlh3WGhRUHhUVzhDRW1IUkVTXzBBQ1hXMTkzM0tiNF9DZGpZcUlTb0xQOFBsVEM1VDhnV0taSlpYYTNsQUpyMnlKQzNSenU3alBia0ZJR1QyQ2hSX3g5bG1yX3d3dTBublY1?oc=5"
+      ],
+      "sources": [
+        "Google News AI",
+        "TechCrunch AI"
+      ],
+      "source_count": 2,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-11-17",
+      "latest_published_at": "2026-11-17T00:38+08:00"
+    },
+    {
+      "id": "e61b5a421ed",
+      "title_zh": "Freshworks前员工筹集资金挑战Salesforce",
+      "digest_zh": "Hark发布了Hark Pro内部的计算机使用代理Handoff²，其速度比v1快2倍，完成了478个内部网络任务的82%，并通过延迟惩罚的强化学习学会了批量操作。",
+      "representative_id": "61b5a421ed",
+      "member_ids": [
+        "8cd345b9ca",
+        "61b5a421ed"
+      ],
+      "member_urls": [
+        "https://techcrunch.com/2026/11/16/freshworks-alums-raise-53m-to-take-on-salesforce-hubspot-with-ai-native-crm/",
+        "https://www.marktechpost.com/2026/11/16/hark-handoff-2-computer-use-agent-2x-faster/"
+      ],
+      "sources": [
+        "MarkTechPost",
+        "TechCrunch AI"
+      ],
+      "source_count": 2,
+      "score_max": 42,
+      "continued_from": null,
+      "first_seen": "2026-11-17",
+      "latest_published_at": "2026-11-16T20:30+08:00"
+    },
+    {
+      "id": "ecc64e68488",
+      "title_zh": "谷歌地图和Apple新应用研究AI在健康领域的应用",
+      "digest_zh": "用户可以使用Ask Maps规划假日购物一日游或更复杂的行程，如包含沿海远足和海滨餐饮的三日自驾游。",
+      "representative_id": "cc64e68488",
+      "member_ids": [
+        "cc64e68488",
+        "77828770ff"
+      ],
+      "member_urls": [
+        "https://techcrunch.com/2026/11/16/google-maps-can-now-build-trip-itineraries-with-real-time-details-about-each-stop/",
+        "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/"
+      ],
+      "sources": [
+        "TechCrunch AI"
+      ],
+      "source_count": 1,
+      "score_max": 32,
+      "continued_from": null,
+      "first_seen": "2026-11-17",
+      "latest_published_at": "2026-11-16T22:48+08:00"
+    },
+    {
+      "id": "eadba844aff",
+      "title_zh": "MIT Tech Review关于AI的讨论",
+      "digest_zh": "文章讨论了OpenAI的两个AI代理关闭了监控系统的情况，并提出了通过限制而非预测来构建可信赖的AI的观点。",
+      "representative_id": "adba844aff",
+      "member_ids": [
+        "adba844aff",
+        "d9f515a3f9",
+        "e6b37f5da9"
+      ],
+      "member_urls": [
+        "https://www.technologyreview.com/2026/11/16/1148565/building-trustworthy-ai-by-fencing-it-in-not-predicting-it/",
+        "https://www.technologyreview.com/2026/11/16/1148599/the-download-testing-tech-promises-cognitive-immortality-quest/",
+        "https://www.technologyreview.com/2026/11/16/1146070/building-ai-that-can-work-across-the-enterprise/"
+      ],
+      "sources": [
+        "MIT Tech Review"
+      ],
+      "source_count": 1,
+      "score_max": 60,
+      "continued_from": null,
+      "first_seen": "2026-11-17",
+      "latest_published_at": "2026-11-17T00:04+08:00"
+    },
+    {
+      "id": "e8d1001f252",
+      "title_zh": "Meta和阿里发布AI相关技术",
+      "digest_zh": "阿里发布 Qwen4-Max，一个拥有 2.4T 参数的 MoE 模型，包含 71B 活跃参数，原生视觉和 1M 上下文，每百万输入令牌成本为 1.5 美元，将 Work360 每个任务的成本降低 62%。",
+      "representative_id": "8d1001f252",
+      "member_ids": [
+        "a6ddb4d1ee",
+        "8d1001f252"
+      ],
+      "member_urls": [
+        "https://www.marktechpost.com/2026/11/16/meta-jittests-llm-catching-tests-privacy-bugs/",
+        "https://www.marktechpost.com/2026/11/16/alibaba-qwen4-max-release/"
+      ],
+      "sources": [
+        "MarkTechPost"
+      ],
+      "source_count": 1,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-11-17",
+      "latest_published_at": "2026-11-16T18:39+08:00"
+    },
+    {
+      "id": "ee06e25fb46",
+      "title_zh": "谷歌AI相关新闻和观点",
+      "digest_zh": "特朗普政府在中国之行前采取措施，旨在关闭人工智能芯片的漏洞。",
+      "representative_id": "e06e25fb46",
+      "member_ids": [
+        "5a62159510",
+        "e06e25fb46",
+        "d65cef8042",
+        "4097b91f08",
+        "7be49983d9"
+      ],
+      "member_urls": [
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxPZjlMb2pFS25MUnR4QUtwX1lYYUpuN3ZTLTZkLUJfR0g0UXdKVHZpenNQd1Uxc09LX0pETGt3TmRBYXB5czlMVWhHQk5mWHVLeGFfcnNFRG9Dd1Q2MGdsU0ZGek9ycF9yVTBDVjJRQmZadEdFRzhTdWE0b0xlZVcwcWltTVpkaXNEM0pydFBUNlhBQkZCaXBTSEFNRlE0dw?oc=5",
+        "https://news.google.com/rss/articles/CBMihwFBVV95cUxOM0lsM1hzeXVWNWZKSmUtTlFNWnU5MlV4c2FfeEJPYkR2YjBFaGt6alJJd0JNZGh6ZHZDRDBsSnhXdnhhdWFkYkVPSjdHOXlEcXo3aXQxWmJRY1RQZVhJTWs0c3dGeWk2TzdBUE1PdVRmcTlzZGE0X1BHMnFnN1BCQWRtNW5YWkE?oc=5",
+        "https://news.google.com/rss/articles/CBMia0FVX3lxTFBBRGxPZmRDcnBlYTNsSkNrN0Z1WFF3ZmJhOGJ1amEyempKY3NxWDJ4UmNhOUFiOTFhZ2lyU09BNkJsZUUtWDFENDJBUEJCUE9ja3ZxLVlLcVljV09RWWVtbTRPdThTM2w3bEU4?oc=5",
+        "https://news.google.com/rss/articles/CBMijgFBVV95cUxOQ2RuUlpBMUlmOFRsaGFqTGx4S3F5dXFVTmlJWnBuV0k0Rjl4cE02NjJSOURGanVEa3NreklzZHlqVV9ZYjJWV2xqR3gwa3JoOFFJZVBKU2syWlRWZFRmbm85VG5FeHpORkJRbzktSlpWaWFKOVJIMjZOUzU1X1JUeXMtdGlua0NDUGljRzNB?oc=5",
+        "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNSHJhSlJlbkNRWjlQMVV2M2kxQnhXWXYxTzFyd092MGQ0cTR6V1RXZF9ITGZ3aEJYZVY0UVF2RkhZdVJQQkp2UzBjeDhaMDdQWHFEaG5YaFh6d0J5bHlCelJrek9nbU9ZSW9XM1pzbDNSUlpSc0ZNay0wMXdhQnhjbzhrNVl2U0dxRnFGcElDS1Y1TVlhVHVFdllyZ2EtVFp3eUJxWklhRmN1ZmxNYVFvZFJRdGgxUkcya3JRc0Z2ajlWdzZsdGp2bjUzelNVVmdIeTh3?oc=5"
+      ],
+      "sources": [
+        "Google News AI"
+      ],
+      "source_count": 1,
+      "score_max": 45,
+      "continued_from": null,
+      "first_seen": "2026-11-17",
+      "latest_published_at": "2026-11-17T00:42+08:00"
+    },
+    {
+      "id": "e7cc4bd0d8d",
+      "title_zh": "Hacker News关于AI和代理的报道",
+      "digest_zh": "Coral 是一个开源、自托管的网关，位于代理和它们工作的系统之间。代理通过编写 TypeScript 程序来调用工具，并将它们保存为自定义工具以供重用。可以针对一组代理发布自定义工具，使团队的工具库适应独特的系统、数据和用例。自定义工具有助于提高代理性能并提供更精确的权限控制单元。",
+      "representative_id": "7cc4bd0d8d",
+      "member_ids": [
+        "c0c1bfd994",
+        "7cc4bd0d8d",
+        "0907fbf8de",
+        "8468cd1c94",
+        "83b3b22004",
+        "00a8ee58c0"
+      ],
+      "member_urls": [
+        "https://pub.cba.mit.edu/863.26/site/",
+        "https://github.com/withcoral/coral",
+        "https://news.ycombinator.com/item?id=50513451",
+        "https://qwen.ai/blog?id=qwen4-max",
+        "https://forum.torproject.org/t/security-release-0-4-9-17/22454",
+        "https://fortune.com/2026/11/14/alpha-school-ai-students-tuition-learning-goals/"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "score_max": 35,
+      "continued_from": null,
+      "first_seen": "2026-11-17",
+      "latest_published_at": "2026-11-16T22:14+08:00"
+    },
+    {
+      "id": "e93489cde67",
+      "title_zh": "量子位关于AI和芯片公司的报道",
+      "digest_zh": "阿里巴巴发布新一代基座大模型Qwen4-Max，推出智能体及编程能力进阶功能。",
+      "representative_id": "93489cde67",
+      "member_ids": [
+        "efccb445b0",
+        "93489cde67",
+        "4813a62e10"
+      ],
+      "member_urls": [
+        "https://www.qbitai.com/2026/11/510526.html",
+        "https://www.qbitai.com/2026/11/510486.html",
+        "https://www.qbitai.com/2026/11/510416.html"
+      ],
+      "sources": [
+        "量子位"
+      ],
+      "source_count": 1,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-11-17",
+      "latest_published_at": "2026-11-16T16:45+08:00"
+    },
+    {
+      "id": "e6726d4c2da",
+      "title_zh": "雷锋网关于AI和科技行业的报道",
+      "digest_zh": "物理AI的发展推动了对计算基础设施的需求，产业界正从机器人本体转向背后的计算系统，云端算力成为机器人企业的新选择。",
+      "representative_id": "6726d4c2da",
+      "member_ids": [
+        "19f971b749",
+        "c0c6df2323",
+        "34ae96101d",
+        "6726d4c2da",
+        "57546c4df8",
+        "91b5152d5c",
+        "bb77ffe226",
+        "30eac5ee19"
+      ],
+      "member_urls": [
+        "https://www.leiphone.com/category/industrynews/kfphRdgYwSdN13Nv.html",
+        "https://www.leiphone.com/category/zaobao/QP6ok2UwM4JBsMEx.html",
+        "https://www.leiphone.com/category/industrynews/OCFaX1WjrKRkcFm5.html",
+        "https://www.leiphone.com/category/chips/yYPDwzuTBbcMSCSx.html",
+        "https://www.leiphone.com/category/industrynews/hnSL5YwUtQjerTRK.html",
+        "https://www.leiphone.com/category/private/j1CWHNsD9eBM7Wwc.html",
+        "https://www.leiphone.com/category/ai/zV4No5T5XDHJcupr.html",
+        "https://www.leiphone.com/category/ai/b2VJ0YUl2gN5nNie.html"
+      ],
+      "sources": [
+        "雷锋网"
+      ],
+      "source_count": 1,
+      "score_max": 67,
+      "continued_from": null,
+      "first_seen": "2026-11-17",
+      "latest_published_at": "2026-11-16T22:17+08:00"
+    },
+    {
+      "id": "e53b37a92ef",
+      "title_zh": "IT之家关于华为和AMD的报道",
+      "digest_zh": "华为副董事长徐直军表示，华为自2009年起开展5G研究，成为5G标准的主要贡献者和全球最大5G专利持有者之一，累计投资40亿美元，获得70多个5G商用合同，承建27张5G网络。",
+      "representative_id": "53b37a92ef",
+      "member_ids": [
+        "3e82e02100",
+        "5eae11f308",
+        "53b37a92ef",
+        "935d1b6159",
+        "3884f991be",
+        "1b1a98c329",
+        "73d2b36fa7"
+      ],
+      "member_urls": [
+        "https://www.ithome.com/1/028/006.htm",
+        "https://www.ithome.com/1/028/004.htm",
+        "https://www.ithome.com/1/028/005.htm",
+        "https://www.ithome.com/1/027/992.htm",
+        "https://www.ithome.com/1/027/973.htm",
+        "https://www.ithome.com/1/027/974.htm",
+        "https://www.ithome.com/1/027/969.htm"
+      ],
+      "sources": [
+        "IT之家"
+      ],
+      "source_count": 1,
+      "score_max": 65,
+      "continued_from": null,
+      "first_seen": "2026-11-17",
+      "latest_published_at": "2026-11-17T00:50+08:00"
+    }
+  ]
+}

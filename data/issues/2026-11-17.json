@@ -1,0 +1,53 @@
+{
+  "issue": 55,
+  "date": "2026-11-17",
+  "generated_at": "2026-11-16T17:03:41",
+  "stats": {
+    "collected": 65,
+    "duplicates": 0,
+    "analyzed": 55,
+    "blocked": 10,
+    "selected": 5,
+    "events": 2,
+    "sources": [
+      "Google News AI",
+      "Hacker News",
+      "IT之家",
+      "MIT Tech Review",
+      "MarkTechPost",
+      "OpenAI News",
+      "TechCrunch AI",
+      "The Decoder",
+      "量子位",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "美国加强AI芯片出口管制",
+    "paragraph": "美国加强人工智能芯片出口管制，旨在阻止中国公司远程访问计算资源，同时阿里发布Qwen4和Qwen4-Max模型，LVMH与OpenAI建立战略合作伙伴关系，华为成为5G标准主要贡献者。",
+    "highlights": [
+      "43465bb556",
+      "93489cde67",
+      "8d1001f252",
+      "91e58e2ea9",
+      "53b37a92ef"
+    ]
+  },
+  "headline_ids": [
+    "43465bb556",
+    "93489cde67",
+    "8d1001f252"
+  ],
+  "briefing_ids": [
+    "91e58e2ea9",
+    "6726d4c2da",
+    "53b37a92ef",
+    "d8056e9f19",
+    "adba844aff",
+    "e06e25fb46",
+    "61b5a421ed",
+    "7cc4bd0d8d",
+    "2e4299b08e",
+    "cc64e68488"
+  ]
+}
