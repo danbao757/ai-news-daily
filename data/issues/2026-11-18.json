@@ -1,0 +1,43 @@
+{
+  "issue": 56,
+  "date": "2026-11-18",
+  "generated_at": "2026-11-17T16:55:58",
+  "stats": {
+    "collected": 71,
+    "duplicates": 1,
+    "analyzed": 55,
+    "blocked": 15,
+    "selected": 4,
+    "events": 3,
+    "sources": [
+      "Ars Technica",
+      "Google News AI",
+      "IT之家",
+      "MarkTechPost",
+      "Simon Willison",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "美国阻挠中国AI租用，中国已建立并行供应链",
+    "paragraph": "美国试图限制中国获取国外AI能力，但中国已成功建立起独立的AI供应链。同时，AI生成儿童性虐待材料报告激增，谷歌警告全自动网络攻击即将恶化。",
+    "highlights": [
+      "bc27ab6bd6",
+      "c9bf6b76d9",
+      "5289d8de41"
+    ]
+  },
+  "headline_ids": [
+    "bc27ab6bd6",
+    "c9bf6b76d9",
+    "5289d8de41"
+  ],
+  "briefing_ids": [
+    "3a14048026",
+    "a258409b95",
+    "862dc099fb",
+    "5ab3ec093f",
+    "da6d9c00c4",
+    "75c7ee7437"
+  ]
+}
