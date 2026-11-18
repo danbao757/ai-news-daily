@@ -1,0 +1,39 @@
+{
+  "issue": 57,
+  "date": "2026-11-19",
+  "generated_at": "2026-11-18T16:29:37",
+  "stats": {
+    "collected": 82,
+    "duplicates": 2,
+    "analyzed": 62,
+    "blocked": 18,
+    "selected": 4,
+    "events": 3,
+    "sources": [
+      "HuggingFace Blog",
+      "OpenAI News",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "OpenAI发布GPT-6.2 Astra和Sol",
+    "paragraph": "今日AI动态，OpenAI发布全新模型GPT-6.2 Astra和Sol，同时首次向独立审计机构开放AI系统。秘鲁小说AI生成争议，Pangram工具将多部获奖作品标记为AI生成，但出版社支持作者。此外，Rumble-2-Flash语音模型支持多种语言，Streamhouse时间序列模型探索新领域。",
+    "highlights": [
+      "549a77347d",
+      "596a505b3b",
+      "55f7e3940a",
+      "679cee5ea1",
+      "bf1424b145"
+    ]
+  },
+  "headline_ids": [
+    "596a505b3b",
+    "549a77347d",
+    "adb832209d"
+  ],
+  "briefing_ids": [
+    "55f7e3940a",
+    "679cee5ea1",
+    "bf1424b145"
+  ]
+}
