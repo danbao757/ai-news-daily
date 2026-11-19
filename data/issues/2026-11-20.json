@@ -1,0 +1,49 @@
+{
+  "issue": 58,
+  "date": "2026-11-20",
+  "generated_at": "2026-11-19T16:36:17",
+  "stats": {
+    "collected": 75,
+    "duplicates": 1,
+    "analyzed": 63,
+    "blocked": 11,
+    "selected": 8,
+    "events": 4,
+    "sources": [
+      "Ars Technica",
+      "GitHub Blog",
+      "HuggingFace Blog",
+      "IT之家",
+      "The Decoder",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "Anthropic完成史上最大规模IPO",
+    "paragraph": "Anthropic成功完成IPO，成为AI行业里程碑事件，估值高达1.5万亿美元。同时，Google DeepMind发布新AI模型Gemini 4 Neon，性能全面超越前代。此外，OCR模型成本大幅降低，ChatGPT新增实时听写功能，AI应用领域持续拓展。",
+    "highlights": [
+      "29ebb15def",
+      "5f9c2add74",
+      "bce84a240c",
+      "d544c6cdee",
+      "059dac40b2"
+    ]
+  },
+  "headline_ids": [
+    "29ebb15def",
+    "5f9c2add74",
+    "bd1fc6d49a"
+  ],
+  "briefing_ids": [
+    "7e7b45614c",
+    "a526ce6760",
+    "bce84a240c",
+    "f689168723",
+    "d544c6cdee",
+    "685948b748",
+    "1359fddbf6",
+    "cb39ce49d0",
+    "059dac40b2",
+    "75623b38e6"
+  ]
+}
