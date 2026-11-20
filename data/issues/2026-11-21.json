@@ -1,0 +1,45 @@
+{
+  "issue": 59,
+  "date": "2026-11-21",
+  "generated_at": "2026-11-20T16:11:12",
+  "stats": {
+    "collected": 62,
+    "duplicates": 2,
+    "analyzed": 52,
+    "blocked": 8,
+    "selected": 4,
+    "events": 2,
+    "sources": [
+      "IT之家",
+      "Simon Willison",
+      "TechCrunch AI",
+      "The Decoder",
+      "YT DeepMind",
+      "量子位"
+    ]
+  },
+  "lead": {
+    "title": "Anthropic攻克黎曼猜想",
+    "paragraph": "Anthropic数学家宣布与Claude AI合作，成功攻克了黎曼猜想这一数学难题，标志着人工智能在数学领域的重大突破。",
+    "highlights": [
+      "1021be679f",
+      "0befceefd0",
+      "ac4e692a5c",
+      "d71e9d428c",
+      "9ff6be5498"
+    ]
+  },
+  "headline_ids": [
+    "1021be679f",
+    "0befceefd0",
+    "3e97e19d49"
+  ],
+  "briefing_ids": [
+    "ac4e692a5c",
+    "d71e9d428c",
+    "9ff6be5498",
+    "7339d690df",
+    "77bcf4d6e2",
+    "6f0f2d869f"
+  ]
+}
