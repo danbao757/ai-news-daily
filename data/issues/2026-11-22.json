@@ -1,0 +1,40 @@
+{
+  "issue": 60,
+  "date": "2026-11-22",
+  "generated_at": "2026-11-21T20:08:05",
+  "stats": {
+    "collected": 38,
+    "duplicates": 0,
+    "analyzed": 35,
+    "blocked": 3,
+    "selected": 1,
+    "events": 4,
+    "sources": [
+      "Ars Technica",
+      "MarkTechPost",
+      "TechCrunch AI",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "字节跳动推出Axion 1.0智能体",
+    "paragraph": "今日，字节跳动推出了Axion 1.0智能体，该智能体声称在大多数AI训练阶段中不再必要。同时，Inkling 2 Mini开放模型和Nvidia研究人员的观点也值得关注。",
+    "highlights": [
+      "e8d8b83c69",
+      "0ece8dea7c",
+      "033823f6f4"
+    ]
+  },
+  "headline_ids": [
+    "e8d8b83c69",
+    "0ece8dea7c",
+    "9c9ec1c5f1"
+  ],
+  "briefing_ids": [
+    "99727b65c2",
+    "cdc6e41e55",
+    "033823f6f4",
+    "a35786f035",
+    "01945f6a90"
+  ]
+}

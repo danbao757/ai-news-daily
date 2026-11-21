@@ -1,0 +1,151 @@
+{
+  "date": "2026-11-22",
+  "generated_at": "2026-11-21T20:08:05",
+  "events": [
+    {
+      "id": "ee8d8b83c69",
+      "title_zh": "OpenAI发布GPT-6.2模型",
+      "digest_zh": "字节跳动推出 Axion 1.0 智能体，声称通过精心挑选的训练数据而非增加训练步骤，在三个训练阶段后与 OpenAI 和 Anthropic 的顶级商业模型相当。模型、数据和代码均免费开放。",
+      "representative_id": "e8d8b83c69",
+      "member_ids": [
+        "d536e38a7a",
+        "4997323209",
+        "1be0cb9ade",
+        "e8d8b83c69"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/openai-shares-new-prompting-tips-for-gpt-6-2-astra-and-sol-to-fix-brief-answers-and-unnecessary-questions/",
+        "https://the-decoder.com/openai-makes-it-much-harder-for-attackers-to-extract-how-its-latest-ai-models-think/",
+        "https://www.marktechpost.com/2026/11/21/openai-gpt-live-1-1-api-standby-mode/",
+        "https://the-decoder.com/bytedance-argues-most-ai-training-phases-are-unnecessary-and-backs-it-up-with-a-competitive-open-model/"
+      ],
+      "sources": [
+        "MarkTechPost",
+        "The Decoder"
+      ],
+      "source_count": 2,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-11-22",
+      "latest_published_at": "2026-11-21T21:32+08:00"
+    },
+    {
+      "id": "e0ece8dea7c",
+      "title_zh": "Inkling 2 Mini发布",
+      "digest_zh": "Thinking Machines 发布了 Inkling 2 Mini，一个开放的循环变压器，它在每个标记上运行其 24 层中的 12 层三次。这使得模型能够在不生成额外文本的情况下进行更长时间的内部推理。在 Artificial Analysis 的 Intelligence Index 上，它与 Qwen3.8 27B 相当，成本大约低六倍。",
+      "representative_id": "0ece8dea7c",
+      "member_ids": [
+        "0ece8dea7c",
+        "cc5c5c9af1",
+        "b9db119f86"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/new-open-model-inkling-2-mini-thinks-in-loops-to-solve-problems-with-fewer-words-and-still-runs-on-a-laptop/",
+        "https://www.marktechpost.com/2026/11/21/thinking-machines-inkling-2-mini-looped-transformer/",
+        "https://thinkingmachines.ai/news/inkling-2-mini/"
+      ],
+      "sources": [
+        "Hacker News",
+        "MarkTechPost",
+        "The Decoder"
+      ],
+      "source_count": 3,
+      "score_max": 65,
+      "continued_from": null,
+      "first_seen": "2026-11-22",
+      "latest_published_at": "2026-11-21T20:13+08:00"
+    },
+    {
+      "id": "e9c9ec1c5f1",
+      "title_zh": "黎曼猜想研究论文发布",
+      "digest_zh": "Anthropic 的数学家声称使用 Claude 证明了黎曼猜想，而斯坦福的研究人员随后发布了一篇独立的、完全由人类完成的竞争性论文。",
+      "representative_id": "9c9ec1c5f1",
+      "member_ids": [
+        "9c9ec1c5f1",
+        "fec5f09ec7",
+        "6f232f6bc5"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/",
+        "https://news.google.com/rss/articles/CBMie0FVX3lxTE4wOXI2UURFdDY0b1kyNnBEMjFkN3p5b1N4dWNXd2FRUUhJUXdrN3FBVUpRRkp6TjN0OWZocTZvRGljTmtuSTBMUVd2RVdUdDcwZi1hc2NlNjM0ZjlralNReUt3Ykc2OVN6SWJQNVZuS2xVaUdralp3SHhKbw?oc=5",
+        "https://www.wsj.com/finance/stocks/anthropics-ipo-bust-punctuates-4-trillion-ai-wipeout-on-wall-street-f1f1ec90"
+      ],
+      "sources": [
+        "Google News AI",
+        "Hacker News",
+        "The Decoder"
+      ],
+      "source_count": 3,
+      "score_max": 65,
+      "continued_from": null,
+      "first_seen": "2026-11-22",
+      "latest_published_at": "2026-11-22T03:00+08:00"
+    },
+    {
+      "id": "e1021be679f",
+      "title_zh": "AI行业新闻汇总",
+      "digest_zh": "研究者通过使用带有独特、可追踪秘密的提示词进行测试，证明数据在AI供应链中无法保持隐私。",
+      "representative_id": "99727b65c2",
+      "member_ids": [
+        "88798943b1",
+        "89298d3b7f",
+        "5a49fd4a2d",
+        "c4b0222f29",
+        "99727b65c2",
+        "b93c08b74a",
+        "893ab88fa4",
+        "d7d63c9370",
+        "e0f1103cd0",
+        "83bab1f354",
+        "d5eeee1878",
+        "b4c093e50c",
+        "35f854dd76",
+        "956f406f46",
+        "6a3417d061",
+        "89b2ac41fe",
+        "1602c0f630",
+        "1b1ef6e69c",
+        "8183856b37",
+        "c484adb800",
+        "7c62fe2de0"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/us-technology-stocks-suffer-their-worst-weekly-loss-since-the-pandemic-as-ai-doubts-pile-up/",
+        "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
+        "https://arstechnica.com/ai/2026/11/googles-latest-search-page-redesign-drops-the-search-button-adds-ai-sidebar/",
+        "https://arstechnica.com/ai/2026/11/meta-reconsiders-2030-net-zero-goal-amid-record-emissions-from-ai-data-centers/",
+        "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+        "https://www.youtube.com/shorts/tgK-mPtgCCU",
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNVmw5MEdUWFlVTW1fVFBSc3JyR0k2SXBBbjdiU0lJZnpDM25TNzNNRUxkU254Uk1tQ3UtUlo0alhWb2R1b2FkT0dKcWJaSWtuVkNNank5YTNvaFlkT1Rrb1FMRDcwWDhoYmpGX1RxT2Z0QXZtWGgtNjVqS0xtT0ZuVFlWaS1jT0FickRtSw?oc=5",
+        "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNai1Mbml4SElaOU9odDRwWjJ0UjVDcGE4Nmdic0hhaWVqOXZpNGZ0NmxGbzZ6dWVfbEQ1by12cXRDTkV6SWhOczdSdXhNTkFKb1FDT0pkS2VVbE9vd0pxcnNvN1JfUlotMnB2V3VkMVN3UDJwRzNBSzY1a3BjZFZBQkZPM1R0RWI0Y0ZhUzFaSkh6SXNGd0xQanhUWVg5TFJVYnR5S2NGZU9NZGtteU5tbmZieEhDQnZub1B6RFJXSWRYUl9HSzJnaUtKSmdDYkVXSUdCRFFERldaNjdIRndF?oc=5",
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWkVRcWdCQzBDME0wd2RVQkxwQzdUa2M5LWVSd0pZYnVqTmlXWU9zUDRSb1NURi1rQ1puWjNVZmRpaUxfbnh4MGhnUVdkZy1nNjBOaFJTWEdvbUE5Vk1KVVdVQjhiOWRFS2RvYUtkWlFUaUxNYWpyVnBCNnh5ZzVvbHlxVFlwckZFNHJNdGIwYXk1ZV9SeTNhTVJGaFFQMmp0WGc?oc=5",
+        "https://news.google.com/rss/articles/CBMirAFBVV95cUxNVE04c2JFeVQtdll3WmNoaW1ES3dYTzI2eFBXNEs1V2tjOE1pVlE1Tk1vRWl2WnkwY2dVYmxDbzJNaXVRWWs1OTZsRGJ5RGYxNktjZW43UThxUnNsOG5pamR2RjdVaUo3ajMwZDlYbWFXcnZjUzJ6VXJSekhmSnh0RWJqXzhfVXFyVC1kSVhMc0RBVlp3OUJXWS1CWW9OOGttSnRoSkxoWG5uemRi?oc=5",
+        "http://ricapar.net/ClawDOS/",
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxOX2VmY3VVQjJPVDlqcVVpOEl0eVJzdGt2SUVlTktmUC1ITWR0eWJ0SV9oYkNtRHYzaGJaMF9TTWFBaEVTQkJhQV9yaElYU3FzOGt3TzV2dU5KazE2WklYbUJQQUFnVXdOUjlHOV9pXzlUekNyN1IteUFzQ2ZfZnBrUkVjZTBPeFJHUVpaVExoam52MzVQ?oc=5",
+        "https://news.ycombinator.com/item?id=50583761",
+        "https://www.researchgate.net/publication/418143113_The_Hungry_Butler_Effect_Concealed_Commercial_Incentives_and_the_Erosion_of_Epistemic_Rigour_in_Large_Language_Models",
+        "https://www.ithome.com/1/030/511.htm",
+        "https://www.ithome.com/1/030/509.htm",
+        "https://www.ithome.com/1/030/507.htm",
+        "https://www.ithome.com/1/030/506.htm",
+        "https://www.ithome.com/1/030/505.htm",
+        "https://www.ithome.com/1/030/504.htm",
+        "https://www.ithome.com/1/030/479.htm"
+      ],
+      "sources": [
+        "Ars Technica",
+        "Google News AI",
+        "Hacker News",
+        "IT之家",
+        "TechCrunch AI",
+        "The Decoder",
+        "YT Matt Wolfe"
+      ],
+      "source_count": 7,
+      "score_max": 65,
+      "continued_from": "2026-11-21",
+      "first_seen": "2026-11-21",
+      "latest_published_at": "2026-11-22T03:15+08:00"
+    }
+  ]
+}
