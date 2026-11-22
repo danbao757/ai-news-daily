@@ -1,0 +1,37 @@
+{
+  "issue": 61,
+  "date": "2026-11-23",
+  "generated_at": "2026-11-22T20:16:47",
+  "stats": {
+    "collected": 42,
+    "duplicates": 0,
+    "analyzed": 37,
+    "blocked": 5,
+    "selected": 4,
+    "events": 1,
+    "sources": [
+      "IT之家",
+      "OpenAI News",
+      "Simon Willison",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "MiniMax刷新国际挑战赛密码学破解纪录",
+    "paragraph": "今日AI界重大突破，MiniMax利用最新内部模型成功破解多个密码学前沿方案，刷新国际挑战赛纪录。同时，数学界确认Levent Alpöge的Riemann假设证明正确，OpenAI发布关于困惑度和智能的论文，Simon Willison开源项目Muru值得关注。",
+    "highlights": [
+      "32c75de8df",
+      "fa9fd258db",
+      "de5cd1a6d5",
+      "0ceef4b235"
+    ]
+  },
+  "headline_ids": [
+    "32c75de8df",
+    "fa9fd258db",
+    "de5cd1a6d5"
+  ],
+  "briefing_ids": [
+    "0ceef4b235"
+  ]
+}
