@@ -1,0 +1,27 @@
+{
+  "issue": 62,
+  "date": "2026-11-24",
+  "generated_at": "2026-11-23T19:19:31",
+  "stats": {
+    "collected": 70,
+    "duplicates": 0,
+    "analyzed": 58,
+    "blocked": 12,
+    "selected": 5,
+    "events": 1,
+    "sources": [
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "GPT-6.2 Astra破解数学难题",
+    "paragraph": "OpenAI最新发布的GPT-6.2模型Astra在数学领域取得突破，成功破解了其他AI无法解决的数学定理。",
+    "highlights": [
+      "ddd44f3daf"
+    ]
+  },
+  "headline_ids": [
+    "ddd44f3daf"
+  ],
+  "briefing_ids": []
+}
