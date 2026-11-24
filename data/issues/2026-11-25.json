@@ -1,0 +1,39 @@
+{
+  "issue": 63,
+  "date": "2026-11-25",
+  "generated_at": "2026-11-24T18:56:13",
+  "stats": {
+    "collected": 70,
+    "duplicates": 1,
+    "analyzed": 51,
+    "blocked": 18,
+    "selected": 6,
+    "events": 4,
+    "sources": [
+      "MarkTechPost",
+      "TechCrunch AI",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "OpenAI 和 Anthropic 未发布模型安全措施引担忧",
+    "paragraph": "OpenAI 和 Anthropic 在未公布模型安全措施的情况下，继续推动人工智能的发展。OpenAI 更新了 ChatGPT，而 Anthropic 推出了 Claude Ship 智能体功能。同时，Z AI 发布了新的 GLM-5.4 模型，德国研究人员呼吁重新定义计算机科学，Meta 将 Muse AI 助手引入 Instagram 私信。",
+    "highlights": [
+      "fce8d06d33",
+      "94d323914d",
+      "671fc88c0b",
+      "671fc88c0b",
+      "aa6abd20a9"
+    ]
+  },
+  "headline_ids": [
+    "fce8d06d33",
+    "94d323914d",
+    "9c47dc701a"
+  ],
+  "briefing_ids": [
+    "671fc88c0b",
+    "aa6abd20a9",
+    "eaadf24237"
+  ]
+}
