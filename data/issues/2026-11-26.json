@@ -1,0 +1,42 @@
+{
+  "issue": 64,
+  "date": "2026-11-26",
+  "generated_at": "2026-11-25T18:01:19",
+  "stats": {
+    "collected": 70,
+    "duplicates": 0,
+    "analyzed": 54,
+    "blocked": 16,
+    "selected": 1,
+    "events": 3,
+    "sources": [
+      "GitHub Blog",
+      "HuggingFace Blog",
+      "Simon Willison",
+      "The Decoder",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "LLM重大转折，材料大模型登顶",
+    "paragraph": "过去一年，大型语言模型（LLM）经历了三个重大转折点，其中元材新界发布的FrontierMat大模型在真实研发难题上挑战GPT-6 Astra，成为自研跨尺度材料大模型的佼佼者。同时，Anthropic发布的智能体功能突破7亿次每月MCP SDK下载量，显示出开源社区的活跃。亚马逊和Meta洽谈解除对Muse的封锁，行业动态值得关注。",
+    "highlights": [
+      "9099c1af90",
+      "73b013ffb4",
+      "dc8fa3c5c4",
+      "c510c09107",
+      "d8d6777ecf"
+    ]
+  },
+  "headline_ids": [
+    "8caf928054",
+    "9099c1af90",
+    "73b013ffb4"
+  ],
+  "briefing_ids": [
+    "2633f28b54",
+    "dc8fa3c5c4",
+    "c510c09107",
+    "d8d6777ecf"
+  ]
+}
