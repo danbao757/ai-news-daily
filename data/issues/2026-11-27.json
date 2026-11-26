@@ -1,0 +1,33 @@
+{
+  "issue": 65,
+  "date": "2026-11-27",
+  "generated_at": "2026-11-26T17:51:43",
+  "stats": {
+    "collected": 49,
+    "duplicates": 1,
+    "analyzed": 41,
+    "blocked": 7,
+    "selected": 6,
+    "events": 1,
+    "sources": [
+      "HuggingFace Blog",
+      "IT之家",
+      "The Decoder"
+    ]
+  },
+  "lead": {
+    "title": "微软披露国家支持黑客利用ARTEX AI框架攻击",
+    "paragraph": "微软近日详细揭露了国家支持的黑客如何利用ARTEX AI框架自动化网络攻击，同时瑞士也发生了五起AI智能体网络攻击事件，凸显了AI安全领域的严峻挑战。此外，Nemotron 3.5的开放数据解析和优化推理功能为AI开源社区带来了新的进展。",
+    "highlights": [
+      "c0937367ab",
+      "f738c24f1f",
+      "d3aa48daa6"
+    ]
+  },
+  "headline_ids": [
+    "c0937367ab",
+    "f738c24f1f",
+    "d3aa48daa6"
+  ],
+  "briefing_ids": []
+}
