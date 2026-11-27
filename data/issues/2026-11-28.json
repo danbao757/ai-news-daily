@@ -1,0 +1,41 @@
+{
+  "issue": 66,
+  "date": "2026-11-28",
+  "generated_at": "2026-11-27T17:29:45",
+  "stats": {
+    "collected": 55,
+    "duplicates": 2,
+    "analyzed": 43,
+    "blocked": 10,
+    "selected": 2,
+    "events": 1,
+    "sources": [
+      "Google News AI",
+      "Hacker News",
+      "MIT Tech Review",
+      "TechCrunch AI",
+      "The Decoder",
+      "雷锋网"
+    ]
+  },
+  "lead": {
+    "title": "Anthropic发布Claude Ship，内部PR合并量翻倍",
+    "paragraph": "Anthropic今日发布Claude Ship，内部PR合并量翻倍，回滚比例下降超40%，显示出其在AI领域的显著进步。同时，Nvidia暂停向东南亚运送芯片，可能对当地AI产业产生影响。",
+    "highlights": [
+      "8e7bcbb089",
+      "94305b427e",
+      "ee0e28b34a"
+    ]
+  },
+  "headline_ids": [
+    "8e7bcbb089",
+    "94305b427e",
+    "ee0e28b34a"
+  ],
+  "briefing_ids": [
+    "2aeb5c7ea9",
+    "f7c430bedf",
+    "9b56021da3",
+    "7f71381ca1"
+  ]
+}

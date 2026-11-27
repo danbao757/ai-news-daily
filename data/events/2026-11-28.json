@@ -1,0 +1,165 @@
+{
+  "date": "2026-11-28",
+  "generated_at": "2026-11-27T17:29:45",
+  "events": [
+    {
+      "id": "e2d7f8b4f84",
+      "title_zh": "AI新闻汇总",
+      "digest_zh": "HuggingFace展示了如何使用Trainium3和LTX-2.5模型生成视频。",
+      "representative_id": "2d7f8b4f84",
+      "member_ids": [
+        "2d7f8b4f84",
+        "07fea5b0e7",
+        "7e69e25001",
+        "fd5b6cb638",
+        "aa54bd3bfe",
+        "5b8e45afc5",
+        "1940fcdf93",
+        "5d6bbd440a",
+        "c44918dff3",
+        "453ef4046d",
+        "11688ce651",
+        "3cf85e729c",
+        "3b8b3d9930",
+        "4f426f5090",
+        "138e1e1887",
+        "48b0d8d3f8",
+        "6aa339a9d5",
+        "005b7c4e65",
+        "cc54ca76b8",
+        "22df109b65",
+        "44a871db65",
+        "755aa823de",
+        "09d0f878e5",
+        "e01a04001d",
+        "29e437c8d8",
+        "2df10afe33",
+        "a42017c91f",
+        "8e7bcbb089",
+        "4de984943d",
+        "db2e4be87c",
+        "6cc8f8eaf2",
+        "67cb560c53"
+      ],
+      "member_urls": [
+        "https://huggingface.co/blog/video-trainium3",
+        "https://the-decoder.com/openai-is-building-athena-data-platform-to-cut-down-on-ai-agent-guesswork/",
+        "https://the-decoder.com/former-openai-researcher-says-the-riemann-proof-matters-less-than-the-fact-that-an-ai-system-can-produce-it/",
+        "https://www.marktechpost.com/2026/11/26/nexos-ai-ai-gateway-200-models-governance/",
+        "https://www.marktechpost.com/2026/11/26/tencent-dfly2-speculative-decoding-sparse-models/",
+        "https://www.marktechpost.com/2026/11/26/sakana-ai-namazu-small-30b-nemotron-3-nano/",
+        "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWTBWVWZFRVNySTBaYk00dTZXdUgzTjJBUjRWM2xobWtwc3lpTlVXWkhwbXdYR1BMdDVPLWZyVEh6ZGp5X2RjRjVTbUtYNnRkMWFISm5pRGo1UjRYcVJPQzZUWUx0QnlSNmYwN0NuRTNfc20tN3hPRFdWWTFfbDJyV3pBWVRJUzFsSm1xUlRn?oc=5",
+        "https://news.google.com/rss/articles/CBMihgFBVV95cUxOX0s4V042U0lyQ1ZOWUdRc0N3eUhjNlZNaVd4WXZsZFlzU252RW9rWVVNWW1UVzZLazZKTGx1dVNZSnV2WUFveGdBMVpJR0xvb1FQZkJiX1U4elRSVHZwdUZfR0t4bUtvM2pSWWtaSGtBcm9Pa3NIQ3dNN1otLVUzTXNYdEI3QQ?oc=5",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTVVId25KSXJqbHR2LXZBTmhILXQzU1RYQnFfSjVaWDE5ODROSGFLN295dHRlNEJUeHNIaUlxSzktR2hzZzVWcGVKaE5Kb2tObGFXUzlJb25BY1M3MXpoTjJtWTUzZnZMSVNPa2NNNS15UzcxOWppNFVWZU00WWdudDA5aXMzLXdoRVBTMzUtaXZVcVV3amlRcm5BSUVMUUxJZ2xBdGZxR3diNWhnT2MyVC16b1J0bDl5Rmc?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeG05enNvR29yXzZYN1FpcEZ3a0sxZFlvSTdieDA3cjE2Vm80TjJDcGVDdVRnYkp6RHN1a2N0N3ByaDRjb3ZoNHh0cUJHRHlKRTZRVVY4dVM3OGRWMjRjaUtSV1NwQ2h0UVZsNVBqZTlENV9xckpJLVdGbE1seVJadE8wR1lnZUxGUkd3RDhqeDBoX2FNY281cmJydmxPU0MtZFRNMzZGVmRIMTVHODh2OQ?oc=5",
+        "https://news.google.com/rss/articles/CBMihgFBVV95cUxOeTBTcVozOHB5cWJGZ1Y1LWtBUFRIOWNPOXJXRmRhOFBmUG1lbmsyanN1ZVRza3dORmdYRGkwdHRoX0swMS1sZmgzM2M0S2l2bG4wMHMteVNDSjFWcXR6WnZqTGNiaGJMd01lNW92Yk1ESzRJdmxoSGR6VmRtME5oNjJfSUpKdw?oc=5",
+        "https://news.google.com/rss/articles/CBMickFVX3lxTFBpbURNOXBVTVBYYkdtc3ZfVW5jTGVsZHdEY0llUEpmQmxPVFJTMlF1SlZwaEJOZkNNTGs1SjdKdUctWklqRVBScXJmdnVsYk5BV0U1YzItSkRuZk5aUE5xVmM3WWxFTlQ5dGpCcHJlNW0yZw?oc=5",
+        "https://news.sky.com/story/us-air-forces-cloud-computing-platform-hacked-13617163",
+        "https://www.thetimes.com/uk/technology-uk/article/ai-making-online-security-useless-smr73d3n8",
+        "https://twitter.com/RealAstropulse/status/2126119408997466389",
+        "https://construct22.com/",
+        "https://www.qbitai.com/2026/11/513352.html",
+        "https://www.qbitai.com/2026/11/513346.html",
+        "https://www.qbitai.com/2026/11/513320.html",
+        "https://www.qbitai.com/2026/11/513194.html",
+        "https://www.qbitai.com/2026/11/513227.html",
+        "https://www.qbitai.com/2026/11/513211.html",
+        "https://www.leiphone.com/category/industrynews/bNneZTVQVkQBiKrH.html",
+        "https://www.qbitai.com/2026/11/513163.html",
+        "https://www.leiphone.com/category/industrynews/szJUnXEhChJQgJHZ.html",
+        "https://www.leiphone.com/category/industrynews/iJ0tw7k1kHDs5zjT.html",
+        "https://www.leiphone.com/category/robot/UTZbbw7CrHpZvIS7.html",
+        "https://www.leiphone.com/category/ai/iWUKWuRp4AmJ6dZE.html",
+        "https://www.leiphone.com/category/ai/IMi92BFX4KU0R8uh.html",
+        "https://www.ithome.com/1/033/770.htm",
+        "https://www.ithome.com/1/033/769.htm",
+        "https://www.ithome.com/1/033/765.htm"
+      ],
+      "sources": [
+        "Google News AI",
+        "Hacker News",
+        "HuggingFace Blog",
+        "IT之家",
+        "MarkTechPost",
+        "The Decoder",
+        "量子位",
+        "雷锋网"
+      ],
+      "source_count": 8,
+      "score_max": 70,
+      "continued_from": null,
+      "first_seen": "2026-11-28",
+      "latest_published_at": "2026-11-28T01:15+08:00"
+    },
+    {
+      "id": "eee0e28b34a",
+      "title_zh": "AI研究与发展动态",
+      "digest_zh": "Yann LeCun通过其初创公司AMI Labs推进其语言模型替代方案JEPA架构，该架构旨在赋予机器内部世界模型以捕捉因果关系。三项新研究显示在机器人规划、更高效训练和错误纠正方面取得进展，但各部分仍需整合。",
+      "representative_id": "ee0e28b34a",
+      "member_ids": [
+        "ee0e28b34a",
+        "880d4f99a3"
+      ],
+      "member_urls": [
+        "https://the-decoder.com/three-studies-from-meta-and-ami-labs-back-yann-lecuns-bet-on-jepa-world-models-over-large-language-models/",
+        "https://the-decoder.com/sap-plans-to-cut-at-least-10000-jobs-as-it-pivots-to-ai/"
+      ],
+      "sources": [
+        "The Decoder"
+      ],
+      "source_count": 1,
+      "score_max": 45,
+      "continued_from": null,
+      "first_seen": "2026-11-28",
+      "latest_published_at": "2026-11-28T00:58+08:00"
+    },
+    {
+      "id": "ef7c430bedf",
+      "title_zh": "MIT科技评论相关新闻",
+      "digest_zh": "亚历山大（阿维）·戴维森分享了他作为青少年遭受严重伤害后成为创伤治疗师的经历，并探讨了尖端假肢在探索人类大脑方面的潜力。",
+      "representative_id": "f7c430bedf",
+      "member_ids": [
+        "e0750e6833",
+        "b4e61911e4",
+        "f7c430bedf"
+      ],
+      "member_urls": [
+        "https://www.technologyreview.com/2026/11/27/1149960/the-download-the-download-innovators-under-35-nominations-bionic-hand/",
+        "https://www.technologyreview.com/2026/11/27/1149857/2027-innovators-under-35-competition-nominate/",
+        "https://www.technologyreview.com/2026/11/27/1149946/cutting-edge-prosthetics-allow-researchers-to-probe-the-human-mind/"
+      ],
+      "sources": [
+        "MIT Tech Review"
+      ],
+      "source_count": 1,
+      "score_max": 30,
+      "continued_from": null,
+      "first_seen": "2026-11-28",
+      "latest_published_at": "2026-11-27T21:00+08:00"
+    },
+    {
+      "id": "e7f71381ca1",
+      "title_zh": "Hacker News相关新闻",
+      "digest_zh": "开发者创建了一个关于弹跳球的实时预测市场游戏，玩家可以预测球会落在何处。游戏中的弹跳过程由服务器端模拟，并以服务器发送事件的形式流式传输到每个客户端。每个弹跳结果都是确定性的，但起始位置的微小变化可能会改变最终结果。游戏中有一些AI交易者来维持市场活跃，但他们在任何有超过五人的回合中会退出。",
+      "representative_id": "7f71381ca1",
+      "member_ids": [
+        "d6b51fef84",
+        "7f71381ca1",
+        "159355ba03"
+      ],
+      "member_urls": [
+        "https://www.kimi.ai/news/kimi-for-science-program",
+        "https://bouncemarket.minhanhday.com/",
+        "https://herecomesthemoon.net/2026/11/whats-claudes-fursona/"
+      ],
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "score_max": 17,
+      "continued_from": null,
+      "first_seen": "2026-11-28",
+      "latest_published_at": "2026-11-27T23:01+08:00"
+    }
+  ]
+}
