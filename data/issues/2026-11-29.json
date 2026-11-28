@@ -1,0 +1,40 @@
+{
+  "issue": 67,
+  "date": "2026-11-29",
+  "generated_at": "2026-11-28T16:10:35",
+  "stats": {
+    "collected": 45,
+    "duplicates": 2,
+    "analyzed": 33,
+    "blocked": 10,
+    "selected": 1,
+    "events": 1,
+    "sources": [
+      "Hacker News",
+      "MarkTechPost",
+      "TechCrunch AI",
+      "The Decoder",
+      "YT Matt Wolfe",
+      "量子位"
+    ]
+  },
+  "lead": {
+    "title": "黎曼猜想证明通过独立验证",
+    "paragraph": "今天，量子位报道了一项重大突破，黎曼猜想证明已通过独立验证。同时，蚂蚁集团开源了LingSante-3.1-flash，一个具有560亿参数的多模态医学AI模型，以及机器人初创公司Embo获得1100万美元种子轮融资，用于开发世界模型AI。",
+    "highlights": [
+      "56d0200acd",
+      "a9416658da",
+      "2709044ad7"
+    ]
+  },
+  "headline_ids": [
+    "56d0200acd",
+    "a9416658da",
+    "2709044ad7"
+  ],
+  "briefing_ids": [
+    "f5cef2012c",
+    "765ab0a36b",
+    "3ba4c445eb"
+  ]
+}
